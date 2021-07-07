@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
 <<<<<<< HEAD
+    <list default="true" id="98510d03-2851-4869-a0ae-8263b7d693ba" name="Default Changelist" comment="Basic Setup Commit" />
+=======
+<<<<<<< HEAD
     <list default="true" id="7076c9ff-4b75-414f-88d6-d9af7f0edca7" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
 =======
@@ -12,6 +15,7 @@
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
 >>>>>>> 692641c9e5164c3bc9b3c7f571a130c26de209f2
     </list>
+>>>>>>> origin/develop
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,11 +62,30 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="14" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.ignored.files" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.dalhousie.group14.BusinessLogic.employee" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -73,6 +96,9 @@
       <option name="presentableId" value="Default" />
       <updated>1623866301513</updated>
       <workItem from="1623866337051" duration="2740000" />
+      <workItem from="1624615307188" duration="180000" />
+      <workItem from="1625678098808" duration="1198000" />
+      <workItem from="1625679322704" duration="780000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Setup Commit">
       <created>1623867197649</created>
@@ -101,6 +127,10 @@
 <<<<<<< HEAD
     <option name="oldMeFiltersMigrated" value="true" />
 =======
+<<<<<<< HEAD
+    <option name="oldMeFiltersMigrated" value="true" />
+=======
+>>>>>>> origin/develop
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basic Setup Commit" />
