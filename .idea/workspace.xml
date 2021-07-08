@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98510d03-2851-4869-a0ae-8263b7d693ba" name="Default Changelist" comment="Updated gitignore">
-      <change beforePath="$PROJECT_DIR$/.idea/group-14.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/group-14.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22-06-2021_14_00_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22-06-2021_14_00__Default_Changelist_.xml" beforeDir="false" />
+    <list default="true" id="fd55d881-a87e-4354-bdbc-4bafda7af9ea" name="Default Changelist" comment="Defined Client Dashboard and Project Definition Class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/client/ClientDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/client/ClientDashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/client/ProjectDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/client/ProjectDefinition.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +49,19 @@
       <recent name="H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -68,7 +79,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623867197649</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Defined Client Dashboard and Project Definition Class">
+      <created>1625746237805</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1625746237805</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -88,6 +106,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basic Setup Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic Setup Commit" />
+    <MESSAGE value="Defined Client Dashboard and Project Definition Class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Defined Client Dashboard and Project Definition Class" />
   </component>
 </project>

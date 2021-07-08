@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class ClientDashboard {
     private void clientscreen() {
         ClientDashboardValidation clientDashboardValidation = new ClientDashboardValidation();
+        Project project  = new Project();
         boolean correctoption = false;
         int optionchosen = 0;
         System.out.println();
@@ -27,7 +28,15 @@ public class ClientDashboard {
                 }
             }
         }
+        if(correctoption){
+            if(optionchosen == 1 ){
+                project.defineproject();
+            }else{
+                if(optionchosen == 2 ){
 
+                }
+            }
+        }
     }
 
 }
