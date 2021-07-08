@@ -3,7 +3,10 @@ image: maven:latest
 build:
   stage: build
   script:
-    - mvn compile
+    - mvn clean compile
+  artifacts:
+    paths:
+      - group14/target
   tags:
     - ugrad
 
@@ -13,3 +16,5 @@ test:
     - mvn clean test
   tags:
     - ugrad
+
+  
