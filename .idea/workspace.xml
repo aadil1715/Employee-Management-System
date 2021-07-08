@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd55d881-a87e-4354-bdbc-4bafda7af9ea" name="Default Changelist" comment="Added isStringvalid Method.">
+    <list default="true" id="fd55d881-a87e-4354-bdbc-4bafda7af9ea" name="Default Changelist" comment="Added noreturn, datesetter and datecomparison methods.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/client/ClientValidation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/client/Define.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/client/NormalClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/client/ClientDashboardValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/client/ClientDashboardValidation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/client/ProjectDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/client/ProjectDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/client/ProjectValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/client/ProjectValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/client/ClientDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/client/ClientDashboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/client/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/client/Project.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -102,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625749040536</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added noreturn, datesetter and datecomparison methods.">
+      <created>1625750743944</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1625750743944</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +136,7 @@
     <MESSAGE value="Defined Client Dashboard and Project Definition Class" />
     <MESSAGE value="Defined Project Definition, Project Validation and Project Database Interaction Classes." />
     <MESSAGE value="Added isStringvalid Method." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added isStringvalid Method." />
+    <MESSAGE value="Added noreturn, datesetter and datecomparison methods." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added noreturn, datesetter and datecomparison methods." />
   </component>
 </project>

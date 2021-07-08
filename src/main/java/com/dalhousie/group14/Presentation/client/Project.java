@@ -4,6 +4,7 @@ import com.dalhousie.group14.BusinessLogic.client.ProjectDefinition;
 import com.dalhousie.group14.BusinessLogic.client.ProjectValidation;
 import com.dalhousie.group14.Database.client.ProjectDatabaseInteraction;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -62,6 +63,7 @@ public class Project {
             }
         }
         return true;
-
     }
+
+
 }

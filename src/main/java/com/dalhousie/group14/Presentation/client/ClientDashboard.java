@@ -1,9 +1,11 @@
 package com.dalhousie.group14.Presentation.client;
 import com.dalhousie.group14.BusinessLogic.client.ClientDashboardValidation;
+import com.dalhousie.group14.BusinessLogic.client.ClientValidation;
+
 import java.util.Scanner;
 
-public class ClientDashboard {
-    private void clientscreen() {
+public class ClientDashboard implements NormalClient {
+    public void clientscreen() {
         ClientDashboardValidation clientDashboardValidation = new ClientDashboardValidation();
         Project project  = new Project();
         boolean correctoption = false;
@@ -15,11 +17,11 @@ public class ClientDashboard {
         System.out.println("3. Provide project feedback.");
         System.out.print("Provide your input here : ");
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < tries; i++) {
             try {
                 Scanner s = new Scanner(System.in);
                 optionchosen = s.nextInt();
-                correctoption = clientDashboardValidation.clientinput(optionchosen);
+                correctoption = clientDashboardValidation.clientinput(optionchosen, ClientValidation.low_range,ClientValidation.high_range);
             } catch (Exception e) {
                 if (i < 2) {
                     System.out.print("Incorrect Input, Enter your input again : ");
