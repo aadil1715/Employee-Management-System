@@ -33,7 +33,6 @@ public class ClientDashboard {
                 project.defineproject();
             }else{
                 if(optionchosen == 2 ){
-
                 }
             }
         }

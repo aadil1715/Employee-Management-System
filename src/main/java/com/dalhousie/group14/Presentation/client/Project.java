@@ -26,6 +26,10 @@ public class Project {
                 }
             }
         }
+        System.out.println();
+        done = false;
+        System.out.println("Now, you will need to enter the programming languages for the project.");
+        System.out.println("Enter 'DONE' when you have finished entering the languages.");
 
         return true;
 
