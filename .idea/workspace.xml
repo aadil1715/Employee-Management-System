@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd55d881-a87e-4354-bdbc-4bafda7af9ea" name="Default Changelist" comment="Added Interfaces related to the classes to ensure Solid Principles are being followed.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/Common/UserInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/EvaluatorInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/PerformanceEvaluatorScreen.java" afterDir="false" />
+    <list default="true" id="fd55d881-a87e-4354-bdbc-4bafda7af9ea" name="Default Changelist" comment="Defined PerformanceEvaluatorScreen Class.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/manager/EvaluatorProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/manager/PerformanceEvaluator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/manager/PerformanceEvaluatorDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/group-14.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/group-14.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Client.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -53,13 +53,15 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -68,12 +70,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="98510d03-2851-4869-a0ae-8263b7d693ba" name="Default Changelist" comment="" />
+      <changelist id="fd55d881-a87e-4354-bdbc-4bafda7af9ea" name="Default Changelist" comment="Defined PerformanceEvaluatorScreen Class." />
       <created>1623866301513</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1623866301513</updated>
       <workItem from="1623866337051" duration="2740000" />
+      <workItem from="1625777110977" duration="3260000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Setup Commit">
       <created>1623867197649</created>
@@ -117,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625770481755</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Defined PerformanceEvaluatorScreen Class.">
+      <created>1625772712574</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1625772712574</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +152,7 @@
     <MESSAGE value="Added isStringvalid Method." />
     <MESSAGE value="Added noreturn, datesetter and datecomparison methods." />
     <MESSAGE value="Added Interfaces related to the classes to ensure Solid Principles are being followed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Interfaces related to the classes to ensure Solid Principles are being followed." />
+    <MESSAGE value="Defined PerformanceEvaluatorScreen Class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Defined PerformanceEvaluatorScreen Class." />
   </component>
 </project>
