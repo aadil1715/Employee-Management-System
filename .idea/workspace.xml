@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd55d881-a87e-4354-bdbc-4bafda7af9ea" name="Default Changelist" comment="Added noreturn, datesetter and datecomparison methods.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/client/ClientValidation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/client/Define.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/client/NormalClient.java" afterDir="false" />
+    <list default="true" id="fd55d881-a87e-4354-bdbc-4bafda7af9ea" name="Default Changelist" comment="Added Interfaces related to the classes to ensure Solid Principles are being followed.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/Common/UserInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/EvaluatorInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/PerformanceEvaluatorScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/client/ClientDashboardValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/client/ClientDashboardValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/client/ProjectDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/client/ProjectDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/client/ClientDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/client/ClientDashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/client/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/client/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Client.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -113,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625750743944</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added Interfaces related to the classes to ensure Solid Principles are being followed.">
+      <created>1625770481755</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1625770481755</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +141,7 @@
     <MESSAGE value="Defined Project Definition, Project Validation and Project Database Interaction Classes." />
     <MESSAGE value="Added isStringvalid Method." />
     <MESSAGE value="Added noreturn, datesetter and datecomparison methods." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added noreturn, datesetter and datecomparison methods." />
+    <MESSAGE value="Added Interfaces related to the classes to ensure Solid Principles are being followed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Interfaces related to the classes to ensure Solid Principles are being followed." />
   </component>
 </project>

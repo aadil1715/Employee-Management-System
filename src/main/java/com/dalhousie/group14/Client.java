@@ -6,11 +6,6 @@ import java.util.regex.Pattern;
 
 public class Client {
 
-    public static void main(String[] args) {
-        Client obj = new Client();
-        obj.clientscreen();
-
-    }
 
 
     private void clientscreen() {
