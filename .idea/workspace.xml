@@ -4,29 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="98510d03-2851-4869-a0ae-8263b7d693ba" name="Default Changelist" comment="Basic Setup Commit" />
-=======
-<<<<<<< HEAD
-    <list default="true" id="7076c9ff-4b75-414f-88d6-d9af7f0edca7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-=======
-    <list default="true" id="98510d03-2851-4869-a0ae-8263b7d693ba" name="Default Changelist" comment="Basic Setup Commit">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
->>>>>>> 692641c9e5164c3bc9b3c7f571a130c26de209f2
+    <list default="true" id="98510d03-2851-4869-a0ae-8263b7d693ba" name="Default Changelist" comment="Updated gitignore">
+      <change beforePath="$PROJECT_DIR$/.idea/group-14.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/group-14.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22-06-2021_14_00_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22-06-2021_14_00__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
->>>>>>> origin/develop
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-<<<<<<< HEAD
-  <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-=======
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -37,18 +26,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
->>>>>>> 692641c9e5164c3bc9b3c7f571a130c26de209f2
+        <entry key="$PROJECT_DIR$" value="aadil" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-<<<<<<< HEAD
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="TaskManager">
-    <servers />
-  </component>
-=======
   <component name="ProjectId" id="1u2akOH3r2IguoVWpSeVn0w6R9a" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -56,36 +38,18 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="14" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.ignored.files" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.dalhousie.group14.BusinessLogic.employee" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -96,9 +60,6 @@
       <option name="presentableId" value="Default" />
       <updated>1623866301513</updated>
       <workItem from="1623866337051" duration="2740000" />
-      <workItem from="1624615307188" duration="180000" />
-      <workItem from="1625678098808" duration="1198000" />
-      <workItem from="1625679322704" duration="780000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Setup Commit">
       <created>1623867197649</created>
@@ -113,7 +74,6 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
->>>>>>> 692641c9e5164c3bc9b3c7f571a130c26de209f2
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -124,17 +84,10 @@
         </entry>
       </map>
     </option>
-<<<<<<< HEAD
     <option name="oldMeFiltersMigrated" value="true" />
-=======
-<<<<<<< HEAD
-    <option name="oldMeFiltersMigrated" value="true" />
-=======
->>>>>>> origin/develop
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basic Setup Commit" />
     <option name="LAST_COMMIT_MESSAGE" value="Basic Setup Commit" />
->>>>>>> 692641c9e5164c3bc9b3c7f571a130c26de209f2
   </component>
 </project>
