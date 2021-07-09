@@ -20,5 +20,18 @@ public class QueryExecutor {
         }
         return null;
     }
+
+    public static void writeData(String query){
+        ResultSet resultSet =  null;
+        try {
+            PreparedStatement preparedStatement  = DbConnection.connectDB().prepareStatement(query);
+            if(preparedStatement!=null){
+                preparedStatement.executeUpdate(query);
+
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
     }
 

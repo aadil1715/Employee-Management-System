@@ -13,9 +13,9 @@ import java.util.List;
 import java.util.Map;
 
 public class ProjectPerformanceEvaluator implements ProjPerformanceProperties {
-    public List<Map.Entry<String, Float>> evalProjPerformanceAll() {
+    public Map<String, Float> evalProjPerformanceAll() {
         ResultSet resultSet = EmployeeProjectPerformance.projectperformanceall();
-        HashMap<String, Float> projperformance = new HashMap<>();
+        Map<String, Float> projperformance = new HashMap<>();
         if (resultSet != null) {
             while (true) {
                 try {
@@ -30,7 +30,7 @@ public class ProjectPerformanceEvaluator implements ProjPerformanceProperties {
                 }
             }
         }
-        return EvaluatorComparator.entriesSortedByValues(projperformance);
+        return projperformance;
     }
 
     private float ProjEvaluator(String username, String projects_list) {

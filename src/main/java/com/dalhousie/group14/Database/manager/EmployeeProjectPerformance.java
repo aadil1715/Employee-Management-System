@@ -24,4 +24,9 @@ public class EmployeeProjectPerformance {
         ResultSet resultSet= QueryExecutor.readData(query);
         return  resultSet;
     }
+
+    public static void EmployeeofMonth(String username, Float rating){
+        String query = "";
+        QueryExecutor.writeData(query);
+    }
 }

@@ -40,8 +40,7 @@ public class PerformanceEvaluatorScreen implements EvaluatorInterface {
                     if(Validations.isStringvalid(username)){
                         done = true;
                         SessionEvaluator obj = new SessionEvaluator();
-                        String employee_performance = obj.evaluateEmployeeSession(username);
-                        System.out.println(employee_performance);
+
 
                     }else{
                         System.out.println("Incorrect Input Format, Please enter correctly.");

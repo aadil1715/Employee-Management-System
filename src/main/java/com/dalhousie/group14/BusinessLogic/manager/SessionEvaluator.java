@@ -9,13 +9,13 @@ import java.util.*;
 public class SessionEvaluator implements SessionEvaluatorProperties {
 
 
-    public List<Map.Entry<String, Float>> evaluateAllSessions() {
+    public Map<String, Float> evaluateAllSessions() {
         Map<String, ArrayList<String>> employeesessions = new HashMap<>();
         Map<String, Float> emp_discipline_rating = new HashMap<>();
         ResultSet resultset = EmployeeSessions.getEmployeeSessions();
         employeesessions = sessionadder(resultset,employeesessions);
         emp_discipline_rating = sessionanalysis(employeesessions,emp_discipline_rating);
-        return  EvaluatorComparator.entriesSortedByValues(emp_discipline_rating);
+        return  emp_discipline_rating;
 
     }
     private Map<String, ArrayList<String>> sessionadder(ResultSet resultset,  Map<String, ArrayList<String>> employeesessions){
@@ -37,35 +37,43 @@ public class SessionEvaluator implements SessionEvaluatorProperties {
         return employeesessions;
     }
 
-    public String evaluateEmployeeSession(String userName){
+    public Float evaluateEmployeeSession(String userName){
         Map<String, ArrayList<String>> employeesessions = new HashMap<>();
         Map<String, Float> emp_discipline_rating = new HashMap<>();
         ResultSet resultset = EmployeeSessions.getEmployeeSession(userName);
         employeesessions = sessionadder(resultset,employeesessions);
         emp_discipline_rating = sessionanalysis(employeesessions,emp_discipline_rating);
-        String display = userName + " - "+ emp_discipline_rating.get(userName);
-        return display;
+        float session_rating = emp_discipline_rating.get(userName);
+        return session_rating;
     }
 
-    public void topEmployees(){
+    public String topEmployees(){
         List<Map.Entry<String, Float>> emp_discipline_rating = new ArrayList<>();
-        emp_discipline_rating = evaluateAllSessions();
+        Map<String,Float> topemployees = evaluateAllSessions();
+        emp_discipline_rating = EvaluatorComparator.entriesSortedByValues(topemployees);
+        String display = "";
         for(int i =0 ; i<employeeshow ; i++ ){
             Map.Entry<String, Float> empdetails = emp_discipline_rating.get(0);
             String username = empdetails.getKey();
             Float discipline_rating = empdetails.getValue();
+            display = display + username + " - " + discipline_rating  + "\n";
         }
+        return display;
 
     }
 
-    public void bottomEmployees(){
+    public String bottomEmployees(){
         List<Map.Entry<String, Float>> emp_discipline_rating = new ArrayList<>();
-        emp_discipline_rating = evaluateAllSessions();
+        Map<String,Float> bottomemployees = evaluateAllSessions();
+        String display = "";
+        emp_discipline_rating = EvaluatorComparator.entriesSortedByValues(bottomemployees);
         for(int i = 1 ; i<=employeeshow ; i++ ){
             Map.Entry<String, Float> empdetails = emp_discipline_rating.get(emp_discipline_rating.size()-i);
             String username = empdetails.getKey();
             Float discipline_rating = empdetails.getValue();
+            display = display + username + " - " + discipline_rating  + "\n";
         }
+        return display;
 
     }
 
