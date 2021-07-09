@@ -5,7 +5,8 @@ before_script:
   - mkdir -p ~/.ssh
   - chmod 700 ~/.ssh
   - echo "$DEPLOY_SSH_KEY"
-  - echo "$DEPLOY_SSH_KEY" | tr -d '\r' >> ~/.ssh/id_rsa
+  - cat $DEPLOY_SSH_KEY
+  - cat $DEPLOY_SSH_KEY | tr -d '\r' >> ~/.ssh/id_rsa
 
 stages:
 # These are the three states we want, building the app, testing it by
@@ -45,7 +46,7 @@ deployStage:
       - group14/target
   script:
     
-    - ssh -i ${DEPLOY_SSH_KEY} -o StrictHostKeyChecking=no ${DEPLOY_USER}@${DEPLOY_HOST} "mkdir ${DEPLOY_DIR}/${CI_COMMIT_REF_NAME}_${CI_COMMIT_SHORT_SHA}"
+    - ssh -o StrictHostKeyChecking=no ${DEPLOY_USER}@${DEPLOY_HOST} "mkdir ${DEPLOY_DIR}/${CI_COMMIT_REF_NAME}_${CI_COMMIT_SHORT_SHA}"
 
   environment:
     name: Production
