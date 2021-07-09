@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd55d881-a87e-4354-bdbc-4bafda7af9ea" name="Default Changelist" comment="Defined PerformanceEvaluatorScreen Class.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/manager/EvaluatorProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/manager/PerformanceEvaluator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/manager/PerformanceEvaluatorDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/group-14.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/group-14.iml" afterDir="false" />
+    <list default="true" id="fd55d881-a87e-4354-bdbc-4bafda7af9ea" name="Default Changelist" comment="Defined and implemented some functionality of PerformanceEvaluator">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/manager/PerformanceEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/manager/PerformanceEvaluator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,21 +49,6 @@
       <recent name="H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -76,7 +58,8 @@
       <option name="presentableId" value="Default" />
       <updated>1623866301513</updated>
       <workItem from="1623866337051" duration="2740000" />
-      <workItem from="1625777110977" duration="3260000" />
+      <workItem from="1625777110977" duration="3327000" />
+      <workItem from="1625807494746" duration="972000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Setup Commit">
       <created>1623867197649</created>
@@ -127,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625772712574</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Defined and implemented some functionality of PerformanceEvaluator">
+      <created>1625781582743</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1625781582743</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +143,7 @@
     <MESSAGE value="Added noreturn, datesetter and datecomparison methods." />
     <MESSAGE value="Added Interfaces related to the classes to ensure Solid Principles are being followed." />
     <MESSAGE value="Defined PerformanceEvaluatorScreen Class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Defined PerformanceEvaluatorScreen Class." />
+    <MESSAGE value="Defined and implemented some functionality of PerformanceEvaluator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Defined and implemented some functionality of PerformanceEvaluator" />
   </component>
 </project>
