@@ -33,7 +33,7 @@ build:
     - mvn clean install
   artifacts:
     paths:
-      - group14/target
+      - group-14/target
   tags:
     - ugrad
 
@@ -52,7 +52,7 @@ deployStage:
     - ugrad
   artifacts:
     paths:
-      - group14/target
+      - group-14/target
   script:
     
     - ssh -o StrictHostKeyChecking=no ${DEPLOY_USER}@${DEPLOY_HOST} "mkdir ${DEPLOY_DIR}/${CI_COMMIT_REF_NAME}_${CI_COMMIT_SHORT_SHA}"
