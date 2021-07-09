@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd55d881-a87e-4354-bdbc-4bafda7af9ea" name="Default Changelist" comment="Implemented the Session History Evaluation and Project Performance Evaluation Features.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/manager/EmpEvaluation.java" afterDir="false" />
+    <list default="true" id="fd55d881-a87e-4354-bdbc-4bafda7af9ea" name="Default Changelist" comment="Implemented the Employee Performance Analysis Functionality.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/manager/ProjectPerformanceEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/manager/ProjectPerformanceEvaluator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/manager/SessionEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/manager/SessionEvaluator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/manager/EmpEvaluation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/manager/EmpEvaluation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/manager/EmployeeProjectPerformance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/manager/EmployeeProjectPerformance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/utilities/QueryExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/utilities/QueryExecutor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/PerformanceEvaluatorScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/PerformanceEvaluatorScreen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +109,7 @@
       <updated>1623866301513</updated>
       <workItem from="1623866337051" duration="2740000" />
       <workItem from="1625777110977" duration="3327000" />
-      <workItem from="1625807494746" duration="24308000" />
+      <workItem from="1625807494746" duration="26031000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Setup Commit">
       <created>1623867197649</created>
@@ -198,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625831308041</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Implemented the Employee Performance Analysis Functionality.">
+      <created>1625859522480</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1625859522480</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +232,7 @@
     <MESSAGE value="Code Formatting Corrected." />
     <MESSAGE value="Created DB Interaction Classes and Refactored Code to adhere to Solid Principles." />
     <MESSAGE value="Implemented the Session History Evaluation and Project Performance Evaluation Features." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented the Session History Evaluation and Project Performance Evaluation Features." />
+    <MESSAGE value="Implemented the Employee Performance Analysis Functionality." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented the Employee Performance Analysis Functionality." />
   </component>
 </project>

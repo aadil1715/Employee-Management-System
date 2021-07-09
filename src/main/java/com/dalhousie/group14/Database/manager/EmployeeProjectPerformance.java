@@ -29,4 +29,10 @@ public class EmployeeProjectPerformance {
         String query = "";
         QueryExecutor.writeData(query);
     }
+
+    public static ResultSet DisplayEoM(){
+        String query = "";
+        ResultSet resultSet = QueryExecutor.readData(query);
+        return resultSet;
+    }
 }

@@ -2,6 +2,8 @@ package com.dalhousie.group14.BusinessLogic.manager;
 
 import com.dalhousie.group14.Database.manager.EmployeeProjectPerformance;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -53,6 +55,22 @@ public class EmpEvaluation {
     public String leastDisciplined(){
         SessionEvaluator obj = new SessionEvaluator();
         return obj.bottomEmployees();
+    }
+
+    public String EoM(){
+        ResultSet resultSet = EmployeeProjectPerformance.DisplayEoM();
+        String display = "";
+        try {
+            if(resultSet.isBeforeFirst()){
+                resultSet.next();
+                String username = resultSet.getString("userName");
+                String rating = resultSet.getString("Rating");
+                display = username + "                 "+ rating;
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return display;
     }
 
 }
