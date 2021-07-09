@@ -1,4 +1,5 @@
-image:alpine
+image: alpine:latest
+
 before_script:
   - mkdir -p ~/.ssh
   - echo "$DEPLOY_SSH_KEY" | tr -d '\r' > ~/.ssh/id_rsa
