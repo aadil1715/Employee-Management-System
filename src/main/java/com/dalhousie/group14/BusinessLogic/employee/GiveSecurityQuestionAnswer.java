@@ -12,11 +12,11 @@ interface  GiveSecurityQuestionAnswers{
     int max = 3;
     int min = 1;
     Random random = new Random();
-
 }
 public class GiveSecurityQuestionAnswer implements GiveSecurityQuestionAnswers{
     
     public static void giveSecurityQuestionAnswer(String username) {
+
 
         Scanner scanner = new Scanner(System.in);
         HashMap<Integer, String> hashMap = new HashMap<>();
