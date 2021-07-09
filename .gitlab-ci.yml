@@ -1,40 +1,63 @@
-build:
+variables:
+  # This is a place for you to define variables you can use
+  # later in the script by referring to the variable like so:
+  #   ${EXAMPLE_VARIABLE}
+  EXAMPLE_VARIABLE: "Example"
+  
+
+image: maven:3.3.9-jdk-8
+
+before_script:
+  # Do anything you have to do before your stages below here.
+  # For example, do you need to change permissions on a build folder
+  # or modify a file to insert a variable from your CI config here?
+  
+  - which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )  
+  - eval $(ssh-agent -s)
+  - echo "$DEPLOY_SSH_KEY" | tr -d '\r' | ssh-add -
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
+
+stages:
+# These are the three states we want, building the app, testing it by
+# executing unit tests and checking the results, and finally if this
+  - build
+  # You will need to define this stage somewhere below.
+  - test
+  # I will provide this example for you below.
+  - deploy
+
+buildStep:
   image: maven:3.3.9-jdk-8
   stage: build
   tags:
     - ugrad
   artifacts:
     paths:
-    - group14/target
+    - /target
   script:
     mvn clean install
-    #mvn clean compile
 
-test:
+testStep:
   image: maven:3.3.9-jdk-8
   stage: test
-  script:
-    - mvn clean test
   tags:
     - ugrad
+  artifacts:
+    when: always
+    reports:
+      junit:
+        - /target/surefire-reports/TEST-*.xml
+  script:
+    mvn verify
 
-
-deployStage:
+deployStep:
   stage: deploy
   tags:
     - ugrad
   artifacts:
     paths:
-      - group14/target
+      # Change this directory to the path that contains your built executable
+      - /target
   script:
-    - chmod -R 777 ./
-    - chmod og-rwx ${DEPLOY_SSH_KEY}
-   ## - cat /home/gitlab-runner/.ssh/id_rsa
-   ## - scp -r -o StrictHostKeyChecking=no -i "${DEPLOY_SSH_KEY}" ${EXECUTABLE_TO_DEPLOY} "${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_DIR}/"
-   ## - ssh -i /users/grad/ashaikh/.ssh/gitlab-ci-delivery -o StrictHostKeyChecking=no ${DEPLOY_USER}@${DEPLOY_HOST} "mkdir ${DEPLOY_DIR}/${CI_COMMIT_REF_NAME}_${CI_COMMIT_SHORT_SHA}"
-    - scp -r -o StrictHostKeyChecking=no group14/target/EMS-1.0-SNAPSHOT.jar "${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_DIR}/"
-  environment:
-    name: Production
-  only:
-    - master
-  
+    - scp -r -o StrictHostKeyChecking=no /home/gitlab-runner/.m2/repository/com/dalhousie/group14/0.0.1-SNAPSHOT/EMS-1.0-SNAPSHOT.jar "${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_DIR}/"
