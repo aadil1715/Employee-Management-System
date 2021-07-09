@@ -1,6 +1,6 @@
 package com.dalhousie.group14.Presentation.manager;
 
-import com.dalhousie.group14.BusinessLogic.manager.PerformanceEvaluator;
+import com.dalhousie.group14.BusinessLogic.manager.SessionEvaluator;
 import com.dalhousie.group14.BusinessLogic.utilities.Validations;
 import com.dalhousie.group14.Presentation.Common.UserInput;
 
@@ -39,8 +39,8 @@ public class PerformanceEvaluatorScreen implements EvaluatorInterface {
                     String username = UserInput.takeString();
                     if(Validations.isStringvalid(username)){
                         done = true;
-                        PerformanceEvaluator obj = new PerformanceEvaluator();
-                        String employee_performance = obj.evaluateEmployee(username);
+                        SessionEvaluator obj = new SessionEvaluator();
+                        String employee_performance = obj.evaluateEmployeeSession(username);
                         System.out.println(employee_performance);
 
                     }else{

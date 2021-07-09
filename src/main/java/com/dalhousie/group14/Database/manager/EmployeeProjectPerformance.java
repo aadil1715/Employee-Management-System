@@ -18,4 +18,10 @@ public class EmployeeProjectPerformance {
         resultSet = QueryExecutor.readData(query);
         return resultSet;
     }
+
+    public static ResultSet EmpProjectMilestones(String project_id){
+        String query = "";
+        ResultSet resultSet= QueryExecutor.readData(query);
+        return  resultSet;
+    }
 }
