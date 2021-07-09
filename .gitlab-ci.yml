@@ -41,7 +41,7 @@ test:
   image: maven:latest
   stage: test
   script:
-    - mvn clean test
+    - mvn test
   tags:
     - ugrad
 
