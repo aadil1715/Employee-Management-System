@@ -22,7 +22,6 @@ public class GetSecurityQuestion {
         ResultSet rs;
         {
             try {
-
                 connectDB();
                 stmt = connection.createStatement();
                 rs = stmt.executeQuery(query);
