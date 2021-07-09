@@ -1,6 +1,6 @@
 package com.dalhousie.group14.BusinessLogic.manager;
 
-import com.dalhousie.group14.Database.manager.PerformanceEvaluatorDB;
+import com.dalhousie.group14.Database.manager.EmployeeSessions;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -14,14 +14,16 @@ public class PerformanceEvaluator implements EvaluatorProperties {
     Map<String, Float> emp_discipline_rating = new HashMap<>();
 
     public void evaluateAll() {
-        ResultSet resultset = PerformanceEvaluatorDB.getEmployeeSessions();
+        ResultSet resultset = EmployeeSessions.getEmployeeSessions();
         if (resultset != null) {
             while (true) {
                 try {
                     if (!resultset.next()) {
                         break;
                     }
-                    sessionmanager(resultset.getString("userName"), resultset.getString("minutes"));
+                    String username = resultset.getString("userName");
+                    String session_time = resultset.getString("minutes");
+                    sessionmanager(username,session_time);
 
                 } catch (SQLException throwables) {
                     throwables.printStackTrace();
@@ -29,6 +31,22 @@ public class PerformanceEvaluator implements EvaluatorProperties {
             }
         }
         sessionanalysis();
+
+
+
+
+    }
+
+    public String evaluateEmployee(String userName){
+        return "ok";
+
+    }
+
+    public void topEmployees(){
+
+    }
+
+    public void bottomEmployees(){
 
     }
 

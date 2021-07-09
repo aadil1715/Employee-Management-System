@@ -1,8 +1,9 @@
 package com.dalhousie.group14.Presentation.manager;
 
+import com.dalhousie.group14.BusinessLogic.manager.PerformanceEvaluator;
+import com.dalhousie.group14.BusinessLogic.utilities.Validations;
 import com.dalhousie.group14.Presentation.Common.UserInput;
 
-import java.text.ParseException;
 
 public class PerformanceEvaluatorScreen implements EvaluatorInterface {
 
@@ -13,7 +14,7 @@ public class PerformanceEvaluatorScreen implements EvaluatorInterface {
         System.out.println("1. Show Performance Evaluation of All Employees.");
         System.out.println("2. Display Performance Evaluation of A Specific Employee.");
         System.out.println("3. Show the Best Performing Employees.");
-        System.out.println("4. Show the Worst Performing Employees");
+        System.out.println("4. Show the Worst Performing Employees.");
         System.out.println("5. Current Employee of the Month.");
         System.out.println("6. To go back to the previous screen. ");
         try{
@@ -28,20 +29,33 @@ public class PerformanceEvaluatorScreen implements EvaluatorInterface {
             System.out.println("You can only enter an integer value");
         }
 
+        boolean done = false;
+        while(!done){
+            if(correctinput){
+                if(userinput == 1){
 
-        if(correctinput){
-            if(userinput == 1){
+                }else if(userinput == 2){
+                    System.out.println("Enter the employee userName");
+                    String username = UserInput.takeString();
+                    if(Validations.isStringvalid(username)){
+                        done = true;
+                        PerformanceEvaluator obj = new PerformanceEvaluator();
+                        String employee_performance = obj.evaluateEmployee(username);
+                        System.out.println(employee_performance);
 
-            }else if(userinput == 2){
+                    }else{
+                        System.out.println("Incorrect Input Format, Please enter correctly.");
+                    }
 
-            }else if(userinput == 3){
+                }else if(userinput == 3){
 
-            }else if(userinput == 4){
+                }else if(userinput == 4){
 
-            }else if(userinput == 5){
+                }else if(userinput == 5){
 
-            }else if(userinput == 6){
+                }else if(userinput == 6){
 
+                }
             }
         }
 
