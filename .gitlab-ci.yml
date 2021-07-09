@@ -6,7 +6,8 @@ before_script:
   - chmod 700 ~/.ssh
   - echo "$DEPLOY_SSH_KEY"
   - cat $DEPLOY_SSH_KEY
-  - cat $DEPLOY_SSH_KEY | tr -d '\r' >> ~/.ssh/id_rsa
+  - cat $DEPLOY_SSH_KEY | tr -d '\r' >> ~/.ssh/gitlab-ci-delivery
+  - cat ~/.ssh/gitlab-ci-delivery
 
 stages:
 # These are the three states we want, building the app, testing it by
@@ -46,7 +47,7 @@ deployStage:
       - group14/target
   script:
     
-    - ssh -o StrictHostKeyChecking=no ${DEPLOY_USER}@${DEPLOY_HOST} "mkdir ${DEPLOY_DIR}/${CI_COMMIT_REF_NAME}_${CI_COMMIT_SHORT_SHA}"
+    - ssh -i ~/.ssh/gitlab-ci-delivery -o StrictHostKeyChecking=no ${DEPLOY_USER}@${DEPLOY_HOST} "mkdir ${DEPLOY_DIR}/${CI_COMMIT_REF_NAME}_${CI_COMMIT_SHORT_SHA}"
 
   environment:
     name: Production
