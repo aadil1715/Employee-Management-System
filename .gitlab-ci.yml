@@ -1,3 +1,15 @@
+
+variables:
+  EXAMPLE_VARIABLE: "Example"
+
+image: maven:3.3.9-jdk-8
+
+before_script:
+  - which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
+  - eval $(ssh-agent -s)
+  - echo "$DEPLOY_SSH_KEY" | tr -d '\r'  | ssh-add -
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
 image: maven:latest
 
 build:
