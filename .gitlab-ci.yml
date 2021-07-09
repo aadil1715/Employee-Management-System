@@ -6,7 +6,7 @@ before_script:
   - chmod 700 /home/gitlab-runner/.ssh
   - echo "$DEPLOY_SSH_KEY"
   - cat $DEPLOY_SSH_KEY
-  - cat $DEPLOY_SSH_KEY >> /home/gitlab-runner/.ssh/gitlab-ci-delivery
+  - cp $DEPLOY_SSH_KEY /home/gitlab-runner/.ssh/gitlab-ci-delivery
   - cat /home/gitlab-runner/.ssh/gitlab-ci-delivery
 
 stages:
