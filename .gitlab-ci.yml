@@ -1,4 +1,4 @@
-image: maven:latest
+image: node:latest
 
 before_script:
   # Do anything you have to do before your stages below here.
@@ -21,6 +21,7 @@ stages:
   - deploy
   
 build:
+  image: maven:latest
   stage: build
   script:
     - mvn clean install
@@ -31,6 +32,7 @@ build:
     - ugrad
 
 test:
+  image: maven:latest
   stage: test
   script:
     - mvn clean test
