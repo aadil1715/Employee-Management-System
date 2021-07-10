@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 
-public class login implements Login_credentials {
+public class login {
     private Enter_credentials ec=new Enter_credentials();
     private Map<String, String> credentials=new HashMap<>();
     //driver method
