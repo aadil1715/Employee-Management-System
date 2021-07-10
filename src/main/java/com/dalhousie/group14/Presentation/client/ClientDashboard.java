@@ -1,6 +1,7 @@
 package com.dalhousie.group14.Presentation.client;
 import com.dalhousie.group14.BusinessLogic.client.ClientDashboardValidation;
 import com.dalhousie.group14.BusinessLogic.client.ClientValidation;
+import com.dalhousie.group14.Client;
 
 import java.util.Scanner;
 
@@ -22,6 +23,9 @@ public class ClientDashboard implements NormalClient {
                 Scanner s = new Scanner(System.in);
                 optionchosen = s.nextInt();
                 correctoption = clientDashboardValidation.clientinput(optionchosen, ClientValidation.low_range,ClientValidation.high_range);
+                if(correctoption){
+                    break;
+                }
             } catch (Exception e) {
                     System.out.print("Incorrect Input, Enter your input again : ");
             }
@@ -31,7 +35,12 @@ public class ClientDashboard implements NormalClient {
         }
         if(correctoption){
             if(optionchosen == 1 ){
-                project.defineproject();
+               boolean response =  project.defineproject();
+                if(response){
+                    System.out.println("Your project has been successfully defined along with its milestones.");
+                }else{
+                    System.out.println("The project was not defined due to illegal operations.");
+                }
             }else{
                 if(optionchosen == 2 ){
                 }

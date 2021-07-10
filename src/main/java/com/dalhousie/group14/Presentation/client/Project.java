@@ -4,8 +4,7 @@ import com.dalhousie.group14.BusinessLogic.client.ProjectDefinition;
 import com.dalhousie.group14.BusinessLogic.utilities.Validations;
 import com.dalhousie.group14.Database.client.ProjectDatabaseInteraction;
 
-import java.util.Date;
-import java.util.Scanner;
+import java.util.*;
 
 public class Project {
 
@@ -14,12 +13,13 @@ public class Project {
         ProjectDefinition projectDefinition = new ProjectDefinition();
         Scanner s = new Scanner(System.in);
         Project projectobj = new Project();
+        String projectname = "";
         boolean done = false;
         System.out.println();
         System.out.println("Welcome to the project definition module");
         while (!done){
             System.out.print("Enter the project name : ");
-            String projectname = s.nextLine();
+            projectname = s.nextLine();
             if (Validations.isStringvalid(projectname)) {
                 if (projectDatabaseInteraction.projectexistscheck(projectname)) {
                     done = true;
@@ -31,6 +31,25 @@ public class Project {
         System.out.println();
         System.out.println("Now, you will need to enter the programming languages for the project.");
         System.out.println("Enter 'DONE' when you have finished entering the languages.");
+        int count = 1;
+        ArrayList<String> language_requirements = new ArrayList<>();
+        done = false;
+        while(!done){
+
+            System.out.print("Enter the "+ Validations.noreturn(count)+" programming language that will be used for this project : ");
+            count++;
+            String languageinput = s.next();
+            if(languageinput.equals("DONE")){
+                done = true;
+                break;
+            }
+            if(Validations.isStringvalid(languageinput)){
+                language_requirements.add(languageinput);
+            }else{
+                System.out.println("Invalid Language has been entered, please enter again, enter 'DONE' when you have finished");
+                count--;
+            }
+        }
         done = false;
         Date start_date = new Date();
         Date end_date = new Date();
@@ -60,7 +79,16 @@ public class Project {
                 }
             }
         }
-        return true;
+        if(done){
+            MilestonesDashboard obj = new MilestonesDashboard();
+            ProjectDatabaseInteraction obj2 = new ProjectDatabaseInteraction();
+            Map<Date,String> milestones = obj.definemilestonescreen(start_date,end_date);
+            if(milestones != null){
+                obj2.insertprojectDB(projectname,start_date, end_date,language_requirements,milestones);
+                return true;
+            }
+        }
+        return false;
     }
 
 
