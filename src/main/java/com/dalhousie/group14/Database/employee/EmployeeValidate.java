@@ -1,11 +1,14 @@
 package com.dalhousie.group14.Database.employee;
 
+import com.dalhousie.group14.Database.utilities.DbConnection;
+
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
 import static com.dalhousie.group14.Database.utilities.DbConnection.connectDB;
-import static com.dalhousie.group14.Database.utilities.DbConnection.connection;
+
 import static com.dalhousie.group14.Presentation.employee.EmployeeLoginDashBoard.employeeLoginDashBoard;
 
 public class EmployeeValidate {
@@ -17,7 +20,7 @@ public class EmployeeValidate {
         query = "select * from securityanswer where UserName='" + user_name + "'";
 
         try {
-            connectDB();
+            Connection connection= DbConnection.connectDB();
             statement = connection.createStatement();
             resultSet = statement.executeQuery(query);
             while (resultSet.next()) {
