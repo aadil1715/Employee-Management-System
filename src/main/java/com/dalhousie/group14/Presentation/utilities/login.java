@@ -2,11 +2,6 @@ package com.dalhousie.group14.Presentation.utilities;
 import com.dalhousie.group14.BusinessLogic.utilities.Enter_credentials;
 import com.dalhousie.group14.BusinessLogic.utilities.Password_Check;
 import com.dalhousie.group14.BusinessLogic.utilities.Username_Check;
-
-
-
-
-
 import java.io.Console;
 import java.util.HashMap;
 import java.util.Map;
@@ -14,16 +9,10 @@ import java.util.Scanner;
 
 
 
-public class login  {
+public class login implements Login_credentials {
     private Enter_credentials ec=new Enter_credentials();
     private Map<String, String> credentials=new HashMap<>();
     //driver method
-    public static void main(String[] args)
-    {
-        login l=new login();
-        l.userType();
-
-    }
 
     public void userType() {
         HashMap<String, String> userType = new HashMap<>();
