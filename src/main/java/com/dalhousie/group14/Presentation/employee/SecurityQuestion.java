@@ -1,7 +1,5 @@
 package com.dalhousie.group14.Presentation.employee;
 
-
-
 import java.util.Scanner;
 
 import static com.dalhousie.group14.BusinessLogic.employee.GiveSecurityQuestionAnswer.giveSecurityQuestionAnswer;
