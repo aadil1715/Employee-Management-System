@@ -1,1 +1,16 @@
+com\dalhousie\group14\Database\utilities\DataStorage.class
+com\dalhousie\group14\BusinessLogic\utilities\Taxes.class
+com\dalhousie\group14\Presentation\manager\SalaryOfEmployeeTest.class
+com\dalhousie\group14\BusinessLogic\utilities\TaxesIn2021.class
 com\dalhousie\group14\App.class
+com\dalhousie\group14\Presentation\employee\Salary.class
+com\dalhousie\group14\BusinessLogic\utilities\Login.class
+com\dalhousie\group14\BusinessLogic\utilities\Salaries.class
+com\dalhousie\group14\Database\utilities\MySQLDatabase.class
+com\dalhousie\group14\Presentation\manager\SalaryOfEmployee.class
+com\dalhousie\group14\BusinessLogic\client\Client.class
+com\dalhousie\group14\BusinessLogic\utilities\SalariesTest.class
+com\dalhousie\group14\Presentation\employee\SalaryTest.class
+com\dalhousie\group14\BusinessLogic\utilities\Request.class
+com\dalhousie\group14\BusinessLogic\employee\Employee.class
+com\dalhousie\group14\BusinessLogic\manager\Manager.class
