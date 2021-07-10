@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98510d03-2851-4869-a0ae-8263b7d693ba" name="Default Changelist" comment="Updated gitignore">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/utilities/Notification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/utilities/NotificationManager.java" afterDir="false" />
+    <list default="true" id="fd55d881-a87e-4354-bdbc-4bafda7af9ea" name="Default Changelist" comment="Added Database Functionality of Performance Evaluator.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/client/Milestones.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/client/MilestonesDatabaseInteraction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/client/MilestoneProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/client/MilestonesDashboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/utilities/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/utilities/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/utilities/DbConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/utilities/DbConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/utilities/Validations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/utilities/Validations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/client/ProjectDatabaseInteraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/client/ProjectDatabaseInteraction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/client/ClientDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/client/ClientDashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/client/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/client/Project.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +24,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -32,14 +36,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
   </component>
   <component name="ProjectId" id="1u2akOH3r2IguoVWpSeVn0w6R9a" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -55,23 +51,19 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="14" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.dalhousie.group14.App" />
+  <component name="RunManager" selected="Application.ClientDashboard">
+    <configuration name="ClientDashboard" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dalhousie.group14.Presentation.client.ClientDashboard" />
       <module name="group-14" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dalhousie.group14.*" />
+          <option name="PATTERN" value="com.dalhousie.group14.Presentation.client.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -79,39 +71,98 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration name="DummySessions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dalhousie.group14.virtualize.DummySessions" />
+      <module name="group-14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dalhousie.group14.virtualize.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PerformanceEvaluatorScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dalhousie.group14.Presentation.manager.PerformanceEvaluatorScreen" />
+      <module name="group-14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dalhousie.group14.Presentation.manager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EvaluatorTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="group-14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="manager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="manager" />
+      <option name="MAIN_CLASS_NAME" value="manager.EvaluatorTests" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EvaluatorTests.inputValidationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="group-14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="manager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="manager" />
+      <option name="MAIN_CLASS_NAME" value="manager.EvaluatorTests" />
+      <option name="METHOD_NAME" value="inputValidationTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
-        <item itemvalue="Application.App" />
+        <item itemvalue="Application.ClientDashboard" />
+        <item itemvalue="Application.DummySessions" />
+        <item itemvalue="JUnit.EvaluatorTests.inputValidationTest" />
+        <item itemvalue="JUnit.EvaluatorTests" />
+        <item itemvalue="Application.PerformanceEvaluatorScreen" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="98510d03-2851-4869-a0ae-8263b7d693ba" name="Default Changelist" comment="" />
+      <changelist id="fd55d881-a87e-4354-bdbc-4bafda7af9ea" name="Default Changelist" comment="Defined PerformanceEvaluatorScreen Class." />
       <created>1623866301513</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1623866301513</updated>
       <workItem from="1623866337051" duration="2740000" />
-      <workItem from="1625831703079" duration="65000" />
-      <workItem from="1625831788100" duration="189000" />
-      <workItem from="1625864343537" duration="1529000" />
-      <workItem from="1625865914870" duration="51000" />
-      <workItem from="1625865992701" duration="17000" />
-      <workItem from="1625866043666" duration="114000" />
+      <workItem from="1625777110977" duration="3327000" />
+      <workItem from="1625807494746" duration="27642000" />
+      <workItem from="1625899559746" duration="25242000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Setup Commit">
       <created>1623867197649</created>
@@ -120,7 +171,105 @@
       <option name="project" value="LOCAL" />
       <updated>1623867197649</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Defined Client Dashboard and Project Definition Class">
+      <created>1625746237805</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1625746237805</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Defined Project Definition, Project Validation and Project Database Interaction Classes.">
+      <created>1625748391990</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1625748391990</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added isStringvalid Method.">
+      <created>1625749040536</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1625749040536</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added noreturn, datesetter and datecomparison methods.">
+      <created>1625750743944</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1625750743944</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added Interfaces related to the classes to ensure Solid Principles are being followed.">
+      <created>1625770481755</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1625770481755</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Defined PerformanceEvaluatorScreen Class.">
+      <created>1625772712574</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1625772712574</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Defined and implemented some functionality of PerformanceEvaluator">
+      <created>1625781582743</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1625781582743</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Code Formatting Corrected.">
+      <created>1625808783405</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1625808783405</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Created DB Interaction Classes and Refactored Code to adhere to Solid Principles.">
+      <created>1625817215000</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1625817215000</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Implemented the Session History Evaluation and Project Performance Evaluation Features.">
+      <created>1625831090338</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1625831090338</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Implemented the Session History Evaluation and Project Performance Evaluation Features.">
+      <created>1625831308041</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1625831308041</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Implemented the Employee Performance Analysis Functionality.">
+      <created>1625859522480</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1625859522480</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Presentation Layer - Employee Evaluation Module.">
+      <created>1625861503010</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1625861503010</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Added Database Functionality of Performance Evaluator.">
+      <created>1625915469894</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1625915469894</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +289,30 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basic Setup Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic Setup Commit" />
+    <MESSAGE value="Defined Client Dashboard and Project Definition Class" />
+    <MESSAGE value="Defined Project Definition, Project Validation and Project Database Interaction Classes." />
+    <MESSAGE value="Added isStringvalid Method." />
+    <MESSAGE value="Added noreturn, datesetter and datecomparison methods." />
+    <MESSAGE value="Added Interfaces related to the classes to ensure Solid Principles are being followed." />
+    <MESSAGE value="Defined PerformanceEvaluatorScreen Class." />
+    <MESSAGE value="Defined and implemented some functionality of PerformanceEvaluator" />
+    <MESSAGE value="Code Formatting Corrected." />
+    <MESSAGE value="Created DB Interaction Classes and Refactored Code to adhere to Solid Principles." />
+    <MESSAGE value="Implemented the Session History Evaluation and Project Performance Evaluation Features." />
+    <MESSAGE value="Implemented the Employee Performance Analysis Functionality." />
+    <MESSAGE value="Presentation Layer - Employee Evaluation Module." />
+    <MESSAGE value="Added Database Functionality of Performance Evaluator." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Database Functionality of Performance Evaluator." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/client/ClientDashboard.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
