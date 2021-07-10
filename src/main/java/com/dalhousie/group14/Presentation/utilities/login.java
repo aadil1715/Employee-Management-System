@@ -1,12 +1,12 @@
 package com.dalhousie.group14.Presentation.utilities;
 import com.dalhousie.group14.BusinessLogic.utilities.Enter_credentials;
+
 import com.dalhousie.group14.BusinessLogic.utilities.Password_Check;
 import com.dalhousie.group14.BusinessLogic.utilities.Username_Check;
 import java.io.Console;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-
 
 
 public class login implements Login_credentials {
@@ -25,20 +25,20 @@ public class login implements Login_credentials {
             case 1:
                 System.out.println("You are an employee!");
                 usertype = "Employee";
-                this.login1();
-                this.login2();
+                login1();
+                login2();
                 break;
             case 2:
                 System.out.println("You are a manager!");
                 usertype = "Manager";
-                this.login1();
-                this.login2();
+                login1();
+                login2();
                 break;
             case 3:
                 System.out.println("You are a client!");
                 usertype = "Client";
-                this.login1();
-                this.login2();
+                login1();
+                login2();
                 break;
             default:
                 System.out.println("Please select another option");
