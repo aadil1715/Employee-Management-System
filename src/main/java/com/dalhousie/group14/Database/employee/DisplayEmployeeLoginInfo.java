@@ -1,11 +1,14 @@
 package com.dalhousie.group14.Database.employee;
 
+import com.dalhousie.group14.Database.utilities.DbConnection;
+
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
 import static com.dalhousie.group14.Database.utilities.DbConnection.connectDB;
-import static com.dalhousie.group14.Database.utilities.DbConnection.connection;
+
 
 public class DisplayEmployeeLoginInfo {
 
@@ -14,7 +17,7 @@ public class DisplayEmployeeLoginInfo {
         ResultSet resultSet;
         String query= "select * from LoginInfo where UserName ='"+username+"'";
         try {
-            connectDB();
+            Connection connection= DbConnection.connectDB();
             statement=connection.createStatement();
             resultSet=statement.executeQuery(query);
             while (resultSet.next()){
