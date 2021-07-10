@@ -1,18 +1,24 @@
 package com.dalhousie.group14.BusinessLogic.manager;
 
+import com.dalhousie.group14.BusinessLogic.utilities.CommonConstants;
+import com.dalhousie.group14.BusinessLogic.utilities.Validations;
 import com.dalhousie.group14.Database.manager.EmployeeSessions;
-
+import java.util.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.*;
 
-public class SessionEvaluator implements SessionEvaluatorProperties {
+
+
+public class SessionEvaluator implements SessionEvaluatorProperties, CommonConstants {
 
 
     public Map<String, Float> evaluateAllSessions() {
         Map<String, ArrayList<String>> employeesessions = new HashMap<>();
         Map<String, Float> emp_discipline_rating = new HashMap<>();
-        ResultSet resultset = EmployeeSessions.getEmployeeSessions();
+        Calendar calendar = Calendar.getInstance();
+        Date final_date = Validations.datesetter(sdf.format(calendar.getTime()));
+        ResultSet resultset = EmployeeSessions.getEmployeeSessions(final_date);
         employeesessions = sessionadder(resultset,employeesessions);
         emp_discipline_rating = sessionanalysis(employeesessions,emp_discipline_rating);
         return  emp_discipline_rating;
@@ -25,8 +31,8 @@ public class SessionEvaluator implements SessionEvaluatorProperties {
                     if (!resultset.next()) {
                         break;
                     }
-                    String username = resultset.getString("userName");
-                    String session_time = resultset.getString("minutes");
+                    String username = resultset.getString("UserName");
+                    String session_time = resultset.getString("Minutes");
                     employeesessions = sessionmanager(username,session_time, employeesessions);
 
                 } catch (SQLException throwables) {
@@ -40,7 +46,9 @@ public class SessionEvaluator implements SessionEvaluatorProperties {
     public Float evaluateEmployeeSession(String userName){
         Map<String, ArrayList<String>> employeesessions = new HashMap<>();
         Map<String, Float> emp_discipline_rating = new HashMap<>();
-        ResultSet resultset = EmployeeSessions.getEmployeeSession(userName);
+        Calendar calendar = Calendar.getInstance();
+        Date final_date = Validations.datesetter(sdf.format(calendar.getTime()));
+        ResultSet resultset = EmployeeSessions.getEmployeeSession(userName, final_date);
         employeesessions = sessionadder(resultset,employeesessions);
         emp_discipline_rating = sessionanalysis(employeesessions,emp_discipline_rating);
         float session_rating = emp_discipline_rating.get(userName);
@@ -93,7 +101,6 @@ public class SessionEvaluator implements SessionEvaluatorProperties {
             employeesessions.put(username, dailysession);
         }
         return employeesessions;
-
     }
 
     private Map<String, Float> sessionanalysis(Map<String, ArrayList<String>> employeesessions,Map<String, Float> emp_discipline_rating) {

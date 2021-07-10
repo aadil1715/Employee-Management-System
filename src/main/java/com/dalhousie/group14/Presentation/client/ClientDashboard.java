@@ -23,12 +23,11 @@ public class ClientDashboard implements NormalClient {
                 optionchosen = s.nextInt();
                 correctoption = clientDashboardValidation.clientinput(optionchosen, ClientValidation.low_range,ClientValidation.high_range);
             } catch (Exception e) {
-                if (i < 2) {
                     System.out.print("Incorrect Input, Enter your input again : ");
-                } else {
-                    System.out.println("You have used all your attempts, log back into the application.");
-                }
             }
+        }
+        if(!correctoption){
+            System.out.println("You have used all your attempts, log back into the application.");
         }
         if(correctoption){
             if(optionchosen == 1 ){

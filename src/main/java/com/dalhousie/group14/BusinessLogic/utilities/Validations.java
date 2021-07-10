@@ -1,11 +1,14 @@
 package com.dalhousie.group14.BusinessLogic.utilities;
 
+import com.dalhousie.group14.Project;
+
+import java.text.ParseException;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Validations {
+public class Validations implements CommonConstants {
     public static boolean isStringvalid(String input){
         if(input==null || input.isEmpty()){
             return false;
@@ -26,6 +29,28 @@ public class Validations {
         c.add(Calendar.DATE, days); // Adding 5 days
         Date updatedate = c.getTime();
         return updatedate;
+    }
+
+    public static Date subtractDaystoDate(Date date, int days){
+        Calendar c = Calendar.getInstance();
+        c.setTime(date);// Using today's date
+        c.add(Calendar.DATE, -days);
+        Date updatedate = c.getTime();
+        return updatedate;
+    }
+
+    public static Date datesetter(String date){
+
+        try{
+
+            return sdf.parse(date);
+
+        }catch (ParseException e){
+            System.out.println("Invalid Date format - Follow YYYY-MM-dd Format.");
+
+        }
+
+        return null;
     }
 
 }

@@ -21,7 +21,7 @@ public class ProjectPerformanceEvaluator implements ProjPerformanceProperties {
                 try {
                     if (!resultSet.next()) break;
                     String username = resultSet.getString("userName");
-                    String projects_list = resultSet.getString("Project_History");
+                    String projects_list = resultSet.getString("ProjectHistory");
                     float final_proj_rating =  ProjEvaluator(username,projects_list);
                     projperformance.put(username, final_proj_rating);
 
@@ -83,7 +83,7 @@ public class ProjectPerformanceEvaluator implements ProjPerformanceProperties {
         try {
             if(resultSet.isBeforeFirst()){
                 while (resultSet.next()){
-                    String projects_list = resultSet.getString("Project_History");
+                    String projects_list = resultSet.getString("ProjectHistory");
                     final_rating = ProjEvaluator(username,projects_list);
                 }
             }

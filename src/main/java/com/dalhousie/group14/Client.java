@@ -175,7 +175,7 @@ public class Client {
             return obj.sdf.parse(date);
 
         }catch (ParseException e){
-            System.out.println("Invalid Date format - Follow dd-MM-YYYY Format.");
+            System.out.println("Invalid Date format - Follow YYYY-MM-dd Format.");
 
         }
 
