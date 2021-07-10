@@ -24,35 +24,6 @@ public class login implements Login_credentials {
 
     }
 
-    public  void login1() {
-        Username_Check uc=new Username_Check();
-
-        HashMap<String, String> userName=new HashMap<>();
-        Scanner scanner = new Scanner(System.in);
-        Console cnsl = System.console();
-        // Take the user input for username
-        System.out.println("Enter the username");
-        String username = scanner.nextLine();
-        uc.username_Check(username);
-        userName.put("UserName",username);
-        ec.credentials(userName);
-    }
-
-    public void login2()
-    {
-        Password_Check pc=new Password_Check();
-        HashMap<String, String> passwords=new HashMap<>();
-        Scanner scanner=new Scanner(System.in);
-        // take the user input for password
-        System.out.println("Enter the password");
-        String password = scanner.nextLine();
-        System.out.println("Password is "+password);
-        pc.password_Check(password);
-
-
-        passwords.put("Password",password);
-        ec.credentials(passwords);
-    }
     public void userType() {
         HashMap<String, String> userType = new HashMap<>();
         String usertype = null;
@@ -89,4 +60,36 @@ public class login implements Login_credentials {
     }
 
 
+    @Override
+    public void login2() {
+        Password_Check pc=new Password_Check();
+        HashMap<String, String> passwords=new HashMap<>();
+        Scanner scanner=new Scanner(System.in);
+        // take the user input for password
+        System.out.println("Enter the password");
+        String password = scanner.nextLine();
+        System.out.println("Password is "+password);
+        pc.password_Check(password);
+
+
+        passwords.put("Password",password);
+        ec.credentials(passwords);
+
+    }
+
+    @Override
+    public void login1() {
+        Username_Check uc=new Username_Check();
+
+        HashMap<String, String> userName=new HashMap<>();
+        Scanner scanner = new Scanner(System.in);
+        Console cnsl = System.console();
+        // Take the user input for username
+        System.out.println("Enter the username");
+        String username = scanner.nextLine();
+        uc.username_Check(username);
+        userName.put("UserName",username);
+        ec.credentials(userName);
+
+    }
 }
