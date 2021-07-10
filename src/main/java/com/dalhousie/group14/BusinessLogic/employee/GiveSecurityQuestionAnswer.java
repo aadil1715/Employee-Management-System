@@ -11,13 +11,13 @@ import static com.dalhousie.group14.Database.employee.GetSecurityQuestion.getSec
 interface  GiveSecurityQuestionAnswers{
     int max = 3;
     int min = 1;
-    Random random = new Random();
+
 }
 public class GiveSecurityQuestionAnswer implements GiveSecurityQuestionAnswers{
     
     public static void giveSecurityQuestionAnswer(String username) {
 
-
+        Random random = new Random();
         Scanner scanner = new Scanner(System.in);
         HashMap<Integer, String> hashMap = new HashMap<>();
         ArrayList<String> arrayList;
