@@ -14,7 +14,7 @@ import java.util.Scanner;
 
 
 
-public class login implements Login_credentials {
+public class login  {
     private Enter_credentials ec=new Enter_credentials();
     private Map<String, String> credentials=new HashMap<>();
     public static void main(String[] args)
@@ -60,7 +60,7 @@ public class login implements Login_credentials {
     }
 
 
-    @Override
+
     public void login2() {
         Password_Check pc=new Password_Check();
         HashMap<String, String> passwords=new HashMap<>();
@@ -77,7 +77,7 @@ public class login implements Login_credentials {
 
     }
 
-    @Override
+
     public void login1() {
         Username_Check uc=new Username_Check();
 
