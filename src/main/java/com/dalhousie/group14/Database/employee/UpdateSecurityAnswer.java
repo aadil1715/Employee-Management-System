@@ -1,10 +1,13 @@
 package com.dalhousie.group14.Database.employee;
 
+import com.dalhousie.group14.Database.utilities.DbConnection;
+
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
 import static com.dalhousie.group14.Database.utilities.DbConnection.connectDB;
-import static com.dalhousie.group14.Database.utilities.DbConnection.connection;
+
 
 public class UpdateSecurityAnswer {
 
@@ -15,7 +18,7 @@ public class UpdateSecurityAnswer {
 
         String query="UPDATE `ems`.`securityanswer` SET `securityAnswer1` = '"+ answer1 +"' ,`securityAnswer2` = '"+ answer2 +"' ,`securityAnswer3` = '"+ answer3 +"' WHERE (`UserName` = '"+username+"')";
         try{
-            connectDB();
+            Connection connection= DbConnection.connectDB();
             statement=connection.createStatement();
             resultSet=statement.executeUpdate(query);
             if (resultSet>0){
