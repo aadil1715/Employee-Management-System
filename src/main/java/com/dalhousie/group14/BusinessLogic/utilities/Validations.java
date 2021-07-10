@@ -1,7 +1,5 @@
 package com.dalhousie.group14.BusinessLogic.utilities;
 
-import com.dalhousie.group14.Project;
-
 import java.text.ParseException;
 import java.util.Calendar;
 import java.util.Date;

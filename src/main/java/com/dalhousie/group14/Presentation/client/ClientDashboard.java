@@ -1,7 +1,6 @@
 package com.dalhousie.group14.Presentation.client;
 import com.dalhousie.group14.BusinessLogic.client.ClientDashboardValidation;
 import com.dalhousie.group14.BusinessLogic.client.ClientValidation;
-import com.dalhousie.group14.Client;
 
 import java.util.Scanner;
 
