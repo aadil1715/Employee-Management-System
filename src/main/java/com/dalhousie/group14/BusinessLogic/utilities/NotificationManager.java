@@ -25,14 +25,14 @@ public class NotificationManager {
     // Use this method to get notifications by passing an employeeID.
     public void getNotifications(String empID) throws SQLException {
         Statement statement = connection.createStatement();
-        String sql = "SELECT * from `notification` where empID ='" + empID + "'";
+        String sql = "SELECT * from `notification` where empID ='" + empID + "'AND  seen=0";
         ResultSet rs = statement.executeQuery(sql);
         Notification notification1 = new Notification();
-        rs.next();
-        if (rs != null) {
+        while (rs.next()) {
             notification1.setMsg(rs.getString("msg"));
             notification1.setPriority(rs.getString("priority"));
             notification1.setSeen(1);
+            notification1.setManagerID(rs.getString("managerID"));
             Statement statement2 = connection.createStatement();
             sql = "UPDATE `notification` set `seen` ='" + notification1.getSeen() + "'";
             statement2.executeUpdate(sql);

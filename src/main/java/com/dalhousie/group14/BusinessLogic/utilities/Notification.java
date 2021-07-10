@@ -4,6 +4,26 @@ public class Notification {
     String msg;
     int seen;
     priority p;
+    String empID;
+    String managerID;
+
+
+    public String getEmpID() {
+        return empID;
+    }
+
+    public void setEmpID(String empID) {
+        this.empID = empID;
+    }
+
+    public String getManagerID() {
+        return managerID;
+    }
+
+    public void setManagerID(String managerID) {
+        this.managerID = managerID;
+    }
+
 
     public Notification(){
 
@@ -50,6 +70,7 @@ public class Notification {
         System.out.println("There's a new notification for you!");
         System.out.println("Message: " + getMsg());
         System.out.println("Priority: " + getPriority());
+        System.out.println("From : " + getManagerID());
     }
 
     enum priority {LOW, MEDIUM, HIGH}
