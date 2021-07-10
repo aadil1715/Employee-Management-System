@@ -1,1 +1,16 @@
+com\dalhousie\group14\Presentation\utilities\loginTest.class
+com\dalhousie\group14\Presentation\manager\Approve_Requests.class
+com\dalhousie\group14\BusinessLogic\utilities\Username_Check.class
+com\dalhousie\group14\Database\utilities\Insert_credentials.class
+com\dalhousie\group14\Presentation\utilities\enter_Password.class
+com\dalhousie\group14\BusinessLogic\utilities\Enter_credentials.class
+com\dalhousie\group14\BusinessLogic\utilities\Password_CheckTest.class
+com\dalhousie\group14\Database\utilities\DbConnection.class
+com\dalhousie\group14\Presentation\utilities\enter_userType.class
+com\dalhousie\group14\BusinessLogic\utilities\Password_Check.class
 com\dalhousie\group14\App.class
+com\dalhousie\group14\Presentation\utilities\enter_username.class
+com\dalhousie\group14\Database\utilities\resign_requests.class
+com\dalhousie\group14\Presentation\utilities\Login_credentials.class
+com\dalhousie\group14\Presentation\manager\resign_requests.class
+com\dalhousie\group14\Presentation\utilities\login.class

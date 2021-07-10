@@ -23,7 +23,7 @@ public class login implements Login_credentials {
         l.userType();
 
     }
-    @Override
+
     public  void login1() {
         Username_Check uc=new Username_Check();
 
@@ -37,7 +37,7 @@ public class login implements Login_credentials {
         userName.put("UserName",username);
         ec.credentials(userName);
     }
-    @Override
+
     public void login2()
     {
         Password_Check pc=new Password_Check();
