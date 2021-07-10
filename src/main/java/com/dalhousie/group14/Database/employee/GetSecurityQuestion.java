@@ -1,6 +1,9 @@
 package com.dalhousie.group14.Database.employee;
 
 
+import com.dalhousie.group14.Database.utilities.DbConnection;
+
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -8,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import static com.dalhousie.group14.Database.utilities.DbConnection.connectDB;
-import static com.dalhousie.group14.Database.utilities.DbConnection.connection;
+
 
 public class GetSecurityQuestion {
 
@@ -22,7 +25,7 @@ public class GetSecurityQuestion {
         ResultSet rs;
         {
             try {
-                connectDB();
+                Connection connection= DbConnection.connectDB();
                 stmt = connection.createStatement();
                 rs = stmt.executeQuery(query);
                 System.out.println("Set Security Question Answer.......First Time User.............");
