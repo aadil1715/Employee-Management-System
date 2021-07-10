@@ -14,7 +14,7 @@ import java.util.Scanner;
 
 
 
-public class login {
+public class login implements Login_credentials {
     private Enter_credentials ec=new Enter_credentials();
     private Map<String, String> credentials=new HashMap<>();
     public static void main(String[] args)
@@ -23,6 +23,7 @@ public class login {
         l.userType();
 
     }
+    @Override
     public  void login1() {
         Username_Check uc=new Username_Check();
 
@@ -36,6 +37,7 @@ public class login {
         userName.put("UserName",username);
         ec.credentials(userName);
     }
+    @Override
     public void login2()
     {
         Password_Check pc=new Password_Check();
@@ -44,8 +46,9 @@ public class login {
         // take the user input for password
         System.out.println("Enter the password");
         String password = scanner.nextLine();
-        pc.password_Check(password);
         System.out.println("Password is "+password);
+        pc.password_Check(password);
+
 
         passwords.put("Password",password);
         ec.credentials(passwords);
