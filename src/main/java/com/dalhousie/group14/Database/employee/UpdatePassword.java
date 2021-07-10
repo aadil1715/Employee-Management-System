@@ -1,10 +1,11 @@
 package com.dalhousie.group14.Database.employee;
 
+import com.dalhousie.group14.Database.utilities.DbConnection;
+
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import static com.dalhousie.group14.Database.utilities.DbConnection.connectDB;
-import static com.dalhousie.group14.Database.utilities.DbConnection.connection;
 
 public class UpdatePassword {
     public static void updatePassword(String username, String password) {
@@ -12,8 +13,8 @@ public class UpdatePassword {
         int resultSet;
 
         String query = "UPDATE `ems`.`LoginInfo` SET `Password` = '" + password + "' WHERE (`UserName` = '" + username + "')";
-        try{
-            connectDB();
+        try {
+            Connection connection= DbConnection.connectDB();
             statement = connection.createStatement();
             resultSet = statement.executeUpdate(query);
             if (resultSet > 0) {
