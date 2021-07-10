@@ -1,11 +1,11 @@
 package com.dalhousie.group14.Database.employee;
 
 
+import java.sql.Connection;
 import java.sql.Statement;
 import java.util.Scanner;
 
-import static com.dalhousie.group14.Database.utilities.DbConnection.connectDB;
-import static com.dalhousie.group14.Database.utilities.DbConnection.connection;
+import com.dalhousie.group14.Database.utilities.*;
 
 public class SetSecurityQuestionFirstTime {
 
@@ -25,9 +25,12 @@ public class SetSecurityQuestionFirstTime {
         query=("insert into securityquestion (UserName,securityQuestion1,securityQuestion2,securityQuestion3)" +
                 "values('" + username + "','" + question1 + "','" + question2 + "','" + question3 + "')");
         try {
-            connectDB();
+
+            Connection connection=DbConnection.connectDB();
             statement= connection.createStatement();
+
             result=statement.executeUpdate(query);
+
             if (result > 0)
                 System.out.println("successfully inserted");
             else
