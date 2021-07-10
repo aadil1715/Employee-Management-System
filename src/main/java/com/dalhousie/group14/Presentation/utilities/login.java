@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class login {
     private Enter_credentials ec=new Enter_credentials();
     private Map<String, String> credentials=new HashMap<>();
-    //driver method
+
 
     public void userType() {
         HashMap<String, String> userType = new HashMap<>();
