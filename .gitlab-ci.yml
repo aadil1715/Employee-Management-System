@@ -47,5 +47,3 @@ deployStage:
 
   environment:
     name: Production
-  only:
-    - master
