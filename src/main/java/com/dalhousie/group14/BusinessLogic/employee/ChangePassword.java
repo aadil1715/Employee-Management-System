@@ -1,24 +1,41 @@
 package com.dalhousie.group14.BusinessLogic.employee;
 
-import java.util.Scanner;
+import com.dalhousie.group14.Database.employee.DisplayEmployeeLoginInfo;
+import com.dalhousie.group14.Database.employee.UpdatePassword;
+import com.dalhousie.group14.Presentation.employee.TakeInputsFromEmployee;
 
-import static com.dalhousie.group14.Database.employee.DisplayEmployeeLoginInfo.displayEmployeeLoginInfo;
-import static com.dalhousie.group14.Database.employee.UpdatePassword.updatePassword;
+import java.util.HashMap;
 
-public class ChangePassword {
+/* Author- Jainam Shah(B00883898)
+* This class implement the IChangePassword interface.
+* This class for update the userName and Password.
+*/
+public class ChangePassword implements IChangePassword {
 
-    public static void changePassword(){
-            String username,password;
-            Scanner scanner= new Scanner(System.in);
+  //public static void main(String[] args) {
+  UpdatePassword updatePassword = new UpdatePassword();
 
-            System.out.println("Enter your UserName");
-            username= scanner.nextLine();
+  DisplayEmployeeLoginInfo displayEmployeeLoginInfo = new
+      DisplayEmployeeLoginInfo();
 
-            System.out.println("Enter your New Password");
-            password= scanner.nextLine();
+  @Override
+  /* This method update the userName and Password.
+   */
+  public void changePassword() {
 
-            updatePassword(username,password);
-            displayEmployeeLoginInfo(username);
-        }
-    }
+    HashMap<String, String> hashMap;
+    TakeInputsFromEmployee tip = new TakeInputsFromEmployee();
+    String username;
+    String password;
+
+    hashMap = tip.getUserNamePassword();
+
+    username = hashMap.get("UserName");
+    password = hashMap.get("Password");
+
+    updatePassword.updatePassword(username, password);
+    displayEmployeeLoginInfo.displayEmployeeLoginInfo(username);
+
+  }
+}
 
