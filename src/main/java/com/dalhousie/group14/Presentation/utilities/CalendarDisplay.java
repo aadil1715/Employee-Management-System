@@ -32,6 +32,7 @@ public class CalendarDisplay implements ICalendarDisplay{
     public void display(int year) {
         for(int i=start_month;i<=total_months;i++)
         {
+            System.out.println(LocalDate.of(year,i,1).getMonth().toString());
             displayMonths(year,i);
         }
     }
