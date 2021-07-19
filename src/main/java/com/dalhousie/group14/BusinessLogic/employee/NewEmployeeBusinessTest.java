@@ -11,4 +11,12 @@ public class NewEmployeeBusinessTest {
     assertEquals(true,newEmployeeBusiness.Login("tempFakeUserName","abc"));
   }
 
+  @Test
+  public void userNameValidation(){
+    NewEmployeeBusiness newEmployeeBusiness=new NewEmployeeBusiness();
+    assertEquals(false,newEmployeeBusiness.userNameValidtion("ninads79shukla" +
+            "@gmail.com"));
+    assertEquals(true,"ninads79shukla");
+  }
+
 }
