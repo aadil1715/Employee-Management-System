@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 
 public class NewEmployeeBusinessTest {
   @Test
-  void Login(){
+  public void Login(){
     NewEmployeeBusiness newEmployeeBusiness=new NewEmployeeBusiness();
     assertEquals(true,newEmployeeBusiness.Login("tempFakeUserName","abc"));
   }
