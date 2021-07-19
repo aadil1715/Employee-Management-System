@@ -1,7 +1,6 @@
 package com.dalhousie.group14.Presentation.utilities;
 
 import java.util.Scanner;
-import static com.dalhousie.group14.BusinessLogic.utilities.Login.loginEmployee;
 
 public class Login_Presentation {
 
