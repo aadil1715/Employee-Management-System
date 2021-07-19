@@ -1,11 +1,8 @@
 package manager;
 
-import com.dalhousie.group14.BusinessLogic.manager.PendingProjects;
+import com.dalhousie.group14.BusinessLogic.manager.ProjectStatusRetrieve;
 import com.dalhousie.group14.BusinessLogic.manager.ProjectAssigner;
-import com.dalhousie.group14.Database.manager.ProjectStatus;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.DisplayName;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -18,13 +15,13 @@ public class ProjectTests {
 
   @Test
   public void projectStatusCheck(){
-    assertEquals(true,ProjectStatus.checkStatus("Initiation"));
+    assertEquals(true, com.dalhousie.group14.Database.manager.ProjectStatus.checkStatus("Initiation"));
   }
 
   @Test
   public void projectUnassignedTest(){
-    ResultSet resultSet = ProjectStatus.checkStatus("Initiation");
-    List<String> pendingprojects = PendingProjects.unassignedProjects(resultSet);
+    ResultSet resultSet = com.dalhousie.group14.Database.manager.ProjectStatus.checkStatus("Initiation");
+    List<String> pendingprojects = ProjectStatusRetrieve.projectList(resultSet);
     List<String> pendingprojects_test = new ArrayList<>();
 
     pendingprojects.add("2 Student Management System Java Python HTML 2021-06-26 2021-12-26 Initiation");
@@ -37,7 +34,7 @@ public class ProjectTests {
   @Test
   public void projectssignedTest() {
     ProjectAssigner obj = new ProjectAssigner();
-    assertEquals(true,obj.assignproject(1));
+    assertEquals(true,obj.assignproject(""));
   }
 
 }

@@ -5,9 +5,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PendingProjects {
-  public static List<String> unassignedProjects(ResultSet resultSet){
-    List<String> pendingprojects = new ArrayList<>();
+public class ProjectStatusRetrieve {
+  public static List<String> projectList(ResultSet resultSet){
+    List<String> projects = new ArrayList<>();
     int Sno = 1;
     try{
       while (resultSet.next()){
@@ -21,13 +21,13 @@ public class PendingProjects {
             + ProjectLanguages + " " + ProjectStartDate + " " + ProjectEndDate
               + " " + ProjectStatus;
 
-        pendingprojects.add(proj);
+        projects.add(proj);
         Sno++;
       }
     }catch (SQLException throwables){
       return null;
     }
 
-    return pendingprojects;
+    return projects;
   }
 }

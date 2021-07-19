@@ -64,4 +64,23 @@ public class Validations implements CommonConstants {
         }
     }
 
+    public static boolean intVerifier(int lRange, int hRange, int input){
+        try{
+            if(input>=lRange && input<=hRange){
+                return true;
+            }
+
+        }catch (NumberFormatException n){
+            return false;
+        }
+        return false;
+    }
+
+    public static boolean limitCheck(int tries){
+        if(tries>maxtries){
+            return true;
+        }
+        return false;
+    }
+
 }

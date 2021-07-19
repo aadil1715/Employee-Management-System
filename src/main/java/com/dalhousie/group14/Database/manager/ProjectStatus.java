@@ -11,7 +11,15 @@ public class ProjectStatus {
     if (resultSet == null){
       return null;
     }
+    return resultSet;
+  }
 
+  public static ResultSet availableEmployees(){
+    String query = "Select * from Project where Assigned='" + false + "';";
+    ResultSet resultSet = QueryExecutor.readData(query);
+    if (resultSet == null){
+      return null;
+    }
     return resultSet;
   }
 }
