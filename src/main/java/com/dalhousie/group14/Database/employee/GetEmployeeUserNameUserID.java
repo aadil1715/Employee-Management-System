@@ -20,7 +20,6 @@ public class GetEmployeeUserNameUserID implements IGetEmployeeUserNameUserID {
    */
   public int getEmployeeUserIDFromUserName(String userName) {
 
-    System.out.println(userName);
     Statement statement;
     ResultSet rs;
     int userID = 0;
@@ -33,7 +32,7 @@ public class GetEmployeeUserNameUserID implements IGetEmployeeUserNameUserID {
       rs = statement.executeQuery(query);
       while (rs.next()) {
         userID = rs.getInt("EmployeeID");
-        System.out.println(userID);
+        //System.out.println(userID);
       }
 
     } catch (SQLException throwables) {
