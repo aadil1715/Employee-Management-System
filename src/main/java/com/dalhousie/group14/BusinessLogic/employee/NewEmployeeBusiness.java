@@ -31,13 +31,19 @@ public class NewEmployeeBusiness {
   public boolean applyjoinRequest(String oldUserName,String userName,
                                   String password) {
     NewEmployee newEmployee =new NewEmployee();
-    newEmployee.setNewEmployee("oldUserName","requestedUserName",
-            userName);
-    newEmployee.setNewEmployee("oldUserName","requestedPassword",
-            password);
-    newEmployee.setNewEmployee("oldUserName","approvalstatus",
-            "pending");
-    return true;
+    try {
+      newEmployee.setNewEmployee(oldUserName,"requestedUserName",
+              userName);
+      newEmployee.setNewEmployee(oldUserName,"requestedPassword",
+              password);
+      newEmployee.setNewEmployee(oldUserName,"approvalstatus",
+              "pending");
+      return true;
+    }
+    catch (Exception e){
+      return false;
+    }
+
   }
 
   public boolean userNameValidtion(String userName) {
