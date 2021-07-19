@@ -2,8 +2,8 @@ package com.dalhousie.group14.BusinessLogic.utilities;
 //S of S.O.L.I.D is used and developed by TDD
 import com.dalhousie.group14.BusinessLogic.employee.Employee;
 import com.dalhousie.group14.BusinessLogic.manager.Manager;
-import com.dalhousie.group14.Database.utilities.DataStorage;
-import com.dalhousie.group14.Database.utilities.MySQLDatabase;
+import com.dalhousie.group14.Database.employee.EmployeeDBOperation;
+
 
 import java.util.HashMap;
 import java.util.Map;
@@ -18,7 +18,7 @@ public class Salaries {
     public Map viewSalary(Employee employee){
 
         String emp=employee.getUserName();
-        DataStorage d=new MySQLDatabase();
+        EmployeeDBOperation d=new EmployeeDBOperation();
         Map<String,Double> salary_info=new HashMap<>();
         Map<String,String> info=new HashMap<>();
         info= d.getEmployeeInfo(emp);
@@ -48,9 +48,9 @@ public class Salaries {
 
     }
     public boolean updateSalary(String employee,double amount,String salryType){
-        DataStorage d=new MySQLDatabase();
+        EmployeeDBOperation d=new EmployeeDBOperation();
 
-        return ((MySQLDatabase) d).setEmployee(employee,salryType,amount);
+        return ((EmployeeDBOperation) d).setEmployee(employee,salryType,amount);
 
     }
 
