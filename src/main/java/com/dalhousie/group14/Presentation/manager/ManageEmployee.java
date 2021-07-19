@@ -10,7 +10,7 @@ public class ManageEmployee {
     ManagerLoginDashBoard managerLoginDashBoard =
         new ManagerLoginDashBoard();
 
-    EditEmployeeInformation employeeInformation=
+    EditEmployeeInformation employeeInformation =
         new EditEmployeeInformation();
     System.out.println("Welcome to Manage Employee Page:");
     System.out.println("Select any of the following task to perform on " +
