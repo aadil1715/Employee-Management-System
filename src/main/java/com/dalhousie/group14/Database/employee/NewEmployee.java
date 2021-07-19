@@ -20,7 +20,8 @@ public class NewEmployee {
     try {
       Statement stmt = this.connection.createStatement();
       String sql=
-              "UPDATE joinrequest SET "+type+"="+value+"WHERE UserName='"+username+"';";
+              "UPDATE joinrequest SET "+type+"='"+value+"' WHERE " +
+                      "TempUserName='"+username+"';";
       stmt.execute(sql);
       return true;
     } catch (SQLException throwables) {
