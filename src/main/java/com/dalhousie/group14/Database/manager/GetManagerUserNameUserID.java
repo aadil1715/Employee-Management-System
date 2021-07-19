@@ -19,7 +19,6 @@ public class GetManagerUserNameUserID implements IGetManagerUserNameUserID {
    */
   public int getManagerUserIDFromUserName(String managerName) {
 
-    System.out.println(managerName);
     Statement statement;
     ResultSet rs;
     int managerID = 0;
@@ -31,7 +30,7 @@ public class GetManagerUserNameUserID implements IGetManagerUserNameUserID {
       rs = statement.executeQuery(query);
       while (rs.next()) {
         managerID = rs.getInt("ManagerID");
-        System.out.println(managerID);
+       // System.out.println(managerID);
       }
 
     } catch (SQLException throwables) {
