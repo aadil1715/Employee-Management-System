@@ -34,8 +34,44 @@ public class NewEmployeePresentation {
     System.out.println("Please Enter your new permanent username.(Username " +
             "should be greater than 4 characters please avoid any spaces or " +
             "any special characters)");
+    String exit=" ";
+    do{
+      if(exit.equals("No")){
+        System.out.println("the user Name you added is incorrect please try " +
+                "againUsername "  +"should be greater than 4 characters " +
+                "please avoid any spaces or "  +"any special characters");
+      }
     Scanner scanner=new Scanner(System.in);
     String userName=scanner.nextLine();
+    NewEmployeeBusiness newEmployeeBusiness=new NewEmployeeBusiness();
+    if(newEmployeeBusiness.userNameValidtion(userName)){
+      exit="yes";
+    }
+    else {
+      exit="No";
+    }
+    }while (exit.equals("No"));
+
+    System.out.println("Please Enter your new permanent Password.(Password " +
+            "should be more then 4 characters long and should contain 1 " +
+            "special character and one digit");
+    String exit1=" ";
+    do{
+      if(exit1.equals("No")){
+        System.out.println("the Password you added is not strong please try " +
+                "again Password should be more then 4 characters long and should contain 1 " +
+                "special character and one digit");
+      }
+      Scanner scanner=new Scanner(System.in);
+      String password=scanner.nextLine();
+      NewEmployeeBusiness newEmployeeBusiness=new NewEmployeeBusiness();
+      if(newEmployeeBusiness.passwordValidtion(password)){
+        exit1="yes";
+      }
+      else {
+        exit1="No";
+      }
+    }while (exit1.equals("No"));
 
   }
 

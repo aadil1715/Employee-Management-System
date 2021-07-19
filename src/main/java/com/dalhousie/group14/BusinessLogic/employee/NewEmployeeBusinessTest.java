@@ -19,4 +19,12 @@ public class NewEmployeeBusinessTest {
     assertEquals(true,newEmployeeBusiness.userNameValidtion("ninads79shukla"));
   }
 
+  @Test
+  public void passwordValidation(){
+    NewEmployeeBusiness newEmployeeBusiness=new NewEmployeeBusiness();
+    assertEquals(false,newEmployeeBusiness.passwordValidtion("123"));
+    assertEquals(true,newEmployeeBusiness.passwordValidtion("ninads79shukla" +
+            "@gmail.com"));
+  }
+
 }
