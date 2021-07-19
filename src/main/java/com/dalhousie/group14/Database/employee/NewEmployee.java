@@ -20,7 +20,9 @@ public class NewEmployee {
     Map<String,String>information=new HashMap<String,String>();
     try {
       stmt = this.connection.createStatement();
-      ResultSet rs=stmt.executeQuery("SELECT * FROM joinrequest WHERE UserName='"+username+"';");
+      ResultSet rs=stmt.executeQuery("SELECT * FROM joinrequest WHERE " +
+              "TempUserName='"+username+"';");
+
       while (rs.next()) {
         information.put("TempUserName", rs.getString("TempUserName"));
         information.put("ContactName", rs.getString("ContactName"));
