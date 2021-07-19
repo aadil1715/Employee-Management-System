@@ -36,11 +36,11 @@ public class NewEmployeeBusiness {
     if(userName != null){
       for(int i = 0; i < userName.length(); i++){
         if(Character.isWhitespace(userName.charAt(i))||userName.charAt(i)=='@'||userName.charAt(i)=='!'||userName.charAt(i)=='#'||userName.charAt(i)=='$'||userName.charAt(i)=='%'||userName.charAt(i)=='^'||userName.charAt(i)=='&'||userName.charAt(i)=='*'||userName.charAt(i)=='('||userName.charAt(i)==')'||userName.charAt(i)=='-'||userName.charAt(i)=='_'||userName.charAt(i)=='+'||userName.charAt(i)=='='){
-          return true;
+          return false;
         }
       }
     }
-    return false;
+    return true;
   }
 
 

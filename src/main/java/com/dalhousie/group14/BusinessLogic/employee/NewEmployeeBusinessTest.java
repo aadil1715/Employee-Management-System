@@ -16,7 +16,7 @@ public class NewEmployeeBusinessTest {
     NewEmployeeBusiness newEmployeeBusiness=new NewEmployeeBusiness();
     assertEquals(false,newEmployeeBusiness.userNameValidtion("ninads79shukla" +
             "@gmail.com"));
-    assertEquals(true,"ninads79shukla");
+    assertEquals(true,newEmployeeBusiness.userNameValidtion("ninads79shukla"));
   }
 
 }
