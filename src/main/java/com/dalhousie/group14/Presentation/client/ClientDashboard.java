@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class ClientDashboard implements NormalClient {
     public void clientscreen() {
         ClientDashboardValidation clientDashboardValidation = new ClientDashboardValidation();
-        Project project  = new Project();
+        ClientProject project  = new ClientProject();
         boolean correctoption = false;
         int optionchosen = 0;
         System.out.println();

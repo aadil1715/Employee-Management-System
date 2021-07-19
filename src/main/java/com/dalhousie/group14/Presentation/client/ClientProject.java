@@ -6,13 +6,13 @@ import com.dalhousie.group14.Database.client.ProjectDatabaseInteraction;
 
 import java.util.*;
 
-public class Project {
+public class ClientProject {
 
     public boolean defineproject(){
         ProjectDatabaseInteraction projectDatabaseInteraction = new ProjectDatabaseInteraction();
         ProjectDefinition projectDefinition = new ProjectDefinition();
         Scanner s = new Scanner(System.in);
-        Project projectobj = new Project();
+        ClientProject projectobj = new ClientProject();
         String projectname = "";
         boolean done = false;
         System.out.println();
