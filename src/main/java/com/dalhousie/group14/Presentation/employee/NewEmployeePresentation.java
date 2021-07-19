@@ -1,9 +1,5 @@
 package com.dalhousie.group14.Presentation.employee;
-
-
-
 import com.dalhousie.group14.BusinessLogic.employee.NewEmployeeBusiness;
-
 import java.util.Scanner;
 
 /*
