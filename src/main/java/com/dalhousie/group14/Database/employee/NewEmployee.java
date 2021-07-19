@@ -15,6 +15,19 @@ public class NewEmployee {
 
     connection= DbConnection.connectDB();
   }
+
+  public Boolean setNewEmployee(String username, String type, String value){
+    try {
+      Statement stmt = this.connection.createStatement();
+      String sql=
+              "UPDATE joinrequest SET "+type+"="+value+"WHERE UserName='"+username+"';";
+      stmt.execute(sql);
+      return true;
+    } catch (SQLException throwables) {
+      throwables.printStackTrace();
+    }
+    return false;
+  }
   public Map<String,String> getNewEmployeeInfo(String username)  {
     Statement stmt = null;
     Map<String,String>information=new HashMap<String,String>();

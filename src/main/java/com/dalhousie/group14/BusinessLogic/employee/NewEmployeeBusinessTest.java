@@ -27,4 +27,12 @@ public class NewEmployeeBusinessTest {
             "@gmail.com"));
   }
 
+  @Test
+  public void applyjoinRequest(){
+    NewEmployeeBusiness newEmployeeBusiness=new NewEmployeeBusiness();
+    assertEquals(true,newEmployeeBusiness.applyjoinRequest("tempFakeUserName",
+            "ninads79shukla",
+            "ninnnnnnnnn"));
+  }
+
 }
