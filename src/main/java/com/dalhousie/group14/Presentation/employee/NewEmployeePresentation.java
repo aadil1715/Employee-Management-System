@@ -30,10 +30,12 @@ public class NewEmployeePresentation {
 
   }
 
-  void applyRequest(){
+  public void applyRequestPresentation(String old){
     System.out.println("Please Enter your new permanent username.(Username " +
             "should be greater than 4 characters please avoid any spaces or " +
             "any special characters)");
+    String userName="";
+    String password="";
     String exit=" ";
     do{
       if(exit.equals("No")){
@@ -42,7 +44,7 @@ public class NewEmployeePresentation {
                 "please avoid any spaces or "  +"any special characters");
       }
     Scanner scanner=new Scanner(System.in);
-    String userName=scanner.nextLine();
+    userName=scanner.nextLine();
     NewEmployeeBusiness newEmployeeBusiness=new NewEmployeeBusiness();
     if(newEmployeeBusiness.userNameValidtion(userName)){
       exit="yes";
@@ -63,15 +65,21 @@ public class NewEmployeePresentation {
                 "special character and one digit");
       }
       Scanner scanner=new Scanner(System.in);
-      String password=scanner.nextLine();
+      password=scanner.nextLine();
       NewEmployeeBusiness newEmployeeBusiness=new NewEmployeeBusiness();
       if(newEmployeeBusiness.passwordValidtion(password)){
         exit1="yes";
+        if(newEmployeeBusiness.applyjoinRequest(old,userName,password)){
+
+          System.out.println("Request Sent successfully");
+
+        }
       }
       else {
         exit1="No";
       }
     }while (exit1.equals("No"));
+
 
   }
 

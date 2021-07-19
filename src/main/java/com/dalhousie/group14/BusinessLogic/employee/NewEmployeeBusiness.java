@@ -2,6 +2,7 @@ package com.dalhousie.group14.BusinessLogic.employee;
 
 import com.dalhousie.group14.Database.employee.EmployeeDBOperation;
 import com.dalhousie.group14.Database.employee.NewEmployee;
+import com.dalhousie.group14.Presentation.employee.NewEmployeePresentation;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,8 +17,8 @@ public class NewEmployeeBusiness {
 
     if (Password.equals(info.get("Password"))) {
 
-      NewEmployeeBusiness newEmployeeBusiness = new NewEmployeeBusiness();
-      newEmployeeBusiness.applyjoinRequest();
+      NewEmployeePresentation newEmployeeBusiness = new NewEmployeePresentation();
+      newEmployeeBusiness.applyRequestPresentation(UserName);
       return true;
     } else {
       System.out.println("Incorrect Login or Password Please Try again");
@@ -27,9 +28,16 @@ public class NewEmployeeBusiness {
 
   }
 
-  public void applyjoinRequest() {
-
-
+  public boolean applyjoinRequest(String oldUserName,String userName,
+                                  String password) {
+    NewEmployee newEmployee =new NewEmployee();
+    newEmployee.setNewEmployee("oldUserName","requestedUserName",
+            userName);
+    newEmployee.setNewEmployee("oldUserName","requestedPassword",
+            password);
+    newEmployee.setNewEmployee("oldUserName","approvalstatus",
+            "pending");
+    return true;
   }
 
   public boolean userNameValidtion(String userName) {
@@ -71,8 +79,8 @@ public class NewEmployeeBusiness {
         }
       }
       if (flag1 == 1 && flag2 == 1) {
-        System.out.println(flag1);
         return true;
+
       }
     }
 
