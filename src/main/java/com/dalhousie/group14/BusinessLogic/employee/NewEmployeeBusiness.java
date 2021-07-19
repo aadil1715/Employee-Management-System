@@ -15,14 +15,32 @@ public class NewEmployeeBusiness {
 
     if(Password.equals(info.get("Password"))) {
 
+      NewEmployeeBusiness newEmployeeBusiness=new NewEmployeeBusiness();
+      newEmployeeBusiness.applyjoinRequest();
       return true;
     }
     else{
-
+      System.out.println("Incorrect Login or Password Please Try again");
       return false;
     }
 
 
+  }
+
+  public void applyjoinRequest(){
+
+
+  }
+
+  public  boolean userNameValidtion(String userName){
+    if(userName != null){
+      for(int i = 0; i < userName.length(); i++){
+        if(Character.isWhitespace(userName.charAt(i))||userName.charAt(i)=='@'||userName.charAt(i)=='!'||userName.charAt(i)=='#'||userName.charAt(i)=='$'||userName.charAt(i)=='%'||userName.charAt(i)=='^'||userName.charAt(i)=='&'||userName.charAt(i)=='*'||userName.charAt(i)=='('||userName.charAt(i)==')'||userName.charAt(i)=='-'||userName.charAt(i)=='_'||userName.charAt(i)=='+'||userName.charAt(i)=='='){
+          return true;
+        }
+      }
+    }
+    return false;
   }
 
 
