@@ -7,9 +7,9 @@ import com.dalhousie.group14.Presentation.employee.TakeInputsFromEmployee;
 import java.util.HashMap;
 
 /* Author- Jainam Shah(B00883898)
-* This class implement the IChangePassword interface.
-* This class for update the userName and Password.
-*/
+ * This class implement the IChangePassword interface.
+ * This class for update the userName and Password.
+ */
 public class ChangePassword implements IChangePassword {
 
   //public static void main(String[] args) {
