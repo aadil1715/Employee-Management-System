@@ -91,7 +91,6 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
           question3 = rs.getString("securityQuestion3");
           arrayList.add(question3);
         }
-        //System.out.println(arrayList);
 
       } catch (SQLException throwables) {
         throwables.printStackTrace();
@@ -130,9 +129,9 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
     Statement statement;
     ResultSet resultSet;
     String query;
-    String answer_1 = null;
-    String answer_2 = null;
-    String answer_3 = null;
+    String answer1 = null;
+    String answer2 = null;
+    String answer3 = null;
 
     query = "select * from securityanswer where UserName='" + userName + "'";
 
@@ -141,15 +140,15 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
       statement = connection.createStatement();
       resultSet = statement.executeQuery(query);
       while (resultSet.next()) {
-        answer_1 = resultSet.getString("securityAnswer1");
-        answer_2 = resultSet.getString("securityAnswer2");
-        answer_3 = resultSet.getString("securityAnswer3");
+        answer1 = resultSet.getString("securityAnswer1");
+        answer2 = resultSet.getString("securityAnswer2");
+        answer3 = resultSet.getString("securityAnswer3");
       }
-      if (answer.equalsIgnoreCase(answer_1)) {
+      if (answer.equalsIgnoreCase(answer1)) {
         employeeLoginDashBoard();
-      } else if (answer.equalsIgnoreCase(answer_2)) {
+      } else if (answer.equalsIgnoreCase(answer2)) {
         employeeLoginDashBoard();
-      } else if (answer.equalsIgnoreCase(answer_3)) {
+      } else if (answer.equalsIgnoreCase(answer3)) {
         employeeLoginDashBoard();
       } else {
         System.out.println("Please enter correct value:");
