@@ -7,12 +7,28 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.YearMonth;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.zip.CRC32;
 
 public class CalendarDisplay implements ICalendarDisplay{
     private final List<Long> testD = new ArrayList<>();
+
+    public void getSpecialDates() throws SQLException {
+        String query = "SELECT eventDate from `Calendar` where empID='" + 891000 + "'";
+        ResultSet rs;
+        rs = QueryExecutor.readData(query);
+        while(rs != null && rs.next()){
+            String date = rs.getString("eventDate");
+            int special_year = Integer.parseInt(date.substring(0,4));
+            int special_month = Integer.parseInt(date.substring(5,7));
+            int special_date = Integer.parseInt(date.substring(8,10));
+
+            CRC32 hash = new CRC32();
+            hash.reset();
+            hash.update(String.format("%d_%d", special_month, special_date).getBytes());
+            testD.add(hash.getValue());
+        }
+    }
 
     public void displayMonths(int year, int month) {
                 YearMonth ym = YearMonth.of(year, month);
@@ -46,28 +62,43 @@ public class CalendarDisplay implements ICalendarDisplay{
                 }
                 System.out.println();
                 System.out.println();
+
             }
 
     @Override
     public void display(int year) throws SQLException {
-        String query = "SELECT eventDate from `Calendar` where empID='" + 891000 + "'";
-        ResultSet rs;
-        rs = QueryExecutor.readData(query);
-        while(rs != null && rs.next()){
-            String date = rs.getString("eventDate");
-            int special_year = Integer.parseInt(date.substring(0,4));
-            int special_month = Integer.parseInt(date.substring(5,7));
-            int special_date = Integer.parseInt(date.substring(8,10));
-
-            CRC32 hash = new CRC32();
-            hash.reset();
-            hash.update(String.format("%d_%d", special_month, special_date).getBytes());
-            testD.add(hash.getValue());
-        }
+        getSpecialDates();
         for(int i=start_month;i<=total_months;i++)
         {
             System.out.println(LocalDate.of(year,i,1).getMonth().toString());
             displayMonths(year,i);
         }
+        System.out.println("The dates having events have underlines beneath them.");
+        System.out.println("Example: ");
+        System.out.printf("\033[4m%-2s\033[0m",12);
+        System.out.println();
+    }
+
+    public void displayCurrentMonth(int year, int current_month) throws SQLException {
+        getSpecialDates();
+        System.out.println(LocalDate.of(year,current_month,1).getMonth().toString());
+        displayMonths(year,current_month);
+        System.out.println("The dates having events have underlines beneath them.");
+        System.out.println("Example: ");
+        System.out.printf("\033[4m%-2s\033[0m",12);
+        System.out.println();
+    }
+
+    public void displayThreeMonths(int year,int current_month) throws SQLException {
+        getSpecialDates();
+        for(int i=current_month;i<=current_month+2;i++)
+        {
+            System.out.println(LocalDate.of(year,i,1).getMonth().toString());
+            displayMonths(year,i);
+        }
+        System.out.println("The dates having events have underlines beneath them.");
+        System.out.println("Example: ");
+        System.out.printf("\033[4m%-2s\033[0m",12);
+        System.out.println();
     }
 }
