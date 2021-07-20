@@ -10,7 +10,7 @@ import java.util.Scanner;
 * */
 public class NewEmployeePresentation {
   /*This page displays the login screen for new employee*/
-  void newEmployeeLogin(){
+  public void newEmployeeLogin(){
     boolean exit=false;
     do {
       System.out.println("Hello welcome to xyz company.Please add your " +
