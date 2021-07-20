@@ -5,12 +5,15 @@ import com.dalhousie.group14.Database.employee.DBRequestForLeave;
 import java.util.HashMap;
 import java.util.Scanner;
 
+/**
+ * This class implement the IRequestLeave.
+ * Manager see the all pending leave requests and manager can approve or
+ * cancel the leave request.
+ */
 public class RequestLeave implements IRequestLeave {
 
-
-
   @Override
-    public void requestLeave(){
+  public void requestLeave() {
 
     DBRequestForLeave dbRequestForLeave = new DBRequestForLeave();
     HashMap<Integer, HashMap<String, String>> hashMap;
