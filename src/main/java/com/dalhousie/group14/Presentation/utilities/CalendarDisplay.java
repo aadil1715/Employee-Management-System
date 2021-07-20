@@ -2,7 +2,6 @@ package com.dalhousie.group14.Presentation.utilities;
 
 import java.time.LocalDate;
 import java.time.YearMonth;
-import java.util.Scanner;
 
 public class CalendarDisplay implements ICalendarDisplay{
 
@@ -14,11 +13,21 @@ public class CalendarDisplay implements ICalendarDisplay{
                 int dayValue = LocalDate.of(year, month, 1).getDayOfWeek().getValue();
                 if (dayValue != 7)
                     for (int i = 0; i < dayValue; i++, counter++) {
-                        System.out.printf("%-4s", "");
+                            System.out.printf("%-4s", "");
                     }
-
                 for (int i = 1; i <= ym.getMonth().length(ym.isLeapYear()); i++, counter++) {
-                    System.out.printf("%-4d", i);
+                    if(ym.getMonth().toString().equals("AUGUST") && i==1)
+                    {
+                        System.out.printf("\033[4m%-2s\033[0m",i);
+                        System.out.printf("%-2s", "");
+                    }
+                    else if(ym.getMonth().toString().equals("JANUARY") && i==2){
+                        System.out.printf("\033[4m%-2s\033[0m",i);
+                        System.out.printf("%-2s", "");
+                    }
+                    else{
+                        System.out.printf("%-4d",i);
+                    }
 
                     if (counter % 7 == 0) {
                         System.out.println();
