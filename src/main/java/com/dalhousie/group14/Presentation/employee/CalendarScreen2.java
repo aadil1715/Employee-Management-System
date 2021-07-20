@@ -20,12 +20,15 @@ public class CalendarScreen2 implements CalendarScreen{
         switch(choice){
             case 1:
                 calendarDisplay.displayCurrentMonth(currentYear,currentMonth);
+                displayScreen();
 
             case 2:
                 calendarDisplay.displayThreeMonths(currentYear,currentMonth);
+                displayScreen();
 
             case 3:
                 calendarDisplay.display(currentYear);
+                displayScreen();
 
             case 4:
                 CalendarScreen1 cs1 = new CalendarScreen1();

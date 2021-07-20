@@ -17,7 +17,8 @@ public class CalendarScreen1 implements CalendarScreen {
                 CalendarScreen2 cs2 = new CalendarScreen2();
                 cs2.displayScreen();
             case 4:
-                //Add the logic to go back to previous screen.
+                System.out.println("PREVIOUS SCREEN!");
+                break;
             default:
                 System.out.println("Enter a correct choice");
                 displayScreen();
