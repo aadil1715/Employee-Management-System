@@ -2,6 +2,7 @@ package com.dalhousie.group14.Presentation.utilities;
 
 import com.dalhousie.group14.Database.utilities.QueryExecutor;
 import com.dalhousie.group14.Presentation.Common.UserInput;
+import com.dalhousie.group14.Presentation.employee.CalendarScreen1;
 import org.junit.Test;
 
 import java.sql.ResultSet;
@@ -16,7 +17,7 @@ public class CalendarDisplayTest {
     public void display() throws SQLException {
         int year = 2021;
         CalendarDisplay cd = new CalendarDisplay();
-        cd.display(year);
+        cd.displayThreeMonths(year,7);
     }
 
     @Test
@@ -39,4 +40,5 @@ public class CalendarDisplayTest {
         }
 
     }
+
 }
