@@ -5,12 +5,15 @@ import java.util.Scanner;
 /**This is Manager Login Dashboard. After successfully login manager redirect
  *  to this page. Manager has option to select.
  */
-public class ManagerLoginDashBoard implements IManagerLoginDashBoard {
-  @Override
+public class ManagerLoginDashBoard {
+
   public void managerLoginDashBoard(){
     Scanner scanner = new Scanner(System.in);
-    ManageEmployee manageEmployee=new ManageEmployee();
-    RequestForApprovals request=new RequestForApprovals();
+
+    ManageEmployee ManageEmployee =new ManageEmployee();
+
+    IRequestForApprovals request=new RequestForApprovals();
+
     System.out.println("Welcome to Manager Dashboard..");
 
     System.out.println("Please Select the number from following Options:");
@@ -21,7 +24,7 @@ public class ManagerLoginDashBoard implements IManagerLoginDashBoard {
     select = scanner.nextInt();
     switch (select) {
       case 1:
-        manageEmployee.manageEmployee();
+        ManageEmployee.manageEmployee();
         System.out.println("ManageEmployee");
         break;
       case 2:
