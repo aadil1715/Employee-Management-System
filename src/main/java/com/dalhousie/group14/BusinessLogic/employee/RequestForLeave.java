@@ -97,6 +97,9 @@ public class RequestForLeave implements IRequestForLeave {
 
 
   @Override
+  /* this method logically validate that starting leave date is always before
+   the starting end date.
+   */
   public boolean dateValidation(String startingLeaveDate,
                                 String endingLeaveDate) {
 
