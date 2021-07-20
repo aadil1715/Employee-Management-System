@@ -14,6 +14,8 @@ import java.util.HashMap;
 public class DBRequestForLeave implements IDBRequestForLeave {
 
   @Override
+  /*This method insert the leave data into database.
+   */
   public void insertRequestForLeave(int employeeID, int managerID, Date actualstartingLeaveDate,
                                     Date actualendingLeaveDate, long days, int remainingleaves,
                                     String reason, String status) {
@@ -44,6 +46,9 @@ public class DBRequestForLeave implements IDBRequestForLeave {
     }
   }
 
+  /*
+  This method insert the Remaining Leaves data into Reamining Leaves table.
+   */
   public void insertRemainingLeaves(int employeeID, int managerID) {
 
     ResultSet resultSet;
@@ -71,6 +76,8 @@ public class DBRequestForLeave implements IDBRequestForLeave {
 
 
   @Override
+  /* this method return the remaining leaves.
+   */
   public int remainingLeaves(int userID) {
 
     Statement stmt;
@@ -92,6 +99,8 @@ public class DBRequestForLeave implements IDBRequestForLeave {
   }
 
   @Override
+  /* This method return the pending request for leave request.
+   */
   public HashMap<Integer, HashMap<String, String>> getAllLeaveInfo() {
 
     String status;
@@ -137,6 +146,8 @@ public class DBRequestForLeave implements IDBRequestForLeave {
   }
 
   @Override
+  /*Update the leaveRequest table.
+   */
   public void updateLeaveRequest(String username, String status, String days, int RemainingLeaves) {
 
     int resultSet, EmployeeID;
@@ -159,7 +170,8 @@ public class DBRequestForLeave implements IDBRequestForLeave {
     }
   }
 
-
+  /*Cancel the leave request.
+   */
   public void cancelLeaveRequest(String username, String status) {
 
     int resultSet, EmployeeID;
@@ -181,6 +193,8 @@ public class DBRequestForLeave implements IDBRequestForLeave {
     }
   }
 
+  /*Update the remaining leave request.
+   */
   private void updateRemainingLeaves(int employeeID, String days, int remainingLeaves) {
 
     int updateLeavs;
