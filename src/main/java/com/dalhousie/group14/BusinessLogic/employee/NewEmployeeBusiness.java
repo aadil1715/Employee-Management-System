@@ -28,19 +28,18 @@ public class NewEmployeeBusiness {
 
   }
 
-  public boolean applyjoinRequest(String oldUserName,String userName,
+  public boolean applyjoinRequest(String oldUserName, String userName,
                                   String password) {
-    NewEmployee newEmployee =new NewEmployee();
+    NewEmployee newEmployee = new NewEmployee();
     try {
-      newEmployee.setNewEmployee(oldUserName,"requestedUserName",
+      newEmployee.setNewEmployee(oldUserName, "requestedUserName",
               userName);
-      newEmployee.setNewEmployee(oldUserName,"requestedPassword",
+      newEmployee.setNewEmployee(oldUserName, "requestedPassword",
               password);
-      newEmployee.setNewEmployee(oldUserName,"approvalstatus",
+      newEmployee.setNewEmployee(oldUserName, "approvalstatus",
               "pending");
       return true;
-    }
-    catch (Exception e){
+    } catch (Exception e) {
       return false;
     }
 
@@ -48,11 +47,11 @@ public class NewEmployeeBusiness {
 
   public boolean userNameValidtion(String userName) {
     if (userName != null) {
-      EmployeeDBOperation employeeDBOperation=new EmployeeDBOperation();
-      Map<String,String>info=new HashMap<>();
-      info=employeeDBOperation.getEmployeeInfo(userName);
+      EmployeeDBOperation employeeDBOperation = new EmployeeDBOperation();
+      Map<String, String> info = new HashMap<>();
+      info = employeeDBOperation.getEmployeeInfo(userName);
 
-      if(!info.isEmpty()){
+      if (!info.isEmpty()) {
         System.out.println("This user name already exists");
         return false;
       }
@@ -90,7 +89,7 @@ public class NewEmployeeBusiness {
       }
     }
 
-      return false;
+    return false;
 
 
   }
