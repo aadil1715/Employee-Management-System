@@ -19,8 +19,10 @@ public class RequestLeave implements IRequestLeave {
     HashMap<Integer, HashMap<String, String>> hashMap;
     hashMap = dbRequestForLeave.getAllLeaveInfo();
 
-    int key, RemainingLeaves;
-    String username, status, days;
+    int RemainingLeaves;
+    String username;
+    String status;
+    String days;
     Scanner scanner = new Scanner(System.in);
     System.out.println("All are Pending Request:");
     System.out.println("Pending Requests:" + hashMap);
