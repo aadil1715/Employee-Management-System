@@ -4,6 +4,10 @@ import com.dalhousie.group14.Database.employee.DBSecurityQuestion;
 
 import java.util.Scanner;
 
+/* Author- Jainam Shah(B00883898)
+ * This class implement the IChangeSecurityQuestion interface.
+ * This class employee can change the security question and answer.
+ */
 public class ChangeSecurityQuestion implements IChangeSecurityQuestion {
 
   @Override
@@ -11,9 +15,12 @@ public class ChangeSecurityQuestion implements IChangeSecurityQuestion {
 
     DBSecurityQuestion dbSecurityQuestion = new DBSecurityQuestion();
     String username;
-    String question1, answer1;
-    String question2, answer2;
-    String question3, answer3;
+    String question1;
+    String answer1;
+    String question2;
+    String answer2;
+    String question3;
+    String answer3;
 
     Scanner scanner = new Scanner(System.in);
     System.out.println("Enter UserName:");
@@ -36,7 +43,6 @@ public class ChangeSecurityQuestion implements IChangeSecurityQuestion {
 
     dbSecurityQuestion.updateSecurityQuestion(username, question1, question2, question3);
     dbSecurityQuestion.updateSecurityAnswer(username, answer1, answer2, answer3);
-
 
   }
 }
