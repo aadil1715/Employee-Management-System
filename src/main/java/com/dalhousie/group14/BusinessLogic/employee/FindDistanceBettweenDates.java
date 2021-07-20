@@ -3,12 +3,14 @@ package com.dalhousie.group14.BusinessLogic.employee;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**Author- Jainam Shah(B00883898)
+/**
+ * Author- Jainam Shah(B00883898)
  * This class implement the IFindDistanceBetweenDates interface.
  * Take starting and ending date and calculate the distance between two dates.
  */
 
 public class FindDistanceBettweenDates implements IFindDistanceBettweenDates {
+
   @Override
   /*Take starting and ending date and calculate the distance between two dates.
    */
