@@ -2,12 +2,16 @@ package com.dalhousie.group14.Presentation.manager;
 
 import java.util.Scanner;
 
-public class ManagerLoginDashBoard {
-
+/**This is Manager Login Dashboard. After successfully login manager redirect
+ *  to this page. Manager has option to select.
+ */
+public class ManagerLoginDashBoard implements IManagerLoginDashBoard {
+  @Override
   public void managerLoginDashBoard(){
     Scanner scanner = new Scanner(System.in);
     ManageEmployee manageEmployee=new ManageEmployee();
-    System.out.println("Welcome to Manager Dashboard.. Mr Ninad Sukla");
+    RequestForApprovals request=new RequestForApprovals();
+    System.out.println("Welcome to Manager Dashboard..");
 
     System.out.println("Please Select the number from following Options:");
 
@@ -21,6 +25,7 @@ public class ManagerLoginDashBoard {
         System.out.println("ManageEmployee");
         break;
       case 2:
+        request.requestForApprovals();
         System.out.println("Requests");
         break;
       case 3:
@@ -29,6 +34,8 @@ public class ManagerLoginDashBoard {
       case 4:
         System.out.println("Logout");
         break;
+      default:
+        System.out.println("Enter Correct number:");
     }
   }
 }
