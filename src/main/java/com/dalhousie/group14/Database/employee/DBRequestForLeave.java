@@ -172,19 +172,19 @@ public class DBRequestForLeave implements IDBRequestForLeave {
 
   /*Cancel the leave request.
    */
-  public void cancelLeaveRequest(String username, String status) {
+  public void cancelLeaveRequest(String userName, String status) {
 
     int resultSet, EmployeeID;
     Statement statement;
     GetEmployeeUserNameUserID userNameUserID = new GetEmployeeUserNameUserID();
-    EmployeeID = userNameUserID.getEmployeeUserIDFromUserName(username);
+    EmployeeID = userNameUserID.getEmployeeUserIDFromUserName(userName);
     String query = "UPDATE ems.LeaveRequest SET ApprovedStatus = '" + status + "' WHERE (`EmployeeID` = '" + EmployeeID + "')";
     try {
       Connection connection = DbConnection.connectDB();
       statement = connection.createStatement();
       resultSet = statement.executeUpdate(query);
       if (resultSet > 0) {
-        System.out.println("Your leave is cancel Successfully:");
+        System.out.println("Leave has been Cancel Successfully for :"+userName);
       } else {
         System.out.println("Please write the correct UserName:");
       }
