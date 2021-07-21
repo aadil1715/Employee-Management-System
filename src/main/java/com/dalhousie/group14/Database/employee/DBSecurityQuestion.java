@@ -1,6 +1,7 @@
 package com.dalhousie.group14.Database.employee;
 
 import com.dalhousie.group14.Database.utilities.DbConnection;
+import com.dalhousie.group14.Presentation.employee.EmployeeLoginDashBoard;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -9,7 +10,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import static com.dalhousie.group14.Presentation.employee.EmployeeLoginDashBoard.employeeLoginDashBoard;
 
 /**
  * Author- Jainam Shah(B00883898)
@@ -24,7 +24,7 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
    * @param username
    */
 
-  public void setSecurityQuestionFirstTime(String username) {
+  public void setSecurityQuestionFirstTime(String userName) {
 
     String query;
     Scanner scanner = new Scanner(System.in);
@@ -41,7 +41,7 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
     question3 = scanner.nextLine();
 
     query = ("insert into securityquestion (UserName,securityQuestion1,securityQuestion2,securityQuestion3)" +
-        "values('" + username + "','" + question1 + "','" + question2 + "','" + question3 + "')");
+        "values('" + userName + "','" + question1 + "','" + question2 + "','" + question3 + "')");
     try {
 
       Connection connection = DbConnection.connectDB();
@@ -62,14 +62,14 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
   /*This method take username as a parameter and retrive all the data from
    *database.
    */
-  public ArrayList<String> getSecurityQuestion(String username) {
+  public ArrayList<String> getSecurityQuestion(String userName) {
 
     ArrayList<String> arrayList = new ArrayList<>();
     String question1;
     String question2;
     String question3;
 
-    String query = "select * from securityquestion where UserName= '" + username + "'";
+    String query = "select * from securityquestion where UserName= '" + userName + "'";
     Statement stmt;
     ResultSet rs;
     {
@@ -79,8 +79,8 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
         rs = stmt.executeQuery(query);
 
         while (rs.next()) {
-          username = rs.getString("UserName");
-          arrayList.add(username);
+          userName = rs.getString("UserName");
+          arrayList.add(userName);
 
           question1 = rs.getString("securityQuestion1");
           arrayList.add(question1);
@@ -133,6 +133,8 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
     String answer2 = null;
     String answer3 = null;
 
+    EmployeeLoginDashBoard employeeLoginDashBoard = new EmployeeLoginDashBoard();
+
     query = "select * from securityanswer where UserName='" + userName + "'";
 
     try {
@@ -145,11 +147,11 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
         answer3 = resultSet.getString("securityAnswer3");
       }
       if (answer.equalsIgnoreCase(answer1)) {
-        employeeLoginDashBoard();
+        employeeLoginDashBoard.employeeLoginDashBoard();
       } else if (answer.equalsIgnoreCase(answer2)) {
-        employeeLoginDashBoard();
+        employeeLoginDashBoard.employeeLoginDashBoard();
       } else if (answer.equalsIgnoreCase(answer3)) {
-        employeeLoginDashBoard();
+        employeeLoginDashBoard.employeeLoginDashBoard();
       } else {
         System.out.println("Please enter correct value:");
       }
@@ -162,12 +164,12 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
   @Override
   /* This method update the security Question in their respective row.
    */
-  public void updateSecurityQuestion(String username, String question1, String question2, String question3) {
+  public void updateSecurityQuestion(String userName, String question1, String question2, String question3) {
 
     int resultSet;
     Statement statement;
 
-    String query = "UPDATE `ems`.`securityquestion` SET `securityQuestion1` = '" + question1 + "', `securityQuestion2` = '" + question2 + "', `securityQuestion3` = '" + question3 + "' WHERE (`UserName` = '" + username + "')";
+    String query = "UPDATE `ems`.`securityquestion` SET `securityQuestion1` = '" + question1 + "', `securityQuestion2` = '" + question2 + "', `securityQuestion3` = '" + question3 + "' WHERE (`UserName` = '" + userName + "')";
     try {
       Connection connection = DbConnection.connectDB();
       statement = connection.createStatement();
@@ -187,12 +189,12 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
   @Override
   /* This method update the security Answer in their respective row.
    */
-  public void updateSecurityAnswer(String username, String answer1, String answer2, String answer3) {
+  public void updateSecurityAnswer(String userName, String answer1, String answer2, String answer3) {
 
     int resultSet;
     Statement statement;
 
-    String query = "UPDATE `ems`.`securityanswer` SET `securityAnswer1` = '" + answer1 + "' ,`securityAnswer2` = '" + answer2 + "' ,`securityAnswer3` = '" + answer3 + "' WHERE (`UserName` = '" + username + "')";
+    String query = "UPDATE `ems`.`securityanswer` SET `securityAnswer1` = '" + answer1 + "' ,`securityAnswer2` = '" + answer2 + "' ,`securityAnswer3` = '" + answer3 + "' WHERE (`UserName` = '" + userName + "')";
     try {
       Connection connection = DbConnection.connectDB();
       statement = connection.createStatement();
