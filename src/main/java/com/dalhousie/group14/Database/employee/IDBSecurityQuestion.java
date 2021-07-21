@@ -4,18 +4,18 @@ import java.util.ArrayList;
 
 public interface IDBSecurityQuestion {
 
-  void setSecurityQuestionFirstTime(String username);
+  void setSecurityQuestionFirstTime(String userName);
 
-  ArrayList<String> getSecurityQuestion(String username);
+  ArrayList<String> getSecurityQuestion(String userName);
 
-  void insertSecurityAnswer(String username, String answer1,
+  void insertSecurityAnswer(String userName, String answer1,
                             String answer2, String answer3);
 
-  void employeeValidate(String user_name, String ans);
+  void employeeValidate(String userName, String answer);
 
-  void updateSecurityQuestion(String username, String question1,
+  void updateSecurityQuestion(String userName, String question1,
                               String question2, String question3);
 
-  void updateSecurityAnswer(String username, String answer1,
+  void updateSecurityAnswer(String userName, String answer1,
                             String answer2, String answer3);
 }
