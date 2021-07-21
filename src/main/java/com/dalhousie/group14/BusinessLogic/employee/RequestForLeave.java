@@ -27,7 +27,7 @@ public class RequestForLeave implements IRequestForLeave {
   public void requestForLeave() {
 
     Scanner scanner = new Scanner(System.in);
-    String username;
+    String userName;
     String managerName;
     String startingLeaveDate;
     String endingLeaveDate;
@@ -54,8 +54,8 @@ public class RequestForLeave implements IRequestForLeave {
 
     try {
       System.out.println("Enter your Username:");
-      username = scanner.nextLine();
-      employeeID = getEmployeeUserNameUserID.getEmployeeUserIDFromUserName(username);
+      userName = scanner.nextLine();
+      employeeID = getEmployeeUserNameUserID.getEmployeeUserIDFromUserName(userName);
 
       System.out.println("Enter your Manager UserName:");
       managerName = scanner.nextLine();
