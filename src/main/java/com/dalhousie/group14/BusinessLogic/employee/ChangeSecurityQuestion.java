@@ -14,7 +14,7 @@ public class ChangeSecurityQuestion implements IChangeSecurityQuestion {
   public void changeSecurityQuestion() {
 
     DBSecurityQuestion dbSecurityQuestion = new DBSecurityQuestion();
-    String username;
+    String userName;
     String question1;
     String answer1;
     String question2;
@@ -25,7 +25,7 @@ public class ChangeSecurityQuestion implements IChangeSecurityQuestion {
     Scanner scanner = new Scanner(System.in);
     System.out.println("Enter UserName:");
 
-    username = scanner.nextLine();
+    userName = scanner.nextLine();
     System.out.println("Enter Security Question 1:");
     question1 = scanner.nextLine();
     System.out.println("Enter Answer for Security Question 1:");
@@ -41,8 +41,8 @@ public class ChangeSecurityQuestion implements IChangeSecurityQuestion {
     System.out.println("Enter Answer for Security Question 3:");
     answer3 = scanner.nextLine();
 
-    dbSecurityQuestion.updateSecurityQuestion(username, question1, question2, question3);
-    dbSecurityQuestion.updateSecurityAnswer(username, answer1, answer2, answer3);
+    dbSecurityQuestion.updateSecurityQuestion(userName, question1, question2, question3);
+    dbSecurityQuestion.updateSecurityAnswer(userName, answer1, answer2, answer3);
 
   }
 }
