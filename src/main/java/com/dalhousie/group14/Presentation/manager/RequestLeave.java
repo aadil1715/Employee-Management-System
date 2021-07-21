@@ -35,6 +35,7 @@ public class RequestLeave implements IRequestLeave {
         status = scanner.nextLine();
         if (status.equalsIgnoreCase("Cancel")) {
           dbRequestForLeave.cancelLeaveRequest(username, status);
+          break;
         } else {
           System.out.println("How many days of leaves you want to approved?");
           days = scanner.nextLine();
@@ -43,11 +44,7 @@ public class RequestLeave implements IRequestLeave {
           RemainingLeaves = scanner.nextInt();
           dbRequestForLeave.updateLeaveRequest(username, status, days, RemainingLeaves);
         }
-        System.out.println("Press 5 for Exit.");
-        int br = scanner.nextInt();
-        if (br == 5) {
-          break;
-        }
+
       } while (true);
     } catch (Exception e) {
       System.out.println("Exception" + e);
