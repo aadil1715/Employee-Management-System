@@ -20,20 +20,20 @@ public class GiveSecurityQuestionAnswer implements IGiveSecurityQuestionAnswer {
    * of three and ask to employee to give answer if answer is correct then
    * allow to redirect Login Dashboard Page.
    */
-  public void giveSecurityQuestionAnswer(String username) {
+  public void giveSecurityQuestionAnswer(String userName) {
 
     DBSecurityQuestion dbSecurityQuestion = new DBSecurityQuestion();
 
-    int max = 3;
-    int min = 1;
     Random random = new Random();
     Scanner scanner = new Scanner(System.in);
     HashMap<Integer, String> hashMap = new HashMap<>();
     ArrayList<String> arrayList;
     String question1, question2, question3;
+    int max = 3;
+    int min = 1;
 
     /* Get all security from database. */
-    arrayList = dbSecurityQuestion.getSecurityQuestion(getUsername(username));
+    arrayList = dbSecurityQuestion.getSecurityQuestion(getUserName(userName));
 
     question1 = arrayList.get(1);
     System.out.println("Question 1:" + question1);
@@ -42,9 +42,9 @@ public class GiveSecurityQuestionAnswer implements IGiveSecurityQuestionAnswer {
     question3 = arrayList.get(3);
     System.out.println("Question 3:" + question3);
 
-    hashMap.put(1, getUsername(question1));
-    hashMap.put(2, getUsername(question2));
-    hashMap.put(3, getUsername(question3));
+    hashMap.put(1, getUserName(question1));
+    hashMap.put(2, getUserName(question2));
+    hashMap.put(3, getUserName(question3));
     System.out.println(hashMap);
 
     /* Generate Random Number */
@@ -52,18 +52,18 @@ public class GiveSecurityQuestionAnswer implements IGiveSecurityQuestionAnswer {
     System.out.println(randomNum);
 
     String question = hashMap.get(randomNum);
-    System.out.println("Your Question is:" + getUsername(question));
+    System.out.println("Your Question is:" + getUserName(question));
 
     System.out.println("Please Write the answer:");
     String answer = scanner.nextLine();
 
     /*Check Employee is validate or not.*/
-    dbSecurityQuestion.employeeValidate(getUsername(username),
-        getUsername(answer));
+    dbSecurityQuestion.employeeValidate(getUserName(userName),
+        getUserName(answer));
   }
 
-  private static String getUsername(String username) {
+  private static String getUserName(String userName) {
 
-    return username;
+    return userName;
   }
 }
