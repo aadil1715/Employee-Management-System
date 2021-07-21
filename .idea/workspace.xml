@@ -4,13 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98510d03-2851-4869-a0ae-8263b7d693ba" name="Default Changelist" comment="login file changed ;removed implements">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="98510d03-2851-4869-a0ae-8263b7d693ba" name="Default Changelist" comment="developed the feature to handle resign requests">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/employee/get_employee_id.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/group-14.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/group-14.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/manager/EvaluatorTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/manager/EvaluatorTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/utilities/Enter_credentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/utilities/Enter_credentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/utilities/Password_Check.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/utilities/Password_Check.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/utilities/Username_Check.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/utilities/Username_Check.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/manager/resign_requests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/manager/database_resign_requests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/utilities/Insert_credentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/utilities/Insert_credentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/employee/EditProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/employee/EditProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/Approve_Requests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/Approve_Requests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/SalaryOfEmployeeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/SalaryOfEmployeeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/resign_requests1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/resign_requests1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/utilities/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/utilities/login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EMS-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +33,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="JUnit4 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -33,6 +47,9 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/utilities/login.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1u2akOH3r2IguoVWpSeVn0w6R9a" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -46,14 +63,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="14" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/group8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -62,7 +81,13 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.dalhousie.group14.BusinessLogic.employee" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="Employee" />
+      <recent name="utilities" />
+      <recent name="com.dalhousie.group14.BusinessLogic.employee" />
       <recent name="com.dalhousie.group14.Presentation.utilities" />
       <recent name="com.dalhousie.group14.BusinessLogic.utilities" />
     </key>
@@ -79,7 +104,7 @@
       <module name="group-14" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dalhousie.group14.BusinessLogic.utilities.*" />
+          <option name="PATTERN" value="com.dalhousie.group14.Presentation.utilities.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -87,15 +112,66 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="resign_requests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.dalhousie.group14.Presentation.manager.resign_requests" />
+    <configuration name="ValidationTest.validateMoneyClaimed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="group-14" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dalhousie.group14.Presentation.manager.*" />
+          <option name="PATTERN" value="Employee.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="Employee" />
+      <option name="MAIN_CLASS_NAME" value="Employee.ValidationTest" />
+      <option name="METHOD_NAME" value="validateMoneyClaimed" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ValidationTest.validateNameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="group-14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Employee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Employee" />
+      <option name="MAIN_CLASS_NAME" value="Employee.ValidationTest" />
+      <option name="METHOD_NAME" value="validateNameTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ValidationTest.validatePolicyNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="group-14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Employee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Employee" />
+      <option name="MAIN_CLASS_NAME" value="Employee.ValidationTest" />
+      <option name="METHOD_NAME" value="validatePolicyNumber" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ValidationTest.validateReason" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="group-14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Employee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Employee" />
+      <option name="MAIN_CLASS_NAME" value="Employee.ValidationTest" />
+      <option name="METHOD_NAME" value="validateReason" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -103,7 +179,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.login" />
-        <item itemvalue="Application.resign_requests" />
+        <item itemvalue="JUnit.ValidationTest.validateMoneyClaimed" />
+        <item itemvalue="JUnit.ValidationTest.validateReason" />
+        <item itemvalue="JUnit.ValidationTest.validatePolicyNumber" />
+        <item itemvalue="JUnit.ValidationTest.validateNameTest" />
       </list>
     </recent_temporary>
   </component>
@@ -166,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625940773760</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="developed the feature to handle resign requests">
+      <created>1626101543956</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1626101543956</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +276,8 @@
     <MESSAGE value="Dbconnection code changed" />
     <MESSAGE value="commit no 1" />
     <MESSAGE value="login file changed ;removed implements" />
-    <option name="LAST_COMMIT_MESSAGE" value="login file changed ;removed implements" />
+    <MESSAGE value="resign_requests" />
+    <MESSAGE value="developed the feature to handle resign requests" />
+    <option name="LAST_COMMIT_MESSAGE" value="developed the feature to handle resign requests" />
   </component>
 </project>

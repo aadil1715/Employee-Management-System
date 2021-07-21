@@ -6,6 +6,11 @@ import static com.dalhousie.group14.BusinessLogic.employee.ChangeSecurityQuestio
 import static com.dalhousie.group14.Presentation.employee.EmployeeLoginDashBoard.employeeLoginDashBoard;
 
 public class EditProfile {
+    public static void main(String[] args)
+    {
+        EditProfile ep=new EditProfile();
+        editProfile();
+    }
     public static void editProfile() {
 
         Scanner scanner = new Scanner(System.in);
