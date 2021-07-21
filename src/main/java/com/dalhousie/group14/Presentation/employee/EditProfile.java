@@ -5,14 +5,15 @@ import java.util.Scanner;
 import com.dalhousie.group14.BusinessLogic.employee.ChangePassword;
 import com.dalhousie.group14.BusinessLogic.employee.ChangeSecurityQuestion;
 
-import static com.dalhousie.group14.Presentation.employee.EmployeeLoginDashBoard.employeeLoginDashBoard;
-
 public class EditProfile {
 
-  public static void editProfile() {
+  public void editProfile() {
 
     ChangeSecurityQuestion changeSecurityQuestion =
         new ChangeSecurityQuestion();
+
+    EmployeeLoginDashBoard employeeLoginDashBoard = new EmployeeLoginDashBoard();
+
     ChangePassword changePassword = new ChangePassword();
     Scanner scanner = new Scanner(System.in);
     int number;
@@ -22,21 +23,22 @@ public class EditProfile {
     number = scanner.nextInt();
 
     try {
-      //noinspection InfiniteLoopStatement
-      do {
-        if (number == 1) {
+      switch (number) {
+        case 1:
           changePassword.changePassword();
-        } else if (number == 2) {
-     //     changeSecurityQuestion.changeSecurityQuestion();
-        } else if (number == 3) {
-          employeeLoginDashBoard();
-        } else {
-          System.out.println("Enter Correct Number");
-        }
+          break;
+        case 2:
+          changeSecurityQuestion.changeSecurityQuestion();
+          break;
+        case 3:
+          employeeLoginDashBoard.employeeLoginDashBoard();
+          break;
+        default:
+          System.out.println("enter valid number:");
+          break;
+      }
 
-      } while (true);
     } catch (Exception e) {
-      //noinspection ThrowablePrintedToSystemOut
       System.out.println(e);
     }
   }
