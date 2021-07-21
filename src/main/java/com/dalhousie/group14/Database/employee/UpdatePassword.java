@@ -10,12 +10,12 @@ public class UpdatePassword {
 
   /* This method Update the password in the database.
    */
-  public void updatePassword(String username, String password) {
+  public void updatePassword(String userName, String password) {
 
     Statement statement;
     int resultSet;
 
-    String query = "UPDATE `ems`.`LoginInfo` SET `Password` = '" + password + "' WHERE (`UserName` = '" + username + "')";
+    String query = "UPDATE `ems`.`LoginInfo` SET `Password` = '" + password + "' WHERE (`UserName` = '" + userName + "')";
     try {
       Connection connection = DbConnection.connectDB();
       statement = connection.createStatement();
