@@ -12,7 +12,6 @@ import java.util.HashMap;
  */
 public class ChangePassword implements IChangePassword {
 
-  //public static void main(String[] args) {
   UpdatePassword updatePassword = new UpdatePassword();
 
   DisplayEmployeeLoginInfo displayEmployeeLoginInfo = new
@@ -25,16 +24,16 @@ public class ChangePassword implements IChangePassword {
 
     HashMap<String, String> hashMap;
     TakeInputsFromEmployee tip = new TakeInputsFromEmployee();
-    String username;
+    String userName;
     String password;
 
     hashMap = tip.getUserNamePassword();
 
-    username = hashMap.get("UserName");
+    userName = hashMap.get("UserName");
     password = hashMap.get("Password");
 
-    updatePassword.updatePassword(username, password);
-    displayEmployeeLoginInfo.displayEmployeeLoginInfo(username);
+    updatePassword.updatePassword(userName, password);
+    displayEmployeeLoginInfo.displayEmployeeLoginInfo(userName);
 
   }
 }
