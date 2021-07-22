@@ -1,7 +1,9 @@
 package com.dalhousie.group14.Database.employee;
 
+import com.dalhousie.group14.BusinessLogic.employee.GiveSecurityQuestionAnswer;
 import com.dalhousie.group14.Database.utilities.DbConnection;
 import com.dalhousie.group14.Presentation.employee.EmployeeLoginDashBoard;
+import com.dalhousie.group14.Presentation.employee.SecurityQuestion;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -33,28 +35,33 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
     String question3;
     Statement statement;
     int result;
-    System.out.println("Enter 1 Security Question");
+    System.out.println("Enter your 1 Security Question:");
     question1 = scanner.nextLine();
-    System.out.println("Enter 2 Security Question");
+    System.out.println("Enter your 2 Security Question:");
     question2 = scanner.nextLine();
-    System.out.println("Enter 3 Security Question");
+    System.out.println("Enter your 3 Security Question:");
     question3 = scanner.nextLine();
-
+    DBSecurityQuestion dbSecurityQuestion = new DBSecurityQuestion();
+    SecurityQuestion question = new SecurityQuestion();
     query = ("insert into securityquestion (UserName,securityQuestion1,securityQuestion2,securityQuestion3)" +
         "values('" + userName + "','" + question1 + "','" + question2 + "','" + question3 + "')");
-    try {
 
+    try {
       Connection connection = DbConnection.connectDB();
       statement = connection.createStatement();
 
       result = statement.executeUpdate(query);
 
-      if (result > 0)
-        System.out.println("successfully inserted");
-      else
+      if (result > 0) {
+        System.out.println("Successfully Inserted Security Question First " +
+            "Time.");
+      } else {
         System.out.println("Data not Inserted!! please, check your Username ");
+
+      }
     } catch (Exception e) {
       System.out.println("Exception:" + e);
+      question.securityQuestion();
     }
   }
 
@@ -104,6 +111,7 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
    */
   public void insertSecurityAnswer(String userName, String answer1, String answer2, String answer3) {
 
+    SecurityQuestion securityQuestion = new SecurityQuestion();
     Statement statement;
     int result;
     String query = ("insert into securityanswer(UserName,securityAnswer1,securityAnswer2,securityAnswer3)" +
@@ -112,10 +120,12 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
       Connection connection = DbConnection.connectDB();
       statement = connection.createStatement();
       result = statement.executeUpdate(query);
-      if (result > 0)
-        System.out.println("successfully inserted");
-      else
+      if (result > 0) {
+        System.out.println("Successfully Inserted your Answers.");
+        securityQuestion.securityQuestion();
+      } else {
         System.out.println("Answers not inserted!! Please check your userName: ");
+      }
     } catch (SQLException throwables) {
       throwables.printStackTrace();
     }
@@ -133,6 +143,8 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
     String answer2 = null;
     String answer3 = null;
 
+    GiveSecurityQuestionAnswer giveSecurityQuestionAnswer=
+        new GiveSecurityQuestionAnswer();
     EmployeeLoginDashBoard employeeLoginDashBoard = new EmployeeLoginDashBoard();
 
     query = "select * from securityanswer where UserName='" + userName + "'";
@@ -154,6 +166,8 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
         employeeLoginDashBoard.employeeLoginDashBoard();
       } else {
         System.out.println("Please enter correct value:");
+        giveSecurityQuestionAnswer.giveSecurityQuestionAnswer(userName);
+
       }
 
     } catch (SQLException throwables) {
