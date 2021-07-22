@@ -1,6 +1,7 @@
 package com.dalhousie.group14.Database.employee;
 
 import com.dalhousie.group14.Database.utilities.DbConnection;
+import com.dalhousie.group14.Presentation.manager.RequestForApprovals;
 
 import java.sql.*;
 import java.util.HashMap;
@@ -38,6 +39,7 @@ public class DBRequestForLeave implements IDBRequestForLeave {
       result = statement.executeUpdate(query);
       if (result > 0) {
         System.out.println("successfully inserted");
+
       } else {
         System.out.println("Data not inserted!! Please check your username: ");
       }
@@ -51,7 +53,6 @@ public class DBRequestForLeave implements IDBRequestForLeave {
    */
   public void insertRemainingLeaves(int employeeID, int managerID) {
 
-    ResultSet resultSet;
     Statement statement;
     int RemainingLeaves;
     RemainingLeaves = 8;
@@ -64,7 +65,7 @@ public class DBRequestForLeave implements IDBRequestForLeave {
       statement = connection.createStatement();
       result = statement.executeUpdate(query);
       if (result > 0) {
-        System.out.println("successfully inserted in Remaining Leaves.");
+        System.out.println("successfully inserted.");
       } else {
         System.out.println("Data not inserted in Remaining Leaves Table: ");
       }
@@ -135,13 +136,13 @@ public class DBRequestForLeave implements IDBRequestForLeave {
         hashMap2.put("Reason", rs.getString("Reason"));
         hashMap2.put("ApprovedStatus", rs.getString("ApprovedStatus"));
         hashMap.put(rs.getInt("RequestID"), hashMap2);
-        System.out.println(hashMap);
+        //System.out.println(hashMap);
       }
 
     } catch (SQLException throwables) {
       throwables.printStackTrace();
     }
-    System.out.println("Hashmap outside try:" + hashMap);
+
     return hashMap;
   }
 
@@ -153,6 +154,7 @@ public class DBRequestForLeave implements IDBRequestForLeave {
     int resultSet, EmployeeID;
     Statement statement;
     GetEmployeeUserNameUserID userNameUserID = new GetEmployeeUserNameUserID();
+    RequestForApprovals request = new RequestForApprovals();
     EmployeeID = userNameUserID.getEmployeeUserIDFromUserName(username);
     String query = "UPDATE ems.LeaveRequest SET ApprovedStatus = '" + status + "', days='" + days + "'  WHERE (`EmployeeID` = '" + EmployeeID + "')";
     try {
@@ -162,6 +164,7 @@ public class DBRequestForLeave implements IDBRequestForLeave {
       if (resultSet > 0) {
         System.out.println("Update Leave Successfully");
         updateRemainingLeaves(EmployeeID, days, RemainingLeaves);
+        request.requestForApprovals();
       } else {
         System.out.println("Please write the correct UserName:");
       }
@@ -184,7 +187,7 @@ public class DBRequestForLeave implements IDBRequestForLeave {
       statement = connection.createStatement();
       resultSet = statement.executeUpdate(query);
       if (resultSet > 0) {
-        System.out.println("Leave has been Cancel Successfully for :"+userName);
+        System.out.println("Leave has been Cancel Successfully for :" + userName);
       } else {
         System.out.println("Please write the correct UserName:");
       }
