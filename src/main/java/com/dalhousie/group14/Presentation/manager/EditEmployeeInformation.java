@@ -33,54 +33,74 @@ public class EditEmployeeInformation {
     ArrayList<EmployeeBean> arrayList =
         dbEditEmployeeInformation.getAllEmployeeInformation();
 
-    System.out.println("EmployeeID" + " " + "UserName" + " " + "ContactName" + " "
-        + "gender" + " " + "DOB" + " " + "Basicsalary" + " " + "CTC" + " " + "bonus" + " " + "lastmonthsalary" + " " + "EPF");
+    System.out.println("EmployeeID" + "          " + "UserName" + "      " +
+        "ContactName" + "      " + "gender" + "      " + "DOB" + "      " +
+        "Basicsalary" + "    " + "CTC" + "      " + "bonus" + "     "
+        + "lastmonthsalary" + "    " + "EPF");
 
-    /* This loop display all information of available employee.*/
+
     for (EmployeeBean employeeBean : arrayList) {
-      System.out.print(employeeBean.getEmployeeID() + "  " + employeeBean.getUserName() + "  " +
-          employeeBean.getContactName() + "  " + employeeBean.getGender() + "  " + employeeBean.getDOB() + "  " +
-          employeeBean.getBasicsalary() + "  " + employeeBean.getCTC() + "  " +
-          employeeBean.getBonus() + "  " + employeeBean.getLastmonthsalary() + "  " + employeeBean.getEPF());
+      System.out.format("%1s%25s%18s%10s%15s%10s%12s%10s%20s%10s",
+          employeeBean.getEmployeeID(), employeeBean.getUserName(),
+          employeeBean.getContactName(), employeeBean.getGender(),
+          employeeBean.getDOB(), employeeBean.getBasicsalary(),
+          employeeBean.getCTC(), employeeBean.getBonus(),
+          employeeBean.getLastmonthsalary(), employeeBean.getEPF());
       System.out.println();
     }
+    boolean decision = true;
+    do {
 
-    System.out.println("Enter UserID of the employee that you want to edit.");
-    employeeID = scanner.nextInt();
+      try {
+        System.out.println("Enter UserID of the employee that you want to edit.");
+        employeeID = scanner.nextInt();
 
-    EmployeeBean employeeBean =
-        dbEditEmployeeInformation.getAllEmployeeByID(employeeID);
+        EmployeeBean employeeBean =
+            dbEditEmployeeInformation.getAllEmployeeByID(employeeID);
 
-    System.out.println("Employee`s ID:" + employeeID);
+        System.out.println("Employee`s ID:" + employeeID);
 
-    System.out.println("Select 1 to change the Contact Name\nSelect 2 to " +
-        "change the Gender\nSelect 3 to change the Date Of Birth");
+        System.out.println("Select 1 to change the Contact Name\nSelect 2 to " +
+            "change the Gender\nSelect 3 to change the Date Of Birth\nSelect " +
+            "5 for exit.");
+        select = scanner.nextInt();
+        switch (select) {
+          case 1:
+            System.out.println("Enter Contact Name for update.");
+            contactName = scannerString.nextLine();
+            employeeBean.setContactName(contactName);
+            dbEditEmployeeInformation.employeeUpdate(employeeBean);
+            break;
+          case 2:
+            System.out.println("Enter Gender for update");
+            gender = scannerString.nextLine();
+            employeeBean.setGender(gender);
+            dbEditEmployeeInformation.employeeUpdate(employeeBean);
+            break;
+          case 3:
+            try {
+              System.out.println("Enter DOB for the update:");
+              birthDate = scannerString.nextLine();
+              DOB = valueOf(birthDate);
+              employeeBean.setDOB(DOB);
+              dbEditEmployeeInformation.employeeUpdate(employeeBean);
+            } catch (IllegalArgumentException illegalArgumentException) {
+              illegalArgumentException.printStackTrace();
+              System.out.println("Please, Enter DOB in yyyy-mm-dd format.");
+              editEmployeeInformation();
+            }
+            break;
+          case 5:
+            decision = false;
+            break;
+          default:
+            System.out.println("Please, Enter valid number.:");
+        }
 
-    select = scanner.nextInt();
-
-    switch (select) {
-      case 1:
-        System.out.println("Enter Contact Name for edit.");
-        contactName = scannerString.nextLine();
-        employeeBean.setContactName(contactName);
-        dbEditEmployeeInformation.employeeUpdate(employeeBean);
-        break;
-      case 2:
-        System.out.println("Enter Gender for update");
-        gender = scannerString.nextLine();
-        employeeBean.setGender(gender);
-        dbEditEmployeeInformation.employeeUpdate(employeeBean);
-        break;
-      case 3:
-        System.out.println("Enter DOB for the update:");
-        birthDate = scannerString.nextLine();
-        DOB = valueOf(birthDate);
-        employeeBean.setDOB(DOB);
-        dbEditEmployeeInformation.employeeUpdate(employeeBean);
-        break;
-      default:
-        System.out.println("Enter valid number:");
-    }
-
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+    } while (decision);
   }
 }
+
