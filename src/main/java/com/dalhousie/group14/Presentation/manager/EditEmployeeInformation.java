@@ -85,7 +85,7 @@ public class EditEmployeeInformation {
               employeeBean.setDOB(DOB);
               dbEditEmployeeInformation.employeeUpdate(employeeBean);
             } catch (IllegalArgumentException illegalArgumentException) {
-              illegalArgumentException.printStackTrace();
+              System.out.println("IllegalArgumentException"+illegalArgumentException);
               System.out.println("Please, Enter DOB in yyyy-mm-dd format.");
               editEmployeeInformation();
             }
