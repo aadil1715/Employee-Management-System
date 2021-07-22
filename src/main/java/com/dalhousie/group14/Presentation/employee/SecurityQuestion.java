@@ -5,6 +5,7 @@ import com.dalhousie.group14.BusinessLogic.employee.SetSecurityQuestion;
 
 import java.util.Scanner;
 
+/**Author- Jainam Shah*/
 public class SecurityQuestion {
 
   public void securityQuestion() {
@@ -15,6 +16,7 @@ public class SecurityQuestion {
     Scanner scanner = new Scanner(System.in);
     Scanner scanner1 = new Scanner(System.in);
     String userName;
+    System.out.println("Welcome to Secuirty Question Page.");
     System.out.println("Enter your UserName:");
     userName = scanner1.nextLine();
     System.out.println("Your UserName is:" + userName);
