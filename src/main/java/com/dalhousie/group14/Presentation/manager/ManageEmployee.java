@@ -22,8 +22,8 @@ public class ManageEmployee {
     boolean decision = true;
     do {
       try {
-        System.out.println("Select 1 for Edit Employee Information:\nPress 2 for " +
-            "Update Calende:\nSelect 3 for Send a Notification:\nSelect 4 for " +
+        System.out.println("Select 1 for Edit Employee Information:\nSelect 2" +
+            " for Update Calende:\nSelect 3 for Send a Notification:\nSelect 4 for " +
             "the Manage the Salary:\nSelect 5 for Map this Employee to the " +
             "project:\nSelect 6 for go to the Manager DashBoard Page:\nSelect" +
             " 7 for exit.");
