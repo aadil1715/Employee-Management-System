@@ -1,5 +1,8 @@
 package com.dalhousie.group14.Presentation.utilities;
 
+import com.dalhousie.group14.BusinessLogic.employee.CalendarEvent;
+import com.dalhousie.group14.Database.employee.InsertCalendarEventE;
+import com.dalhousie.group14.Database.employee.getEvent;
 import com.dalhousie.group14.Database.utilities.QueryExecutor;
 import com.dalhousie.group14.Presentation.Common.UserInput;
 import com.dalhousie.group14.Presentation.employee.CalendarScreen1;
@@ -39,6 +42,12 @@ public class CalendarDisplayTest {
             System.out.println(dte);
         }
 
+    }
+
+    @Test
+    public void temp() throws SQLException {
+        CalendarEvent e = new CalendarEvent("Hackathon","fetr","2021-08-23");
+        getEvent.searchEventAndModify(e,"2021-08-22");
     }
 
 }

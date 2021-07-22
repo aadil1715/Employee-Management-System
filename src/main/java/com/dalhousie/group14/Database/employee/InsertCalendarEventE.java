@@ -6,7 +6,9 @@ import com.dalhousie.group14.Database.utilities.QueryExecutor;
 import java.sql.ResultSet;
 
 public class InsertCalendarEventE {
-    public void insertEvent(CalendarEvent calendarEvent){
+    public static void insertEvent(CalendarEvent calendarEvent){
         // ADD LOGIC
+        String query = "INSERT INTO `Calendar` (eventName,eventDescription,eventDate,empID,createdByManager) VALUES ('"+calendarEvent.getEventName()+"','"+calendarEvent.getEventDescription()+"','"+calendarEvent.getEventDate()+"',"+calendarEvent.getEmpID()+",'"+calendarEvent.getCreatedByManager()+"')";
+        QueryExecutor.writeData(query);
     }
 }
