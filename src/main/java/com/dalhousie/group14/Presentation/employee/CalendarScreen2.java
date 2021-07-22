@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 
 public class CalendarScreen2 implements CalendarScreen{
-    public void displayScreen() throws SQLException {
+    public void displayScreen() {
         System.out.println("1. Display the current month schedule.");
         System.out.println("2. Display schedule for the next 3 months.");
         System.out.println("3. Display schedule for the entire year.");
@@ -19,15 +19,27 @@ public class CalendarScreen2 implements CalendarScreen{
         int currentMonth = currentDate.getMonth().getValue();
         switch(choice){
             case 1:
-                calendarDisplay.displayCurrentMonth(currentYear,currentMonth);
+                try {
+                    calendarDisplay.displayCurrentMonth(currentYear,currentMonth);
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
                 displayScreen();
 
             case 2:
-                calendarDisplay.displayThreeMonths(currentYear,currentMonth);
+                try {
+                    calendarDisplay.displayThreeMonths(currentYear,currentMonth);
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
                 displayScreen();
 
             case 3:
-                calendarDisplay.display(currentYear);
+                try {
+                    calendarDisplay.display(currentYear);
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
                 displayScreen();
 
             case 4:

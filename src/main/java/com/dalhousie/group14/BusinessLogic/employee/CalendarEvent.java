@@ -1,5 +1,9 @@
 package com.dalhousie.group14.BusinessLogic.employee;
 
+import java.sql.SQLException;
+import java.util.List;
+import com.dalhousie.group14.Database.employee.getEvent;
+
 public class CalendarEvent {
     String eventName;
     String eventDescription;
@@ -28,6 +32,12 @@ public class CalendarEvent {
         this.createdByManager = 0;
     }
 
+    public CalendarEvent(String eventName,String eventDescription,String eventDate){
+        this.eventName = eventName;
+        this.eventDescription = eventDescription;
+        this.eventDate = eventDate;
+    }
+
     public String getEventName() {
         return eventName;
     }
@@ -50,5 +60,16 @@ public class CalendarEvent {
 
     public int getCreatedByManager() {
         return createdByManager;
+    }
+
+    public static CalendarEvent searchEvent(String eventDate) throws SQLException {
+        List<String> eventInformation = getEvent.searchEventByDate(eventDate);
+        if(eventInformation.size()!=0) {
+            return new CalendarEvent(eventInformation.get(0), eventInformation.get(1), eventDate);
+        }
+        else{
+            System.out.println("Please enter a correct date. No event found for this date.");
+        }
+        return new CalendarEvent();
     }
 }
