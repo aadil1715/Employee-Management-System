@@ -79,10 +79,8 @@ public class DBEditEmployeeInformation {
     int result;
     Statement statement;
     try {
-
       Connection connection = DbConnection.connectDB();
       statement = connection.createStatement();
-
       result = statement.executeUpdate(query);
 
       if (result > 0) {
