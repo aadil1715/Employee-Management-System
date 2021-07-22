@@ -1,14 +1,25 @@
 package com.dalhousie.group14.BusinessLogic.manager;
 
+import com.dalhousie.group14.Presentation.manager.ProjectManagementDashboard;
+import com.dalhousie.group14.Presentation.utilities.TableFormatter;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ProjectStatusRetrieve {
   public static List<String> projectList(ResultSet resultSet){
     List<String> projects = new ArrayList<>();
-    int Sno = 1;
+    List<List<String>> projectsList = new ArrayList<>();
+    int sNo = 1;
+    List<String> tableheaders = Arrays.asList("S.No", "Project ID",
+        "Project Name",
+        "Project Languages", "Project Start Date", "Project End Date",
+        "Project Current Status");
+    projectsList.add(tableheaders);
+
     try{
       while (resultSet.next()){
         String ProjectID = resultSet.getString("ProjectID");
@@ -17,15 +28,24 @@ public class ProjectStatusRetrieve {
         String ProjectStartDate = resultSet.getString("ProjectStartDate");
         String ProjectEndDate = resultSet.getString("ProjectEndDate");
         String ProjectStatus = resultSet.getString("ProjectStatus");
-        String proj = Sno+ " " + ProjectID + " " + ProjectName + " "
-            + ProjectLanguages + " " + ProjectStartDate + " " + ProjectEndDate
-              + " " + ProjectStatus;
+        String proj = sNo+ "~" + ProjectID + "~" + ProjectName +
+          "~" + ProjectLanguages + "~" + ProjectStartDate + "~"
+            + ProjectEndDate + "~" + ProjectStatus;
 
+        List<String> tablerow = Arrays.asList(sNo+"", ProjectID,
+            ProjectName, ProjectLanguages, ProjectStartDate, ProjectEndDate,
+            ProjectStatus);
         projects.add(proj);
-        Sno++;
+        projectsList.add(tablerow);
+        sNo++;
       }
     }catch (SQLException throwables){
       return null;
+    }
+    String outputProjectString = TableFormatter.formatAsTable(projectsList);
+    if(outputProjectString != null){
+      ProjectManagementDashboard obj = new ProjectManagementDashboard();
+      obj.displayProjects(outputProjectString);
     }
 
     return projects;

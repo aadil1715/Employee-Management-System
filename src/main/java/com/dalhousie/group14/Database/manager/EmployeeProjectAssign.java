@@ -8,12 +8,15 @@ import java.util.Set;
 
 public class EmployeeProjectAssign {
   public static boolean assignEmp(String projectID, Set<String> assignedEmployees){
+    String query = "Select milestoneID from milestones where " +
+        "ProjectID='"+projectID+"';";
+    ResultSet resultSet = QueryExecutor.readData(query);
     for(String employeeID : assignedEmployees){
-      String query = "Update EmployeeTechDetails SET Assigned='"+true+"' where EmployeeID='"+employeeID+"';";
+      query =
+          "Update EmployeeTechDetails SET Assigned=true,CurrentProject='"+projectID+"' " +
+          "where " + "EmployeeID='"+employeeID+"';";
       QueryExecutor.writeData(query);
-      query = "Select milestoneID from milestones where ProjectID='"+projectID+"';";
-      ResultSet resultSet = QueryExecutor.readData(query);
-      query = "Update Project SET ProjectStatus=Assigned where ProjectID='"+projectID+"';";
+      query = "Update Project SET ProjectStatus='Assigned' where ProjectID='"+projectID+"';";
       QueryExecutor.writeData(query);
       if(resultSet!=null){
         try {
@@ -22,7 +25,6 @@ public class EmployeeProjectAssign {
             query = "Update milestones SET AssignedTo='"+employeeID+"' where milestoneID='"+milestoneID+"';";
             QueryExecutor.writeData(query);
           }
-
         } catch (SQLException throwables) {
           return false;
         }

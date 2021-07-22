@@ -34,7 +34,7 @@ public class ProjectTests {
   @Test
   public void projectssignedTest() {
     ProjectAssigner obj = new ProjectAssigner();
-    assertEquals(true,obj.assignproject(""));
+    assertEquals(true,obj.assignProject(""));
   }
 
 }

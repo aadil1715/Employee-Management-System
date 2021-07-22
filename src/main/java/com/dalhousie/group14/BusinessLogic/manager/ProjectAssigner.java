@@ -1,25 +1,33 @@
 package com.dalhousie.group14.BusinessLogic.manager;
 
-import com.dalhousie.group14.BusinessLogic.utilities.CommonConstants;
 import com.dalhousie.group14.Database.manager.EmployeeProjectAssign;
 import com.dalhousie.group14.Database.manager.ProjectStatus;
-import com.dalhousie.group14.Presentation.manager.ProjectManagement;
+import com.dalhousie.group14.Presentation.manager.ProjectManagementDashboard;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.*;
 
-public class ProjectAssigner implements CommonConstants {
-  int assigned = min;
+public class ProjectAssigner {
+  private int assigned = 0;
+  private static final int ID_INDEX = 1;
+  private static final int LANG_INDEX = 3;
+  private static final int COMPLETE_ASSIGNED = 3;
+  private static final int MIN = 0;
+  private static final int ONE = 1;
+  boolean languageContains = false;
   Set<String> assignedemployees = new HashSet<>();
   Map<String, List<String>> empInfo = new HashMap<>();
 
-  public boolean assignproject(String projectInfo) {
-    String[] projectValues = projectInfo.split(" ");
-    String projectID = projectValues[ID];
-    String projectLanguages = projectValues[languages];
+  public boolean assignProject(String projectInfo) {
+    String[] projectValues = projectInfo.split("~");
+    String projectID = projectValues[ID_INDEX];
+    String projectLanguages = projectValues[LANG_INDEX];
     List<String> requiredlanguages = languageformatter(projectLanguages);
     ResultSet resultSet = ProjectStatus.availableEmployees();
+    if(resultSet == null){
+      return false;
+    }
 
     while (true) {
       try {
@@ -39,7 +47,7 @@ public class ProjectAssigner implements CommonConstants {
       return false;
     }
 
-    return EmployeeProjectAssign.assignEmp(projectID,assignedEmployees);
+    return EmployeeProjectAssign.assignEmp(projectID, assignedEmployees);
   }
 
   public Set<String> empAssigner(List<String> requiredlanguages) {
@@ -48,7 +56,7 @@ public class ProjectAssigner implements CommonConstants {
     } else if (assignDuoFit(requiredlanguages)) {
       return assignedemployees;
     } else {
-      ProjectManagement obj = new ProjectManagement();
+      ProjectManagementDashboard obj = new ProjectManagementDashboard();
       if (obj.assignAny() && assignAnyFit()) {
         return assignedemployees;
       }
@@ -66,14 +74,13 @@ public class ProjectAssigner implements CommonConstants {
 
       if (emplanguages.containsAll(requiredlanguages)) {
         assignedemployees.add(key);
-        empInfo.remove(key);
         assigned++;
       }
-      if (assigned == completeassigned) {
+      if (assigned == COMPLETE_ASSIGNED) {
         return true;
       }
     }
-
+   removeDuplicates();
     return false;
   }
 
@@ -82,25 +89,30 @@ public class ProjectAssigner implements CommonConstants {
     List<String> emplanguages;
     List<String> singleFitemployees = new ArrayList<>();
     for (String key : keys) {
-      int lcount = min;
+      int lcount = MIN;
       emplanguages = empInfo.get(key);
       for (String emplanguage : emplanguages) {
+        languageContains = false;
         if (requiredlanguages.contains(emplanguage)) {
           lcount++;
+          languageContains = true;
         }
-        if (lcount > 1) {
+        if (lcount > 1 && languageContains) {
           assignedemployees.add(key);
-          empInfo.remove(key);
           assigned++;
+          if(singleFitemployees.contains(key)){
+            singleFitemployees.remove(key);
+          }
         }
-        if (assigned == maxtries) {
+        if (assigned == COMPLETE_ASSIGNED) {
           return true;
         }
-        if (emplanguages.get(emplanguages.size() - 1).equals(emplanguage) && lcount == 1) {
+        if (lcount == ONE) {
           singleFitemployees.add(key);
         }
       }
     }
+    removeDuplicates();
     if (assignSingleFit(singleFitemployees)) {
       return true;
     }
@@ -115,9 +127,10 @@ public class ProjectAssigner implements CommonConstants {
       empInfo.remove(singleFitemployees.get(i));
       assigned++;
       i++;
-    }
-    if (assigned == completeassigned) {
-      return true;
+
+      if (assigned == COMPLETE_ASSIGNED) {
+        return true;
+      }
     }
 
     return false;
@@ -127,9 +140,8 @@ public class ProjectAssigner implements CommonConstants {
     Set<String> keys = empInfo.keySet();
     for (String key : keys) {
       assignedemployees.add(key);
-      empInfo.remove(key);
       assigned++;
-      if (assigned == completeassigned) {
+      if (assigned == COMPLETE_ASSIGNED) {
         return true;
       }
     }
@@ -145,6 +157,14 @@ public class ProjectAssigner implements CommonConstants {
     }
 
     return languageList;
+  }
+
+  private void removeDuplicates(){
+    for(String employee: assignedemployees){
+      if(empInfo.containsKey(employee)){
+        empInfo.remove(employee);
+      }
+    }
   }
 
 }
