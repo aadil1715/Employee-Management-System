@@ -1,25 +1,22 @@
 package com.dalhousie.group14.Presentation.employee;
 
 import com.dalhousie.group14.BusinessLogic.employee.CalendarEvent;
-import com.dalhousie.group14.Database.employee.getEvent;
+import com.dalhousie.group14.Database.employee.EventOperations;
 import com.dalhousie.group14.Presentation.Common.UserInput;
 import com.dalhousie.group14.Presentation.utilities.CalendarDisplay;
 
 import java.sql.SQLException;
 import java.time.LocalDate;
 
-public class CalendarScreen3 implements CalendarScreen{
+public class CalendarModifyEvent implements ICalendarScreen {
     public void displayScreen(){
         LocalDate currentDate = LocalDate.now();
         int currentYear = currentDate.getYear();
         int currentMonth = currentDate.getMonth().getValue();
         CalendarDisplay calendarDisplay = new CalendarDisplay();
-        try {
-            calendarDisplay.displayThreeMonths(currentYear,currentMonth);
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
-        System.out.println("Enter the date of event (FORMAT - YYYY-MM-DD): ");
+        calendarDisplay.displayThreeMonths(currentYear,currentMonth);
+        System.out.println("-----------------------------MODIFY EVENT------------------");
+        System.out.println("Enter the date of event to modify (FORMAT - YYYY-MM-DD): ");
         System.out.println("Please follow the format (YYYY-DD-MM) EG [2021-12-08]");
         String date = UserInput.takeString();
         try {
@@ -34,13 +31,13 @@ public class CalendarScreen3 implements CalendarScreen{
                 System.out.println("Enter the new description name of event: ");
                 String newdesc = UserInput.takeString();
                 CalendarEvent enew = new CalendarEvent(newname,newdesc,newdate);
-                getEvent.searchEventAndModify(enew,date);
+                EventOperations.searchEventAndModify(enew,date);
                 System.out.println("Updated the event successfully");
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        CalendarScreen1 cs1 = new CalendarScreen1();
+        ICalendarScreen cs1 = new CalendarMainScreen();
         cs1.displayScreen();
 
     }

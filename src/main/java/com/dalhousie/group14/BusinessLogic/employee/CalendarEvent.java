@@ -2,7 +2,8 @@ package com.dalhousie.group14.BusinessLogic.employee;
 
 import java.sql.SQLException;
 import java.util.List;
-import com.dalhousie.group14.Database.employee.getEvent;
+import com.dalhousie.group14.Database.employee.EventOperations;
+import com.dalhousie.group14.Presentation.utilities.EventDisplay;
 
 public class CalendarEvent {
     String eventName;
@@ -63,7 +64,7 @@ public class CalendarEvent {
     }
 
     public static CalendarEvent searchEvent(String eventDate) throws SQLException {
-        List<String> eventInformation = getEvent.searchEventByDate(eventDate);
+        List<String> eventInformation = EventOperations.searchEventByDate(eventDate);
         if(eventInformation.size()!=0) {
             return new CalendarEvent(eventInformation.get(0), eventInformation.get(1), eventDate);
         }
@@ -71,5 +72,11 @@ public class CalendarEvent {
             System.out.println("Please enter a correct date. No event found for this date.");
         }
         return new CalendarEvent();
+    }
+
+    public void display()
+    {
+        EventDisplay eventDisplay = new EventDisplay();
+        eventDisplay.display(this);
     }
 }

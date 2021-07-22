@@ -1,11 +1,9 @@
 package com.dalhousie.group14.Presentation.employee;
 
-import com.dalhousie.group14.BusinessLogic.employee.CalendarEvent;
-import com.dalhousie.group14.Database.employee.InsertCalendarEventE;
 import com.dalhousie.group14.Presentation.Common.UserInput;
 import java.sql.SQLException;
 
-public class CalendarScreen1 implements CalendarScreen {
+public class CalendarMainScreen implements ICalendarScreen {
     public void displayScreen() {
         try {
             System.out.println("1. Display your schedule");
@@ -16,15 +14,19 @@ public class CalendarScreen1 implements CalendarScreen {
             int choice = UserInput.takeInt();
             switch (choice) {
                 case 1:
-                    CalendarScreen2 cs2 = new CalendarScreen2();
+                    CalendarScheduleScreen cs2 = new CalendarScheduleScreen();
                     cs2.displayScreen();
                 case 2:
-                    CalendarScreen4 cs4 = new CalendarScreen4();
+                    CalendarAddEvent cs4 = new CalendarAddEvent();
                     cs4.displayScreen();
 
                 case 3:
-                    CalendarScreen3 cs3 = new CalendarScreen3();
+                    CalendarModifyEvent cs3 = new CalendarModifyEvent();
                     cs3.displayScreen();
+
+                case 4:
+                    CalendarRemoveEvent cs5 = new CalendarRemoveEvent();
+                    cs5.displayScreen();
 
                 case 5:
                     System.out.println("PREVIOUS SCREEN!");
@@ -39,7 +41,7 @@ public class CalendarScreen1 implements CalendarScreen {
     }
 
     public static void main(String[] args) throws SQLException {
-        CalendarScreen1 cs = new CalendarScreen1();
+        CalendarMainScreen cs = new CalendarMainScreen();
         cs.displayScreen();
     }
 }
