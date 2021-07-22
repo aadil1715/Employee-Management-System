@@ -32,7 +32,6 @@ public class GetEmployeeUserNameUserID implements IGetEmployeeUserNameUserID {
       rs = statement.executeQuery(query);
       while (rs.next()) {
         userID = rs.getInt("EmployeeID");
-        //System.out.println(userID);
       }
 
     } catch (SQLException throwables) {
