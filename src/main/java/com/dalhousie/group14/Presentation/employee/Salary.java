@@ -2,20 +2,28 @@ package com.dalhousie.group14.Presentation.employee;
 
 import com.dalhousie.group14.BusinessLogic.employee.Employee;
 
-import java.util.Map;
+import com.dalhousie.group14.BusinessLogic.utilities.ISalaries;
 import com.dalhousie.group14.BusinessLogic.utilities.Salaries;
+
+import java.util.Scanner;
+
 public class Salary {
     public void view(String userName){
         System.out.println("Hello "+userName);
 
         System.out.println("Here is the breakdown of your salary");
         Employee employee= new Employee(userName);
-        Salaries salary=new Salaries();
-        for(Object e:salary.viewSalary(employee).entrySet()){
+        ISalaries salary=new Salaries();
+        for(Object e:salary.viewSalary(userName).entrySet()){
             System.out.println(e.toString());
 
         }
-
+        System.out.println("BACK TO the previous page?[yes/no]");
+        Scanner scanner=new Scanner(System.in);
+        String x=scanner.next();
+        if(x.equals("yes")){
+            return;
+        }
 
     }
 }

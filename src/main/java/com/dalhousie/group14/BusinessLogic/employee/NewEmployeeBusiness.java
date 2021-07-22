@@ -9,6 +9,21 @@ import java.util.Map;
 
 public class NewEmployeeBusiness {
 
+  public String checkIfRequestPendingOrApproved(String userName) {
+    NewEmployee newEmployee = new NewEmployee();
+    Map<String, String> info = new HashMap<>();
+
+    info = newEmployee.getNewEmployeeInfo(userName);
+    if (info.get("approvalstatus")!=null && info.get(
+        "approvalstatus").equals("pending")) {
+      return "pending";
+    } else if (info.get("approvalstatus")!=null && info.get("approvalstatus").equals("approved")) {
+      return "approved";
+    } else {
+      return " ";
+    }
+  }
+
 
   public Boolean Login(String UserName, String Password) {
     Map<String, String> info = new HashMap<>();
@@ -16,12 +31,23 @@ public class NewEmployeeBusiness {
     info = nd.getNewEmployeeInfo(UserName);
 
     if (Password.equals(info.get("Password"))) {
-
-      NewEmployeePresentation newEmployeeBusiness = new NewEmployeePresentation();
-      newEmployeeBusiness.applyRequestPresentation(UserName);
-      return true;
+      NewEmployeePresentation newEmployeePresentation = new NewEmployeePresentation();
+      NewEmployeeBusiness newEmployeeBusiness = new NewEmployeeBusiness();
+      if (newEmployeeBusiness.checkIfRequestPendingOrApproved(UserName).equals("pending")) {
+        newEmployeePresentation.requestStillPending();
+        return true;
+      }
+      if (newEmployeeBusiness.checkIfRequestPendingOrApproved(UserName).equals("approved")) {
+        newEmployeePresentation.requestApproved();
+        return true;
+      } else {
+        newEmployeePresentation.applyRequestPresentation(UserName);
+        return true;
+      }
     } else {
-      System.out.println("Incorrect Login or Password Please Try again");
+      NewEmployeePresentation newEmployeePresentation = new NewEmployeePresentation();
+      newEmployeePresentation.incorrectInfo();
+
       return false;
     }
 
@@ -33,11 +59,11 @@ public class NewEmployeeBusiness {
     NewEmployee newEmployee = new NewEmployee();
     try {
       newEmployee.setNewEmployee(oldUserName, "requestedUserName",
-              userName);
+          userName);
       newEmployee.setNewEmployee(oldUserName, "requestedPassword",
-              password);
+          password);
       newEmployee.setNewEmployee(oldUserName, "approvalstatus",
-              "pending");
+          "pending");
       return true;
     } catch (Exception e) {
       return false;
@@ -47,12 +73,14 @@ public class NewEmployeeBusiness {
 
   public boolean userNameValidtion(String userName) {
     if (userName != null) {
+      NewEmployeePresentation newEmployeePresentation = new NewEmployeePresentation();
       EmployeeDBOperation employeeDBOperation = new EmployeeDBOperation();
       Map<String, String> info = new HashMap<>();
       info = employeeDBOperation.getEmployeeInfo(userName);
 
       if (!info.isEmpty()) {
-        System.out.println("This user name already exists");
+        newEmployeePresentation.alreadyExists();
+
         return false;
       }
       for (int i = 0; i < userName.length(); i++) {

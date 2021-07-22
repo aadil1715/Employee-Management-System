@@ -24,8 +24,9 @@ public class NewEmployee {
     try {
       Statement stmt = this.connection.createStatement();
       String sql =
-              "UPDATE joinrequest SET " + type + "='" + value + "' WHERE " +
-                      "TempUserName='" + username + "';";
+          "UPDATE joinrequest SET " + type + "='" + value + "' WHERE " +
+              "TempUserName='" + username + "';";
+
       stmt.execute(sql);
       return true;
     } catch (SQLException throwables) {
@@ -50,15 +51,16 @@ public class NewEmployee {
     try {
       stmt = this.connection.createStatement();
       String sql =
-              "insert into Employee (UserName ,ContactName ,gender ,DOB ," +
-                      "Basicsalary ,CTC ,bonus ,lastmonthsalary ,EPF ,ProjectHistory) " +
-                      "values" +
-                      "('" + map.get("UserName") + "', '" + map.get("ContactName") +
-                      "', '" + map.get("gender") + "', '" + map.get("DOB") + "', '" + map.get(
-                      "Basicsalary") +
-                      "', '" + map.get("CTC") +
-                      "', '0', '0', '" + map.get("EPF") + "','null');";
-      System.out.println(sql);
+          "insert ignore into Employee (UserName ,ContactName ,gender ," +
+              "DOB ," +
+              "Basicsalary ,CTC ,bonus ,lastmonthsalary ,EPF ,ProjectHistory) " +
+              "values" +
+              "('" + map.get("UserName") + "', '" + map.get("ContactName") +
+              "', '" + map.get("gender") + "', '" + map.get("DOB") + "', '" + map.get(
+              "Basicsalary") +
+              "', '" + map.get("CTC") +
+              "', '0', '0', '" + map.get("EPF") + "','null');";
+
       stmt.execute(sql);
       return true;
     } catch (SQLException throwables) {
@@ -71,7 +73,8 @@ public class NewEmployee {
     Statement stmt = null;
     try {
       stmt = this.connection.createStatement();
-      String sql = "Insert into LoginInfo values ('" + userName + "', '" + Password +
+      String sql =
+          "Insert ignore into LoginInfo values ('" + userName + "', '" + Password +
               "'," +
               "'Employee" +
               "');";
@@ -85,13 +88,14 @@ public class NewEmployee {
   public List<List<String>> getPendingNewEmployeeInfo() {
     Statement stmt = null;
     List<List<String>> info = new ArrayList<>();
-    List<String> information = new ArrayList<>();
+
     try {
       stmt = this.connection.createStatement();
       ResultSet rs = stmt.executeQuery("SELECT * FROM joinrequest WHERE " +
-              "approvalstatus='pending';");
+          "approvalstatus='pending';");
 
       while (rs.next()) {
+        List<String> information = new ArrayList<>();
         information.add(rs.getString("TempUserName"));
         information.add(rs.getString("ContactName"));
         information.add(rs.getString("gender"));
@@ -101,10 +105,10 @@ public class NewEmployee {
         information.add(rs.getString("approvedEPF"));
         information.add(rs.getString("requestedUserName"));
         information.add(rs.getString("requestedPassword"));
-
+        info.add(information);
 
       }
-      info.add(information);
+
     } catch (SQLException throwables) {
       throwables.printStackTrace();
     }
@@ -118,7 +122,7 @@ public class NewEmployee {
     try {
       stmt = this.connection.createStatement();
       ResultSet rs = stmt.executeQuery("SELECT * FROM joinrequest WHERE " +
-              "TempUserName='" + username + "';");
+          "TempUserName='" + username + "';");
 
       while (rs.next()) {
         information.put("TempUserName", rs.getString("TempUserName"));
@@ -129,6 +133,7 @@ public class NewEmployee {
         information.put("approvedCTC", rs.getString("approvedCTC"));
         information.put("approvedEPF", rs.getString("approvedEPF"));
         information.put("Password", rs.getString("password"));
+        information.put("approvalstatus", rs.getString("approvalstatus"));
 
       }
     } catch (SQLException throwables) {
