@@ -1,5 +1,6 @@
 package com.dalhousie.group14.Database.employee;
 
+import com.dalhousie.group14.BusinessLogic.employee.ChangePassword;
 import com.dalhousie.group14.Database.utilities.DbConnection;
 
 import java.sql.Connection;
@@ -14,16 +15,17 @@ public class UpdatePassword {
 
     Statement statement;
     int resultSet;
-
+    ChangePassword changePassword=new ChangePassword();
     String query = "UPDATE `ems`.`LoginInfo` SET `Password` = '" + password + "' WHERE (`UserName` = '" + userName + "')";
     try {
       Connection connection = DbConnection.connectDB();
       statement = connection.createStatement();
       resultSet = statement.executeUpdate(query);
       if (resultSet > 0) {
-        System.out.println("Update Successfully");
+        System.out.println("Update password Successfully");
       } else {
         System.out.println("Password not update please check your employee id.");
+        changePassword.changePassword();
       }
 
     } catch (SQLException throwables) {
