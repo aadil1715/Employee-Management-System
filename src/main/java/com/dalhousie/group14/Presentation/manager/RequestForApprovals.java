@@ -43,7 +43,7 @@ public class RequestForApprovals implements IRequestForApprovals {
         System.out.println("Redirect to Mediclaim Request Page.");
         break;
       case 6:
-       // managerLoginDashBoard.managerLoginDashBoard();
+        managerLoginDashBoard.managerLoginDashBoard();
         System.out.println("");
       default:
         System.out.println("Enter valid number:");
