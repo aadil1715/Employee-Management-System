@@ -21,9 +21,10 @@ public class DisplayEmployeeLoginInfo {
       statement = connection.createStatement();
       resultSet = statement.executeQuery(query);
       while (resultSet.next()) {
-        System.out.println("EmployeeUserName" + resultSet.getString("UserName"));
-        System.out.println("Password" + resultSet.getString("Password"));
-        System.out.println("userType" + resultSet.getString("userType"));
+        System.out.println("EmployeeUserName:" + resultSet.getString(
+            "UserName"));
+        System.out.println("Password:" + resultSet.getString("Password"));
+        System.out.println("userType:" + resultSet.getString("userType"));
       }
 
     } catch (SQLException throwables) {
