@@ -9,10 +9,15 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-public class ProjectPerformanceEvaluator implements ProjPerformanceProperties {
+public class ProjectPerformanceEvaluator {
+    String pattern = "yyyy-MM-dd";
+    public static final int FULLRATING = 10;
+    public static final int PROJECTS_CONSIDERING = 5;
+    public static final int DIVIDER = 2;
+    public static final int MAX_DEADLINE = 5;
+    public static final int GOOD_RATING = 1;
     public Map<String, Float> evalProjPerformanceAll() {
         ResultSet resultSet = EmployeeProjectPerformance.projectperformanceall();
         Map<String, Float> projperformance = new HashMap<>();
@@ -38,7 +43,7 @@ public class ProjectPerformanceEvaluator implements ProjPerformanceProperties {
         String clientfeedback = "";
         float cummulitative = 0;
         SimpleDateFormat sdf = new SimpleDateFormat(pattern);
-        for (int i = 0; i < projects_considering; i++) {
+        for (int i = 0; i < PROJECTS_CONSIDERING; i++) {
             ResultSet resultSet1 = EmployeeProjectPerformance.EmpProjectMilestones(projects[i]);
             ResultSet resultSet2 = EmployeeProjectPerformance.employeeprojectperformance(username);
             try {
@@ -56,14 +61,14 @@ public class ProjectPerformanceEvaluator implements ProjPerformanceProperties {
                         boolean beforedeadline = Validations.datecomparison(completiondate, deadlinedate);
                         if (beforedeadline) {
                             int client_rating = Integer.parseInt(clientfeedback);
-                            int work_rating = fullrating;
-                            float pro = (client_rating + work_rating) / divider;
+                            int work_rating = FULLRATING;
+                            float pro = (client_rating + work_rating) / DIVIDER;
                             cummulitative = cummulitative + pro;
                         } else {
-                            if (Validations.addDaystoDate(deadlinedate, max_deadline).before(completiondate)) {
+                            if (Validations.addDaystoDate(deadlinedate, MAX_DEADLINE).before(completiondate)) {
                                 int client_rating = Integer.parseInt(clientfeedback);
-                                int work_rating = fullrating - good;
-                                float pro = (client_rating + work_rating) / divider;
+                                int work_rating = FULLRATING - GOOD_RATING;
+                                float pro = (client_rating + work_rating) / DIVIDER;
                                 cummulitative = cummulitative + pro;
                             }
                         }
@@ -73,7 +78,7 @@ public class ProjectPerformanceEvaluator implements ProjPerformanceProperties {
                 System.out.println("Error Encountered");
             }
         }
-        float final_proj_rating = cummulitative / projects_considering;
+        float final_proj_rating = cummulitative / PROJECTS_CONSIDERING;
         return final_proj_rating;
     }
 

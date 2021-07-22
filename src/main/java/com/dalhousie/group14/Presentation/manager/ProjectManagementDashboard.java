@@ -16,10 +16,6 @@ public class ProjectManagementDashboard implements IProjectManagementDashboard {
   public static final int OPTION_3 = 3;
   public static final int OPTION_4 = 4;
 
-  public static void main(String[] args) {
-    ProjectManagementDashboard obj = new ProjectManagementDashboard();
-    obj.projDashboard();
-  }
 
   @Override
   public void projDashboard() {
