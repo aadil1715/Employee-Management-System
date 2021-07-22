@@ -1,5 +1,6 @@
 package com.dalhousie.group14.Database.employee;
 
+import com.dalhousie.group14.BusinessLogic.employee.ChangeSecurityQuestion;
 import com.dalhousie.group14.BusinessLogic.employee.GiveSecurityQuestionAnswer;
 import com.dalhousie.group14.Database.utilities.DbConnection;
 import com.dalhousie.group14.Presentation.employee.EmployeeLoginDashBoard;
@@ -182,6 +183,7 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
 
     int resultSet;
     Statement statement;
+    ChangeSecurityQuestion securityQuestion=new ChangeSecurityQuestion();
 
     String query = "UPDATE `ems`.`securityquestion` SET `securityQuestion1` = '" + question1 + "', `securityQuestion2` = '" + question2 + "', `securityQuestion3` = '" + question3 + "' WHERE (`UserName` = '" + userName + "')";
     try {
@@ -190,9 +192,11 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
       System.out.println("connect");
       resultSet = statement.executeUpdate(query);
       if (resultSet > 0) {
-        System.out.println("Update Successfully");
+        System.out.println("Update Security Question Successfully");
       } else {
-        System.out.println("Password not update please check your employee id.");
+        System.out.println("Password, not update please check your employee " +
+            "userName:");
+        securityQuestion.changeSecurityQuestion();
       }
     } catch (SQLException throwables) {
       throwables.printStackTrace();
@@ -207,16 +211,19 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
 
     int resultSet;
     Statement statement;
-
+    ChangeSecurityQuestion securityQuestion=new ChangeSecurityQuestion();
     String query = "UPDATE `ems`.`securityanswer` SET `securityAnswer1` = '" + answer1 + "' ,`securityAnswer2` = '" + answer2 + "' ,`securityAnswer3` = '" + answer3 + "' WHERE (`UserName` = '" + userName + "')";
     try {
       Connection connection = DbConnection.connectDB();
       statement = connection.createStatement();
       resultSet = statement.executeUpdate(query);
       if (resultSet > 0) {
-        System.out.println("Update Successfully");
+        System.out.println("Update Security Answer Successfully");
       } else {
-        System.out.println("Security Answer not update please check your employee id.");
+        System.out.println("Security Answer not update please check your " +
+            "employee name.");
+        securityQuestion.changeSecurityQuestion();
+
       }
     } catch (SQLException throwables) {
       throwables.printStackTrace();
