@@ -22,6 +22,10 @@ public class CalendarScreen1 implements CalendarScreen {
                     CalendarScreen4 cs4 = new CalendarScreen4();
                     cs4.displayScreen();
 
+                case 3:
+                    CalendarScreen3 cs3 = new CalendarScreen3();
+                    cs3.displayScreen();
+
                 case 5:
                     System.out.println("PREVIOUS SCREEN!");
                     break;
