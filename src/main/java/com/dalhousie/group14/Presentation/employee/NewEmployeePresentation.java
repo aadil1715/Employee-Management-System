@@ -14,6 +14,7 @@ public class NewEmployeePresentation {
 
   /*This page displays the login screen for new employee*/
   public void newEmployeeLogin() {
+
     boolean exit = false;
     do {
       System.out.println("Hello welcome to xyz company.Please add your " +
@@ -24,6 +25,7 @@ public class NewEmployeePresentation {
       String userName = sc.nextLine();
       String password = sc.nextLine();
       NewEmployeeBusiness nb = new NewEmployeeBusiness();
+
       nb.Login(userName, password);
     } while (exit == false);
 
@@ -70,7 +72,7 @@ public class NewEmployeePresentation {
         if (newEmployeeBusiness.applyjoinRequest(old, userName, password)) {
 
           System.out.println("Request Sent successfully");
-
+          exit1="yes";
         }
       } else {
         exit1 = "No";
@@ -80,4 +82,37 @@ public class NewEmployeePresentation {
 
   }
 
+  public void requestStillPending() {
+    System.out.println("Your request is sent to the manager. It is still " +
+        "pending");
+    System.out.println("Do you want to return to the main page?[yes/No]");
+    Scanner sc=new Scanner(System.in);
+    String ans=sc.next();
+    if (ans.equals("yes")){
+      return;
+    }
+
+  }
+
+  public void requestApproved() {
+    System.out.println("Your Request has been approved by the manager. You " +
+        "can now login to the main system with the permenant credentials you " +
+        "entered");
+    System.out.println("Do you want to return to the main page?[yes/No]");
+    Scanner sc=new Scanner(System.in);
+    String ans=sc.next();
+    if (ans.equals("yes")){
+      return;
+    }
+  }
+
+  public void incorrectInfo() {
+    System.out.println("Incorrect Login or Password Please Try again");
+    return;
+  }
+
+  public void alreadyExists() {
+    System.out.println("This user name already exists");
+    return;
+  }
 }

@@ -12,15 +12,15 @@ public class SalariesTest {
     public void viewSalary() {
         Manager manager=new Manager("abc");
         Employee employee= new Employee("fakeUser");
-        Salaries salary=new Salaries();
-        assertEquals(750000.0,salary.viewSalary(employee).get("CTC"));
-        assertEquals(633461.5384615385,salary.viewSalary(employee).get("gross_salary"));
-        assertEquals(0.0,salary.viewSalary(employee).get("bonus"));
-        assertEquals(150000.0,salary.viewSalary(employee).get("basic_salary"));
-        assertEquals(603461.5384615385,salary.viewSalary(employee).get("tax_home_salary"));
-        assertEquals(30000.0,salary.viewSalary(employee).get("EPF"));
-        assertEquals(0.0,salary.viewSalary(employee).get("tax"));
-        assertEquals(86538.46153846153,salary.viewSalary(employee).get("Gratuity"));
+        ISalaries salary=new Salaries();
+        assertEquals(750000.0,salary.viewSalary("fakeUser").get("CTC"));
+        assertEquals(633461.5384615385,salary.viewSalary("fakeUser").get("gross_salary"));
+        assertEquals(0.0,salary.viewSalary("fakeUser").get("bonus"));
+        assertEquals(150000.0,salary.viewSalary("fakeUser").get("basic_salary"));
+        assertEquals(603461.5384615385,salary.viewSalary("fakeUser").get("tax_home_salary"));
+        assertEquals(30000.0,salary.viewSalary("fakeUser").get("EPF"));
+        assertEquals(0.0,salary.viewSalary("fakeUser").get("tax"));
+        assertEquals(86538.46153846153,salary.viewSalary("fakeUser").get("Gratuity"));
 
 
     }
@@ -31,9 +31,9 @@ public class SalariesTest {
         SalaryOfEmployee se=new SalaryOfEmployee();
         se.editSalary("fakeUser");
         Employee employee= new Employee("fakeUser");
-        Salaries salary=new Salaries();
+        ISalaries salary=new Salaries();
         //CTC updated to 800000
-        assertEquals(800000.0,salary.viewSalary(employee).get("CTC"));
+        assertEquals(800000.0,salary.viewSalary("fakeUser").get("CTC"));
     }
 
 
