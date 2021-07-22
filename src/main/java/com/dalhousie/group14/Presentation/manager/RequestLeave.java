@@ -5,7 +5,7 @@ import com.dalhousie.group14.Database.employee.DBRequestForLeave;
 import java.util.HashMap;
 import java.util.Scanner;
 
-/**
+/**Author Name-Jainam Shah
  * This class implement the IRequestLeave.
  * Manager see the all pending leave requests and manager can approve or
  * cancel the leave request.
