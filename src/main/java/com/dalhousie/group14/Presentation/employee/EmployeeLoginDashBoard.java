@@ -18,7 +18,7 @@ public class EmployeeLoginDashBoard {
 
     EditProfile editProfile = new EditProfile();
     RequestForLeave request = new RequestForLeave();
-    System.out.println("Welcome to Login Dashboard");
+    System.out.println("\t\t\t\t\t\t\t\t\t\t\t\tWelcome to Login Dashboard\t\t\t\t\t\t\t\t\t\t\t\t");
     Scanner scanner = new Scanner(System.in);
     System.out.println("Select any of the following task to perform.");
     System.out.println("Select 1 for Edit Profile:\nSelect 2 for " +
