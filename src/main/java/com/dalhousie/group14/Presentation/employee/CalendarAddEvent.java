@@ -5,7 +5,7 @@ import com.dalhousie.group14.Database.employee.InsertCalendarEventE;
 import com.dalhousie.group14.Presentation.Common.UserInput;
 
 
-public class CalendarScreen4 implements CalendarScreen{
+public class CalendarAddEvent implements ICalendarScreen {
 
     @Override
     public void displayScreen() {
@@ -31,7 +31,7 @@ public class CalendarScreen4 implements CalendarScreen{
         }
 
         System.out.println("Event added successfully to your calendar");
-        CalendarScreen1 cs1 = new CalendarScreen1();
+        CalendarMainScreen cs1 = new CalendarMainScreen();
         cs1.displayScreen();
     }
 }

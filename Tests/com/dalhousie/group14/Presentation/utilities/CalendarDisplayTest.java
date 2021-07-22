@@ -1,19 +1,15 @@
 package com.dalhousie.group14.Presentation.utilities;
 
 import com.dalhousie.group14.BusinessLogic.employee.CalendarEvent;
-import com.dalhousie.group14.Database.employee.InsertCalendarEventE;
-import com.dalhousie.group14.Database.employee.getEvent;
+import com.dalhousie.group14.Database.employee.EventOperations;
 import com.dalhousie.group14.Database.utilities.QueryExecutor;
 import com.dalhousie.group14.Presentation.Common.UserInput;
-import com.dalhousie.group14.Presentation.employee.CalendarScreen1;
 import org.junit.Test;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 public class CalendarDisplayTest {
     @Test
@@ -41,13 +37,13 @@ public class CalendarDisplayTest {
             System.out.println(month);
             System.out.println(dte);
         }
-
     }
 
     @Test
     public void temp() throws SQLException {
-        CalendarEvent e = new CalendarEvent("Hackathon","fetr","2021-08-23");
-        getEvent.searchEventAndModify(e,"2021-08-22");
+        System.out.println("Enter a date to look at the event details: ");
+        CalendarEvent e = CalendarEvent.searchEvent("2021-08-05");
+        e.display();
     }
 
 }
