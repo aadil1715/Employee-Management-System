@@ -56,10 +56,12 @@ public class RequestForLeave implements IRequestForLeave {
       System.out.println("Enter your Username:");
       userName = scanner.nextLine();
       employeeID = getEmployeeUserNameUserID.getEmployeeUserIDFromUserName(userName);
+      System.out.println("Your Employee ID is " + employeeID);
 
       System.out.println("Enter your Manager UserName:");
       managerName = scanner.nextLine();
       managerID = managerUserNameUserID.getManagerUserIDFromUserName(managerName);
+      System.out.println("Your Manager ID" + managerID);
 
       System.out.println("Enter your starting leave date in yyyy-mm-dd format");
       startingLeaveDate = scanner.nextLine();
@@ -74,8 +76,9 @@ public class RequestForLeave implements IRequestForLeave {
       if (!dateValidation) {
         System.out.println("Please Write the correct data. Ending date is " +
             "before Starting date.");
+        System.out.println("Let`s Start with again with beginning.");
+        requestForLeave();
       }
-
       days = findDistanceBettweenDates.findDistanceBettweenDates(startingLeaveDate, endingLeaveDate);
       System.out.println(days);
 
@@ -92,6 +95,8 @@ public class RequestForLeave implements IRequestForLeave {
 
     } catch (Exception e) {
       System.out.println("Exception:" + e);
+      System.out.println("Please Write correct value.");
+      requestForLeave();
     }
   }
 
