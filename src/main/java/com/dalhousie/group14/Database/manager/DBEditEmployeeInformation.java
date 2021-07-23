@@ -1,4 +1,5 @@
 package com.dalhousie.group14.Database.manager;
+/*Author- Jainam Shah(B00883898)*/
 
 import com.dalhousie.group14.Database.utilities.DbConnection;
 
