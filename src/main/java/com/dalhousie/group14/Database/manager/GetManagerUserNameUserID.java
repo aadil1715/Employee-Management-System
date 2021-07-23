@@ -14,7 +14,6 @@ import java.sql.Statement;
  */
 public class GetManagerUserNameUserID implements IGetManagerUserNameUserID {
 
-  @Override
   /*Take manager username and get the managerID.
    */
   public int getManagerUserIDFromUserName(String managerName) {
@@ -30,7 +29,7 @@ public class GetManagerUserNameUserID implements IGetManagerUserNameUserID {
       rs = statement.executeQuery(query);
       while (rs.next()) {
         managerID = rs.getInt("ManagerID");
-       // System.out.println(managerID);
+        // System.out.println(managerID);
       }
 
     } catch (SQLException throwables) {
