@@ -20,7 +20,7 @@ public class DBRequestForLeave implements IDBRequestForLeave {
   public void insertRequestForLeave(int employeeID, int managerID, Date actualstartingLeaveDate,
                                     Date actualendingLeaveDate, long days, int remainingleaves,
                                     String reason, String status) {
-    EmployeeLoginDashBoard employeeLoginDashBoard=new EmployeeLoginDashBoard();
+    EmployeeLoginDashBoard employeeLoginDashBoard = new EmployeeLoginDashBoard();
     ResultSet resultSet;
     Statement statement;
     int result;
@@ -74,7 +74,6 @@ public class DBRequestForLeave implements IDBRequestForLeave {
     }
 
   }
-
 
 
   /* this method return the remaining leaves.
@@ -158,7 +157,7 @@ public class DBRequestForLeave implements IDBRequestForLeave {
     EmployeeID = userNameUserID.getEmployeeUserIDFromUserName(username);
     String query =
         "UPDATE ems.LeaveRequest SET ApprovedStatus = '" + status + "', " +
-        "days='" + days + "'  WHERE (`EmployeeID` = '" + EmployeeID + "')";
+            "days='" + days + "'  WHERE (`EmployeeID` = '" + EmployeeID + "')";
     try {
       Connection connection = DbConnection.connectDB();
       statement = connection.createStatement();
