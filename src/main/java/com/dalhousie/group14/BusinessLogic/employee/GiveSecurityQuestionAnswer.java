@@ -1,51 +1,71 @@
 package com.dalhousie.group14.BusinessLogic.employee;
 
+import com.dalhousie.group14.Database.employee.DBSecurityQuestion;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
 import java.util.Scanner;
 
-import static com.dalhousie.group14.Database.employee.EmployeeValidate.employeeValidate;
-import static com.dalhousie.group14.Database.employee.GetSecurityQuestion.getSecurityQuestion;
+/**
+ * Author- Jainam Shah
+ * This class take all question form database and logically select one out
+ * of three and ask to employee to give answer if answer is correct then
+ * allow to redirect Login Dashboard Page.
+ */
+public class GiveSecurityQuestionAnswer implements IGiveSecurityQuestionAnswer {
 
-interface  GiveSecurityQuestionAnswers{
+
+  /*
+   * This method take all question form database and logically select one out
+   * of three and ask to employee to give answer if answer is correct then
+   * allow to redirect Login Dashboard Page.
+   */
+
+  public void giveSecurityQuestionAnswer(String userName) {
+
+    DBSecurityQuestion dbSecurityQuestion = new DBSecurityQuestion();
+
+    Random random = new Random();
+    Scanner scanner = new Scanner(System.in);
+    HashMap<Integer, String> hashMap = new HashMap<>();
+    ArrayList<String> arrayList;
+    String question1, question2, question3;
     int max = 3;
     int min = 1;
 
-}
-public class GiveSecurityQuestionAnswer implements GiveSecurityQuestionAnswers{
-    
-    public static void giveSecurityQuestionAnswer(String username) {
+    /* Get all security from database. */
+    arrayList = dbSecurityQuestion.getSecurityQuestion(getUserName(userName));
 
-        Random random = new Random();
-        Scanner scanner = new Scanner(System.in);
-        HashMap<Integer, String> hashMap = new HashMap<>();
-        ArrayList<String> arrayList;
-        String question1,question2,question3;
+    question1 = arrayList.get(1);
+    System.out.println("Question 1:" + question1);
+    question2 = arrayList.get(2);
+    System.out.println("Question 2:" + question2);
+    question3 = arrayList.get(3);
+    System.out.println("Question 3:" + question3);
 
-        arrayList=getSecurityQuestion(getUsername(username));
-        question1=arrayList.get(0);
-        question2= arrayList.get(1);
-        question3= arrayList.get(2);
+    hashMap.put(1, getUserName(question1));
+    hashMap.put(2, getUserName(question2));
+    hashMap.put(3, getUserName(question3));
+    System.out.println(hashMap);
 
-        hashMap.put(1, getUsername(question1));
-        hashMap.put(2, getUsername(question2));
-        hashMap.put(3, getUsername(question3));
-        System.out.println(hashMap);
+    /* Generate Random Number */
+    int randomNum = random.nextInt((max - min) + 1) + min;
+    System.out.println(randomNum);
 
-        int randomNum = random.nextInt((max - min) + 1) + min;
-        System.out.println(randomNum);
+    String question = hashMap.get(randomNum);
+    System.out.println("Your Question is:" + getUserName(question));
 
-        String s= hashMap.get(randomNum);
-        System.out.println(""+ getUsername(s));
+    System.out.println("Please Write the answer:");
+    String answer = scanner.nextLine();
 
-        String answer = scanner.nextLine();
-        System.out.println("answer:"+ getUsername(answer));
+    /*Check Employee is validate or not.*/
+    dbSecurityQuestion.employeeValidate(getUserName(userName),
+        getUserName(answer));
+  }
 
-        employeeValidate(getUsername(username), getUsername(answer));
-    }
+  private static String getUserName(String userName) {
 
-    private static String getUsername(String username) {
-        return username;
-    }
+    return userName;
+  }
 }
