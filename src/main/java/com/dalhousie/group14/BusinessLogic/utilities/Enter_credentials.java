@@ -21,7 +21,6 @@ public class Enter_credentials {
         if(map.getOrDefault("UserName",null)!=null)
         {
             username=map.get("UserName");
-
         }
         if(map.getOrDefault("userType",null)!=null)
         {

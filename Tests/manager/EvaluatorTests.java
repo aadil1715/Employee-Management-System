@@ -1,5 +1,5 @@
 package manager;
-import com.dalhousie.group14.Presentation.Common.UserInput;
+
 import com.dalhousie.group14.Presentation.manager.PerformanceEvaluatorScreen;
 import org.junit.Assert;
 import org.junit.Test;
