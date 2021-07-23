@@ -1,6 +1,7 @@
 package com.dalhousie.group14.Database.employee;
 
 import com.dalhousie.group14.Database.utilities.DbConnection;
+import com.dalhousie.group14.Presentation.employee.EmployeeLoginDashBoard;
 import com.dalhousie.group14.Presentation.manager.RequestForApprovals;
 
 import java.sql.*;
@@ -14,13 +15,12 @@ import java.util.HashMap;
  */
 public class DBRequestForLeave implements IDBRequestForLeave {
 
-  @Override
   /*This method insert the leave data into database.
    */
   public void insertRequestForLeave(int employeeID, int managerID, Date actualstartingLeaveDate,
                                     Date actualendingLeaveDate, long days, int remainingleaves,
                                     String reason, String status) {
-
+    EmployeeLoginDashBoard employeeLoginDashBoard=new EmployeeLoginDashBoard();
     ResultSet resultSet;
     Statement statement;
     int result;
@@ -39,7 +39,7 @@ public class DBRequestForLeave implements IDBRequestForLeave {
       result = statement.executeUpdate(query);
       if (result > 0) {
         System.out.println("successfully inserted");
-
+        employeeLoginDashBoard.employeeLoginDashBoard();
       } else {
         System.out.println("Data not inserted!! Please check your username: ");
       }
@@ -65,7 +65,7 @@ public class DBRequestForLeave implements IDBRequestForLeave {
       statement = connection.createStatement();
       result = statement.executeUpdate(query);
       if (result > 0) {
-        System.out.println("successfully inserted.");
+        //System.out.println("successfully inserted.");
       } else {
         System.out.println("Data not inserted in Remaining Leaves Table: ");
       }
@@ -76,7 +76,7 @@ public class DBRequestForLeave implements IDBRequestForLeave {
   }
 
 
-  @Override
+
   /* this method return the remaining leaves.
    */
   public int remainingLeaves(int userID) {
@@ -99,7 +99,7 @@ public class DBRequestForLeave implements IDBRequestForLeave {
     return leaves;
   }
 
-  @Override
+
   /* This method return the pending request for leave request.
    */
   public HashMap<Integer, HashMap<String, String>> getAllLeaveInfo() {
@@ -115,7 +115,7 @@ public class DBRequestForLeave implements IDBRequestForLeave {
 
     ResultSet rs;
     Statement statement;
-    GetEmployeeUserNameUserID getEmployeeUserNameUserID =
+    IGetEmployeeUserNameUserID getEmployeeUserNameUserID =
         new GetEmployeeUserNameUserID();
     try {
       Connection connection = DbConnection.connectDB();
@@ -125,7 +125,7 @@ public class DBRequestForLeave implements IDBRequestForLeave {
 
         userid = rs.getInt("EmployeeID");
         username =
-            getEmployeeUserNameUserID.getEmployeeUserIDFromUserName(userid);
+            getEmployeeUserNameUserID.getEmployeeUserNameFromUserID(userid);
 
         hashMap2.put("ManagerID", String.valueOf(rs.getInt("ManagerID")));
         hashMap2.put("FromDate", String.valueOf(rs.getDate("FromDate")));
@@ -146,17 +146,19 @@ public class DBRequestForLeave implements IDBRequestForLeave {
     return hashMap;
   }
 
-  @Override
+
   /*Update the leaveRequest table.
    */
   public void updateLeaveRequest(String username, String status, String days, int RemainingLeaves) {
 
     int resultSet, EmployeeID;
     Statement statement;
-    GetEmployeeUserNameUserID userNameUserID = new GetEmployeeUserNameUserID();
+    IGetEmployeeUserNameUserID userNameUserID = new GetEmployeeUserNameUserID();
     RequestForApprovals request = new RequestForApprovals();
     EmployeeID = userNameUserID.getEmployeeUserIDFromUserName(username);
-    String query = "UPDATE ems.LeaveRequest SET ApprovedStatus = '" + status + "', days='" + days + "'  WHERE (`EmployeeID` = '" + EmployeeID + "')";
+    String query =
+        "UPDATE ems.LeaveRequest SET ApprovedStatus = '" + status + "', " +
+        "days='" + days + "'  WHERE (`EmployeeID` = '" + EmployeeID + "')";
     try {
       Connection connection = DbConnection.connectDB();
       statement = connection.createStatement();
@@ -179,9 +181,9 @@ public class DBRequestForLeave implements IDBRequestForLeave {
 
     int resultSet, EmployeeID;
     Statement statement;
-    GetEmployeeUserNameUserID userNameUserID = new GetEmployeeUserNameUserID();
+    IGetEmployeeUserNameUserID userNameUserID = new GetEmployeeUserNameUserID();
     EmployeeID = userNameUserID.getEmployeeUserIDFromUserName(userName);
-    String query = "UPDATE ems.LeaveRequest SET ApprovedStatus = '" + status + "' WHERE (`EmployeeID` = '" + EmployeeID + "')";
+    String query = "UPDATE ems.LeaveRequest SET ApprovedStatus = '" + status + "'WHERE (`EmployeeID` = '" + EmployeeID + "')";
     try {
       Connection connection = DbConnection.connectDB();
       statement = connection.createStatement();
