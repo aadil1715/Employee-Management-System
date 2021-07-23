@@ -5,7 +5,7 @@ import com.dalhousie.group14.Presentation.utilities.Print;
 
 import static org.junit.Assert.*;
 
-public class printTest {
+public class PrintTest {
 
   @Test
   public void displayMessageTest() {
