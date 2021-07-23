@@ -4,18 +4,21 @@ import java.util.Scanner;
 
 import com.dalhousie.group14.BusinessLogic.employee.ChangePassword;
 import com.dalhousie.group14.BusinessLogic.employee.ChangeSecurityQuestion;
+import com.dalhousie.group14.BusinessLogic.employee.IChangePassword;
+import com.dalhousie.group14.BusinessLogic.employee.IChangeSecurityQuestion;
+
 /*Author Name-Jainam Shah
  */
 public class EditProfile {
 
   public void editProfile() {
 
-    ChangeSecurityQuestion changeSecurityQuestion =
+    IChangeSecurityQuestion changeSecurityQuestion =
         new ChangeSecurityQuestion();
 
     EmployeeLoginDashBoard employeeLoginDashBoard = new EmployeeLoginDashBoard();
 
-    ChangePassword changePassword = new ChangePassword();
+    IChangePassword changePassword = new ChangePassword();
     Scanner scanner = new Scanner(System.in);
     int number;
     boolean decision = true;
@@ -36,13 +39,13 @@ public class EditProfile {
             employeeLoginDashBoard.employeeLoginDashBoard();
             break;
           case 4:
-            decision=false;
+            decision = false;
           default:
             System.out.println("enter valid number:");
         }
       } catch (Exception e) {
         System.out.println("Exception in EditProfile:" + e);
       }
-    }while (decision);
+    } while (decision);
   }
 }
