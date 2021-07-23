@@ -3,6 +3,8 @@ package com.dalhousie.group14.Database.employee;
 import java.sql.Date;
 import java.util.HashMap;
 
+/*Author- Jainam Shah(B00883898)*/
+
 public interface IDBRequestForLeave {
 
   void insertRequestForLeave(int employeeID, int managerID, Date actualstartingLeaveDate,
@@ -16,4 +18,7 @@ public interface IDBRequestForLeave {
   void updateLeaveRequest(String username, String status, String days, int RemainingLeaves);
 
   void cancelLeaveRequest(String username, String status);
+
+  void insertRemainingLeaves(int employeeID, int managerID);
+
 }
