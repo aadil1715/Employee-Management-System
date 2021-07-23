@@ -2,7 +2,7 @@ package com.dalhousie.group14.BusinessLogic.employee;
 
 import java.lang.Override;
 
-public class Validation implements ValidationInterface {
+public class Validation implements IValidation {
 
   int flag = 0;
 
@@ -12,13 +12,10 @@ public class Validation implements ValidationInterface {
 
   @Override
   public boolean validateName(String name) {
-    if (!name.matches(pattern5) || name.isEmpty() || name.equals(null)) {
-
-      flag = 1;
-      return false;
-
-    } else {
+    if (name.matches(pattern5)) {
       return true;
+    } else {
+      return false;
     }
   }
 
@@ -36,7 +33,6 @@ public class Validation implements ValidationInterface {
   @Override
   public boolean validateMoneyClaimed(int amount) {
     if (amount < 0 || amount == 0) {
-
       return false;
     } else {
       return true;
@@ -45,8 +41,7 @@ public class Validation implements ValidationInterface {
 
   @Override
   public boolean validateReason(String reason) {
-    if (!reason.matches(pattern5)) {
-
+    if (!reason.matches(pattern6)) {
       return false;
     } else {
       return true;

@@ -1,6 +1,7 @@
 package Employee;
 
 import com.dalhousie.group14.BusinessLogic.employee.Validation;
+import com.dalhousie.group14.BusinessLogic.manager.InputValidation;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -26,14 +27,14 @@ public class ValidationTest {
 
   @Test
   public void validateMoneyClaimed() {
-    int amount1=50000;
-    Validation validation= new Validation();
-    assertTrue("amount entered is not valid",validation.validateMoneyClaimed(amount1));
+    int amount1 = 50000;
+    Validation validation = new Validation();
+    assertTrue("amount entered is not valid", validation.validateMoneyClaimed(amount1));
 
-    int amount2=0;
+    int amount2 = 0;
     assertFalse(validation.validateMoneyClaimed(amount2));
 
-    int amount3=-9876;
+    int amount3 = -9876;
     assertFalse(validation.validateMoneyClaimed(amount3));
 
   }
@@ -50,6 +51,22 @@ public class ValidationTest {
     String reason3 = "@#$%^^^^";
     assertFalse(validation.validateReason(reason3));
 
+  }
+
+  @Test
+  public void validateSwitchCaseTest() {
+    int option1 = 1;
+    InputValidation inputValidation = new InputValidation();
+    assertTrue(inputValidation.validateSwitchCase(option1));
+
+    int option2 = 2;
+    assertTrue(inputValidation.validateSwitchCase(option2));
+
+    int option3 = 7;
+    assertFalse(inputValidation.validateSwitchCase(option3));
+
+    int option4 = 23243;
+    assertFalse(inputValidation.validateSwitchCase(option4));
   }
 
 }
