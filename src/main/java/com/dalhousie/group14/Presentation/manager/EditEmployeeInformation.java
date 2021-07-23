@@ -1,4 +1,5 @@
 package com.dalhousie.group14.Presentation.manager;
+/*Author- Jainam Shah(B00883898)*/
 
 import com.dalhousie.group14.Database.manager.DBEditEmployeeInformation;
 import com.dalhousie.group14.Database.manager.EmployeeBean;
@@ -79,13 +80,13 @@ public class EditEmployeeInformation {
             break;
           case 3:
             try {
-              System.out.println("Enter DOB for the update:");
+              System.out.println("Enter DOB for the update in yyyy-mm-dd:");
               birthDate = scannerString.nextLine();
               DOB = valueOf(birthDate);
               employeeBean.setDOB(DOB);
               dbEditEmployeeInformation.employeeUpdate(employeeBean);
             } catch (IllegalArgumentException illegalArgumentException) {
-              System.out.println("IllegalArgumentException"+illegalArgumentException);
+              System.out.println("IllegalArgumentException" + illegalArgumentException);
               System.out.println("Please, Enter DOB in yyyy-mm-dd format.");
               editEmployeeInformation();
             }
