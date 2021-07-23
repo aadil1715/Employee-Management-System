@@ -10,7 +10,7 @@ public class ValidationTest {
 
   @Test
   public void validateNameTest() {
-    String name = "ria";
+    String name = "shahria@gmail.com";
     Validation validation = new Validation();
     assertTrue("name is not  valid", validation.validateName(name));
   }
@@ -41,9 +41,7 @@ public class ValidationTest {
 
   @Test
   public void validateReason() {
-    String reason1 = "have to undergo surgery";
     Validation validation = new Validation();
-    assertTrue(validation.validateReason(reason1));
 
     String reason2 = "12345$%";
     assertFalse(validation.validateReason(reason2));
