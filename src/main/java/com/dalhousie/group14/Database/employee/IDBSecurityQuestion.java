@@ -1,4 +1,6 @@
+/*Author- Jainam Shah(B00883898)*/
 package com.dalhousie.group14.Database.employee;
+
 
 import java.util.ArrayList;
 
@@ -18,4 +20,7 @@ public interface IDBSecurityQuestion {
 
   void updateSecurityAnswer(String userName, String answer1,
                             String answer2, String answer3);
+
+  void insertTechDetails(int userID, String techLanguage1, String techLanguage2,
+                         String techLanguage3);
 }
