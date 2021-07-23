@@ -7,12 +7,13 @@ import static org.junit.Assert.*;
 
 public class SalaryOfEmployeeTest {
 
-    @Test
-    public void editSalary() {
+  @Test
+  public void editSalary() {
 
-        Manager manager=new Manager("fakeManager");
-        SalaryOfEmployee se=new SalaryOfEmployee();
-        se.editSalary("fakeUser");
+    Manager manager = new Manager("fakeManager");
+    SalaryOfEmployee se = new SalaryOfEmployee();
+    se.editSalary("fakeUser");
 
-    }
+  }
+
 }
