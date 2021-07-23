@@ -3,6 +3,7 @@ package com.dalhousie.group14.BusinessLogic.manager;
 import java.util.*;
 
 public class EvaluatorComparator {
+
     static <K,V extends Comparable<? super V>>
     List<Map.Entry<K, V>> entriesSortedByValues(Map<K,V> map) {
 

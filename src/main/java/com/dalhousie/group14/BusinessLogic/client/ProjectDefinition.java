@@ -4,7 +4,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class ProjectDefinition implements Define {
+public class ProjectDefinition implements IProjectDefinition {
+    public static final String[] suffixes = new String[] { "th", "st", "nd", "rd", "th", "th", "th", "th", "th", "th" };
+
 
     public String noreturn(int i) {
         switch (i % 100) {
@@ -18,7 +20,9 @@ public class ProjectDefinition implements Define {
     }
 
     public Date datesetter(String date){
+        String pattern = "yyyy-MM-dd";
         SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+        sdf.setLenient(false);
         try {
             return sdf.parse(date);
         } catch (ParseException e) {

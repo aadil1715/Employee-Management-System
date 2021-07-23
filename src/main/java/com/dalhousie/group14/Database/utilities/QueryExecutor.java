@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class QueryExecutor {
-    public  static ResultSet readData(String query){
+    public static ResultSet readData(String query){
         ResultSet resultSet =  null;
         try {
             PreparedStatement preparedStatement  = DbConnection.connectDB().prepareStatement(query);
@@ -14,6 +14,8 @@ public class QueryExecutor {
                 resultSet = preparedStatement.executeQuery();
                 if(resultSet.isBeforeFirst()){
                     return resultSet;
+                }else{
+                    return null;
                 }
             }
         } catch (SQLException throwables) {
