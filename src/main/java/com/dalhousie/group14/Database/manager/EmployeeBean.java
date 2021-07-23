@@ -2,6 +2,7 @@ package com.dalhousie.group14.Database.manager;
 
 import java.sql.Date;
 
+/*Author- Jainam Shah(B00883898)*/
 public class EmployeeBean {
 
   int EmployeeID, Basicsalary, bonus, lastmonthsalary;
