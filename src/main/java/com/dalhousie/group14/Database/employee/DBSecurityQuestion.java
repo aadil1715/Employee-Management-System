@@ -2,6 +2,8 @@ package com.dalhousie.group14.Database.employee;
 
 import com.dalhousie.group14.BusinessLogic.employee.ChangeSecurityQuestion;
 import com.dalhousie.group14.BusinessLogic.employee.GiveSecurityQuestionAnswer;
+import com.dalhousie.group14.BusinessLogic.employee.IChangeSecurityQuestion;
+import com.dalhousie.group14.BusinessLogic.employee.IGiveSecurityQuestionAnswer;
 import com.dalhousie.group14.Database.utilities.DbConnection;
 import com.dalhousie.group14.Presentation.employee.EmployeeLoginDashBoard;
 import com.dalhousie.group14.Presentation.employee.SecurityQuestion;
@@ -20,51 +22,6 @@ import java.util.Scanner;
  */
 public class DBSecurityQuestion implements IDBSecurityQuestion {
 
-
-  @Override
-  /*
-   * This method take username as a parameter and insert data into database.
-   * @param username
-   */
-
-  public void setSecurityQuestionFirstTime(String userName) {
-
-    String query;
-    Scanner scanner = new Scanner(System.in);
-    String question1;
-    String question2;
-    String question3;
-    Statement statement;
-    int result;
-    System.out.println("Enter your 1 Security Question:");
-    question1 = scanner.nextLine();
-    System.out.println("Enter your 2 Security Question:");
-    question2 = scanner.nextLine();
-    System.out.println("Enter your 3 Security Question:");
-    question3 = scanner.nextLine();
-    DBSecurityQuestion dbSecurityQuestion = new DBSecurityQuestion();
-    SecurityQuestion question = new SecurityQuestion();
-    query = ("insert into securityquestion (UserName,securityQuestion1,securityQuestion2,securityQuestion3)" +
-        "values('" + userName + "','" + question1 + "','" + question2 + "','" + question3 + "')");
-
-    try {
-      Connection connection = DbConnection.connectDB();
-      statement = connection.createStatement();
-
-      result = statement.executeUpdate(query);
-
-      if (result > 0) {
-        System.out.println("Successfully Inserted Security Question First " +
-            "Time.");
-      } else {
-        System.out.println("Data not Inserted!! please, check your Username ");
-
-      }
-    } catch (Exception e) {
-      System.out.println("Exception:" + e);
-      question.securityQuestion();
-    }
-  }
 
   @Override
   /*This method take username as a parameter and retrive all the data from
@@ -144,7 +101,7 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
     String answer2 = null;
     String answer3 = null;
 
-    GiveSecurityQuestionAnswer giveSecurityQuestionAnswer=
+    IGiveSecurityQuestionAnswer giveSecurityQuestionAnswer =
         new GiveSecurityQuestionAnswer();
     EmployeeLoginDashBoard employeeLoginDashBoard = new EmployeeLoginDashBoard();
 
@@ -183,7 +140,7 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
 
     int resultSet;
     Statement statement;
-    ChangeSecurityQuestion securityQuestion=new ChangeSecurityQuestion();
+    IChangeSecurityQuestion securityQuestion = new ChangeSecurityQuestion();
 
     String query = "UPDATE `ems`.`securityquestion` SET `securityQuestion1` = '" + question1 + "', `securityQuestion2` = '" + question2 + "', `securityQuestion3` = '" + question3 + "' WHERE (`UserName` = '" + userName + "')";
     try {
@@ -194,8 +151,8 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
       if (resultSet > 0) {
         System.out.println("Update Security Question Successfully");
       } else {
-        System.out.println("Password, not update please check your employee " +
-            "userName:");
+        System.out.println("security, not update please check your employee " +
+            userName);
         securityQuestion.changeSecurityQuestion();
       }
     } catch (SQLException throwables) {
@@ -211,7 +168,7 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
 
     int resultSet;
     Statement statement;
-    ChangeSecurityQuestion securityQuestion=new ChangeSecurityQuestion();
+    IChangeSecurityQuestion securityQuestion = new ChangeSecurityQuestion();
     String query = "UPDATE `ems`.`securityanswer` SET `securityAnswer1` = '" + answer1 + "' ,`securityAnswer2` = '" + answer2 + "' ,`securityAnswer3` = '" + answer3 + "' WHERE (`UserName` = '" + userName + "')";
     try {
       Connection connection = DbConnection.connectDB();
@@ -229,5 +186,81 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
       throwables.printStackTrace();
     }
   }
+
+
+  @Override
+  /*
+   * This method take username as a parameter and insert data into database.
+   * @param username
+   */
+
+  public void setSecurityQuestionFirstTime(String userName) {
+
+    String query;
+    Scanner scanner = new Scanner(System.in);
+    String question1;
+    String question2;
+    String question3;
+    Statement statement;
+    int result;
+    System.out.println("Enter your 1 Security Question:");
+    question1 = scanner.nextLine();
+    System.out.println("Enter your 2 Security Question:");
+    question2 = scanner.nextLine();
+    System.out.println("Enter your 3 Security Question:");
+    question3 = scanner.nextLine();
+    SecurityQuestion question = new SecurityQuestion();
+    query = ("insert into securityquestion (UserName,securityQuestion1,securityQuestion2,securityQuestion3)" +
+        "values('" + userName + "','" + question1 + "','" + question2 + "','" + question3 + "')");
+
+    try {
+      Connection connection = DbConnection.connectDB();
+      statement = connection.createStatement();
+
+      result = statement.executeUpdate(query);
+
+      if (result > 0) {
+        System.out.println("Successfully Inserted Security Question First " +
+            "Time.");
+      } else {
+        System.out.println("Data not Inserted!! please, check your Username ");
+
+      }
+    } catch (Exception e) {
+      System.out.println("Exception:" + e);
+      question.securityQuestion();
+    }
+  }
+
+
+  @Override
+  public void insertTechDetails(int userID, String techLanguage1, String techLanguage2,
+                                String techLanguage3) {
+    String query;
+    Scanner scanner = new Scanner(System.in);
+    Statement statement;
+    int result;
+    query = "INSERT INTO `ems`.`EmployeeTechDetails` (`EmployeeID`,`Languages`)" +
+        " VALUES ('" + userID + "', '" + techLanguage1 + " ," + techLanguage2 + " ," + techLanguage3 + "')";
+
+    try {
+      Connection connection = DbConnection.connectDB();
+      statement = connection.createStatement();
+
+      result = statement.executeUpdate(query);
+
+      if (result > 0) {
+        System.out.println("Successfully sampledata First " +
+            "Time.");
+      } else {
+        System.out.println("Data not Inserted!! please, check your Username ");
+
+      }
+    } catch (Exception e) {
+      System.out.println("Exception:" + e);
+
+    }
+  }
+
 }
 
