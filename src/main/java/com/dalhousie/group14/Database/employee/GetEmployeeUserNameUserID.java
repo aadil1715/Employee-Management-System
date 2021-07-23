@@ -14,10 +14,10 @@ import java.sql.Statement;
  */
 public class GetEmployeeUserNameUserID implements IGetEmployeeUserNameUserID {
 
-  @Override
 
   /* Take userName as a parameter and return the UserID.
    */
+  @Override
   public int getEmployeeUserIDFromUserName(String userName) {
 
     Statement statement;
@@ -32,6 +32,7 @@ public class GetEmployeeUserNameUserID implements IGetEmployeeUserNameUserID {
       rs = statement.executeQuery(query);
       while (rs.next()) {
         userID = rs.getInt("EmployeeID");
+        System.out.println(userID);
       }
 
     } catch (SQLException throwables) {
@@ -40,10 +41,11 @@ public class GetEmployeeUserNameUserID implements IGetEmployeeUserNameUserID {
     return userID;
   }
 
-  @Override
+
   /* Take userID as a parameter and return the UserName.
    */
-  public String getEmployeeUserIDFromUserName(int employeeID) {
+  @Override
+  public String getEmployeeUserNameFromUserID(int employeeID) {
 
     Statement statement;
     ResultSet rs;
@@ -55,6 +57,7 @@ public class GetEmployeeUserNameUserID implements IGetEmployeeUserNameUserID {
       rs = statement.executeQuery(query);
       while (rs.next()) {
         username = rs.getString("UserName");
+        System.out.println(username);
       }
 
     } catch (SQLException throwables) {
