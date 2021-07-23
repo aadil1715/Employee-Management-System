@@ -1,6 +1,7 @@
 package com.dalhousie.group14.BusinessLogic.employee;
 
 import com.dalhousie.group14.Database.employee.DBSecurityQuestion;
+import com.dalhousie.group14.Database.employee.IDBSecurityQuestion;
 
 import java.util.Scanner;
 
@@ -10,10 +11,10 @@ import java.util.Scanner;
  */
 public class ChangeSecurityQuestion implements IChangeSecurityQuestion {
 
-  @Override
+
   public void changeSecurityQuestion() {
 
-    DBSecurityQuestion dbSecurityQuestion = new DBSecurityQuestion();
+    IDBSecurityQuestion dbSecurityQuestion = new DBSecurityQuestion();
     String userName;
     String question1;
     String answer1;
