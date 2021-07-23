@@ -5,20 +5,20 @@
  */
 package com.dalhousie.group14.Presentation.employee;
 
-import com.dalhousie.group14.Presentation.Common.UserInput;
-
 import java.sql.SQLException;
+import java.util.Scanner;
 
 public class CalendarMainScreen implements ICalendarScreen {
 
   public void displayScreen() {
     try {
+      Scanner scanner = new Scanner(System.in);
       System.out.println("1. Display your schedule");
       System.out.println("2. Add an event in your calendar.");
       System.out.println("3. Modify an event in your calendar");
       System.out.println("4. Delete/Remove an event from your calendar");
       System.out.println("5. Exit");
-      int choice = UserInput.takeInt();
+      int choice = scanner.nextInt();
       switch (choice) {
         case 1:
           CalendarScheduleScreen cs2 = new CalendarScheduleScreen();

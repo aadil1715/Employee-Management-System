@@ -7,7 +7,6 @@
 package com.dalhousie.group14.Presentation.employee;
 
 import com.dalhousie.group14.BusinessLogic.employee.CalendarEvent;
-import com.dalhousie.group14.Presentation.Common.UserInput;
 import com.dalhousie.group14.Presentation.utilities.CalendarDisplay;
 import com.dalhousie.group14.Presentation.utilities.ICalendarDisplay;
 
@@ -18,12 +17,13 @@ import java.util.Scanner;
 public class CalendarScheduleScreen implements ICalendarScreen {
 
   public void displayScreen() {
+    Scanner scanner = new Scanner(System.in);
     System.out.println("1. Display the current month schedule.");
     System.out.println("2. Display schedule for the next 3 months.");
     System.out.println("3. Display schedule for the entire year.");
     System.out.println("4. Go back to the previous screen.");
     try {
-      int choice = UserInput.takeInt();
+      int choice = scanner.nextInt();
       ICalendarDisplay calendarDisplay = new CalendarDisplay();
       LocalDate currentDate = LocalDate.now();
       int currentYear = currentDate.getYear();
@@ -55,9 +55,10 @@ public class CalendarScheduleScreen implements ICalendarScreen {
   }
 
   public void displayEvent() throws SQLException {
+    Scanner scanner = new Scanner(System.in);
     System.out.println("Enter a date to look at the event details: ");
     System.out.println("Enter EXIT to return to previous screen");
-    String date = UserInput.takeString();
+    String date = scanner.nextLine();
     if (!date.equals("EXIT")) {
       CalendarEvent e = CalendarEvent.searchEvent(date);
       e.display();

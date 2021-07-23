@@ -3,7 +3,6 @@ package com.dalhousie.group14.Presentation.utilities;
 import com.dalhousie.group14.BusinessLogic.employee.CalendarEvent;
 import com.dalhousie.group14.Database.employee.EventOperations;
 import com.dalhousie.group14.Database.utilities.QueryExecutor;
-import com.dalhousie.group14.Presentation.Common.UserInput;
 import org.junit.Test;
 
 import java.sql.ResultSet;
