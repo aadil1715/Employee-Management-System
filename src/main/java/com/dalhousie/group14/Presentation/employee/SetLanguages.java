@@ -1,4 +1,5 @@
 package com.dalhousie.group14.Presentation.employee;
+/*Author- Jainam Shah(B00883898)*/
 
 import com.dalhousie.group14.Database.employee.DBSecurityQuestion;
 import com.dalhousie.group14.Database.employee.GetEmployeeUserNameUserID;
@@ -27,6 +28,6 @@ public class SetLanguages implements ISetLanguages {
     techLanguage2 = scanner.nextLine();
     System.out.println("Enter your 3 Technical Language:");
     techLanguage3 = scanner.nextLine();
-    dbSecurityQuestion.insertTechDetails(userID,techLanguage1,techLanguage2,techLanguage3);
+    dbSecurityQuestion.insertTechDetails(userID, techLanguage1, techLanguage2, techLanguage3);
   }
 }

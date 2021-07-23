@@ -1,6 +1,9 @@
 package com.dalhousie.group14.BusinessLogic.employee;
 
 import com.dalhousie.group14.Database.employee.DBSecurityQuestion;
+import com.dalhousie.group14.Database.employee.IDBSecurityQuestion;
+import com.dalhousie.group14.Presentation.employee.ISetLanguages;
+import com.dalhousie.group14.Presentation.employee.SetLanguages;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -19,7 +22,7 @@ public class SetSecurityQuestion implements ISetSecurityQuestion {
    *
    * @param userName
    */
-  @Override
+
   public void setSecurityQuestion(String userName) {
 
     String question1;
@@ -30,8 +33,8 @@ public class SetSecurityQuestion implements ISetSecurityQuestion {
     String answer3;
 
     /*Create Object of DBSecurityQuestion*/
-    DBSecurityQuestion dbSecurityQuestion = new DBSecurityQuestion();
-
+    IDBSecurityQuestion dbSecurityQuestion = new DBSecurityQuestion();
+    ISetLanguages setLanguages = new SetLanguages();
     Scanner scanner = new Scanner(System.in);
     String userId = userName;
     ArrayList<String> arrayList;
@@ -63,5 +66,9 @@ public class SetSecurityQuestion implements ISetSecurityQuestion {
     /*Insert security Question Answer into database.*/
     dbSecurityQuestion.insertSecurityAnswer(userId, answer1, answer2,
         answer3);
+
+    setLanguages.setLanguages(userId);
+
+
   }
 }

@@ -2,7 +2,10 @@ package com.dalhousie.group14.BusinessLogic.employee;
 
 import com.dalhousie.group14.Database.employee.DBRequestForLeave;
 import com.dalhousie.group14.Database.employee.GetEmployeeUserNameUserID;
+import com.dalhousie.group14.Database.employee.IDBRequestForLeave;
+import com.dalhousie.group14.Database.employee.IGetEmployeeUserNameUserID;
 import com.dalhousie.group14.Database.manager.GetManagerUserNameUserID;
+import com.dalhousie.group14.Database.manager.IGetManagerUserNameUserID;
 
 import java.sql.Date;
 
@@ -16,9 +19,6 @@ import java.util.Scanner;
  */
 
 public class RequestForLeave implements IRequestForLeave {
-
-
-  @Override
 
   /* Take data from employee like name, when want to leave start and end data
    * logically calculated the date difference between this. Take all data
@@ -36,13 +36,13 @@ public class RequestForLeave implements IRequestForLeave {
     status = "pending";
     long days;
 
-    GetEmployeeUserNameUserID getEmployeeUserNameUserID =
+    IGetEmployeeUserNameUserID getEmployeeUserNameUserID =
         new GetEmployeeUserNameUserID();
 
-    GetManagerUserNameUserID managerUserNameUserID =
+    IGetManagerUserNameUserID managerUserNameUserID =
         new GetManagerUserNameUserID();
 
-    DBRequestForLeave dbRequestForLeave = new DBRequestForLeave();
+    IDBRequestForLeave dbRequestForLeave = new DBRequestForLeave();
     FindDistanceBettweenDates findDistanceBettweenDates = new FindDistanceBettweenDates();
 
     Date actualStartingLeaveDate;
@@ -55,7 +55,9 @@ public class RequestForLeave implements IRequestForLeave {
     try {
       System.out.println("Enter your Username:");
       userName = scanner.nextLine();
-      employeeID = getEmployeeUserNameUserID.getEmployeeUserIDFromUserName(userName);
+
+      employeeID =
+          getEmployeeUserNameUserID.getEmployeeUserIDFromUserName(userName);
       System.out.println("Your Employee ID is " + employeeID);
 
       System.out.println("Enter your Manager UserName:");
@@ -101,7 +103,6 @@ public class RequestForLeave implements IRequestForLeave {
   }
 
 
-  @Override
   /* this method logically validate that starting leave date is always before
    the starting end date.
    */

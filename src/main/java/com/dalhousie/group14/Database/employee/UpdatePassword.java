@@ -1,6 +1,8 @@
 package com.dalhousie.group14.Database.employee;
+/*Author- Jainam Shah(B00883898)*/
 
 import com.dalhousie.group14.BusinessLogic.employee.ChangePassword;
+import com.dalhousie.group14.BusinessLogic.employee.IChangePassword;
 import com.dalhousie.group14.Database.utilities.DbConnection;
 
 import java.sql.Connection;
@@ -9,13 +11,12 @@ import java.sql.Statement;
 
 public class UpdatePassword {
 
-  /* This method Update the password in the database.
-   */
+
   public void updatePassword(String userName, String password) {
 
     Statement statement;
     int resultSet;
-    ChangePassword changePassword=new ChangePassword();
+    IChangePassword changePassword = new ChangePassword();
     String query = "UPDATE `ems`.`LoginInfo` SET `Password` = '" + password + "' WHERE (`UserName` = '" + userName + "')";
     try {
       Connection connection = DbConnection.connectDB();
