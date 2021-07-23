@@ -1,16 +1,17 @@
 package com.dalhousie.group14.Presentation.manager;
+/*Author- Jainam Shah(B00883898)*/
 
 import java.util.Scanner;
 
-/**This class handle the all requests.
+/**
+ * This class handle the all requests.
  */
 public class RequestForApprovals implements IRequestForApprovals {
 
-  @Override
   public void requestForApprovals() {
 
     Scanner scanner = new Scanner(System.in);
-    RequestLeave requestLeave = new RequestLeave();
+    IRequestLeave requestLeave = new RequestLeave();
 
     ManagerLoginDashBoard managerLoginDashBoard =
         new ManagerLoginDashBoard();
