@@ -1,22 +1,26 @@
 package com.dalhousie.group14.Presentation.employee;
 
 import com.dalhousie.group14.BusinessLogic.employee.GiveSecurityQuestionAnswer;
+import com.dalhousie.group14.BusinessLogic.employee.IGiveSecurityQuestionAnswer;
+import com.dalhousie.group14.BusinessLogic.employee.ISetSecurityQuestion;
 import com.dalhousie.group14.BusinessLogic.employee.SetSecurityQuestion;
 
 import java.util.Scanner;
 
-/**Author- Jainam Shah*/
+/**
+ * Author- Jainam Shah
+ */
 public class SecurityQuestion {
 
   public void securityQuestion() {
 
-    SetSecurityQuestion securityQuestion = new SetSecurityQuestion();
-    GiveSecurityQuestionAnswer giveSecurityQuestionAnswer =
+    ISetSecurityQuestion securityQuestion = new SetSecurityQuestion();
+    IGiveSecurityQuestionAnswer giveSecurityQuestionAnswer =
         new GiveSecurityQuestionAnswer();
     Scanner scanner = new Scanner(System.in);
     Scanner scanner1 = new Scanner(System.in);
     String userName;
-    System.out.println("Welcome to Secuirty Question Page.");
+    System.out.println("Welcome to Security Question Page.");
     System.out.println("Enter your UserName:");
     userName = scanner1.nextLine();
     System.out.println("Your UserName is:" + userName);
