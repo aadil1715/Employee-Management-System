@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98510d03-2851-4869-a0ae-8263b7d693ba" name="Default Changelist" comment="Fixed the bugs that were there in the Test Validation Class.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/utilities/login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/utilities/login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/utilities/printTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,8 +85,8 @@
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
-      <command value="mvn clean install" />
       <command value="mvn compile" />
+      <command value="mvn clean install" />
     </option>
   </component>
   <component name="RunManager" selected="JUnit.printTest.displayMessageTest">
@@ -274,7 +273,21 @@
       <option name="project" value="LOCAL" />
       <updated>1627064621483</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fixed the bugs that were there in the Test Validation Class.">
+      <created>1627064829932</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1627064829932</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fixed the bugs that were there in the Test Validation Class.">
+      <created>1627065101770</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1627065101770</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
