@@ -1,3 +1,7 @@
+/*
+ * This class modifies an event in the calendar
+ * Author : Aadil Shaikh
+ */
 package com.dalhousie.group14.Presentation.employee;
 
 import com.dalhousie.group14.BusinessLogic.employee.CalendarEvent;
@@ -9,36 +13,37 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 
 public class CalendarModifyEvent implements ICalendarScreen {
-    public void displayScreen(){
-        LocalDate currentDate = LocalDate.now();
-        int currentYear = currentDate.getYear();
-        int currentMonth = currentDate.getMonth().getValue();
-        CalendarDisplay calendarDisplay = new CalendarDisplay();
-        calendarDisplay.displayThreeMonths(currentYear,currentMonth);
-        System.out.println("-----------------------------MODIFY EVENT------------------");
-        System.out.println("Enter the date of event to modify (FORMAT - YYYY-MM-DD): ");
-        System.out.println("Please follow the format (YYYY-DD-MM) EG [2021-12-08]");
-        String date = UserInput.takeString();
-        try {
-            CalendarEvent e = CalendarEvent.searchEvent(date);
-            if(e.getEventName()!=null){
-                System.out.println("Enter the new name of event: ");
-                String newname = UserInput.takeString();
-                System.out.println("Enter the date of event (FORMAT - YYYY-MM-DD): ");
-                System.out.println("Please follow the format (YYYY-DD-MM) EG [2021-12-08].");
-                System.out.println("Keep the date as it is if you dont want to change it.");
-                String newdate = UserInput.takeString();
-                System.out.println("Enter the new description name of event: ");
-                String newdesc = UserInput.takeString();
-                CalendarEvent enew = new CalendarEvent(newname,newdesc,newdate);
-                EventOperations.searchEventAndModify(enew,date);
-                System.out.println("Updated the event successfully");
-            }
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
-        ICalendarScreen cs1 = new CalendarMainScreen();
-        cs1.displayScreen();
 
+  public void displayScreen() {
+    LocalDate currentDate = LocalDate.now();
+    int currentYear = currentDate.getYear();
+    int currentMonth = currentDate.getMonth().getValue();
+    CalendarDisplay calendarDisplay = new CalendarDisplay();
+    calendarDisplay.displayThreeMonths(currentYear, currentMonth);
+    System.out.println("-----------------------------MODIFY EVENT------------------");
+    System.out.println("Enter the date of event to modify (FORMAT - YYYY-MM-DD): ");
+    System.out.println("Please follow the format (YYYY-DD-MM) EG [2021-12-08]");
+    String date = UserInput.takeString();
+    try {
+      CalendarEvent e = CalendarEvent.searchEvent(date);
+      if (e.getEventName() != null) {
+        System.out.println("Enter the new name of event: ");
+        String newname = UserInput.takeString();
+        System.out.println("Enter the date of event (FORMAT - YYYY-MM-DD): ");
+        System.out.println("Please follow the format (YYYY-DD-MM) EG [2021-12-08].");
+        System.out.println("Keep the date as it is if you dont want to change it.");
+        String newdate = UserInput.takeString();
+        System.out.println("Enter the new description name of event: ");
+        String newdesc = UserInput.takeString();
+        CalendarEvent enew = new CalendarEvent(newname, newdesc, newdate);
+        EventOperations.searchEventAndModify(enew, date);
+        System.out.println("Updated the event successfully");
+      }
+    } catch (SQLException throwables) {
+      throwables.printStackTrace();
     }
+    ICalendarScreen cs1 = new CalendarMainScreen();
+    cs1.displayScreen();
+
+  }
 }
