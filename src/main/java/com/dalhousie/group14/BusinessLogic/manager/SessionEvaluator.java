@@ -22,6 +22,7 @@ public class SessionEvaluator implements ISessionEvaluator {
         Map<String, List<String>> employeesessions = new HashMap<>();
         Map<String, Float> emp_discipline_rating = new HashMap<>();
         Calendar calendar = Calendar.getInstance();
+        sdf.setLenient(false);
         Date final_date = Validations.datesetter(sdf.format(calendar.getTime()));
         ResultSet resultset = EmployeeSessions.getEmployeeSessions(final_date);
         employeesessions = sessionAdder(resultset,employeesessions);

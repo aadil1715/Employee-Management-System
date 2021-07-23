@@ -3,17 +3,19 @@ package com.dalhousie.group14.Presentation.manager;
 import com.dalhousie.group14.BusinessLogic.manager.EmpEvaluation;
 import com.dalhousie.group14.BusinessLogic.manager.SessionEvaluator;
 import com.dalhousie.group14.BusinessLogic.utilities.Validations;
-import com.dalhousie.group14.Presentation.Common.UserInput;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 
 
 public class PerformanceEvaluatorScreen implements EvaluatorInterface {
 
+
   public void evaluatoroptions() {
     int userinput = 0;
     boolean correctinput = true;
+    Scanner sc = new Scanner(System.in);
     System.out.println("Choose the following options from the options. \n" +
       "1. Show Performance Evaluation of All Employees. \n" +
         "2. Display Performance Evaluation of A Specific Employee. \n" +
@@ -23,7 +25,7 @@ public class PerformanceEvaluatorScreen implements EvaluatorInterface {
                 "6. To go back to the previous screen. \n");
 
     try {
-      userinput = UserInput.takeInt();
+      userinput = sc.nextInt();
       if (userinput > low_limit && userinput <= high_limit) {
         correctinput = true;
       } else {
@@ -53,7 +55,7 @@ public class PerformanceEvaluatorScreen implements EvaluatorInterface {
 
         } else if (userinput == 2) {
           System.out.println("Enter the employee userName");
-          String username = UserInput.takeString();
+          String username = sc.next();
           if (Validations.isStringvalid(username)) {
             done = true;
             EmpEvaluation obj = new EmpEvaluation();

@@ -1,5 +1,6 @@
 package manager;
 
+import com.dalhousie.group14.BusinessLogic.manager.IProjectStatusRetrieve;
 import com.dalhousie.group14.BusinessLogic.manager.ProjectStatusRetrieve;
 import com.dalhousie.group14.BusinessLogic.manager.ProjectAssigner;
 import org.junit.jupiter.api.Test;
@@ -21,7 +22,8 @@ public class ProjectTests {
   @Test
   public void projectUnassignedTest(){
     ResultSet resultSet = com.dalhousie.group14.Database.manager.ProjectStatus.checkStatus("Initiation");
-    List<String> pendingprojects = ProjectStatusRetrieve.projectList(resultSet);
+    IProjectStatusRetrieve projectStatusRetrieve  = new ProjectStatusRetrieve();
+    List<String> pendingprojects = projectStatusRetrieve.projectList(resultSet);
     List<String> pendingprojects_test = new ArrayList<>();
 
     pendingprojects.add("2 Student Management System Java Python HTML 2021-06-26 2021-12-26 Initiation");

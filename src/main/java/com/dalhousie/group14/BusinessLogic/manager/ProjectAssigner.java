@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.*;
 
-public class ProjectAssigner {
+public class ProjectAssigner implements IProjectAssigner {
   private int assigned = 0;
   private static final int ID_INDEX = 1;
   private static final int LANG_INDEX = 3;
@@ -18,6 +18,7 @@ public class ProjectAssigner {
   boolean languageContains = false;
   Set<String> assignedemployees = new HashSet<>();
   Map<String, List<String>> empInfo = new HashMap<>();
+
 
   public boolean assignProject(String projectInfo) {
     String[] projectValues = projectInfo.split("~");
@@ -50,6 +51,7 @@ public class ProjectAssigner {
     return EmployeeProjectAssign.assignEmp(projectID, assignedEmployees);
   }
 
+  @Override
   public Set<String> empAssigner(List<String> requiredlanguages) {
     if (assignPerfectFit(requiredlanguages)) {
       return assignedemployees;
@@ -65,6 +67,7 @@ public class ProjectAssigner {
   }
 
 
+  @Override
   public boolean assignPerfectFit(List<String> requiredlanguages) {
     Set<String> keys = empInfo.keySet();
     List<String> emplanguages;
@@ -84,6 +87,7 @@ public class ProjectAssigner {
     return false;
   }
 
+  @Override
   public boolean assignDuoFit(List<String> requiredlanguages) {
     Set<String> keys = empInfo.keySet();
     List<String> emplanguages;
@@ -120,6 +124,7 @@ public class ProjectAssigner {
     return false;
   }
 
+  @Override
   public boolean assignSingleFit(List<String> singleFitemployees) {
     int i = 0;
     while (i < singleFitemployees.size()) {
@@ -136,6 +141,7 @@ public class ProjectAssigner {
     return false;
   }
 
+  @Override
   public boolean assignAnyFit() {
     Set<String> keys = empInfo.keySet();
     for (String key : keys) {
@@ -148,6 +154,7 @@ public class ProjectAssigner {
     return false;
   }
 
+  @Override
   public List<String> languageformatter(String languages) {
     String[] languageArray = languages.split(",");
     List<String> languageList = new ArrayList<>();

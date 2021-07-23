@@ -1,11 +1,14 @@
 package com.dalhousie.group14.Presentation.client;
 
+import com.dalhousie.group14.BusinessLogic.client.IMilestones;
 import com.dalhousie.group14.BusinessLogic.client.Milestones;
 import com.dalhousie.group14.BusinessLogic.utilities.Validations;
 
 import java.util.*;
 
-public class MilestonesDashboard implements MilestoneProperties {
+public class MilestonesDashboard implements IMilestonesDashboard {
+    public static final int MAX_TRIES = 5;
+    public static final int MILESTONE_LIMIT = 3;
 
 
     public Map<Date,String> definemilestonescreen(Date start_date, Date end_date) {
@@ -13,8 +16,9 @@ public class MilestonesDashboard implements MilestoneProperties {
         int mcount = 1;
         int tries = 0;
         Map<Date, String> received = new HashMap<>();
-        Milestones obj = new Milestones();
-        while (mcount != milestone_limit || tries != max_tries) {
+        IMilestones obj = new Milestones();
+
+        while (mcount != MILESTONE_LIMIT || tries != MAX_TRIES) {
             Scanner sc = new Scanner(System.in);
             System.out.println();
             System.out.print("Enter the " + Validations.noreturn(mcount) + " Milestone's Description : ");
@@ -29,10 +33,10 @@ public class MilestonesDashboard implements MilestoneProperties {
                 }
             }
             tries++;
-            if (tries == max_tries) {
+            if (tries == MAX_TRIES) {
                 System.out.println("Maximum Input Tries Limit Reached, Program will exit.");
             }
-            if (mcount > milestone_limit) {
+            if (mcount > MILESTONE_LIMIT) {
                 return received;
 
             }

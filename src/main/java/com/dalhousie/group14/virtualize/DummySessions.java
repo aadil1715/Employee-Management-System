@@ -20,9 +20,9 @@ public class DummySessions {
   }
 
   public static void createSessions() {
-    String name = "Employee-";
+    String name = "";
     List<String> employees = new ArrayList<>();
-    for (int i = 0; i < 5; i++) {
+    for (int i = 17; i < 20; i++) {
       String emp = name + i;
       employees.add(emp);
     }

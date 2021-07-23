@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class ProjectDefinition implements IProjectDefinition {
     public static final String[] suffixes = new String[] { "th", "st", "nd", "rd", "th", "th", "th", "th", "th", "th" };
-    public static final String pattern = "yyyy-MM-dd";
+
 
     public String noreturn(int i) {
         switch (i % 100) {
@@ -20,7 +20,9 @@ public class ProjectDefinition implements IProjectDefinition {
     }
 
     public Date datesetter(String date){
+        String pattern = "yyyy-MM-dd";
         SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+        sdf.setLenient(false);
         try {
             return sdf.parse(date);
         } catch (ParseException e) {

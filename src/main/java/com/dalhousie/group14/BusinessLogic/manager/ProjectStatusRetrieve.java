@@ -1,5 +1,6 @@
 package com.dalhousie.group14.BusinessLogic.manager;
 
+import com.dalhousie.group14.Presentation.manager.IProjectManagementDashboard;
 import com.dalhousie.group14.Presentation.manager.ProjectManagementDashboard;
 import com.dalhousie.group14.Presentation.utilities.TableFormatter;
 
@@ -9,8 +10,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ProjectStatusRetrieve {
-  public static List<String> projectList(ResultSet resultSet){
+public class ProjectStatusRetrieve implements IProjectStatusRetrieve {
+
+  public List<String> projectList(ResultSet resultSet){
     List<String> projects = new ArrayList<>();
     List<List<String>> projectsList = new ArrayList<>();
     int sNo = 1;
@@ -44,7 +46,7 @@ public class ProjectStatusRetrieve {
     }
     String outputProjectString = TableFormatter.formatAsTable(projectsList);
     if(outputProjectString != null){
-      ProjectManagementDashboard obj = new ProjectManagementDashboard();
+      IProjectManagementDashboard obj = new ProjectManagementDashboard();
       obj.displayProjects(outputProjectString);
     }
 

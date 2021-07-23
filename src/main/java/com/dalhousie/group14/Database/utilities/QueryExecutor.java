@@ -14,6 +14,8 @@ public class QueryExecutor {
                 resultSet = preparedStatement.executeQuery();
                 if(resultSet.isBeforeFirst()){
                     return resultSet;
+                }else{
+                    return null;
                 }
             }
         } catch (SQLException throwables) {
