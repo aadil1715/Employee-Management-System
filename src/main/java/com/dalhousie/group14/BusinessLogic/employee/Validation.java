@@ -1,16 +1,25 @@
 package com.dalhousie.group14.BusinessLogic.employee;
 
-import java.lang.Override;
-
+/**
+ * @Author: Ria Shah
+ * @NameofFile: Validation.java
+ * @ClassDescription: This class will perform the name,policynumber, claimed
+ * amount and reason validation
+ * entered by the user from the console and return true or false according to
+ * the user input.
+ */
 public class Validation implements IValidation {
 
-  int flag = 0;
+  private int flag = 0;
+  private final static String pattern5 = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^" +
+      ".-]+@[a-zA-Z0-9.-]+$";
+  private final static String pattern6 = "^[a-zA-Z0-9]+";
 
   public int getFlag() {
     return this.flag;
   }
 
-  @Override
+
   public boolean validateName(String name) {
     if (name.matches(pattern5)) {
       return true;
@@ -19,7 +28,6 @@ public class Validation implements IValidation {
     }
   }
 
-  @Override
   public boolean validatePolicyNumber(int policynumber) {
     if (policynumber < 0 || policynumber == 0) {
       flag = 1;
@@ -30,7 +38,6 @@ public class Validation implements IValidation {
 
   }
 
-  @Override
   public boolean validateMoneyClaimed(int amount) {
     if (amount < 0 || amount == 0) {
       return false;
@@ -39,7 +46,6 @@ public class Validation implements IValidation {
     }
   }
 
-  @Override
   public boolean validateReason(String reason) {
     if (!reason.matches(pattern6)) {
       return false;

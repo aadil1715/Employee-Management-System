@@ -12,6 +12,7 @@ public class EmployeeProjectPerformance {
         String query = "select EmployeeID,ProjectHistory from EmployeeTechDetails where " +
             "ProjectHistory is not null";
         resultSet = QueryExecutor.readData(query);
+
         return resultSet;
     }
 

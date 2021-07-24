@@ -1,5 +1,12 @@
 package com.dalhousie.group14.Presentation.employee;
 
+import com.dalhousie.group14.BusinessLogic.employee.IValidation;
+import com.dalhousie.group14.BusinessLogic.employee.Validation;
+import com.dalhousie.group14.Database.employee.DatabaseMediclaimRequests;
+import com.dalhousie.group14.Database.employee.IDatabaseMediclaimRequests;
+
+import java.util.Scanner;
+
 public class EmployeeMediclaimRequest implements IMediclaimRequest {
 
   static String name;
@@ -19,13 +26,16 @@ public class EmployeeMediclaimRequest implements IMediclaimRequest {
     enterPolicyNumber();
     moneyClaimed();
     giveReason();
+    IDatabaseMediclaimRequests obj = new DatabaseMediclaimRequests();
     obj.employeeMediclaimRequests(name, policynumber, amount, reason, status);
   }
 
   public void enterName() {
 
     System.out.println("Enter your Name");
+    Scanner scanner = new Scanner(System.in);
     name = scanner.nextLine();
+    IValidation validation = new Validation();
     if (validation.validateName(name)) {
       System.out.println("name is valid");
     } else {
@@ -36,7 +46,9 @@ public class EmployeeMediclaimRequest implements IMediclaimRequest {
 
   public void enterPolicyNumber() {
     System.out.println("Enter your policy number");
+    Scanner scanner = new Scanner(System.in);
     policynumber = scanner.nextInt();
+    IValidation validation = new Validation();
     if (validation.validatePolicyNumber(policynumber)) {
       System.out.println("the policynumber is valid");
     } else {
@@ -47,7 +59,9 @@ public class EmployeeMediclaimRequest implements IMediclaimRequest {
 
   public void moneyClaimed() {
     System.out.println("Enter the amount you want to claim");
+    Scanner scanner = new Scanner(System.in);
     amount = scanner.nextInt();
+    IValidation validation = new Validation();
     if (validation.validateMoneyClaimed(amount)) {
       System.out.println("the amount is valid");
     } else {
@@ -60,7 +74,9 @@ public class EmployeeMediclaimRequest implements IMediclaimRequest {
   public void giveReason() {
 
     System.out.println("Enter your valid reason for mediclaim");
-    reason = scanner.next();
+    Scanner scanner = new Scanner(System.in);
+    reason = scanner.nextLine();
+    IValidation validation = new Validation();
     if (validation.validateReason(reason)) {
       System.out.println("You have entered valid input");
       System.out.println("You have successfully made the mediclaim request.");

@@ -1,10 +1,14 @@
 package com.dalhousie.group14.BusinessLogic.employee;
 
-
 import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
+/*@Author: Ria Shah
+  @Name of File: NoticePeriod.java
+  @Class Description: This class will calculate the noticeperiod
+  of the employee from the current date till the next 2 months
+ */
 public class NoticePeriod implements INoticePeriod {
 
   public long noticePeriodCalculation() {

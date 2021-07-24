@@ -4,8 +4,95 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98510d03-2851-4869-a0ae-8263b7d693ba" name="Default Changelist" comment="Fixed the bugs that were there in the Test Validation Class.">
-      <change beforePath="$PROJECT_DIR$/target/test-classes/utilities/printTest.class" beforeDir="false" />
+    <list default="true" id="98510d03-2851-4869-a0ae-8263b7d693ba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/utilities/InsertLoginDateTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/group-14.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/group-14.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/employee/INoticePeriod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/employee/INoticePeriod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/employee/IValidateResignRequestEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/employee/IValidateResignRequestEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/employee/IValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/employee/IValidation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/employee/NoticePeriod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/employee/NoticePeriod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/employee/ValidateResignRequestEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/employee/ValidateResignRequestEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/employee/Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/employee/Validation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/manager/IInputValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/manager/IInputValidation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/utilities/EnterCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/utilities/EnterCredentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/utilities/UserTypeCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/utilities/UserTypeCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/client/MilestonesDatabaseInteraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/client/MilestonesDatabaseInteraction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/employee/DatabaseMediclaimRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/employee/DatabaseMediclaimRequests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/employee/GetEmployeeID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/employee/GetEmployeeID.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/employee/IDatabaseMediclaimRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/employee/IDatabaseMediclaimRequests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/employee/IGetEmployeeID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/employee/IGetEmployeeID.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/employee/IInsertResignRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/employee/IInsertResignRequests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/manager/EmployeeProjectPerformance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/manager/EmployeeProjectPerformance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/utilities/IInsertLoginTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/utilities/IInsertLoginDateTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/utilities/InsertLoginTime.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/employee/EmployeeMediclaimRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/employee/EmployeeMediclaimRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/employee/IMediclaimRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/employee/IMediclaimRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/employee/IResignRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/employee/IResignRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/employee/MakeResignRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/employee/MakeResignRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/ApproveRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/ApproveRequests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/DisplayUpdatedMediclaimRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/DisplayUpdatedMediclaimRequests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/IDisplayUpdatedMediclaimRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/IDisplayUpdatedMediclaimRequests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/IMediclaimRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/IMediclaimRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/IResignRequestManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/IResignRequestManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/MediclaimRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/MediclaimRequests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/ResignRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/ResignRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/utilities/ILogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/utilities/ILogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/utilities/IPrint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/utilities/IPrint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/utilities/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/utilities/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/utilities/Print.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/utilities/Print.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/utilities/loginTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EMS-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/EMS-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/client/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/client/ClientDashboardValidation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/client/ClientDashboardValidation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/client/ClientValidation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/client/Define.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/client/Milestones.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/client/Milestones.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/client/ProjectDefinition.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/client/ProjectDefinition.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/employee/ChangePassword.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/employee/ChangePassword.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/employee/ChangeSecurityQuestion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/employee/ChangeSecurityQuestion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/employee/GiveSecurityQuestionAnswer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/employee/GiveSecurityQuestionAnswer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/employee/GiveSecurityQuestionAnswers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/employee/SetSecurityQuestion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/employee/SetSecurityQuestion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/manager/EmpEvaluation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/manager/EmpEvaluation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/manager/EvaluatorComparator$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/manager/EvaluatorComparator$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/manager/EvaluatorComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/manager/EvaluatorComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/manager/ProjPerformanceProperties.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/manager/ProjectPerformanceEvaluator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/manager/ProjectPerformanceEvaluator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/manager/SessionEvaluator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/manager/SessionEvaluator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/manager/SessionEvaluatorProperties.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/utilities/CommonConstants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/utilities/EnterCredentials.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/utilities/EnterCredentials.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/utilities/Validations.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/utilities/Validations.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/client/MilestonesDatabaseInteraction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/client/MilestonesDatabaseInteraction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/client/ProjectDatabaseInteraction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/client/ProjectDatabaseInteraction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/employee/DisplayEmployeeLoginInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/employee/DisplayEmployeeLoginInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/employee/EmployeeValidate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/employee/UpdatePassword.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/employee/UpdatePassword.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/manager/EmployeeProjectPerformance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/manager/EmployeeProjectPerformance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/manager/EmployeeSessions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/manager/EmployeeSessions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/utilities/IInsertLoginTime.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/utilities/InsertLoginTime.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/utilities/QueryExecutor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/utilities/QueryExecutor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/Common/UserInput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/client/ClientDashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/client/ClientDashboard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/client/MilestoneProperties.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/client/MilestonesDashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/client/MilestonesDashboard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/client/NormalClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/client/Project.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/employee/EditProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/employee/EditProfile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/employee/EmployeeLoginDashBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/employee/EmployeeLoginDashBoard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/employee/EmployeeMediclaimRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/employee/EmployeeMediclaimRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/employee/IMediclaimRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/employee/IMediclaimRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/employee/IResignRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/employee/IResignRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/employee/MakeResignRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/employee/MakeResignRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/employee/SecurityQuestion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/employee/SecurityQuestion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/manager/ApproveRequests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/manager/ApproveRequests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/manager/PerformanceEvaluatorScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/manager/PerformanceEvaluatorScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/utilities/login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/utilities/login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/utilities/loginTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/virtualize/DummySessions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/virtualize/DummySessions.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,9 +103,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
+        <option value="JUnit4 Test Class" />
         <option value="Class" />
         <option value="Interface" />
-        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -55,14 +142,14 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor.code.editing" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.dalhousie.group14.Database.utilities" />
       <recent name="com.dalhousie.group14.Presentation.manager" />
       <recent name="com.dalhousie.group14.Database.manager" />
       <recent name="com.dalhousie.group14.BusinessLogic.utilities" />
-      <recent name="com.dalhousie.group14.Database.utilities" />
       <recent name="com.dalhousie.group14.Presentation.utilities" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -89,19 +176,29 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.printTest.displayMessageTest">
-    <configuration name="InputValidationTest.validateInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Login">
+    <configuration name="Login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dalhousie.group14.Presentation.utilities.Login" />
       <module name="group-14" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="manager.*" />
+          <option name="PATTERN" value="com.dalhousie.group14.Presentation.utilities.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="manager" />
-      <option name="MAIN_CLASS_NAME" value="manager.InputValidationTest" />
-      <option name="METHOD_NAME" value="validateInput" />
-      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MakeResignRequest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dalhousie.group14.Presentation.employee.MakeResignRequest" />
+      <module name="group-14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dalhousie.group14.Presentation.employee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -117,22 +214,6 @@
       <option name="PACKAGE_NAME" value="Employee" />
       <option name="MAIN_CLASS_NAME" value="Employee.ValidationTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ValidationTest.validateNameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="group-14" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Employee.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Employee" />
-      <option name="MAIN_CLASS_NAME" value="Employee.ValidationTest" />
-      <option name="METHOD_NAME" value="validateNameTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -171,11 +252,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Login" />
+        <item itemvalue="Application.MakeResignRequest" />
         <item itemvalue="JUnit.printTest.displayMessageTest" />
         <item itemvalue="JUnit.ValidationTest" />
         <item itemvalue="JUnit.ValidationTest.validateReason" />
-        <item itemvalue="JUnit.ValidationTest.validateNameTest" />
-        <item itemvalue="JUnit.InputValidationTest.validateInput" />
       </list>
     </recent_temporary>
   </component>

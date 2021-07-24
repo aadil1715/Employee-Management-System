@@ -6,11 +6,12 @@ import com.dalhousie.group14.Database.manager.*;
 
 import java.util.Scanner;
 
-/*@Author: Ria Shah
-  @Name of File: ResignRequest.java
-  @Class Description: This class will display the list of resignation
-  requests to the manager and will allow the manager to approve or reject the
-  pending resign requests.
+/**
+ * @Author: Ria Shah
+ * @NameofFile: ResignRequest.java
+ * @ClassDescription: This class will display the list of resignation
+ * requests to the manager and will allow the manager to approve or reject the
+ * pending resign requests.
  */
 public class ResignRequest implements IResignRequestManager {
 
