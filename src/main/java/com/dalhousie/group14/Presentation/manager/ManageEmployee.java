@@ -23,10 +23,10 @@ public class ManageEmployee {
     do {
       try {
         System.out.println("Select 1 for Edit Employee Information:\nSelect 2" +
-            " for Update Calende:\nSelect 3 for Send a Notification:\nSelect 4 for " +
-            "the Manage the Salary:\nSelect 5 for Map this Employee to the " +
-            "project:\nSelect 6 for go to the Manager DashBoard Page:\nSelect" +
-            " 7 for exit.");
+            " for Managing Employee's Calendar:\nSelect 3 for Send a " +
+            "Notification:\nSelect 4 for go to the Manager DashBoard" +
+            " Page:\nSelect" +
+            " 5 for exit.");
         select = scanner.nextInt();
 
         switch (select) {
@@ -43,12 +43,6 @@ public class ManageEmployee {
             System.out.println("Salary");
             break;
           case 5:
-            System.out.println("Map Employee to the project");
-            break;
-          case 6:
-            managerLoginDashBoard.managerLoginDashBoard();
-            break;
-          case 7:
             decision=false;
           default:
             System.out.println("Enter Correct number:");

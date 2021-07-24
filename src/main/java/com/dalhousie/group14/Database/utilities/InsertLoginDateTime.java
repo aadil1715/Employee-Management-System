@@ -1,5 +1,8 @@
 package com.dalhousie.group14.Database.utilities;
 
+import com.dalhousie.group14.Database.employee.GetEmployeeID;
+import com.dalhousie.group14.Database.employee.IGetEmployeeID;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -14,9 +17,12 @@ public class InsertLoginDateTime implements IInsertLoginDateTime {
 
     LocalTime localTime = LocalTime.parse(time);
     LocalDate localDate = LocalDate.parse(date);
+    IGetEmployeeID iGetEmployeeID = new GetEmployeeID();
+    int user = iGetEmployeeID.getEmployeeID(username);
+    String userID = "" + user;
     String query =
         "insert into LoginSession(LoginTime,UserName,SessionDate) values('" + localTime +
-            "','" + username +
+            "','" + userID +
             "','" + localDate + "');";
     QueryExecutor.writeData(query);
   }

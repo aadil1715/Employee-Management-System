@@ -11,7 +11,7 @@ import com.dalhousie.group14.BusinessLogic.employee.IChangeSecurityQuestion;
  */
 public class EditProfile {
 
-  public void editProfile() {
+  public void editProfile(String userName) {
 
     IChangeSecurityQuestion changeSecurityQuestion =
         new ChangeSecurityQuestion();
@@ -36,7 +36,7 @@ public class EditProfile {
             changeSecurityQuestion.changeSecurityQuestion();
             break;
           case 3:
-            employeeLoginDashBoard.employeeLoginDashBoard();
+            employeeLoginDashBoard.employeeLoginDashBoard(userName);
             break;
           case 4:
             decision = false;

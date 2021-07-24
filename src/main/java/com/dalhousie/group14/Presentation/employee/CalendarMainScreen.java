@@ -36,8 +36,10 @@ public class CalendarMainScreen implements ICalendarScreen {
           cs5.displayScreen();
 
         case 5:
-          System.out.println("PREVIOUS SCREEN!");
-          break;
+
+          EmployeeLoginDashBoard employeeLoginDashBoard =
+              new EmployeeLoginDashBoard();
+          employeeLoginDashBoard.employeeLoginDashBoard("harjot@gmail.com");
         default:
           System.out.println("Enter a correct choice");
           displayScreen();
@@ -47,8 +49,4 @@ public class CalendarMainScreen implements ICalendarScreen {
     }
   }
 
-  public static void main(String[] args) throws SQLException {
-    CalendarMainScreen cs = new CalendarMainScreen();
-    cs.displayScreen();
-  }
 }
