@@ -1,6 +1,13 @@
 package com.dalhousie.group14.Presentation.utilities;
 
+import com.dalhousie.group14.BusinessLogic.employee.SetSecurityQuestion;
 import com.dalhousie.group14.BusinessLogic.utilities.*;
+import com.dalhousie.group14.Presentation.client.ClientDashboard;
+import com.dalhousie.group14.Presentation.client.IClientDashboard;
+import com.dalhousie.group14.Presentation.employee.EmployeeLoginDashBoard;
+import com.dalhousie.group14.Presentation.employee.NewEmployeePresentation;
+import com.dalhousie.group14.Presentation.employee.SecurityQuestion;
+import com.dalhousie.group14.Presentation.manager.ManagerLoginDashBoard;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -18,6 +25,8 @@ import java.util.Scanner;
 public class Login implements ILogin {
 
   private IEnterCredentials enter_credentials = new EnterCredentials();
+  String loggedinUser="";
+
 
   public void userType() {
     HashMap<String, String> userType = new HashMap<>();
@@ -37,30 +46,32 @@ public class Login implements ILogin {
           enterPassword();
           loginTime();
           loginDate();
+          SecurityQuestion securityQuestion = new SecurityQuestion();
+          securityQuestion.securityQuestion();
+          EmployeeLoginDashBoard employeeLoginDashBoard = new EmployeeLoginDashBoard();
+          employeeLoginDashBoard.employeeLoginDashBoard(loggedinUser);
           break;
         case 2:
           System.out.println("You are a manager!");
           usertype = "Manager";
           enterUsername();
           enterPassword();
-          loginTime();
-          loginDate();
+          ManagerLoginDashBoard managerLoginDashBoard = new ManagerLoginDashBoard();
+          managerLoginDashBoard.managerLoginDashBoard();
           break;
         case 3:
           System.out.println("You are a client!");
           usertype = "Client";
           enterUsername();
           enterPassword();
-          loginTime();
-          loginDate();
+          IClientDashboard iClientDashboard = new ClientDashboard();
+          iClientDashboard.clientscreen(loggedinUser);
           break;
         case 4:
           System.out.println("You are a new employee");
-          usertype = "New user";
-          enterUsername();
-          enterPassword();
-          loginTime();
-          loginDate();
+          NewEmployeePresentation newEmployeePresentation=
+              new NewEmployeePresentation();
+          newEmployeePresentation.newEmployeeLogin();
           break;
         default:
           System.out.println("Please select another option");
@@ -100,6 +111,7 @@ public class Login implements ILogin {
     usernameobject.usernameCheck(username);
     userName.put("UserName", username);
     enter_credentials.credentials(userName);
+    loggedinUser = username;
 
   }
 

@@ -34,12 +34,14 @@ public class DBRequestForLeave implements IDBRequestForLeave {
         "'" + status + "')";
 
     try {
+      IGetEmployeeUserNameUserID obj = new GetEmployeeUserNameUserID();
+      String userName = obj.getEmployeeUserNameFromUserID(employeeID);
       Connection connection = DbConnection.connectDB();
       statement = connection.createStatement();
       result = statement.executeUpdate(query);
       if (result > 0) {
         System.out.println("successfully inserted");
-        employeeLoginDashBoard.employeeLoginDashBoard();
+        employeeLoginDashBoard.employeeLoginDashBoard(userName);
       } else {
         System.out.println("Data not inserted!! Please check your username: ");
       }

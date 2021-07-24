@@ -1,5 +1,8 @@
 package com.dalhousie.group14.Presentation.manager;
 
+import com.dalhousie.group14.BusinessLogic.manager.Manager;
+import com.dalhousie.group14.Presentation.utilities.Login;
+
 import java.util.Scanner;
 
 /**
@@ -8,11 +11,14 @@ import java.util.Scanner;
  */
 public class ManagerLoginDashBoard {
 
+  public static void main(String[] args) {
+    ManagerLoginDashBoard obj = new ManagerLoginDashBoard();
+    obj.managerLoginDashBoard();
+  }
   public void managerLoginDashBoard() {
 
     Scanner scanner = new Scanner(System.in);
     ManageEmployee ManageEmployee = new ManageEmployee();
-    ProjectManagement projectManagement=new ProjectManagement();
     IRequestForApprovals request = new RequestForApprovals();
 
     System.out.println("\t\t\t\t\t\t\t\t\t\t\t\tWelcome to Manager Dashboard\t\t\t\t\t\t\t\t\t\t\t\t");
@@ -24,43 +30,51 @@ public class ManagerLoginDashBoard {
     boolean decision = true;
     do {
       try {
-        System.out.println("Enter 1 for ManageEmployee:\nEnter 2 for Approve Requests:" +
-            "\nEnter 3 for Project Management:\nEnter 4 for Performance " +
-            "Evaluation:\nEnter 5 for Notifications:\nEnter 6 for Employee " +
-            "Schedule Management:\nEnter 7 for Employee Salary " +
-            "Management\nEnter 8 for Logout\nEnter 9 for exit from this page.");
+        System.out.println("Enter from the following options. Enter Numerical" +
+            " Input Only.");
+        System.out.println("1. Employee Profile Management. \n2. Project " +
+            "Management. \n3. Employee Performance Evaluation. \n4. Request " +
+            "Management \n5. Employee Schedule Management \n6. Employee " +
+            "Salary" +
+            " Management. \n7. Notifications \n8. Logout \n9. Exit from the " +
+            "application.");
         select = scanner.nextInt();
         switch (select) {
           case 1:
             ManageEmployee.manageEmployee();
-            System.out.println("ManageEmployee");
+            System.out.println("Manage Employee");
             break;
           case 2:
+            IProjectManagementDashboard obj = new ProjectManagementDashboard();
+            obj.projDashboard();
+            break;
+          case 3:
+            PerformanceEvaluatorScreen obj2 = new PerformanceEvaluatorScreen();
+            obj2.evaluatoroptions();
+            break;
+          case 4:
             request.requestForApprovals();
             System.out.println("Requests");
             break;
-          case 3:
-            projectManagement.projectManagement();
-            System.out.println("Project Management");
-            break;
-          case 4:
-            System.out.println("Performance Evaluation");
-            break;
           case 5:
-            System.out.println("Notifications");
+            DisplayEmployeeSchedule obj3 = new DisplayEmployeeSchedule();
+            obj3.displayScreen();
             break;
           case 6:
-            System.out.println("Employee Schedule Management");
+            SalaryOfEmployee se=new SalaryOfEmployee();
+            se.ViewAllEmployees();
             break;
           case 7:
-            System.out.println("Employee Salary Management");
+
             break;
           case 8:
-            System.out.println("Logout");
+            System.out.println("Logging out from the Manager Portal.");
+            Login login = new Login();
+            login.userType();
             break;
           case 9:
             decision = false;
-            break;
+            return;
           default:
             System.out.println("Enter Correct number:");
         }

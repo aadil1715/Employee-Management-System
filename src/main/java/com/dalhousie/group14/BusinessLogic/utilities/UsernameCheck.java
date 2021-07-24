@@ -33,12 +33,6 @@ public class UsernameCheck implements IUsernameCheck {
     //Compile the regex
     Pattern p = Pattern.compile(regex1);
     boolean valid = (name != null) && p.matcher(name).matches();
-    if (!object.checkUsernameExists(name)) {
-      System.out.println("username already exists.Try again");
-      loginobject.enterUsername();
-    } else {
-    }
-
     String message;
     if (valid) {
       message = "USERNAME IS VALID";
