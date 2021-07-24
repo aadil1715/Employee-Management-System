@@ -27,9 +27,4 @@ public class SendNotification {
     nm.send(n, empID, managerID);
     System.out.println("Successfully sent notification!");
   }
-
-  public static void main(String[] args) throws SQLException {
-    SendNotification sendNotification = new SendNotification();
-    sendNotification.display();
-  }
 }
