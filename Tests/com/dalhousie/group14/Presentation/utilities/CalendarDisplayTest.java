@@ -2,8 +2,10 @@ package com.dalhousie.group14.Presentation.utilities;
 
 import com.dalhousie.group14.BusinessLogic.employee.CalendarEvent;
 import com.dalhousie.group14.Database.employee.EventOperations;
+import com.dalhousie.group14.Database.employee.MilestoneOperations;
 import com.dalhousie.group14.Database.utilities.GetSpecialDates;
 import com.dalhousie.group14.Database.utilities.QueryExecutor;
+import com.dalhousie.group14.Presentation.employee.DisplayMilestone;
 import org.junit.Test;
 
 import java.sql.ResultSet;
@@ -43,9 +45,8 @@ public class CalendarDisplayTest {
 
     @Test
     public void temp() throws SQLException {
-        System.out.println("Enter a date to look at the event details: ");
-        CalendarEvent e = CalendarEvent.searchEvent("2021-08-05");
-        e.display();
+        DisplayMilestone displayMilestone = new DisplayMilestone();
+        displayMilestone.display();
     }
 
 }
