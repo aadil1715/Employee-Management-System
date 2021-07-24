@@ -2,13 +2,17 @@ package com.dalhousie.group14.Presentation.manager;
 
 import com.dalhousie.group14.BusinessLogic.manager.IInputValidation;
 import com.dalhousie.group14.BusinessLogic.manager.InputValidation;
-import com.dalhousie.group14.Presentation.employee.IResignRequest;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-/*@Author: Ria Shah
-  @Name of File:ApproveRequests.java
+/**
+ * @Author: Ria Shah
+ * @NameofFile: ApproveRequests.java
+ * @ClassDescription: This class will display the screen of all the types of
+ * requests to the manager which he can approve requested by the employee
+ * such as Resign request, Mediclaim request, Asset requests, Leave requests,
+ * and Joining requests.
  */
 public class ApproveRequests {
 

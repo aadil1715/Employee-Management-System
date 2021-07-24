@@ -20,8 +20,8 @@ public class InputValidation implements IInputValidation {
   }
 
   public boolean validateInput(String input) {
-    if (input.equalsIgnoreCase("Y") || input.equalsIgnoreCase("N") ||input.equalsIgnoreCase("yes")
-    || input.equalsIgnoreCase("no")) {
+    if (input.equalsIgnoreCase("Y") || input.equalsIgnoreCase("N") || input.equalsIgnoreCase("yes")
+        || input.equalsIgnoreCase("no")) {
       return true;
     } else if (!input.equalsIgnoreCase("Y") || !input.equalsIgnoreCase("N")) {
       return false;
@@ -36,7 +36,7 @@ public class InputValidation implements IInputValidation {
       mediapprove.approveStatus(name);
 
     } else {
-      System.out.println("you have entered bad input.Please try again");
+      System.out.println("You have entered bad input.Please try again");
       MediclaimRequests object1 = new MediclaimRequests();
       object1.displayMediclaimRequests();
     }

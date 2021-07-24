@@ -7,8 +7,13 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDate;
 
-import com.dalhousie.group14.BusinessLogic.employee.NoticePeriod;
-
+/**
+ * @Author: Ria Shah
+ * @NameofFile: InsertResignRequests.java
+ * @ClassDescription: This class will insert employeeID, resignDate, reason
+ * for resign, and default pending status in the ResignRequest table in the
+ * ems Database.
+ */
 public class InsertResignRequests implements IApprovedStatus,
     IInsertResignRequests {
 

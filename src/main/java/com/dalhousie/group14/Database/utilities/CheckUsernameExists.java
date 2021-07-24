@@ -8,18 +8,22 @@ import java.sql.Statement;
 public class CheckUsernameExists implements ICheckUsernameExists {
 
   public boolean checkUsernameExists(String name) {
-    try {
       Connection connection = DbConnection.connectDB();
       String query = "SELECT UserName FROM ems.LoginInfo WHERE EXISTS (SELECT UserName FROM ems.LoginInfo WHERE UserName ='" + name + "');";
+
+    ResultSet rs = null;
+    try {
       Statement statement = connection.createStatement();
-      ResultSet rs = statement.executeQuery(query);
-      if (rs != null) {
-        return true;
+      rs = statement.executeQuery(query);
+      if (rs.next()) {
+        return false;
+      } else {
+          return true;
       }
     } catch (SQLException throwables) {
-      System.out.println(throwables);
+      throwables.printStackTrace();
     }
-    return false;
+    return true;
   }
 
 }

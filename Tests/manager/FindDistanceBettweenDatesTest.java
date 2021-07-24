@@ -1,5 +1,6 @@
-package com.dalhousie.group14.BusinessLogic.employee;
+package manager;
 
+import com.dalhousie.group14.BusinessLogic.employee.FindDistanceBettweenDates;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -8,10 +9,11 @@ class FindDistanceBettweenDatesTest {
 
   @Test
   void findDistanceBettweenDates() {
-    FindDistanceBettweenDates findDistanceBettweenDates=
+    FindDistanceBettweenDates findDistanceBettweenDates =
         new FindDistanceBettweenDates();
-    assertEquals(3,findDistanceBettweenDates.findDistanceBettweenDates("2021" +
-        "-12-12","2021-12" +
+    assertEquals(3, findDistanceBettweenDates.findDistanceBettweenDates("2021" +
+        "-12-12", "2021-12" +
         "-15"));
   }
+
 }
