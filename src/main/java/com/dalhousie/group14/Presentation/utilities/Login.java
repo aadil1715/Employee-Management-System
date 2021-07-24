@@ -17,11 +17,6 @@ import java.util.Scanner;
  */
 public class Login implements ILogin {
 
-  public static void main(String[] args) {
-    Login login = new Login();
-    login.userType();
-  }
-
   private IEnterCredentials enter_credentials = new EnterCredentials();
 
   public void userType() {

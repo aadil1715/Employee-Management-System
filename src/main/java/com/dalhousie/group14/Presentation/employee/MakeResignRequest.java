@@ -18,13 +18,9 @@ public class MakeResignRequest implements IResignRequest {
   IValidateResignRequestEmployee validate = new ValidateResignRequestEmployee();
 
 
-  public static void main(String[] args) {
-    MakeResignRequest obj = new MakeResignRequest();
-    obj.resignRequest();
-  }
-
   public void resignRequest() {
     try {
+      System.out.println("You are in the Apply for Resign Request Screen");
       System.out.println("Enter your username");
       String username = scanner.nextLine();
       if (validate.validateName(username) == false) {
@@ -32,19 +28,20 @@ public class MakeResignRequest implements IResignRequest {
         resignRequest();
       } else if (validate.validateName(username) == true) {
         System.out.println("username is valid");
-      }
-      idobject.getEmployeeID(username);
-      System.out.println("Your ResignDate in yyyy/MM/dd format is:");
-      LocalDate localDate = LocalDate.now();
-      System.out.println(localDate);
-      System.out.println("Enter the reason for resignation");
-      Scanner scanner1 = new Scanner(System.in);
-      String reason = scanner1.nextLine();
-      if (!validate.validateReason(reason)) {
-        System.out.println("Reason entered is not in proper format. Please try again later.");
-      } else {
-        System.out.println("You have successfully created the Resign Request.");
-        insertobject.insertResignRequestDetails(idobject.getEmployeeID(username), localDate, reason);
+
+        idobject.getEmployeeID(username);
+        System.out.println("Your ResignDate in yyyy/MM/dd format is:");
+        LocalDate localDate = LocalDate.now();
+        System.out.println(localDate);
+        System.out.println("Enter the reason for resignation");
+        Scanner scanner1 = new Scanner(System.in);
+        String reason = scanner1.nextLine();
+        if (!validate.validateReason(reason)) {
+          System.out.println("Reason entered is not in proper format. Please try again later.");
+        } else {
+          System.out.println("You have successfully created the Resign Request.");
+          insertobject.insertResignRequestDetails(idobject.getEmployeeID(username), localDate, reason);
+        }
       }
     } catch (Exception exception) {
       System.out.println(exception);

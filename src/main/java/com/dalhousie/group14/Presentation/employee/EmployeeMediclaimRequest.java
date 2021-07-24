@@ -15,13 +15,9 @@ public class EmployeeMediclaimRequest implements IMediclaimRequest {
   static String reason;
   static String status = "pending";
 
-  public static void main(String[] args) {
-    EmployeeMediclaimRequest emr = new EmployeeMediclaimRequest();
-    emr.callALlMethods();
-
-  }
 
   public void callALlMethods() {
+    System.out.println("You are in the apply for mediclaim  screen");
     enterName();
     enterPolicyNumber();
     moneyClaimed();
