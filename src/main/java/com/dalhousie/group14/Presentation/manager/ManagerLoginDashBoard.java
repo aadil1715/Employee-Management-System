@@ -36,7 +36,9 @@ public class ManagerLoginDashBoard {
             "Management. \n3. Employee Performance Evaluation. \n4. Request " +
             "Management \n5. Employee Schedule Management \n6. Employee " +
             "Salary" +
-            " Management. \n7. Notifications \n8. Logout \n9. Exit from the " +
+            " Management. \n7. Send Notifications to employee \n8. Logout \n9" +
+            ". " +
+            "Exit from the " +
             "application.");
         select = scanner.nextInt();
         switch (select) {
@@ -65,7 +67,8 @@ public class ManagerLoginDashBoard {
             se.ViewAllEmployees();
             break;
           case 7:
-
+            SendNotification sendNotification = new SendNotification();
+            sendNotification.display();
             break;
           case 8:
             System.out.println("Logging out from the Manager Portal.");
