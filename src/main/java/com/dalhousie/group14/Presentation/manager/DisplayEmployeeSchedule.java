@@ -1,12 +1,7 @@
-/*
- * This class shows the schedule of employee in a calendar format.
- * It extracts the special dates that have events
- * Displays the special dates in underline format.
- * Author : Aadil Shaikh
- */
-package com.dalhousie.group14.Presentation.employee;
+package com.dalhousie.group14.Presentation.manager;
 
 import com.dalhousie.group14.BusinessLogic.employee.CalendarEvent;
+import com.dalhousie.group14.Presentation.employee.ICalendarScreen;
 import com.dalhousie.group14.Presentation.utilities.CalendarDisplay;
 import com.dalhousie.group14.Presentation.utilities.ICalendarDisplay;
 
@@ -14,10 +9,12 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-public class CalendarScheduleScreen implements ICalendarScreen {
+public class DisplayEmployeeSchedule implements ICalendarScreen {
 
   public void displayScreen() {
     Scanner scanner = new Scanner(System.in);
+    System.out.println("Enter the employee's ID: ");
+    String empID = scanner.nextLine();
     System.out.println("1. Display the current month schedule.");
     System.out.println("2. Display schedule for the next 3 months.");
     System.out.println("3. Display schedule for the entire year.");
@@ -28,7 +25,6 @@ public class CalendarScheduleScreen implements ICalendarScreen {
       LocalDate currentDate = LocalDate.now();
       int currentYear = currentDate.getYear();
       int currentMonth = currentDate.getMonth().getValue();
-      String empID = "891000";
       switch (choice) {
         case 1:
           calendarDisplay.displayCurrentMonth(currentYear,currentMonth,empID);
@@ -43,8 +39,9 @@ public class CalendarScheduleScreen implements ICalendarScreen {
           displayEvent();
 
         case 4:
-          CalendarMainScreen cs1 = new CalendarMainScreen();
-          cs1.displayScreen();
+          CalendarManagerScreen calendarManagerScreen =
+              new CalendarManagerScreen();
+          calendarManagerScreen.displayScreen();
 
         default:
           System.out.println("Please enter a correct choice!");
@@ -60,15 +57,14 @@ public class CalendarScheduleScreen implements ICalendarScreen {
     System.out.println("Enter a date to look at the event details: ");
     System.out.println("Enter EXIT to return to previous screen");
     String date = scanner.nextLine();
-    if (!date.equals("EXIT")) {
+    if(!date.equals("EXIT")) {
       CalendarEvent e = CalendarEvent.searchEvent(date);
       e.display();
       System.out.println("Press enter to continue...");
       promptEnterKey();
-      displayScreen();
-    } else {
-      displayScreen();
     }
+    CalendarManagerScreen calendarManagerScreen = new CalendarManagerScreen();
+    calendarManagerScreen.displayScreen();
   }
 
   public void promptEnterKey() {
