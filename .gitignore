@@ -111,6 +111,10 @@ fabric.properties
 # https://plugins.jetbrains.com/plugin/12206-codestream
 .idea/codestream.xml
 
+/target
+/target/**
+/target/*
+
 # End of https://www.toptal.com/developers/gitignore/api/intellij
 /target/classes/com/dalhousie/group14/Presentation/manager/Approve_Requests.class
 /target/classes/com/dalhousie/group14/Presentation/employee/Calendar.class

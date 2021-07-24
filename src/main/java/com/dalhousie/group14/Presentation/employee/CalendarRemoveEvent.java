@@ -17,10 +17,11 @@ public class CalendarRemoveEvent implements ICalendarScreen {
   public void displayScreen() {
     Scanner scanner = new Scanner(System.in);
     LocalDate currentDate = LocalDate.now();
+    String employeeID = "891000";
     int currentYear = currentDate.getYear();
     int currentMonth = currentDate.getMonth().getValue();
     ICalendarDisplay calendarDisplay = new CalendarDisplay();
-    calendarDisplay.displayThreeMonths(currentYear, currentMonth);
+    calendarDisplay.displayThreeMonths(currentYear, currentMonth, employeeID);
     System.out.println("-----------------------REMOVE EVENT--------------------");
     System.out.println("Enter the date of event to remove (FORMAT - YYYY-MM-DD): ");
     System.out.println("Please follow the format (YYYY-DD-MM) EG [2021-12-08]");

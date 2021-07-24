@@ -16,11 +16,13 @@ public class CalendarModifyEvent implements ICalendarScreen {
 
   public void displayScreen() {
     Scanner scanner = new Scanner(System.in);
+    String employeeID = "891000";
     LocalDate currentDate = LocalDate.now();
     int currentYear = currentDate.getYear();
     int currentMonth = currentDate.getMonth().getValue();
     CalendarDisplay calendarDisplay = new CalendarDisplay();
-    calendarDisplay.displayThreeMonths(currentYear, currentMonth);
+    calendarDisplay.displayThreeMonths(currentYear, currentMonth,
+        employeeID);
     System.out.println("-----------------------------MODIFY EVENT------------------");
     System.out.println("Enter the date of event to modify (FORMAT - YYYY-MM-DD): ");
     System.out.println("Please follow the format (YYYY-DD-MM) EG [2021-12-08]");
