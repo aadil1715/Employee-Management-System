@@ -80,7 +80,7 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
       result = statement.executeUpdate(query);
       if (result > 0) {
         System.out.println("Successfully Inserted your Answers.");
-        securityQuestion.securityQuestion();
+
       } else {
         System.out.println("Answers not inserted!! Please check your userName: ");
       }
@@ -242,7 +242,7 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
     int result;
     query = "INSERT INTO `ems`.`EmployeeTechDetails` (`EmployeeID`,`Languages`)" +
         " VALUES ('" + userID + "', '" + techLanguage1 + " ," + techLanguage2 + " ," + techLanguage3 + "')";
-
+    SecurityQuestion securityQuestion = new SecurityQuestion();
     try {
       Connection connection = DbConnection.connectDB();
       statement = connection.createStatement();
@@ -252,6 +252,7 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
       if (result > 0) {
         System.out.println("Successfully sampledata First " +
             "Time.");
+        securityQuestion.securityQuestion();
       } else {
         System.out.println("Data not Inserted!! please, check your Username ");
 
