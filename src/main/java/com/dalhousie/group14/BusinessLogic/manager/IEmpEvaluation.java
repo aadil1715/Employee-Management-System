@@ -2,9 +2,11 @@ package com.dalhousie.group14.BusinessLogic.manager;
 
 import java.util.List;
 import java.util.Map;
-
+/**
+ * @author Harjot Singh
+ */
 public interface IEmpEvaluation {
-  List<Map.Entry<String, Float>> EvaluateAll();
+  String EvaluateAll();
 
   String EvaluateEmployee(String username);
 
@@ -12,5 +14,5 @@ public interface IEmpEvaluation {
 
   String leastDisciplined();
 
-  String EoM();
+  String EoMDisplay();
 }

@@ -3,6 +3,7 @@ package com.dalhousie.group14.BusinessLogic.manager;
 import com.dalhousie.group14.Database.manager.EmployeeProjectAssign;
 import com.dalhousie.group14.Database.manager.ProjectStatus;
 import com.dalhousie.group14.Presentation.manager.ProjectManagementDashboard;
+import com.dalhousie.group14.Presentation.utilities.TableFormatter;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,6 +12,7 @@ import java.util.*;
 public class ProjectAssigner implements IProjectAssigner {
   private int assigned = 0;
   private static final int ID_INDEX = 1;
+  private static final int NAME_INDEX = 1;
   private static final int LANG_INDEX = 3;
   private static final int COMPLETE_ASSIGNED = 3;
   private static final int MIN = 0;
@@ -18,16 +20,19 @@ public class ProjectAssigner implements IProjectAssigner {
   boolean languageContains = false;
   Set<String> assignedemployees = new HashSet<>();
   Map<String, List<String>> empInfo = new HashMap<>();
+  Map<String, List<String>> empInfo2 = new HashMap<>();
 
 
-  public boolean assignProject(String projectInfo) {
+
+  public String assignProject(String projectInfo) {
     String[] projectValues = projectInfo.split("~");
     String projectID = projectValues[ID_INDEX];
+    String projectName = projectValues[NAME_INDEX];
     String projectLanguages = projectValues[LANG_INDEX];
     List<String> requiredlanguages = languageformatter(projectLanguages);
     ResultSet resultSet = ProjectStatus.availableEmployees();
     if(resultSet == null){
-      return false;
+      return null;
     }
 
     while (true) {
@@ -39,16 +44,25 @@ public class ProjectAssigner implements IProjectAssigner {
         List<String> employeeLanguages = languageformatter(languages);
         String empID = resultSet.getString("EmployeeID");
         empInfo.put(empID, employeeLanguages);
+        empInfo2.put(empID, employeeLanguages);
       } catch (SQLException throwables) {
         throwables.printStackTrace();
       }
     }
     Set<String> assignedEmployees = empAssigner(requiredlanguages);
     if (assignedEmployees == null) {
-      return false;
+      return null;
     }
-
-    return EmployeeProjectAssign.assignEmp(projectID, assignedEmployees);
+    boolean assignStatus = EmployeeProjectAssign.assignEmp(projectID,
+        assignedEmployees);
+    if(assignStatus){
+      String assignedEmpString =  assignedEmpDetails(assignedEmployees);
+      String projectString = "Project Name : " + projectName + " - Project ID" +
+          " : "+projectID+"\nProject Lanaguages : "+ projectLanguages;
+      assignedEmpString = projectString + assignedEmpString;
+      return assignedEmpString;
+    }
+    return null;
   }
 
   @Override
@@ -104,9 +118,7 @@ public class ProjectAssigner implements IProjectAssigner {
         if (lcount > 1 && languageContains) {
           assignedemployees.add(key);
           assigned++;
-          if(singleFitemployees.contains(key)){
-            singleFitemployees.remove(key);
-          }
+          singleFitemployees.remove(key);
         }
         if (assigned == COMPLETE_ASSIGNED) {
           return true;
@@ -117,11 +129,7 @@ public class ProjectAssigner implements IProjectAssigner {
       }
     }
     removeDuplicates();
-    if (assignSingleFit(singleFitemployees)) {
-      return true;
-    }
-
-    return false;
+    return assignSingleFit(singleFitemployees);
   }
 
   @Override
@@ -172,6 +180,19 @@ public class ProjectAssigner implements IProjectAssigner {
         empInfo.remove(employee);
       }
     }
+  }
+
+  public String assignedEmpDetails(Set<String> assignedemployees){
+    List<List<String>> assignedEmployee = new ArrayList<>();
+    List<String> headers = Arrays.asList("Employee ID", "Employee Languages");
+    assignedEmployee.add(headers);
+    for(String assignedEmp : assignedemployees){
+      List<String> aassignedEmpLanguages = empInfo2.get(assignedEmp);
+      String empLanguages = String.join(",",aassignedEmpLanguages);
+      List<String> row = Arrays.asList(assignedEmp,empLanguages);
+      assignedEmployee.add(row);
+    }
+    return TableFormatter.formatAsTable(assignedEmployee);
   }
 
 }
