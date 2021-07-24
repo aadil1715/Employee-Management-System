@@ -3,14 +3,36 @@ package com.dalhousie.group14.Presentation.manager;
 import com.dalhousie.group14.BusinessLogic.employee.Employee;
 import com.dalhousie.group14.BusinessLogic.utilities.ISalaries;
 import com.dalhousie.group14.BusinessLogic.utilities.Salaries;
+import com.dalhousie.group14.Presentation.utilities.TableFormatter;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class SalaryOfEmployee {
 
+  public void ViewAllEmployees(){
+    String cont="no";
+    do {
+      System.out.println("This is the list of all employees.Please choose the " +
+          "option you want to edit salary for:-");
+      Salaries salary = new Salaries();
+
+      List<List<String>> display = new ArrayList<>();
+      display = (List<List<String>>) salary.ViewEmployees();
+      for (int i = 0; i < display.size(); i++) {
+        System.out.format("%10s%32s%32s", i, display.get(i).get(0),
+            display.get(i).get(1));
+        System.out.println();
+      }
+      Scanner sc = new Scanner(System.in);
+      String emp = sc.next();
+      int index = Integer.parseInt(emp);
+      editSalary(display.get(index).get(0));
+      System.out.println("Do you want to continue to edit other user " +
+          "salaries?[yes/no]");
+      Scanner sca=new Scanner(System.in);
+      cont=sca.next();
+    }while (cont.equals("yes"));
+  }
   public void editSalary(String userName) {
     ArrayList<String> toViewElements = new ArrayList<>();
     toViewElements.add("CTC");

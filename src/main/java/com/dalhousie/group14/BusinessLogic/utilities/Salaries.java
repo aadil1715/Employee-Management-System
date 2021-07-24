@@ -4,13 +4,22 @@ package com.dalhousie.group14.BusinessLogic.utilities;
 import com.dalhousie.group14.BusinessLogic.employee.Employee;
 import com.dalhousie.group14.Database.employee.EmployeeDBOperation;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Salaries implements ISalaries {
 
   private String manager;
   private Map<String, String> info;
+  public List<List<String>> ViewEmployees(){
+    EmployeeDBOperation d = new EmployeeDBOperation();
+    Map<String, Double> salary_info = new HashMap<>();
+    List<List<String>> info = new ArrayList<>();
+    info = d.getALLEmployeeInfo();
+    return info;
+  }
   @Override
   public Map viewSalary(String emp) {
 
