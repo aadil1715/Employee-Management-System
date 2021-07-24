@@ -1,30 +1,23 @@
-package com.dalhousie.group14.Database.utilities;
+package com.dalhousie.group14.Database.employee;
 
-import java.sql.*;
+import com.dalhousie.group14.Database.utilities.DbConnection;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MySQLDatabase implements DataStorage{
-    private String url;
-    private String username;
-    private String password;
-    private Connection connection;
-    public MySQLDatabase() {
+public class EmployeeDBOperation {
+    Connection connection=null;
+    public EmployeeDBOperation(){
 
-        this.url = "jdbc:mysql://34.134.143.1/ems";
-        username = "root";
-        password = "ahjnr5";
-        try {
-            connection = DriverManager.getConnection(url, username, password);
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
-
+        connection=DbConnection.connectDB();
     }
-
     public Boolean setEmployee(String username,String type,double value){
         try {
-            Statement stmt = connection.createStatement();
+            Statement stmt = this.connection.createStatement();
             String sql="UPDATE Employee SET "+type+"="+value+"WHERE UserName='"+username+"';";
             stmt.execute(sql);
             return true;
@@ -33,12 +26,13 @@ public class MySQLDatabase implements DataStorage{
         }
         return false;
     }
-    public Map<String,String>getEmployeeInfo(String username){
+    public Map<String,String> getEmployeeInfo(String username){
         Map<String,String>information=new HashMap<String,String>();
 
         try {
             Statement stmt = this.connection.createStatement();
             ResultSet rs=stmt.executeQuery("SELECT * FROM Employee WHERE UserName='"+username+"';");
+
             while (rs.next()){
                 information.put("UserName",rs.getString("UserName"));
                 information.put("ContactName",rs.getString("ContactName"));
@@ -58,6 +52,5 @@ public class MySQLDatabase implements DataStorage{
         return  information;
 
     }
-
 
 }

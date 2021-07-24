@@ -66,13 +66,6 @@ public class Notification {
         this.seen = x;
     }
 
-    public void display() {
-        System.out.println("There's a new notification for you!");
-        System.out.println("Message: " + getMsg());
-        System.out.println("Priority: " + getPriority());
-        System.out.println("From : " + getManagerID());
-    }
-
     enum priority {LOW, MEDIUM, HIGH}
 }
 
