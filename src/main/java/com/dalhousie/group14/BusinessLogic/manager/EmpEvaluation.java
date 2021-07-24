@@ -1,18 +1,16 @@
 package com.dalhousie.group14.BusinessLogic.manager;
 
 import com.dalhousie.group14.Database.manager.EmployeeProjectPerformance;
+import com.dalhousie.group14.Presentation.utilities.TableFormatter;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class EmpEvaluation implements IEmpEvaluation {
+  public static final int DIVIDER = 2;
+  public static final int NEGATIVECHECK = 0;
 
 
-  public List<Map.Entry<String, Float>> EvaluateAll() {
+  public String EvaluateAll() {
     SessionEvaluator obj = new SessionEvaluator();
     Map<String, Float> emp_performance = new HashMap<>();
     ProjectPerformanceEvaluator obj2 = new ProjectPerformanceEvaluator();
@@ -23,63 +21,74 @@ public class EmpEvaluation implements IEmpEvaluation {
     empprojectperformance_keys.retainAll(empsessions_keys);
 
     for (String s : empprojectperformance_keys) {
-      float performance_rating = empprojectperformance.get(s);
-      float discipline_rating = empsessions.get(s);
-      float total_rating = (performance_rating + discipline_rating) / 2;
-      emp_performance.put(s, total_rating);
+      float performanceRating = empprojectperformance.get(s);
+      float disciplineRating = empsessions.get(s);
+      float totalRating = (performanceRating + disciplineRating) / DIVIDER;
+      totalRating = ((int) ((totalRating + 0.005f) * 100)) / 100f;
+      emp_performance.put(s, totalRating);
     }
 
-    List<Map.Entry<String, Float>> sorted_performance = EvaluatorComparator.entriesSortedByValues(emp_performance);
-    Map.Entry<String, Float> EoM = sorted_performance.get(0);
-    String EoM_username = EoM.getKey();
-    float EoM_rating = EoM.getValue();
-    EmployeeProjectPerformance.EmployeeofMonth(EoM_username, EoM_rating);
-
-    return sorted_performance;
+    List<Map.Entry<String, Float>> sortedPerformance = EvaluatorComparator.entriesSortedByValues(emp_performance);
+    Map<String, List<Float>> sortedEmpCompleteDetails = new LinkedHashMap<>();
+    List<List<String>> evaluationTable = new ArrayList<>();
+    for (Map.Entry<String, Float> empeval : sortedPerformance) {
+      String userID = empeval.getKey();
+      String totalRatingString = String.valueOf(empeval.getValue());
+      String disciplineRatingString = String.valueOf(empsessions.get(userID));
+      String performanceRatingString =
+          String.valueOf(empprojectperformance.get(userID));
+      List<Float> ratings = Arrays.asList(empeval.getValue(),
+          empsessions.get(userID), empprojectperformance.get(userID));
+      sortedEmpCompleteDetails.put(userID, ratings);
+      List<String> headers = Arrays.asList("Employee ID", "Discipline Rating"
+          , "Project Performance Rating", "Employee Performance Rating");
+      evaluationTable.add(headers);
+      List<String> row = Arrays.asList(userID, disciplineRatingString,
+          performanceRatingString, totalRatingString);
+      evaluationTable.add(row);
+    }
+    EmployeeProjectPerformance.writeprojectPerformanceAll(sortedEmpCompleteDetails);
+    return TableFormatter.formatAsTable(evaluationTable);
   }
 
-  @Override
-  public String EvaluateEmployee(String username) {
+  public String EvaluateEmployee(String userID) {
     SessionEvaluator obj = new SessionEvaluator();
     ProjectPerformanceEvaluator obj2 = new ProjectPerformanceEvaluator();
-    float discipline_rating = obj.evaluateEmployeeSession(username);
-    float performance_rating = obj2.evalProjPerformOne(username);
-    float total_rating = (discipline_rating + performance_rating) / 2;
-    String display = username + " - " + total_rating;
+    List<List<String>> evaluationTable = new ArrayList<>();
+    float disciplineRating = obj.evaluateEmployeeSession(userID);
+    if(disciplineRating < NEGATIVECHECK){
+      return null;
+    }
+    float performanceRating = obj2.evalProjPerformOne(userID);
+    float totalRating = (disciplineRating + performanceRating) / DIVIDER;
 
-    return display;
+    String disciplineRatingString = String.valueOf(disciplineRating);
+    String performanceRatingString = String.valueOf(performanceRating);
+    String totalRatingString = String.valueOf(totalRating);
+
+    List<String> headers = Arrays.asList("Employee ID", "Discipline Rating"
+        , "Project Performance Rating", "Employee Performance Rating");
+    evaluationTable.add(headers);
+    List<String> row = Arrays.asList(userID, disciplineRatingString,
+        performanceRatingString, totalRatingString);
+    evaluationTable.add(row);
+
+    return TableFormatter.formatAsTable(evaluationTable);
   }
 
-  @Override
+
   public String mostDisciplined() {
     SessionEvaluator obj = new SessionEvaluator();
     return obj.topEmployees();
   }
 
-  @Override
   public String leastDisciplined() {
     SessionEvaluator obj = new SessionEvaluator();
     return obj.bottomEmployees();
   }
 
-  @Override
-  public String EoM() {
-    ResultSet resultSet = EmployeeProjectPerformance.DisplayEoM();
-    String display = "";
-
-    try {
-      if (resultSet.isBeforeFirst()) {
-        resultSet.next();
-        String username = resultSet.getString("userName");
-        String rating = resultSet.getString("Rating");
-        display = username + "                 " + rating;
-      }
-    } catch (SQLException throwables) {
-      System.out.println("Not able to display Employee of the Month at this " +
-          "time.");
-    }
-
-    return display;
+  public String EoMDisplay() {
+    return EmployeeProjectPerformance.DisplayEoM();
   }
 
 }

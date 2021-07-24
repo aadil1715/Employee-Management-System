@@ -11,12 +11,11 @@ import java.util.*;
 
 public class ProjectPerformanceEvaluator {
   String pattern = "yyyy-MM-dd";
-  public static final int FULLRATING = 10;
+  public static final int PROJ_FULL_RATING = 5;
   public static final int PROJECTS_CONSIDERING = 2;
-  public static final int DIVIDER = 2;
   public static final int ZERO = 0;
   public static final int MAX_DEADLINE = 5;
-  public static final int GOOD_RATING = 1;
+  public static final int LATE_PENALTY = 2;
 
   public Map<String, Float> evalProjPerformanceAll() {
     float final_proj_rating = 0;
@@ -35,7 +34,7 @@ public class ProjectPerformanceEvaluator {
           String[] projectsArray =
               eligibleProjects.toArray(new String[eligibleProjects.size()]);
           if (eligibleProjects.size() >= PROJECTS_CONSIDERING) {
-            final_proj_rating = projEvaluator(projectsArray);
+            final_proj_rating = projEvaluator(projectsArray, employeeID);
           }
           if (final_proj_rating != ZERO) {
             projPerformance.put(employeeID, final_proj_rating);
@@ -49,7 +48,8 @@ public class ProjectPerformanceEvaluator {
     return projPerformance;
   }
 
-  private float projEvaluator(String[] projectsArray) {
+  private float projEvaluator(String[] projectsArray, String employeeID) {
+    float MAX_RATING =0;
     float final_proj_rating = 0;
     if (projectsArray.length >= PROJECTS_CONSIDERING) {
       String clientfeedback = "";
@@ -58,7 +58,9 @@ public class ProjectPerformanceEvaluator {
       sdf.setLenient(false);
       for (int i = 0; i < PROJECTS_CONSIDERING; i++) {
         ResultSet resultSet2 = EmployeeProjectPerformance.projectPerformance(projectsArray[i]);
-        ResultSet resultSet1 = EmployeeProjectPerformance.EmpProjectMilestones(projectsArray[i]);
+        ResultSet resultSet1 =
+            EmployeeProjectPerformance.EmpProjectMilestones(projectsArray[i],
+                employeeID);
         try {
           if (resultSet2.isBeforeFirst()) {
             resultSet2.next();
@@ -66,6 +68,7 @@ public class ProjectPerformanceEvaluator {
           }
           if (resultSet1!=null && resultSet1.isBeforeFirst()) {
             while (resultSet1.next()) {
+              MAX_RATING = MAX_RATING+10;
               String deadline_date = resultSet1.getString("Deadline");
               String completion_date = resultSet1.getString("CompletionDate");
               Date deadlinedate = sdf.parse(deadline_date);
@@ -73,24 +76,23 @@ public class ProjectPerformanceEvaluator {
               boolean beforedeadline = Validations.datecomparison(completiondate, deadlinedate);
               if (beforedeadline) {
                 float client_rating = Integer.parseInt(clientfeedback);
-                float work_rating = FULLRATING;
-                float pro = (client_rating + work_rating) / DIVIDER;
-                cummulitative = cummulitative + pro;
+                cummulitative =
+                    cummulitative + (float) PROJ_FULL_RATING + client_rating;
               } else {
                 if (Validations.addDaystoDate(deadlinedate, MAX_DEADLINE).before(completiondate)) {
                   float client_rating = Integer.parseInt(clientfeedback);
-                  float work_rating = FULLRATING - GOOD_RATING;
-                  float pro = (client_rating + work_rating) / DIVIDER;
-                  cummulitative = cummulitative + pro;
+                  float work_rating = PROJ_FULL_RATING - LATE_PENALTY;
+                  cummulitative = cummulitative + work_rating + client_rating;
                 }
               }
             }
           }
         } catch (SQLException | ParseException e) {
-          System.out.println("Error Encountered");
+          System.out.println(e);
         }
       }
-      final_proj_rating = cummulitative / PROJECTS_CONSIDERING;
+      final_proj_rating = (cummulitative/MAX_RATING)*10;
+      final_proj_rating = ((int) ((final_proj_rating + 0.005f) * 100)) / 100f;
     }
     return final_proj_rating;
   }
@@ -102,8 +104,9 @@ public class ProjectPerformanceEvaluator {
       if (resultSet.isBeforeFirst()) {
         while (resultSet.next()) {
           String projects_list = resultSet.getString("ProjectHistory");
+          String employeeID = resultSet.getString("EmployeeID");
           String[] projectsArray = projects_list.split(",");
-          final_rating = projEvaluator(projectsArray);
+          final_rating = projEvaluator(projectsArray, employeeID);
         }
       }
     } catch (SQLException throwables) {

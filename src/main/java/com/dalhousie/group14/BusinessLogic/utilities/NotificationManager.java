@@ -1,6 +1,7 @@
 package com.dalhousie.group14.BusinessLogic.utilities;
 
 import com.dalhousie.group14.Database.utilities.DbConnection;
+import com.dalhousie.group14.Presentation.utilities.NotificationDisplay;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -19,7 +20,6 @@ public class NotificationManager {
         Statement statement = connection.createStatement();
         String sql = "INSERT INTO `notification`(msg,managerID,empID,seen,priority) VALUE ('" + notification.getMsg() + "','" + managerID + "','" + empID + "','" + notification.getSeen() + "','" + notification.getPriority() + "')";
         statement.executeUpdate(sql);
-        System.out.println("Successfully sent notification!");
     }
 
     // Use this method to get notifications by passing an employeeID.
@@ -36,7 +36,8 @@ public class NotificationManager {
             Statement statement2 = connection.createStatement();
             sql = "UPDATE `notification` set `seen` ='" + notification1.getSeen() + "'";
             statement2.executeUpdate(sql);
-            notification1.display();
+            NotificationDisplay nd = new NotificationDisplay();
+            nd.display(notification1);
         }
     }
 }
