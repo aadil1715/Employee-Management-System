@@ -5,18 +5,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DbConnection implements DataStorage{
-    private String url;
-    private String username;
-    private String password;
-    private Connection connection;
     public static Connection connectDB() {
         final String url = "jdbc:mysql://34.134.143.1/ems";
         final String username = "root";
         final String password = "ahjnr5";
         try {
             Connection connection = DriverManager.getConnection(url, username, password);
+
             return connection;
-        } catch (SQLException throwables) {
+        } catch (SQLException sqlException) {
             return null;
         }
     }

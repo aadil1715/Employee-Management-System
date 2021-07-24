@@ -29,7 +29,7 @@ public class AssetRequestDB {
         information.add(rs.getString("EmployeeUserName"));
         information.add(rs.getString("Reason"));
         information.add(rs.getString("ApprovdStatus"));
-        information.add(rs.getString("item"));
+        information.add(rs.getString("Asset"));
         info.add(information);
 
       }
@@ -61,8 +61,8 @@ public class AssetRequestDB {
 
   }
 
-  public void insertNewAssetRequest(String employeeUserName, String reason,
-                                    String item) {
+  public void insertNewAssetRequest(String employeeUserName, String item,
+                                    String reason) {
     try {
       Statement statement=this.connection.createStatement();
       String sql=
