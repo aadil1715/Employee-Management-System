@@ -1,11 +1,12 @@
 package com.dalhousie.group14.BusinessLogic.employee;
 
-
+/*@Author: Ria Shah
+  @Name of File: IValidation.java
+  @Interface Description: This interface will only declare the validateName,
+  validatePolicyNumber, validateMoneyClaimed,and validateReason methods
+  which the base class Validation will implement.
+ */
 public interface IValidation {
-
-  String pattern5 ="^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
-
-  String pattern6= "^[a-zA-Z0-9]+";
 
   boolean validateName(String name);
 
