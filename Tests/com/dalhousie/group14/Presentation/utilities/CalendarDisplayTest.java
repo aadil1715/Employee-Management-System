@@ -2,6 +2,7 @@ package com.dalhousie.group14.Presentation.utilities;
 
 import com.dalhousie.group14.BusinessLogic.employee.CalendarEvent;
 import com.dalhousie.group14.Database.employee.EventOperations;
+import com.dalhousie.group14.Database.utilities.GetSpecialDates;
 import com.dalhousie.group14.Database.utilities.QueryExecutor;
 import org.junit.Test;
 
@@ -13,9 +14,11 @@ import java.util.List;
 public class CalendarDisplayTest {
     @Test
     public void display() throws SQLException {
-        int year = 2021;
-        CalendarDisplay cd = new CalendarDisplay();
-        cd.displayThreeMonths(year,7);
+        List<Long> fetchedSpecialDates = new ArrayList<>();
+        GetSpecialDates getSpecialDatesObject = new GetSpecialDates();
+        fetchedSpecialDates =
+            getSpecialDatesObject.getSpecialDatesForEmployee("891000");
+        System.out.println(fetchedSpecialDates);
     }
 
     @Test

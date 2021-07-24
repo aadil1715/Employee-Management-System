@@ -4,6 +4,7 @@
  */
 package com.dalhousie.group14.Presentation.utilities;
 
+import com.dalhousie.group14.Database.utilities.GetSpecialDates;
 import com.dalhousie.group14.Database.utilities.QueryExecutor;
 
 import java.sql.ResultSet;
@@ -16,31 +17,13 @@ import java.util.zip.CRC32;
 
 public class CalendarDisplay implements ICalendarDisplay {
 
-  private final List<Long> testD = new ArrayList<>();
+  int start_month = 1;
+  int total_months = 12;
   LocalDate currentDate = LocalDate.now();
   int currentYear = currentDate.getYear();
   int currentMonth = currentDate.getMonth().getValue();
-  int start_month = 1;
-  int total_months = 12;
-
-  public void getSpecialDates() throws SQLException {
-    String query = "SELECT eventDate from `Calendar`";
-    ResultSet rs;
-    rs = QueryExecutor.readData(query);
-    while (rs != null && rs.next()) {
-      String date = rs.getString("eventDate");
-      int special_year = Integer.parseInt(date.substring(0, 4));
-      int special_month = Integer.parseInt(date.substring(5, 7));
-      int special_date = Integer.parseInt(date.substring(8, 10));
-      if (special_year == currentYear) {
-        CRC32 hash = new CRC32();
-        hash.reset();
-        hash.update(String.format("%d_%d", special_month, special_date).getBytes());
-        testD.add(hash.getValue());
-      }
-    }
-  }
-
+  GetSpecialDates getSpecialDatesObject = new GetSpecialDates();
+  List<Long> fetchedSpecialDates = new ArrayList<>();
   public void displayMonths(int year, int month) {
     YearMonth ym = YearMonth.of(year, month);
 
@@ -59,7 +42,7 @@ public class CalendarDisplay implements ICalendarDisplay {
       hash.reset();
       hash.update(String.format("%d_%d", ym.getMonth().getValue(), i).getBytes());
 
-      if (testD.contains(hash.getValue()) && ym.getYear() == currentYear) {
+      if (fetchedSpecialDates.contains(hash.getValue()) && ym.getYear() == currentYear) {
         System.out.printf("\033[4m%-2s\033[0m", i);
         System.out.printf("%-2s", "");
       } else {
@@ -76,10 +59,11 @@ public class CalendarDisplay implements ICalendarDisplay {
   }
 
   @Override
-  public void display(int year) {
+  public void display(int year,String employeeID, int current_month,
+                      int total_months) {
     try {
-      getSpecialDates();
-      for (int i = start_month; i <= total_months; i++) {
+      getSpecialDatesEmployee(employeeID);
+      for (int i = current_month; i <= total_months; i++) {
         System.out.println(LocalDate.of(year, i, 1).getMonth().toString());
         displayMonths(year, i);
       }
@@ -92,33 +76,31 @@ public class CalendarDisplay implements ICalendarDisplay {
     }
   }
 
-  public void displayCurrentMonth(int year, int current_month) {
+  public void displayCurrentMonth(int year, int current_month,
+                                  String employeeID) {
     try {
-      getSpecialDates();
-      System.out.println(LocalDate.of(year, current_month, 1).getMonth().toString());
-      displayMonths(year, current_month);
-      System.out.println("The dates having events have underlines beneath them.");
-      System.out.println("Example: ");
-      System.out.printf("\033[4m%-2s\033[0m", 12);
-      System.out.println();
+      getSpecialDatesEmployee(employeeID);
+      display(year,employeeID,current_month,current_month+1);
     } catch (Exception e) {
       e.printStackTrace();
     }
   }
 
-  public void displayThreeMonths(int year, int current_month) {
+  public void displayThreeMonths(int year, int current_month,
+                                 String EmployeeID) {
     try {
-      getSpecialDates();
-      for (int i = current_month; i <= current_month + 2; i++) {
-        System.out.println(LocalDate.of(year, i, 1).getMonth().toString());
-        displayMonths(year, i);
-      }
-      System.out.println("The dates having events have underlines beneath them.");
-      System.out.println("Example: ");
-      System.out.printf("\033[4m%-2s\033[0m", 12);
-      System.out.println();
+      getSpecialDatesEmployee(EmployeeID);
+      display(year,EmployeeID,current_month,current_month+2);
     } catch (Exception e) {
       e.printStackTrace();
     }
+  }
+
+  public void getAllSpecialDates(){
+    fetchedSpecialDates = getSpecialDatesObject.getSpecialDates();
+  }
+
+  public void getSpecialDatesEmployee(String employeeID){
+    fetchedSpecialDates = getSpecialDatesObject.getSpecialDatesForEmployee(employeeID);
   }
 }
