@@ -117,11 +117,11 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
         answer3 = resultSet.getString("securityAnswer3");
       }
       if (answer.equalsIgnoreCase(answer1)) {
-        employeeLoginDashBoard.employeeLoginDashBoard();
+        employeeLoginDashBoard.employeeLoginDashBoard(userName);
       } else if (answer.equalsIgnoreCase(answer2)) {
-        employeeLoginDashBoard.employeeLoginDashBoard();
+        employeeLoginDashBoard.employeeLoginDashBoard(userName);
       } else if (answer.equalsIgnoreCase(answer3)) {
-        employeeLoginDashBoard.employeeLoginDashBoard();
+        employeeLoginDashBoard.employeeLoginDashBoard(userName);
       } else {
         System.out.println("Please enter correct value:");
         giveSecurityQuestionAnswer.giveSecurityQuestionAnswer(userName);

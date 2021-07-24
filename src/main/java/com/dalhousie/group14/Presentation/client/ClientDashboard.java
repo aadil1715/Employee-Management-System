@@ -7,6 +7,7 @@ import com.dalhousie.group14.BusinessLogic.client.ProjectFeedback;
 import com.dalhousie.group14.Database.client.IProjectDatabaseInteraction;
 import com.dalhousie.group14.Database.client.ProjectDatabaseInteraction;
 import com.dalhousie.group14.Presentation.utilities.IuserIntValidation;
+import com.dalhousie.group14.Presentation.utilities.Login;
 import com.dalhousie.group14.Presentation.utilities.userIntValidation;
 
 import java.util.InputMismatchException;
@@ -23,11 +24,6 @@ public class ClientDashboard implements IClientDashboard {
   public static final int FOUR = 4;
 
 
-  public static void main(String[] args) {
-    IClientDashboard obj = new ClientDashboard();
-    obj.clientscreen("Harjot@Gmail.com");
-  }
-
   public void clientscreen(String clientID) {
     IClientDashboardValidation clientDashboardValidation =
         new ClientDashboardValidation();
@@ -35,7 +31,7 @@ public class ClientDashboard implements IClientDashboard {
     boolean correctoption = false;
     int optionchosen = 0;
 
-    System.out.printf("%80s%10s\n", "Cient", "Dashboard");
+    System.out.printf("%80s%10s\n", "Client", "Dashboard");
     System.out.println("\nHello! Welcome Back "+clientID+" -  Employee " +
             "Management System");
     System.out.println("\nEnter from the following options");
@@ -82,7 +78,8 @@ public class ClientDashboard implements IClientDashboard {
       } else if (optionchosen == THREE) {
         giveProjectFeedbackScreen(iProjectDatabaseInteraction, clientID, scanner);
       } else if (optionchosen == FOUR) {
-        return;
+        Login login = new Login();
+        login.userType();
       }
     }
   }

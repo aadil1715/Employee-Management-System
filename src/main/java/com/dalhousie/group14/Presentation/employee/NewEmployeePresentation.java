@@ -17,7 +17,7 @@ public class NewEmployeePresentation {
 
     boolean exit = false;
     do {
-      System.out.println("Hello welcome to xyz company.Please add your " +
+      System.out.println("Hello welcome to EMS.Please add your " +
               "temporary UserName and Password so that you can request for " +
               "permanent credentials");
       Scanner sc = new Scanner(System.in);

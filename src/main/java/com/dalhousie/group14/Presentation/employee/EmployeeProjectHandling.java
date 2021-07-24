@@ -2,7 +2,7 @@ package com.dalhousie.group14.Presentation.employee;
 
 import java.util.Scanner;
 
-public class ProjectManagement {
+public class EmployeeProjectHandling {
   public void display(){
     Scanner scanner = new Scanner(System.in);
     System.out.println("Project Management for Employee");
@@ -10,7 +10,7 @@ public class ProjectManagement {
     System.out.println("1. See Milestone Deadline.");
     System.out.println("2. Complete Milestone.");
     System.out.println("3. Project History.");
-    ProjectManagement projectManagement = new ProjectManagement();
+    EmployeeProjectHandling employeeProjectHandling = new EmployeeProjectHandling();
     int choice = scanner.nextInt();
     switch (choice){
       case 1:
@@ -19,29 +19,25 @@ public class ProjectManagement {
           System.out.println("Press \"ENTER\" to continue...");
           scanner = new Scanner(System.in);
           scanner.nextLine();
-          projectManagement.display();
+          employeeProjectHandling.display();
       case 2:
           CompleteMilestone completeMilestone = new CompleteMilestone();
           completeMilestone.display();
           System.out.println("Press \"ENTER\" to continue...");
           scanner = new Scanner(System.in);
           scanner.nextLine();
-          projectManagement.display();
+          employeeProjectHandling.display();
       case 3:
           DisplayProject displayProject = new DisplayProject();
           displayProject.display();
           System.out.println("Press \"ENTER\" to continue...");
           scanner = new Scanner(System.in);
           scanner.nextLine();
-          projectManagement.display();
+          employeeProjectHandling.display();
       default:
         System.out.println("Please enter a correct option.");
         display();
     }
   }
 
-  public static void main(String[] args) {
-   ProjectManagement projectManagement = new ProjectManagement();
-   projectManagement.display();
-  }
 }

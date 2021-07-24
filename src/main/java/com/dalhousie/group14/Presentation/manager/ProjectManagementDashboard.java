@@ -59,6 +59,9 @@ public class ProjectManagementDashboard implements IProjectManagementDashboard {
       } else if (userinput == OPTION_3) {
         IFinishedProjects obj = new FinishedProjects();
         obj.displayFinishedProjects(projectStatusRetrieve);
+      }else{
+        ManagerLoginDashBoard obj = new ManagerLoginDashBoard();
+        obj.managerLoginDashBoard();
       }
     }
   }
