@@ -1,9 +1,10 @@
 package com.dalhousie.group14.Presentation.utilities;
 
-/*@Author:Ria Shah
-  @Name of File: Print.java
-  @Class Description: This class will print the string message
-  passed as a parameter.
+/**
+ * @Author: Ria Shah
+ * @NameofFile: Print.java
+ * @ClassDescription: This class will print the string message
+ * passed as a parameter.
  */
 public class Print implements IPrint {
 

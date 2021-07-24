@@ -11,7 +11,7 @@ public class InputValidationTest {
   public void validateSwitchCase() {
     int input1 = 0;
     InputValidation inputValidation = new InputValidation();
-    assertNotEquals(input1,inputValidation.validateSwitchCase(input1));
+    assertNotEquals(input1, inputValidation.validateSwitchCase(input1));
     assertFalse(inputValidation.validateSwitchCase(input1));
 
     int input2 = 3;
@@ -43,6 +43,7 @@ public class InputValidationTest {
 
   @Test
   public void validateNameRequestApproval() {
+
   }
 
   @Test

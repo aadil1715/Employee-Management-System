@@ -6,11 +6,14 @@ import com.dalhousie.group14.Database.manager.IManagerDatabaseMediclaimRequests;
 
 import java.util.Scanner;
 
-/* Name of File: mediclaim_requests.java
-   Author: Ria Shah
-   Class Description: This class will display the list of all the mediclaim requests to the manager on his
-   manager dashboard such mediclaimrequestsdb Name, Policy Number,Medical ID, Remaining Money, Money Claimed,Reason columns
-   Method name/s: displayMediclaimRequests
+/**
+ * @Author: Ria Shah
+ * @NameofFile: MediclaimRequests.java
+ * @ClassDescription: This class will display the list of all the mediclaim
+ * requests to the manager on his
+ * manager dashboard such as Name, Policy Number,Medical
+ * ID, Remaining Money, Money Claimed,Reason columns. It will also validate
+ * all the user inputs.
  */
 public class MediclaimRequests implements IMediclaimRequest {
 
@@ -18,7 +21,8 @@ public class MediclaimRequests implements IMediclaimRequest {
     IManagerDatabaseMediclaimRequests mediclaimrequestsdb =
         new DatabaseMediclaimRequests();
     InputValidation object4 = new InputValidation();
-    System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t-----LIST OF MEDICLAIM REQUESTS-----\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t");
+    System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t-----LIST OF MEDICLAIM REQUESTS-----" +
+        "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t");
     System.out.printf("%15s %30s %30s %30s %30s %30s", "NAME", "POLICY NUMBER"
         , "MEDICAL ID", "MONEY CLAIMED", "REASON", "APPROVED STATUS\n\n");
     mediclaimrequestsdb.displayMediclaimRequestsManager();

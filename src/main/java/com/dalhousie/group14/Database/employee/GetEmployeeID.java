@@ -11,7 +11,7 @@ public class GetEmployeeID implements IGetEmployeeID   {
 
   static int id = 0;
 
-  public int get_EmployeeID(String username) {
+  public int getEmployeeID(String username) {
 
     try {
       Connection connection = DbConnection.connectDB();
