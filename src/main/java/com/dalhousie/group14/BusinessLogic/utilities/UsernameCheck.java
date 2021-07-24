@@ -9,15 +9,16 @@ import com.dalhousie.group14.Presentation.utilities.Print;
 
 import java.util.regex.Pattern;
 
-/* @Author: Ria Shah
-   @Name of File:UsernameCheck.java
-   @Class Description: This class will check whether the
-   entered username by the user is valid or not. If the username is
-   not valid the system will prompt the user again to enter the
-   username until it will be valid.
-   @Method Name: usernameCheck(String name)- This method will take a regex
-   for username and check for it and returns true or false. It will also check
-   whether the username already exists in the table database or not.
+/**
+ * @Author: Ria Shah
+ * @NameofFile: UsernameCheck.java
+ * @ClassDescription: This class will check whether the
+ * entered username by the user is valid or not. If the username is
+ * not valid the system will prompt the user again to enter the
+ * username until it will be valid.
+ * @MethodName: usernameCheck(String name)- This method will take a regex
+ * for username and check for it and returns true or false. It will also check
+ * whether the username already exists in the table database or not.
  */
 public class UsernameCheck implements IUsernameCheck {
 
@@ -37,6 +38,7 @@ public class UsernameCheck implements IUsernameCheck {
       loginobject.enterUsername();
     } else {
     }
+
     String message;
     if (valid) {
       message = "USERNAME IS VALID";

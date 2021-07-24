@@ -42,12 +42,15 @@ public class ValidationTest {
   @Test
   public void validateReason() {
     Validation validation = new Validation();
+    String reason1= "good job";
+    assertTrue(validation.validateReason(reason1));
 
     String reason2 = "12345$%";
     assertFalse(validation.validateReason(reason2));
 
     String reason3 = "@#$%^^^^";
     assertFalse(validation.validateReason(reason3));
+
 
   }
 

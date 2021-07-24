@@ -1,9 +1,6 @@
 package com.dalhousie.group14.BusinessLogic.utilities;
 
-import com.dalhousie.group14.Database.utilities.IInsertCredentials;
-import com.dalhousie.group14.Database.utilities.IInsertLoginTime;
-import com.dalhousie.group14.Database.utilities.InsertLoginCredentials;
-import com.dalhousie.group14.Database.utilities.InsertLoginTime;
+import com.dalhousie.group14.Database.utilities.*;
 
 import java.util.HashMap;
 
@@ -13,11 +10,12 @@ public class EnterCredentials implements IEnterCredentials {
   private String username = null;
   private String userType = null;
   private String time = null;
+  private String date = null;
 
 
   public void credentials(HashMap<String, String> map) {
     IInsertCredentials insertCredentials = new InsertLoginCredentials();
-    IInsertLoginTime insertLoginTime = new InsertLoginTime();
+    IInsertLoginDateTime insertLoginTime = new InsertLoginDateTime();
 
     if (map.getOrDefault("Password", null) != null) {
       password = map.get("Password");
@@ -34,9 +32,12 @@ public class EnterCredentials implements IEnterCredentials {
     if (map.getOrDefault("time", null) != null) {
       time = map.get("time");
     }
-    if (password != null && username != null && userType != null) {
+    if (map.getOrDefault("date", null) != null) {
+      date = map.get("date");
+    }
+    if (password != null && username != null && userType != null && date != null && time != null) {
       insertCredentials.insertLoginCredentials(username, password, userType);
-      insertLoginTime.insertLoginTime(time, username);
+      insertLoginTime.insertLoginDateTime(time, username, date);
 
     }
   }

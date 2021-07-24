@@ -2,16 +2,18 @@ package com.dalhousie.group14.Presentation.utilities;
 
 import com.dalhousie.group14.BusinessLogic.utilities.*;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.HashMap;
 import java.util.Scanner;
 
-/*@Author:Ria Shah
-  @Name of File: Login.java
-  @Class Description: This class will allow the user to enter the usertype,
-  username, and password details. It will also invoke the validation functions
-  for username and password.It will also enter the login details in the
-  database.
+/**
+ * @Author: Ria Shah
+ * @NameofFile: Login.java
+ * @ClassDescription: This class will allow the user to enter the usertype,
+ * username, and password details. It will also invoke the validation functions
+ * for username and password.It will also enter the login details in the
+ * database.
  */
 public class Login implements ILogin {
 
@@ -34,6 +36,7 @@ public class Login implements ILogin {
           enterUsername();
           enterPassword();
           loginTime();
+          loginDate();
           break;
         case 2:
           System.out.println("You are a manager!");
@@ -41,6 +44,7 @@ public class Login implements ILogin {
           enterUsername();
           enterPassword();
           loginTime();
+          loginDate();
           break;
         case 3:
           System.out.println("You are a client!");
@@ -48,6 +52,7 @@ public class Login implements ILogin {
           enterUsername();
           enterPassword();
           loginTime();
+          loginDate();
           break;
         case 4:
           System.out.println("You are a new employee");
@@ -55,6 +60,7 @@ public class Login implements ILogin {
           enterUsername();
           enterPassword();
           loginTime();
+          loginDate();
           break;
         default:
           System.out.println("Please select another option");
@@ -98,11 +104,21 @@ public class Login implements ILogin {
   }
 
   public void loginTime() {
+    // enter the local current time of login
     LocalTime time = LocalTime.now();
     String finalTime = time.toString();
     HashMap<String, String> time1 = new HashMap<>();
     time1.put("time", finalTime);
     enter_credentials.credentials(time1);
+  }
+
+  public void loginDate() {
+    // enter the local current time of login
+    LocalDate now = LocalDate.now();
+    String finalDate = now.toString();
+    HashMap<String, String> date1 = new HashMap<>();
+    date1.put("date", finalDate);
+    enter_credentials.credentials(date1);
   }
 
 }
