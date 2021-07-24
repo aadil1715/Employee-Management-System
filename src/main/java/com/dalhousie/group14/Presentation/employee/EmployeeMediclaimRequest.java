@@ -72,15 +72,14 @@ public class EmployeeMediclaimRequest implements IMediclaimRequest {
   }
 
   public void giveReason() {
-
+    Scanner scanner1 = new Scanner(System.in);
     System.out.println("Enter your valid reason for mediclaim");
-    Scanner scanner = new Scanner(System.in);
-    reason = scanner.nextLine();
+    reason = scanner1.nextLine();
     IValidation validation = new Validation();
     if (validation.validateReason(reason)) {
       System.out.println("You have entered valid input");
       System.out.println("You have successfully made the mediclaim request.");
-    } else {
+    } else if (!validation.validateReason(reason)) {
       System.out.println("The reason should be of string type ");
       giveReason();
 

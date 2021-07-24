@@ -22,6 +22,7 @@ public class ResignRequest implements IResignRequestManager {
     IInsertManagerID insert_manager_id = new InsertManagerID();
     IGetManagerID getManagerId = new GetManagerID();
     IInputValidation object4 = new InputValidation();
+
     try {
       System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t-----List of Resignation Requests-----\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t");
       System.out.printf("%10s %15s %30s %35s %30s %30s %30s %30s", "EMPLOYEE ID",
@@ -57,15 +58,13 @@ public class ResignRequest implements IResignRequestManager {
       System.out.println(exception);
     }
     System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t----------Below is " +
-        "the updated " +
-        "list of Resign Requests----------\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" +
-        "\t");
+        "the updated list of Resign " +
+        "Requests----------\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t");
     System.out.printf("%10s %15s %30s %35s %30s %30s %30s %30s", "EMPLOYEE " +
             "ID", "MANAGER ID", "REQUEST ID", "DATE OF RESIGNATION", "NOTICE " +
             "PERIOD", "REASON FOR THE RESIGNATION", "APPROVED STATUS",
         "EMPLOYEE USERNAME\n");
     object3.selectResignRequests();
-
   }
 
 }

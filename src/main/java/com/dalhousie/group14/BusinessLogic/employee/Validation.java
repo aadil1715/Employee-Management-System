@@ -13,7 +13,7 @@ public class Validation implements IValidation {
   private int flag = 0;
   private final static String pattern5 = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^" +
       ".-]+@[a-zA-Z0-9.-]+$";
-  private final static String pattern6 = "^[a-zA-Z0-9]+";
+  private final static String pattern6 = "^[a-zA-Z\\s]+";
 
   public int getFlag() {
     return this.flag;
@@ -47,10 +47,10 @@ public class Validation implements IValidation {
   }
 
   public boolean validateReason(String reason) {
-    if (!reason.matches(pattern6)) {
-      return false;
-    } else {
+    if (reason.matches(pattern6)) {
       return true;
+    } else {
+      return false;
     }
   }
 
