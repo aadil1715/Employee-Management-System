@@ -6,11 +6,13 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class EmployeeDBOperation {
-    Connection connection=null;
+    Connection connection;
     public EmployeeDBOperation(){
 
         connection=DbConnection.connectDB();
@@ -30,7 +32,7 @@ public class EmployeeDBOperation {
         Map<String,String>information=new HashMap<String,String>();
 
         try {
-            Statement stmt = this.connection.createStatement();
+            Statement stmt = connection.createStatement();
             ResultSet rs=stmt.executeQuery("SELECT * FROM Employee WHERE UserName='"+username+"';");
 
             while (rs.next()){
@@ -53,4 +55,25 @@ public class EmployeeDBOperation {
 
     }
 
+
+  public List<List<String>> getALLEmployeeInfo() {
+      Map<String,String>information=new HashMap<String,String>();
+      List<List<String>>x=new ArrayList<>();
+      try {
+          Statement stmt = connection.createStatement();
+          ResultSet rs=stmt.executeQuery("SELECT * FROM Employee;");
+
+          while (rs.next()){
+              ArrayList<String>info=new ArrayList<>();
+              info.add(rs.getString("UserName"));
+              info.add(rs.getString("ContactName"));
+              x.add(info);
+          }
+      } catch (SQLException throwables) {
+          throwables.printStackTrace();
+      }
+
+
+      return  x;
+  }
 }

@@ -6,15 +6,15 @@ import java.util.Scanner;
 public class AssetRequestPresentation {
 
   public void allPendingAssetRequests(List<List<String>> info) {
-    System.out.format("%32s%32s%32s%32s", "Index", "EmployeeUserName" +
+    System.out.format("%32s%32s%32s%32s%32s", "Index", "EmployeeUserName" ,
             "Reason",
-        "ApprovdStatus", "item");
+        "ApprovdStatus", "Item");
 
     int i = 0;
     System.out.println();
     for (List<String> item : info) {
 
-      System.out.format("%32s%32s%32s%32s", i,
+      System.out.format("%32s%32s%32s%32s%32s", i,
           item.get(0), item.get(1), item.get(2), item.get(3));
       System.out.println();
       i += 1;
