@@ -3,7 +3,9 @@ package com.dalhousie.group14.BusinessLogic.client;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-
+/**
+ * @author Harjot Singh
+ */
 public class Milestones implements IMilestones {
   boolean validinfo = false;
   Map<Date, String> milestones = new HashMap<>();
