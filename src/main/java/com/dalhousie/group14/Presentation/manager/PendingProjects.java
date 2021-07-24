@@ -35,10 +35,17 @@ public class PendingProjects implements IPendingProjects {
         IuserIntValidation iuserIntValidation = new userIntValidation();
         userInput = iuserIntValidation.takeUserinput(scanner, MAX_SIZE);
         if (userInput > MIN) {
+          System.out.println("You have chosen S.No "+userInput);
+          System.out.println("This process will take some time to perform " +
+              "analysis and then assign projects based on the best fitting " +
+              "employees to your project requirements");
+          System.out.println("Please Wait...");
           IProjectAssigner obj = new ProjectAssigner();
-          boolean status = obj.assignProject(pendingprojects.get(userInput - ONE));
-          if (status) {
+          String assignedEmployees =
+              obj.assignProject(pendingprojects.get(userInput - ONE));
+          if (assignedEmployees != null) {
             System.out.println("Successfully Assigned Employees to the Project");
+            System.out.println(assignedEmployees);
           } else {
             System.out.println("Couldn't assign employees to the project due to unavailability of free employees.");
           }

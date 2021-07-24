@@ -2,7 +2,9 @@ package com.dalhousie.group14.Presentation.utilities;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
+/**
+ * @author Harjot Singh
+ */
 public class userIntValidation implements IuserIntValidation {
   public static final int MIN = 0;
   public static final int ONE = 1;

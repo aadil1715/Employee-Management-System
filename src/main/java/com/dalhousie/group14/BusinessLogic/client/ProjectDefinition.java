@@ -3,7 +3,9 @@ package com.dalhousie.group14.BusinessLogic.client;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
+/**
+ * @author Harjot Singh
+ */
 public class ProjectDefinition implements IProjectDefinition {
     public static final String[] suffixes = new String[] { "th", "st", "nd", "rd", "th", "th", "th", "th", "th", "th" };
 

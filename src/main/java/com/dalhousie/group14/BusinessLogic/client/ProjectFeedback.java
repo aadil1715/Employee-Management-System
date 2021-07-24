@@ -2,7 +2,9 @@ package com.dalhousie.group14.BusinessLogic.client;
 
 import com.dalhousie.group14.Database.client.IProjectDatabaseInteraction;
 import com.dalhousie.group14.Database.client.ProjectDatabaseInteraction;
-
+/**
+ * @author Harjot Singh
+ */
 public class ProjectFeedback implements IProjectFeedback {
   private static final int ID_INDEX = 1;
 

@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Set;
 
 public interface IProjectAssigner {
-  boolean assignProject(String projectInfo);
+  String assignProject(String projectInfo);
 
   Set<String> empAssigner(List<String> requiredlanguages);
 

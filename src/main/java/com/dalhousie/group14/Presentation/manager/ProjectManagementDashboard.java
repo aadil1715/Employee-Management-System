@@ -8,6 +8,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ProjectManagementDashboard implements IProjectManagementDashboard {
+
   int tries = 0;
   public static final int MIN = 0;
   public static final int ONE = 1;

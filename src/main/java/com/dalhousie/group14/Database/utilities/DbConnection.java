@@ -1,11 +1,14 @@
 package com.dalhousie.group14.Database.utilities;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.HashMap;
+import java.util.Map;
 
-public class DbConnection {
-
+public class DbConnection implements DataStorage{
+    private String url;
+    private String username;
+    private String password;
+    private Connection connection;
     public static Connection connectDB() {
         final String url = "jdbc:mysql://34.134.143.1/ems";
         final String username = "root";
@@ -17,4 +20,6 @@ public class DbConnection {
             return null;
         }
     }
+
+
 }

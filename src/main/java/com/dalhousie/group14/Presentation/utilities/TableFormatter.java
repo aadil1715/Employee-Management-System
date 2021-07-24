@@ -26,7 +26,6 @@ public class TableFormatter {
       }
       return result.toString();
     } catch (IndexOutOfBoundsException indexOutOfBoundsException) {
-      System.out.println(indexOutOfBoundsException);
       return null;
     }
 
