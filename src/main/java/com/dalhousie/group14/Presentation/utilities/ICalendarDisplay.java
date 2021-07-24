@@ -2,11 +2,12 @@ package com.dalhousie.group14.Presentation.utilities;
 
 public interface ICalendarDisplay {
 
-  void display(int year);
+  void display(int year, String employeeID, int current_month,
+               int total_months);
+  void displayCurrentMonth(int year, int current_month,
+                           String employeeID);
 
-  void displayMonths(int year, int month);
+  void displayThreeMonths(int year, int current_month,
+                          String EmployeeID);
 
-  void displayThreeMonths(int year, int current_month);
-
-  void displayCurrentMonth(int year, int current_month);
 }
