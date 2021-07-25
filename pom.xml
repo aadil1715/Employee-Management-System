@@ -121,7 +121,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.dalhousie.group14</mainClass>
+                            <mainClass>com.dalhousie.group14.EMSController</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
