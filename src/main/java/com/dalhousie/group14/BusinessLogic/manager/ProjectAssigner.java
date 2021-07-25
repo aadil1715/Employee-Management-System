@@ -59,7 +59,7 @@ public class ProjectAssigner implements IProjectAssigner {
       String assignedEmpString =  assignedEmpDetails(assignedEmployees);
       String projectString = "Project Name : " + projectName + " - Project ID" +
           " : "+projectID+"\nProject Lanaguages : "+ projectLanguages;
-      assignedEmpString = projectString + assignedEmpString;
+      assignedEmpString = projectString + "\n"+ assignedEmpString;
       return assignedEmpString;
     }
     return null;
