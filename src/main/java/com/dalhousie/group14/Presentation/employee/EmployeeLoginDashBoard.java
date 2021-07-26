@@ -78,8 +78,8 @@ public class EmployeeLoginDashBoard {
             break;
           case 7:
             System.out.println("Resign Requests");
-            ResignRequest resignRequest = new ResignRequest();
-            resignRequest.displayResignRequest();
+            MakeResignRequest resignRequest = new MakeResignRequest();
+            resignRequest.resignRequest();
             break;
           case 8:
             System.out.println("Manage your projects.");
