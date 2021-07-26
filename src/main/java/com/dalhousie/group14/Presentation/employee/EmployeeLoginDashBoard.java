@@ -72,9 +72,9 @@ public class EmployeeLoginDashBoard {
             break;
           case 6:
             System.out.println("Asset Requests");
-            AssetRequests assetRequests=
-                new AssetRequests();
-            assetRequests.viewRequests(userName);
+            AssetRequestPresentation assetRequests=
+                new AssetRequestPresentation();
+            assetRequests.askForAssets();
             break;
           case 7:
             System.out.println("Resign Requests");
