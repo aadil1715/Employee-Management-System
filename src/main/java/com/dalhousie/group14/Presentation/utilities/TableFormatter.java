@@ -6,25 +6,25 @@ public class TableFormatter {
 
   public static String formatAsTable(List<List<String>> tablerows) {
     try {
-      int[] maxLengths = new int[tablerows.get(0).size()];
+      int[] lenMAX = new int[tablerows.get(0).size()];
 
       for (List<String> row : tablerows) {
         for (int i = 0; i < row.size(); i++) {
-          maxLengths[i] = Math.max(maxLengths[i], row.get(i).length());
+          lenMAX[i] = Math.max(lenMAX[i], row.get(i).length());
         }
       }
 
-      StringBuilder formatBuilder = new StringBuilder();
-      for (int maxLength : maxLengths) {
-        formatBuilder.append("%-").append(maxLength + 2).append("s");
+      StringBuilder buildFormat = new StringBuilder();
+      for (int maxLength : lenMAX) {
+        buildFormat.append("%-").append(maxLength + 2).append("s");
       }
-      String format = formatBuilder.toString();
+      String format = buildFormat.toString();
 
-      StringBuilder result = new StringBuilder();
+      StringBuilder finalTable = new StringBuilder();
       for (List<String> row : tablerows) {
-        result.append(String.format(format, row.toArray(new String[0]))).append("\n");
+        finalTable.append(String.format(format, row.toArray(new String[0]))).append("\n");
       }
-      return result.toString();
+      return finalTable.toString();
     } catch (IndexOutOfBoundsException indexOutOfBoundsException) {
       return null;
     }
