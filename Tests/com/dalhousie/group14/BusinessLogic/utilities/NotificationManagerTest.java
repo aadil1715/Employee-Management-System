@@ -12,5 +12,6 @@ public class NotificationManagerTest {
     public void getNotifications() throws SQLException {
         NotificationManager nm = new NotificationManager();
         nm.getNotifications("891000");
+        System.out.println(nm);
     }
 }

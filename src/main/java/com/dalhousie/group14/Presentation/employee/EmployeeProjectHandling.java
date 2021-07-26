@@ -40,4 +40,10 @@ public class EmployeeProjectHandling {
     }
   }
 
+  public static void main(String[] args) {
+    EmployeeProjectHandling employeeProjectHandling =
+        new EmployeeProjectHandling();
+    employeeProjectHandling.display();
+  }
+
 }

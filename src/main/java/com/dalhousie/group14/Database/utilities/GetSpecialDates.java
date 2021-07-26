@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.zip.CRC32;
 
-public class GetSpecialDates implements IGetSpecialDates {
+public class GetSpecialDates implements IGetSpecialDates,IGetSpecialDatesEmployee {
 
   private final List<Long> specialDates = new ArrayList<>();
   LocalDate currentDate = LocalDate.now();

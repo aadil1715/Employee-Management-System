@@ -16,7 +16,7 @@ public class CalendarModifyEvent implements ICalendarScreen {
 
   public void displayScreen() {
     Scanner scanner = new Scanner(System.in);
-    String employeeID = "891000";
+    String employeeID = "17";
     LocalDate currentDate = LocalDate.now();
     int currentYear = currentDate.getYear();
     int currentMonth = currentDate.getMonth().getValue();

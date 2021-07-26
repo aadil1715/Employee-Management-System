@@ -17,11 +17,11 @@ public class CompleteMilestone {
     MilestoneOperations milestoneOperations = new MilestoneOperations();
     DisplayMilestone displayMilestone = new DisplayMilestone();
     displayMilestone.display();
-    System.out.println("Enter your milestoneID: ");
-    milestoneID = scanner.nextInt();
     System.out.println("Enter the completion date: ");
     System.out.println("Please follow the format (YYYY-DD-MM) EG [2021-12-08]");
     date = scanner.nextLine();
+    System.out.println("Enter your milestoneID: ");
+    milestoneID = scanner.nextInt();
     System.out.println();
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
     sdf.setLenient(false);

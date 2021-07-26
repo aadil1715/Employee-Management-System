@@ -28,7 +28,7 @@ public class CalendarScheduleScreen implements ICalendarScreen {
       LocalDate currentDate = LocalDate.now();
       int currentYear = currentDate.getYear();
       int currentMonth = currentDate.getMonth().getValue();
-      String empID = "891000";
+      String empID = "17";
       switch (choice) {
         case 1:
           calendarDisplay.displayCurrentMonth(currentYear,currentMonth,empID);

@@ -1,67 +1,211 @@
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Presentation\client\Project.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Presentation\Common\UserInput.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Database\employee\UpdateSecurityAnswer.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Presentation\client\MilestoneProperties.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\TaxesIn2021.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\EmployeeLoginDashBoard.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\PerformanceEvaluatorScreen.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\client\Milestones.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Database\employee\GetSecurityQuestion.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\AssetRequest.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\NewEmployeeBusinessTest.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Database\employee\UpdateSecurityQuestion.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Database\manager\EmployeeSessions.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\virtualize\DummySessions.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\NotificationManager.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Database\employee\InsertSecurityAnswer.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\client\ClientDashboardValidation.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\ChangePassword.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\manager\EvaluatorComparator.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\manager\ProjPerformanceProperties.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\Salaries.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\Validations.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\ChangeSecurityQuestion.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Database\utilities\DbConnection.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\EmployeeTest.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Presentation\utilities\Login_Presentation.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\Employee.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\EvaluatorInterface.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Database\employee\SetSecurityQuestionFirstTime.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\Salary.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\CommonConstants.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\EditProfile.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Database\client\ProjectDatabaseInteraction.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\SalaryOfEmployeeTest.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\manager\EmpEvaluation.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Presentation\client\NormalClient.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\Taxes.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Database\utilities\QueryExecutor.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Presentation\client\MilestonesDashboard.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Database\employee\DisplayEmployeeLoginInfo.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\SalaryOfEmployee.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\NewEmployeeBusiness.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\manager\SessionEvaluator.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Database\employee\NewEmployee.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\SecurityQuestion.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\manager\SessionEvaluatorProperties.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\SetSecurityQuestion.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\SalariesTest.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\manager\ProjectPerformanceEvaluator.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\manager\Manager.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\Notification.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Database\client\MilestonesDatabaseInteraction.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Database\employee\EmployeeDBOperation.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\Request.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\Login.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\NewEmployeePresentation.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\client\Client.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Database\manager\EmployeeProjectPerformance.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\client\ClientValidation.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\SalaryTest.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\client\Define.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Database\utilities\DataStorage.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Database\employee\EmployeeValidate.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\GiveSecurityQuestionAnswer.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\client\ProjectDefinition.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Presentation\client\ClientDashboard.java
-C:\Users\admin\IdeaProjects\group-14\src\main\java\com\dalhousie\group14\Database\employee\UpdatePassword.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\GetEmployeeUserNameUserID.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\CompleteMilestone.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\manager\MediClaimRejection.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\manager\ProjectPerformanceEvaluator.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\IUserTypeCheck.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\manager\IEmpEvaluation.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\manager\InputValidation.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\manager\DatabaseMediclaimRequests.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\InsertResignRequests.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\manager\ISessionEvaluator.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\Salaries.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\ISetLanguages.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\manager\EmployeeProjectAssign.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\manager\GetManagerUserNameUserID.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\utilities\NotificationDisplay.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\IResignRequest.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\IDisplayUpdatedMediclaimRequests.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\IProjectManagementDashboard.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\DisplayUpdatedMediclaimRequests.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\utilities\GetSpecialDates.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\FindDistanceBettweenDates.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\IRequestForApprovals.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\manager\EmpEvaluation.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\DisplayEmployeeLoginInfo.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\IGetEmployeeUserNameUserID.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\manager\ProjectStatus.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\RequestForLeave.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\client\IClientProject.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\IValidateResignRequestEmployee.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\manager\IMediclaimRejection.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\utilities\CheckUsernameExists.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\manager\IInsertManagerID.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\ProjectManagementDashboard.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\IFinishedProjects.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\IChangePassword.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\UpdateSecurityQuestion.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\IApprovedStatus.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\SecurityQuestion.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\NewEmployeeBusinessTest.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\CalendarRemoveEvent.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\INoticePeriod.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\utilities\IInsertLoginDateTime.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\CalendarEvent.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\EMSController.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\EmployeeDBOperation.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\IResignRequestManager.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\utilities\CalendarDisplay.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\GetSecurityQuestion.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\manager\IProjectStatusRetrieve.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\UserTypeCheck.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\manager\ProjectAssigner.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\manager\RejectedStatus.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\EmployeeTest.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\EditProfile.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\EditEmployeeInformation.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\IPendingProjects.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\IPasswordCheck.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\manager\IManagerDatabaseMediclaimRequests.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\IInsertResignRequests.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\GetEmployeeID.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\IProjectOperations.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\IDBRequestForLeave.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\DisplayProject.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\CalendarManagerScreen.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\IMilestoneOperations.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\JoinRequests.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\ProjectOperations.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\DisplayMilestone.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\ISetSecurityQuestion.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\manager\JoininRequest.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\FinishedProjects.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\IGetEmployeeID.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\IRequestForLeave.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\utilities\IPrint.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\manager\InsertManagerID.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\manager\IRejectedStatus.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\client\Milestones.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\manager\NoticePeriodDisplay.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\client\IMilestonesDatabaseInteraction.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\NewEmployeePresentation.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\Notification.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\ISalaries.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\UpdateSecurityAnswer.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\Validation.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\manager\AssetRequestDB.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\utilities\TableFormatter.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\Assets.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\manager\ApprovedStatus.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\manager\MediClaimApproval.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\InsertCalendarEventE.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\utilities\DataStorage.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\InsertSecurityAnswer.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\utilities\IInsertCredentials.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\Calendar.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\manager\IDatabaseResignRequests.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\GiveSecurityQuestionAnswer.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\client\ClientDashboardValidation.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\client\IClientDashboard.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\EmployeeProjectHandling.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\manager\EmployeeProjectPerformance.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\ManagerLoginDashBoard.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\IValidation.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\manager\EmployeeSessions.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\UsernameCheck.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\utilities\QueryExecutor.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\EmployeeMediclaimRequest.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\utilities\Print.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\NewEmployee.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\Employee.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\AssetRequestEmployee.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\utilities\DbConnection.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\IDatabaseMediclaimRequests.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\NoticePeriod.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\utilities\ICheckUsernameExists.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\client\IMilestones.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\utilities\EventDisplay.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\manager\IApprovedStatusbyManager.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\client\ProjectDefinition.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\IChangeSecurityQuestion.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\manager\IGetManagerUserNameUserID.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\EventOperations.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\PendingProjects.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\ChangeSecurityQuestion.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\utilities\Login.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\manager\EmployeeBean.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\utilities\IGetSpecialDates.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\AddEmployeeSchedule.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\client\IProjectFeedback.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\utilities\ICalendarDisplay.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\ICalendarScreen.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\manager\DatabaseResignRequests.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\manager\IProjectAssigner.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\utilities\ILogin.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\DatabaseMediclaimRequests.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\UpdatePassword.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\Taxes.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\SalaryOfEmployeeTest.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\manager\IGetManagerID.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\client\ProjectDatabaseInteraction.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\utilities\IuserIntValidation.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\IMediclaimRequest.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\SetLanguages.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\DBRequestForLeave.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\ResignRequest.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\virtualize\DummySessions.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\AssetRequest.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\IAssignedProjects.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\EvaluatorInterface.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\client\ProjectFeedback.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\IEnterCredentials.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\utilities\InsertLoginCredentials.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\PerformanceEvaluatorScreen.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\manager\INoticePeriodDisplay.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\DisplayEmployeeSchedule.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\utilities\userIntValidation.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\SendNotification.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\TaxesIn2021.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\client\IProjectDefinition.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\IUsernameCheck.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\TakeInputsFromEmployee.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\client\IClientDashboardValidation.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\manager\ProjectStatusRetrieve.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\client\MilestonesDashboard.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\client\ClientProject.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\ApproveRequests.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\client\ClientDashboard.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\IRequestLeave.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\manager\DBEditEmployeeInformation.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\CalendarModifyEvent.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\MilestoneOperations.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\SalaryOfEmployee.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\DBSecurityQuestion.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\RequestLeave.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\CalendarMainScreen.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\manager\IInputValidation.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\MediclaimRequests.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\ManageEmployee.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\manager\GetManagerID.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\EnterCredentials.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\manager\Manager.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\SalariesTest.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\ValidateResignRequestEmployee.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\utilities\InsertLoginDateTime.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\IFindDistanceBettweenDates.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\MakeResignRequest.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\Request.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\client\IProjectDatabaseInteraction.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\RequestForApprovals.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\CalendarScheduleScreen.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\Validations.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\manager\AssetRequests.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\IDBSecurityQuestion.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\AssetRequestPresentation.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\EmployeeLoginDashBoard.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\CalendarAddEvent.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\NewEmployeeBusiness.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\client\IMilestonesDashboard.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\AssetRequestPresentation.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\client\MilestonesDatabaseInteraction.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\NotificationManager.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\IMediclaimRequest.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\employee\SetSecurityQuestionFirstTime.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\utilities\PasswordCheck.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\ChangePassword.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\manager\AssignedProjects.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\manager\EvaluatorComparator.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Database\manager\IMediclaimApproval.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\Presentation\employee\Salary.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\SetSecurityQuestion.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\manager\SessionEvaluator.java
+H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14\src\main\java\com\dalhousie\group14\BusinessLogic\employee\IGiveSecurityQuestionAnswer.java
