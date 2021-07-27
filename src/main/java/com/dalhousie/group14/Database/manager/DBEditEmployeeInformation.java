@@ -6,7 +6,7 @@ import com.dalhousie.group14.Database.utilities.DbConnection;
 import java.sql.*;
 import java.util.ArrayList;
 
-public class DBEditEmployeeInformation {
+public class DBEditEmployeeInformation implements IDBEditEmployeeInformation {
 
   public ArrayList<EmployeeBean> getAllEmployeeInformation() {
 

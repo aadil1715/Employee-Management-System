@@ -1,12 +1,11 @@
 package com.dalhousie.group14.BusinessLogic.employee;
 
-/* Author- Jainam Shah*/
-
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 
 import static org.junit.Assert.*;
 
+/*Author- Jainam Shah*/
 public class ChangeSecurityQuestionTest {
 
   @Test
