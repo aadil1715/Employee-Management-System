@@ -11,7 +11,6 @@ import java.util.Date;
 
 public class FindDistanceBettweenDates implements IFindDistanceBettweenDates {
 
-  @Override
   /*Take starting and ending date and calculate the distance between two dates.
    */
   public long findDistanceBettweenDates(String startingLeaveDate, String endingLeaveDate) {

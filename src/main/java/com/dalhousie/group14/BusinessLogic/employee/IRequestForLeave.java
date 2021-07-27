@@ -8,7 +8,7 @@ public interface IRequestForLeave {
    * process it if needed then send to the database Layer.
    */
 
-  void requestForLeave();
+  void requestForLeave(String userName);
 
   boolean dateValidation(String actualStartingLeaveDate,
                          String actualEndingLeaveDate);

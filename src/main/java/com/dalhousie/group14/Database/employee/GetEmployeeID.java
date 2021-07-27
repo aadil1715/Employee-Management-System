@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class GetEmployeeID implements IGetEmployeeID   {
+public class GetEmployeeID implements IGetEmployeeID {
 
   static int id = 0;
 

@@ -14,7 +14,6 @@ import java.util.Scanner;
  */
 public class RequestLeave implements IRequestLeave {
 
-
   public void requestLeave() {
 
     IDBRequestForLeave dbRequestForLeave = new DBRequestForLeave();
@@ -33,7 +32,6 @@ public class RequestLeave implements IRequestLeave {
       System.out.println("No pending Requests");
     } else {
       try {
-
         do {
           System.out.println("Enter Username of the employee:");
           username = scanner.nextLine();
@@ -50,7 +48,6 @@ public class RequestLeave implements IRequestLeave {
             RemainingLeaves = scanner.nextInt();
             dbRequestForLeave.updateLeaveRequest(username, status, days, RemainingLeaves);
           }
-
         } while (true);
       } catch (Exception e) {
         System.out.println("Exception" + e);

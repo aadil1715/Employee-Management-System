@@ -2,16 +2,12 @@ package com.dalhousie.group14.Presentation.manager;
 
 import java.util.Scanner;
 
+/* Author- Jainam Shah*/
 public class ManageEmployee {
 
   public void manageEmployee() {
 
     Scanner scanner = new Scanner(System.in);
-    ManagerLoginDashBoard managerLoginDashBoard =
-        new ManagerLoginDashBoard();
-
-    EditEmployeeInformation employeeInformation =
-        new EditEmployeeInformation();
 
     System.out.println("\t\t\t\t\t\t\t\t\t\t\t\tWelcome to Manage Employee Page:\t\t\t\t\t\t\t\t\t\t\t\t");
 
@@ -31,6 +27,8 @@ public class ManageEmployee {
 
         switch (select) {
           case 1:
+            IEditEmployeeInformation employeeInformation =
+                new EditEmployeeInformation();
             employeeInformation.editEmployeeInformation();
             break;
           case 2:
@@ -43,13 +41,14 @@ public class ManageEmployee {
             System.out.println("Salary");
             break;
           case 5:
-            decision=false;
+            decision = false;
+            break;
           default:
             System.out.println("Enter Correct number:");
         }
       } catch (Exception e) {
         System.out.println("Exception in ManageEmployee class" + e);
       }
-    } while(decision);
+    } while (decision);
   }
 }
