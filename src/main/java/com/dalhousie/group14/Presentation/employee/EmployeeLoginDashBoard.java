@@ -13,7 +13,7 @@ import com.dalhousie.group14.BusinessLogic.employee.Employee;
 import com.dalhousie.group14.BusinessLogic.employee.IRequestForLeave;
 import com.dalhousie.group14.BusinessLogic.employee.RequestForLeave;
 import com.dalhousie.group14.BusinessLogic.manager.AssetRequests;
-import com.dalhousie.group14.BusinessLogic.utilities.NotificationManager;
+import com.dalhousie.group14.Database.utilities.NotificationManager;
 import com.dalhousie.group14.Database.employee.GetEmployeeUserNameUserID;
 import com.dalhousie.group14.Database.employee.IGetEmployeeUserNameUserID;
 import com.dalhousie.group14.Presentation.manager.ResignRequest;

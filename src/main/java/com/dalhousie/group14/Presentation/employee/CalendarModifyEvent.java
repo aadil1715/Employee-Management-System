@@ -1,4 +1,4 @@
-/*
+/**
  * This class modifies an event in the calendar
  * Author : Aadil Shaikh
  */

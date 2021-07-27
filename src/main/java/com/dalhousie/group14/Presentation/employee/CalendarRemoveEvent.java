@@ -1,4 +1,4 @@
-/*
+/**
  * This class removes an event from the employee calendar
  * Author : Aadil Shaikh
  */

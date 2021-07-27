@@ -1,4 +1,4 @@
-/*
+/**
  * This class shows the schedule of employee in a calendar format.
  * It extracts the special dates that have events
  * Displays the special dates in underline format.

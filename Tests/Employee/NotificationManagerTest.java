@@ -1,10 +1,14 @@
-package com.dalhousie.group14.BusinessLogic.utilities;
+/**
+ * Author : Aadil Shaikh
+ * Test for notification manager. It will pass if the function works for
+ * getNotifications without any error.
+ */
+package Employee;
 
+import com.dalhousie.group14.Database.utilities.NotificationManager;
 import org.junit.Test;
 
 import java.sql.SQLException;
-
-import static org.junit.Assert.*;
 
 public class NotificationManagerTest {
 
@@ -12,6 +16,5 @@ public class NotificationManagerTest {
     public void getNotifications() throws SQLException {
         NotificationManager nm = new NotificationManager();
         nm.getNotifications("891000");
-        System.out.println(nm);
     }
 }

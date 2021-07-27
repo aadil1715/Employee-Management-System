@@ -1,3 +1,8 @@
+/**
+ * Author: Aadil Shaikh
+ * This class is responsible for getting the dates that have events in them.
+ * The dates that have events are called special dates.
+ */
 package com.dalhousie.group14.Database.utilities;
 
 import java.sql.ResultSet;
@@ -7,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.zip.CRC32;
 
-public class GetSpecialDates implements IGetSpecialDates,IGetSpecialDatesEmployee {
+public class GetSpecialDates implements IGetSpecialDates, IGetSpecialDatesEmployee {
 
   private final List<Long> specialDates = new ArrayList<>();
   LocalDate currentDate = LocalDate.now();
@@ -31,7 +36,7 @@ public class GetSpecialDates implements IGetSpecialDates,IGetSpecialDatesEmploye
           specialDates.add(hash.getValue());
         }
       }
-    } catch (SQLException e){
+    } catch (SQLException e) {
       System.out.println(e.getMessage());
     }
 
@@ -56,7 +61,7 @@ public class GetSpecialDates implements IGetSpecialDates,IGetSpecialDatesEmploye
           specialDates.add(hash.getValue());
         }
       }
-    } catch (SQLException e){
+    } catch (SQLException e) {
       System.out.println(e.getMessage());
     }
 

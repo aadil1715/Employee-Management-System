@@ -1,3 +1,8 @@
+/**
+ * Author: Aadil Shaikh
+ * This class is responsible for handling milestone operations.
+ * It queries the database for respective operation.
+ */
 package com.dalhousie.group14.Database.employee;
 
 import com.dalhousie.group14.Database.utilities.QueryExecutor;
@@ -9,7 +14,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class MilestoneOperations implements IMilestoneOperations{
+public class MilestoneOperations implements IMilestoneOperations {
 
   public List<String> getMilestone(String empID) {
     String query =
@@ -17,14 +22,14 @@ public class MilestoneOperations implements IMilestoneOperations{
     List<String> milestonesList = new ArrayList<>();
     try {
       ResultSet rs = QueryExecutor.readData(query);
-      int i=0;
+      int i = 0;
       while (rs != null && rs.next()) {
-          milestonesList.add(0 + (i*4),rs.getString("milestoneID"));
-          milestonesList.add(1 + (i*4),rs.getString("milestoneDesc"));
-          milestonesList.add(2 + (i*4),rs.getString("ProjectID"));
-          milestonesList.add(3 + (i*4),rs.getString("Deadline"));
+        milestonesList.add(0 + (i * 4), rs.getString("milestoneID"));
+        milestonesList.add(1 + (i * 4), rs.getString("milestoneDesc"));
+        milestonesList.add(2 + (i * 4), rs.getString("ProjectID"));
+        milestonesList.add(3 + (i * 4), rs.getString("Deadline"));
       }
-    } catch (SQLException e){
+    } catch (SQLException e) {
       e.printStackTrace();
     }
     return milestonesList;
@@ -34,7 +39,7 @@ public class MilestoneOperations implements IMilestoneOperations{
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
     String query =
         "UPDATE milestones SET CompletionDate = '" + sdf.format(date) + "'" +
-        "WHERE milestoneID = '" + milestoneID + "'" + "AND AssignedTo = '" + empID + "'";
+            "WHERE milestoneID = '" + milestoneID + "'" + "AND AssignedTo = '" + empID + "'";
     QueryExecutor.writeData(query);
   }
 }
