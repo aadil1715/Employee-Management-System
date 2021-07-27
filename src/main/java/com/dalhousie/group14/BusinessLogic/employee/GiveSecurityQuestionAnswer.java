@@ -1,6 +1,7 @@
 package com.dalhousie.group14.BusinessLogic.employee;
 
 import com.dalhousie.group14.Database.employee.DBSecurityQuestion;
+import com.dalhousie.group14.Database.employee.IDBSecurityQuestion;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,16 +25,16 @@ public class GiveSecurityQuestionAnswer implements IGiveSecurityQuestionAnswer {
 
   public void giveSecurityQuestionAnswer(String userName) {
 
-    DBSecurityQuestion dbSecurityQuestion = new DBSecurityQuestion();
+    IDBSecurityQuestion dbSecurityQuestion = new DBSecurityQuestion();
 
     Random random = new Random();
     Scanner scanner = new Scanner(System.in);
     HashMap<Integer, String> hashMap = new HashMap<>();
     ArrayList<String> arrayList;
     String question1, question2, question3;
-    int max = 3;
-    int min = 1;
-
+    int maximum = 3;
+    int minimum = 1;
+    int randomNumber;
     /* Get all security from database. */
     arrayList = dbSecurityQuestion.getSecurityQuestion(getUserName(userName));
 
@@ -50,10 +51,10 @@ public class GiveSecurityQuestionAnswer implements IGiveSecurityQuestionAnswer {
     System.out.println(hashMap);
 
     /* Generate Random Number */
-    int randomNum = random.nextInt((max - min) + 1) + min;
-    System.out.println(randomNum);
+    randomNumber = random.nextInt((maximum - minimum) + 1) + minimum;
+    System.out.println(randomNumber);
 
-    String question = hashMap.get(randomNum);
+    String question = hashMap.get(randomNumber);
     System.out.println("Your Question is:" + getUserName(question));
 
     System.out.println("Please Write the answer:");
@@ -65,7 +66,6 @@ public class GiveSecurityQuestionAnswer implements IGiveSecurityQuestionAnswer {
   }
 
   private static String getUserName(String userName) {
-
     return userName;
   }
 }

@@ -1,8 +1,8 @@
 package com.dalhousie.group14.Presentation.manager;
-/*Author- Jainam Shah(B00883898)*/
 
 import com.dalhousie.group14.Database.manager.DBEditEmployeeInformation;
 import com.dalhousie.group14.Database.manager.EmployeeBean;
+import com.dalhousie.group14.Database.manager.IDBEditEmployeeInformation;
 
 import java.sql.Date;
 import java.util.ArrayList;
@@ -10,15 +10,15 @@ import java.util.Scanner;
 
 import static java.sql.Date.valueOf;
 
-/**
+/*Author- Jainam Shah(B00883898)
  * This class edit the employee information.
  */
 
-public class EditEmployeeInformation {
+public class EditEmployeeInformation implements IEditEmployeeInformation {
 
   public void editEmployeeInformation() {
 
-    DBEditEmployeeInformation dbEditEmployeeInformation =
+    IDBEditEmployeeInformation dbEditEmployeeInformation =
         new DBEditEmployeeInformation();
 
     Scanner scanner = new Scanner(System.in);
@@ -38,7 +38,6 @@ public class EditEmployeeInformation {
         "ContactName" + "      " + "gender" + "      " + "DOB" + "      " +
         "Basicsalary" + "    " + "CTC" + "      " + "bonus" + "     "
         + "lastmonthsalary" + "    " + "EPF");
-
 
     for (EmployeeBean employeeBean : arrayList) {
       System.out.format("%1s%25s%18s%10s%15s%10s%12s%10s%20s%10s",

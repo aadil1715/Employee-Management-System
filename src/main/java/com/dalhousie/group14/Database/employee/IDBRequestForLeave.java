@@ -15,9 +15,9 @@ public interface IDBRequestForLeave {
 
   HashMap<Integer, HashMap<String, String>> getAllLeaveInfo();
 
-  void updateLeaveRequest(String username, String status, String days, int RemainingLeaves);
+  void updateLeaveRequest(String userName, String status, String days, int remainingLeaves);
 
-  void cancelLeaveRequest(String username, String status);
+  void cancelLeaveRequest(String userName, String status);
 
   void insertRemainingLeaves(int employeeID, int managerID);
 

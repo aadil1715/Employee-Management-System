@@ -1,5 +1,12 @@
 package com.dalhousie.group14.BusinessLogic.employee;
 
+/* Author- Jainam Shah(B00883898)
+ * SetSecurityQuestion java class contains three task. One is to ask Security
+ * from employee and insert data into database. Second is to ask the answers
+ * of this question. And 3rd one is to insert Security Question and Answer in
+ *  database.
+ */
+
 import com.dalhousie.group14.Database.employee.DBSecurityQuestion;
 import com.dalhousie.group14.Database.employee.IDBSecurityQuestion;
 import com.dalhousie.group14.Presentation.employee.ISetLanguages;
@@ -8,12 +15,6 @@ import com.dalhousie.group14.Presentation.employee.SetLanguages;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/* Author- Jainam Shah(B00883898)
- * SetSecurityQuestion java class contains three task. One is to ask Security
- * from employee and insert data into database. Second is to ask the answers
- * of this question. And 3rd one is to insert Security Question and Answer in
- *  database.
- */
 public class SetSecurityQuestion implements ISetSecurityQuestion {
 
   /**
@@ -68,7 +69,6 @@ public class SetSecurityQuestion implements ISetSecurityQuestion {
         answer3);
 
     setLanguages.setLanguages(userId);
-
 
   }
 }

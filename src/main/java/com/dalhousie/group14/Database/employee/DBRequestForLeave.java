@@ -77,7 +77,6 @@ public class DBRequestForLeave implements IDBRequestForLeave {
 
   }
 
-
   /* this method return the remaining leaves.
    */
   public int remainingLeaves(int userID) {
@@ -99,7 +98,6 @@ public class DBRequestForLeave implements IDBRequestForLeave {
     }
     return leaves;
   }
-
 
   /* This method return the pending request for leave request.
    */
@@ -137,7 +135,6 @@ public class DBRequestForLeave implements IDBRequestForLeave {
         hashMap2.put("Reason", rs.getString("Reason"));
         hashMap2.put("ApprovedStatus", rs.getString("ApprovedStatus"));
         hashMap.put(rs.getInt("RequestID"), hashMap2);
-        //System.out.println(hashMap);
       }
 
     } catch (SQLException throwables) {
@@ -147,16 +144,15 @@ public class DBRequestForLeave implements IDBRequestForLeave {
     return hashMap;
   }
 
-
   /*Update the leaveRequest table.
    */
-  public void updateLeaveRequest(String username, String status, String days, int RemainingLeaves) {
+  public void updateLeaveRequest(String userName, String status, String days, int remainingLeaves) {
 
     int resultSet, EmployeeID;
     Statement statement;
     IGetEmployeeUserNameUserID userNameUserID = new GetEmployeeUserNameUserID();
     RequestForApprovals request = new RequestForApprovals();
-    EmployeeID = userNameUserID.getEmployeeUserIDFromUserName(username);
+    EmployeeID = userNameUserID.getEmployeeUserIDFromUserName(userName);
     String query =
         "UPDATE ems.LeaveRequest SET ApprovedStatus = '" + status + "', " +
             "days='" + days + "'  WHERE (`EmployeeID` = '" + EmployeeID + "')";
@@ -166,7 +162,7 @@ public class DBRequestForLeave implements IDBRequestForLeave {
       resultSet = statement.executeUpdate(query);
       if (resultSet > 0) {
         System.out.println("Update Leave Successfully");
-        updateRemainingLeaves(EmployeeID, days, RemainingLeaves);
+        updateRemainingLeaves(EmployeeID, days, remainingLeaves);
         request.requestForApprovals();
       } else {
         System.out.println("Please write the correct UserName:");

@@ -10,7 +10,6 @@ import java.util.Scanner;
 
 public class SetLanguages implements ISetLanguages {
 
-
   public void setLanguages(String userName) {
 
     IDBSecurityQuestion dbSecurityQuestion = new DBSecurityQuestion();

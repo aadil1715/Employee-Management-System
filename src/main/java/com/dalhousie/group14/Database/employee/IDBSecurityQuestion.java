@@ -1,7 +1,6 @@
 /*Author- Jainam Shah(B00883898)*/
 package com.dalhousie.group14.Database.employee;
 
-
 import java.util.ArrayList;
 
 public interface IDBSecurityQuestion {
