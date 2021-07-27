@@ -3,21 +3,22 @@ package com.dalhousie.group14.Presentation.manager;
 import com.dalhousie.group14.BusinessLogic.employee.Employee;
 import com.dalhousie.group14.BusinessLogic.utilities.ISalaries;
 import com.dalhousie.group14.BusinessLogic.utilities.Salaries;
-import com.dalhousie.group14.Presentation.utilities.TableFormatter;
-
+/*Name: Ninad Nitin Shukla
+ * Salaries of employee can be seen here*/
 import java.util.*;
 
-public class SalaryOfEmployee {
+public class SalaryOfEmployee implements ISalaryOfEmployee {
 
-  public void ViewAllEmployees(){
-    String cont="no";
+  @Override
+  public void ViewAllEmployees() {
+    String cont = "no";
     do {
       System.out.println("This is the list of all employees.Please choose the " +
           "option you want to edit salary for:-");
       Salaries salary = new Salaries();
 
       List<List<String>> display = new ArrayList<>();
-      display = (List<List<String>>) salary.ViewEmployees();
+      display = (List<List<String>>) salary.viewEmployees();
       for (int i = 0; i < display.size(); i++) {
         System.out.format("%10s%32s%32s", i, display.get(i).get(0),
             display.get(i).get(1));
@@ -29,10 +30,12 @@ public class SalaryOfEmployee {
       editSalary(display.get(index).get(0));
       System.out.println("Do you want to continue to edit other user " +
           "salaries?[yes/no]");
-      Scanner sca=new Scanner(System.in);
-      cont=sca.next();
-    }while (cont.equals("yes"));
+      Scanner sca = new Scanner(System.in);
+      cont = sca.next();
+    } while (cont.equals("yes"));
   }
+
+  @Override
   public void editSalary(String userName) {
     ArrayList<String> toViewElements = new ArrayList<>();
     toViewElements.add("CTC");

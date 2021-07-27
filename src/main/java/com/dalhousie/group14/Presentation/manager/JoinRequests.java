@@ -2,7 +2,8 @@ package com.dalhousie.group14.Presentation.manager;
 
 import java.util.List;
 import java.util.Scanner;
-
+/*Name:-Ninad Nitin Shukla
+* Purpose:-Display of all the Joining Requests*/
 public class JoinRequests {
 
 

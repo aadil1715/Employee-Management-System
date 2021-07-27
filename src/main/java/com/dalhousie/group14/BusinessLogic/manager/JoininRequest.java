@@ -4,9 +4,13 @@ import com.dalhousie.group14.Database.employee.NewEmployee;
 import com.dalhousie.group14.Presentation.manager.JoinRequests;
 
 import java.util.*;
+/*Author:-Ninad Nitin Shukla
+* Purpose:-Displaying all the Joining Request to the manager and giving
+* option to
+* */
+public class JoininRequest implements IJoininRequest {
 
-public class JoininRequest {
-
+  @Override
   public void displayAllRequests() {
     String exit = "";
 
@@ -15,9 +19,9 @@ public class JoininRequest {
       List<List<String>> info = new ArrayList<>();
       NewEmployee newEmployee = new NewEmployee();
       info = newEmployee.getPendingNewEmployeeInfo();
-      JoinRequests joinRequests=new JoinRequests();
+      JoinRequests joinRequests = new JoinRequests();
       joinRequests.allPendingRequests(info);
-      int index=joinRequests.enterRequest();
+      int index = joinRequests.enterRequest();
 
 
       Map<String, String> map = new HashMap<>();
@@ -35,14 +39,14 @@ public class JoininRequest {
       if (newEmployee.setLoginInfo(info.get(index).get(7),
           info.get(index).get(8)) && newEmployee.setEmployee(map)) {
         System.out.println(map.get("UserName"));
-        newEmployee.setNewEmployee(map.get("UserName"),"approvalstatus",
+        newEmployee.setNewEmployee(map.get("UserName"), "approvalstatus",
             "approved");
 
 
       } else {
         System.out.println();
       }
-      exit=joinRequests.wantToExit();
+      exit = joinRequests.wantToExit();
 
 
     } while (exit.equals("yes"));
