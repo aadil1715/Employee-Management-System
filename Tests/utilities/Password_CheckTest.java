@@ -3,6 +3,9 @@ package utilities;
 import com.dalhousie.group14.BusinessLogic.utilities.PasswordCheck;
 import org.junit.jupiter.api.Test;
 
+/**
+ * @Author: Ria Shah
+ */
 class Password_CheckTest {
 
   @Test

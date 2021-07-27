@@ -9,6 +9,7 @@ import com.dalhousie.group14.Presentation.employee.NewEmployeePresentation;
 import com.dalhousie.group14.Presentation.employee.SecurityQuestion;
 import com.dalhousie.group14.Presentation.manager.ManagerLoginDashBoard;
 
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.HashMap;
@@ -24,8 +25,9 @@ import java.util.Scanner;
  */
 public class Login implements ILogin {
 
+
   private IEnterCredentials enter_credentials = new EnterCredentials();
-  String loggedinUser="";
+  String loggedinUser = "";
 
 
   public void userType() {
@@ -69,7 +71,7 @@ public class Login implements ILogin {
           break;
         case 4:
           System.out.println("You are a new employee");
-          NewEmployeePresentation newEmployeePresentation=
+          NewEmployeePresentation newEmployeePresentation =
               new NewEmployeePresentation();
           newEmployeePresentation.newEmployeeLogin();
           break;

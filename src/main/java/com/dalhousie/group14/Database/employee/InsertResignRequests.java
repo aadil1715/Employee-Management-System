@@ -17,6 +17,8 @@ import java.time.LocalDate;
 public class InsertResignRequests implements IApprovedStatus,
     IInsertResignRequests {
 
+  private static String approved_status = "pending";
+
   public void insertResignRequestDetails(int id, LocalDate date, String reason) {
     try {
       Connection connection = DbConnection.connectDB();

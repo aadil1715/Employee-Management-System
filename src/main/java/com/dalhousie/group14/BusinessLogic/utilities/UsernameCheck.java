@@ -7,6 +7,7 @@ import com.dalhousie.group14.Presentation.utilities.IPrint;
 import com.dalhousie.group14.Presentation.utilities.Login;
 import com.dalhousie.group14.Presentation.utilities.Print;
 
+
 import java.util.regex.Pattern;
 
 /**
@@ -22,8 +23,9 @@ import java.util.regex.Pattern;
  */
 public class UsernameCheck implements IUsernameCheck {
 
+
   public void usernameCheck(String name) {
-    IPrint printobject = new Print();
+    IPrint print = new Print();
     ILogin loginobject = new Login();
     ICheckUsernameExists object = new CheckUsernameExists();
 
@@ -36,10 +38,10 @@ public class UsernameCheck implements IUsernameCheck {
     String message;
     if (valid) {
       message = "USERNAME IS VALID";
-      System.out.println(printobject.displayMessage(message));
+      System.out.println(print.displayMessage(message));
     } else {
       message = "USERNAME IS NOT VALID. PLEASE TRY AGAIN.";
-      System.out.println(printobject.displayMessage(message));
+      System.out.println(print.displayMessage(message));
       loginobject.enterUsername();
     }
   }
