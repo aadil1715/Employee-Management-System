@@ -6,10 +6,11 @@ import com.dalhousie.group14.Database.employee.IGetEmployeeID;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-/*@Author: Ria Shah
-  @Name of File: InsertLoginDateTime.java
-  @Class Description: This class will insert the current local date, time and
-  username of the user in the LoginSession table of ems database.
+/**
+ * @Author: Ria Shah
+ * @Name of File: InsertLoginDateTime.java
+ * @Class Description: This class will insert the current local date, time and
+ * username of the user in the LoginSession table of ems database.
  */
 public class InsertLoginDateTime implements IInsertLoginDateTime {
 

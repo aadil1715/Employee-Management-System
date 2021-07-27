@@ -1,9 +1,8 @@
 package com.dalhousie.group14.Presentation.manager;
 
 import com.dalhousie.group14.BusinessLogic.manager.Manager;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
 
 public class SalaryOfEmployeeTest {
 

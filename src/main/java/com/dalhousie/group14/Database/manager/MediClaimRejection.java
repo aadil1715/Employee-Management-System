@@ -5,6 +5,9 @@ import com.dalhousie.group14.Database.utilities.QueryExecutor;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * @Author: Ria Shah
+ */
 public class MediClaimRejection implements IMediclaimRejection {
 
   static int id = 0;

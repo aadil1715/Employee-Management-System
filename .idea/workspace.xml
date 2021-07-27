@@ -4,26 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98510d03-2851-4869-a0ae-8263b7d693ba" name="Default Changelist" comment="added TestClass for Print class">
-      <change afterPath="$PROJECT_DIR$/Tests/utilities/PrintTest.java" afterDir="false" />
+    <list default="true" id="98510d03-2851-4869-a0ae-8263b7d693ba" name="Default Changelist" comment="committing and pushing the final changes by refactoring the code in my repository">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Employee/ValidationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Employee/ValidationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Employee/notice_periodTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/manager/FindDistanceBettweenDatesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/manager/FindDistanceBettweenDatesTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/manager/InputValidationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/manager/InputValidationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/manager/InputValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/manager/InputValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/utilities/UsernameCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/utilities/UsernameCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/utilities/CheckUsernameExists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/utilities/CheckUsernameExists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/employee/EmployeeMediclaimRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/employee/EmployeeMediclaimRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/employee/MakeResignRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/employee/MakeResignRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/utilities/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/utilities/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/manager/InputValidation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/manager/InputValidation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/utilities/UsernameCheck.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/BusinessLogic/utilities/UsernameCheck.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/utilities/CheckUsernameExists.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/utilities/CheckUsernameExists.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/employee/EmployeeMediclaimRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/employee/EmployeeMediclaimRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/employee/MakeResignRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/employee/MakeResignRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/utilities/login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/utilities/login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/utilities/print.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/utilities/print.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/utilities/Password_CheckTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/employee/Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/employee/Validation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/utilities/IPasswordCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/utilities/IPasswordCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/employee/IApprovedStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/employee/InsertResignRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/employee/InsertResignRequests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/manager/DatabaseMediclaimRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/manager/DatabaseMediclaimRequests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/manager/IInsertManagerID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/manager/IInsertManagerID.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/manager/IMediclaimApproval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/manager/IMediclaimApproval.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/manager/InsertManagerID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/manager/InsertManagerID.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/employee/IMediclaimRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/employee/IMediclaimRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/MediclaimRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/MediclaimRequests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/employee/IApprovedStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/employee/InsertResignRequests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/employee/InsertResignRequests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/manager/DatabaseMediclaimRequests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/manager/DatabaseMediclaimRequests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/manager/MediclaimRequests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/manager/MediclaimRequests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +49,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/utilities/Login.java" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="1u2akOH3r2IguoVWpSeVn0w6R9a" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -73,7 +74,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor.code.editing" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -109,11 +110,11 @@
   </component>
   <component name="RunManager" selected="Application.EMSController">
     <configuration name="EMSController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.dalhousie.group14.Presentation.utilities.EMSController" />
+      <option name="MAIN_CLASS_NAME" value="com.dalhousie.group14.EMSController" />
       <module name="group-14" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dalhousie.group14.Presentation.utilities.*" />
+          <option name="PATTERN" value="com.dalhousie.group14.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -121,33 +122,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InputValidationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PrintTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="group-14" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="manager.*" />
+          <option name="PATTERN" value="utilities.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="manager" />
-      <option name="MAIN_CLASS_NAME" value="manager.InputValidationTest" />
+      <option name="PACKAGE_NAME" value="utilities" />
+      <option name="MAIN_CLASS_NAME" value="utilities.PrintTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NoticePeriodTest.noticePeriodCalculation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="group-14" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Employee.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Employee" />
-      <option name="MAIN_CLASS_NAME" value="Employee.NoticePeriodTest" />
-      <option name="METHOD_NAME" value="noticePeriodCalculation" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -168,7 +153,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ValidationTest.validateReason" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ValidateResignRequestEmployeeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="group-14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Employee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Employee" />
+      <option name="MAIN_CLASS_NAME" value="Employee.ValidateResignRequestEmployeeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ValidationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="group-14" />
       <extension name="coverage">
         <pattern>
@@ -178,8 +178,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="Employee" />
       <option name="MAIN_CLASS_NAME" value="Employee.ValidationTest" />
-      <option name="METHOD_NAME" value="validateReason" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -187,10 +186,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.EMSController" />
-        <item itemvalue="JUnit.InputValidationTest" />
-        <item itemvalue="JUnit.ValidationTest.validateReason" />
-        <item itemvalue="JUnit.NoticePeriodTest.noticePeriodCalculation" />
         <item itemvalue="JUnit.PrintTest.displayMessage" />
+        <item itemvalue="JUnit.PrintTest" />
+        <item itemvalue="JUnit.ValidateResignRequestEmployeeTest" />
+        <item itemvalue="JUnit.ValidationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -316,7 +315,49 @@
       <option name="project" value="LOCAL" />
       <updated>1627123835265</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="added comments">
+      <created>1627153668419</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1627153668419</updated>
+    </task>
+    <task id="LOCAL-00018" summary="commit for UsernameCheck.java">
+      <created>1627156006791</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1627156006791</updated>
+    </task>
+    <task id="LOCAL-00019" summary="commit for UsernameCheck.java">
+      <created>1627156135084</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1627156135084</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fixed the resign request bug in EmployeeLoginDashBoard">
+      <created>1627323736107</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1627323736107</updated>
+    </task>
+    <task id="LOCAL-00021" summary="fixed the resign request bug in EmployeeLoginDashBoard">
+      <created>1627323781586</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1627323781586</updated>
+    </task>
+    <task id="LOCAL-00022" summary="committing and pushing the final changes by refactoring the code in my repository">
+      <created>1627400793653</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1627400793653</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,6 +389,10 @@
     <MESSAGE value="Fixed the bugs that were there in the Test Validation Class." />
     <MESSAGE value="Refactored the code, added comments, fixed bugs and added login date in the LoginSession table code." />
     <MESSAGE value="added TestClass for Print class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added TestClass for Print class" />
+    <MESSAGE value="added comments" />
+    <MESSAGE value="commit for UsernameCheck.java" />
+    <MESSAGE value="fixed the resign request bug in EmployeeLoginDashBoard" />
+    <MESSAGE value="committing and pushing the final changes by refactoring the code in my repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="committing and pushing the final changes by refactoring the code in my repository" />
   </component>
 </project>

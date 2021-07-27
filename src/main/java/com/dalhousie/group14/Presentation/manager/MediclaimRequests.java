@@ -23,7 +23,7 @@ public class MediclaimRequests implements IMediclaimRequest {
     InputValidation object4 = new InputValidation();
     System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t-----LIST OF MEDICLAIM REQUESTS-----" +
         "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t");
-    System.out.printf("%15s %30s %30s %30s %30s %30s", "NAME", "POLICY NUMBER"
+    System.out.printf("%20s %30s %35s %35s %35s %30s", "NAME", "POLICY NUMBER"
         , "MEDICAL ID", "MONEY CLAIMED", "REASON", "APPROVED STATUS\n\n");
     mediclaimrequestsdb.displayMediclaimRequestsManager();
     System.out.println("\nDo you want to approve or reject the pending " +

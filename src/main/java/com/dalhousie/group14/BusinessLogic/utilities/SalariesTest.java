@@ -4,7 +4,8 @@ import com.dalhousie.group14.BusinessLogic.employee.Employee;
 import com.dalhousie.group14.BusinessLogic.manager.Manager;
 import com.dalhousie.group14.Presentation.manager.SalaryOfEmployee;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class SalariesTest {
     //TEST SET 1 before the coding is done

@@ -7,6 +7,9 @@ import com.dalhousie.group14.BusinessLogic.employee.NoticePeriod;
 import java.sql.Connection;
 import java.sql.Statement;
 
+/**
+ * @Author: Ria Shah
+ */
 public class NoticePeriodDisplay implements INoticePeriodDisplay {
 
   @Override
