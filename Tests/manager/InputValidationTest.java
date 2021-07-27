@@ -41,16 +41,6 @@ public class InputValidationTest {
 
     String input5 = "null";
     assertFalse(inputValidation.validateInput(input5));
-
-  }
-
-  @Test
-  public void validateNameRequestApproval() {
-
-  }
-
-  @Test
-  public void validateNameRequestRejection() {
   }
 
 }

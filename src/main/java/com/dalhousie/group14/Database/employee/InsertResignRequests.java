@@ -14,7 +14,7 @@ import java.time.LocalDate;
  * for resign, and default pending status in the ResignRequest table in the
  * ems Database.
  */
-public class InsertResignRequests implements IApprovedStatus,
+public class InsertResignRequests implements
     IInsertResignRequests {
 
   private static String approved_status = "pending";

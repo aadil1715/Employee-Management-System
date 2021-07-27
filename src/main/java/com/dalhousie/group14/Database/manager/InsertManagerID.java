@@ -5,7 +5,9 @@ import com.dalhousie.group14.Database.utilities.DbConnection;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
-
+/**
+ * @Author: Ria Shah
+ */
 public class InsertManagerID implements IInsertManagerID {
 
   public void insertManagerID(int employeeid, int managerid) {

@@ -5,7 +5,7 @@ package com.dalhousie.group14.BusinessLogic.utilities;
  */
 public interface IPasswordCheck {
 
-  void passwordCheck(String password);
+    void passwordCheck(String password);
 
 
 }

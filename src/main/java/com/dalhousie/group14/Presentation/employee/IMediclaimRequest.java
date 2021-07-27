@@ -7,7 +7,7 @@ public interface IMediclaimRequest {
 
   void callALlMethods();
 
-  void enterName();
+    void enterName();
 
   void enterPolicyNumber();
 
