@@ -62,7 +62,7 @@ public class EmployeeLoginDashBoard {
             break;
           case 4:
             System.out.println("Request Leave");
-            request.requestForLeave();
+            request.requestForLeave(userName);
             break;
           case 5:
             IMediclaimRequest iMediclaimRequest =
