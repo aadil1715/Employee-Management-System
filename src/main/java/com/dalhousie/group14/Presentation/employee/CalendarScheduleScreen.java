@@ -1,4 +1,4 @@
-/*
+/**
  * This class shows the schedule of employee in a calendar format.
  * It extracts the special dates that have events
  * Displays the special dates in underline format.
@@ -28,7 +28,7 @@ public class CalendarScheduleScreen implements ICalendarScreen {
       LocalDate currentDate = LocalDate.now();
       int currentYear = currentDate.getYear();
       int currentMonth = currentDate.getMonth().getValue();
-      String empID = "891000";
+      String empID = "17";
       switch (choice) {
         case 1:
           calendarDisplay.displayCurrentMonth(currentYear,currentMonth,empID);

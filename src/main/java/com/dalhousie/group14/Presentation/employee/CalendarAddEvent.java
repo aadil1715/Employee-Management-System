@@ -1,4 +1,4 @@
-/*
+/**
  * This class adds an event to employee calendar
  * Author : Aadil Shaikh
  */

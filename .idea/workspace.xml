@@ -4,24 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98510d03-2851-4869-a0ae-8263b7d693ba" name="Default Changelist" comment="committing and pushing the final changes by refactoring the code in my repository">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/manager/InputValidationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/manager/InputValidationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/utilities/Password_CheckTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/employee/Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/employee/Validation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/utilities/IPasswordCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/BusinessLogic/utilities/IPasswordCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/employee/IApprovedStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/employee/InsertResignRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/employee/InsertResignRequests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/manager/DatabaseMediclaimRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/manager/DatabaseMediclaimRequests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/manager/IInsertManagerID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/manager/IInsertManagerID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/manager/IMediclaimApproval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/manager/IMediclaimApproval.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/manager/InsertManagerID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/manager/InsertManagerID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/employee/IMediclaimRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/employee/IMediclaimRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/MediclaimRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/manager/MediclaimRequests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/employee/IApprovedStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/employee/InsertResignRequests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/employee/InsertResignRequests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/manager/DatabaseMediclaimRequests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Database/manager/DatabaseMediclaimRequests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/manager/MediclaimRequests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dalhousie/group14/Presentation/manager/MediclaimRequests.class" afterDir="false" />
+    <list default="true" id="98510d03-2851-4869-a0ae-8263b7d693ba" name="Default Changelist" comment="Final small fixes for code.">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,10 +15,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
-        <option value="Interface" />
         <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -46,8 +31,13 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Presentation/utilities/Login.java" root0="FORCE_HIGHLIGHTING" />
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProblemsViewState">
     <option name="selectedIndex" value="1" />
@@ -62,44 +52,32 @@
     <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="14" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../developbranch/group-14" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.dalhousie.group14.Database.utilities" />
-      <recent name="com.dalhousie.group14.Presentation.manager" />
-      <recent name="com.dalhousie.group14.Database.manager" />
-      <recent name="com.dalhousie.group14.BusinessLogic.utilities" />
-      <recent name="com.dalhousie.group14.Presentation.utilities" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="ExtractSuperBase.RECENT_KEYS">
-      <recent name="com.dalhousie.group14.Database.manager" />
-      <recent name="com.dalhousie.group14.BusinessLogic.employee" />
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.dalhousie.group14.Database.utilities" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="Employee" />
-      <recent name="utilities" />
-      <recent name="manager" />
-      <recent name="com.dalhousie.group14.BusinessLogic.employee" />
       <recent name="com.dalhousie.group14.Presentation.utilities" />
+      <recent name="com.dalhousie.group14.BusinessLogic.utilities" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -108,7 +86,7 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.EMSController">
+  <component name="RunManager" selected="JUnit.CalendarDisplayTest.display">
     <configuration name="EMSController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.dalhousie.group14.EMSController" />
       <module name="group-14" />
@@ -122,22 +100,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrintTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmployeeProjectHandling" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dalhousie.group14.Presentation.employee.EmployeeProjectHandling" />
       <module name="group-14" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="utilities.*" />
+          <option name="PATTERN" value="com.dalhousie.group14.Presentation.employee.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.PrintTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrintTest.displayMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalendarDisplayTest.display" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="group-14" />
       <extension name="coverage">
         <pattern>
@@ -146,14 +133,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="utilities" />
-      <option name="MAIN_CLASS_NAME" value="utilities.PrintTest" />
-      <option name="METHOD_NAME" value="displayMessage" />
+      <option name="MAIN_CLASS_NAME" value="utilities.CalendarDisplayTest" />
+      <option name="METHOD_NAME" value="display" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ValidateResignRequestEmployeeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalendarEventTest.searchEvent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="group-14" />
       <extension name="coverage">
         <pattern>
@@ -162,13 +149,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Employee" />
-      <option name="MAIN_CLASS_NAME" value="Employee.ValidateResignRequestEmployeeTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="Employee.CalendarEventTest" />
+      <option name="METHOD_NAME" value="searchEvent" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ValidationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NotificationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="group-14" />
       <extension name="coverage">
         <pattern>
@@ -177,19 +165,26 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Employee" />
-      <option name="MAIN_CLASS_NAME" value="Employee.ValidationTest" />
+      <option name="MAIN_CLASS_NAME" value="Employee.NotificationTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.EMSController" />
+      <item itemvalue="Application.EmployeeProjectHandling" />
+      <item itemvalue="JUnit.CalendarEventTest.searchEvent" />
+      <item itemvalue="JUnit.NotificationTest" />
+      <item itemvalue="JUnit.CalendarDisplayTest.display" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CalendarDisplayTest.display" />
+        <item itemvalue="JUnit.NotificationTest" />
+        <item itemvalue="JUnit.CalendarEventTest.searchEvent" />
+        <item itemvalue="Application.EmployeeProjectHandling" />
         <item itemvalue="Application.EMSController" />
-        <item itemvalue="JUnit.PrintTest.displayMessage" />
-        <item itemvalue="JUnit.PrintTest" />
-        <item itemvalue="JUnit.ValidateResignRequestEmployeeTest" />
-        <item itemvalue="JUnit.ValidationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -202,6 +197,14 @@
       <option name="presentableId" value="Default" />
       <updated>1623866301513</updated>
       <workItem from="1623866337051" duration="2740000" />
+      <workItem from="1627073090774" duration="544000" />
+      <workItem from="1627073646871" duration="1678000" />
+      <workItem from="1627120743829" duration="6746000" />
+      <workItem from="1627134685678" duration="14933000" />
+      <workItem from="1627161783571" duration="10584000" />
+      <workItem from="1627337257581" duration="9495000" />
+      <workItem from="1627418480384" duration="6530000" />
+      <workItem from="1627425110169" duration="882000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Setup Commit">
       <created>1623867197649</created>
@@ -252,112 +255,70 @@
       <option name="project" value="LOCAL" />
       <updated>1625940773760</updated>
     </task>
-    <task id="LOCAL-00008" summary="developed the feature to handle resign requests">
-      <created>1626101543956</created>
+    <task id="LOCAL-00008" summary="Use of scanner class implemented.">
+      <created>1627074771820</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1626101543956</updated>
+      <updated>1627074771820</updated>
     </task>
-    <task id="LOCAL-00009" summary="developed resign requests and mediclaim requests feature">
-      <created>1626881556020</created>
+    <task id="LOCAL-00009" summary="Implemented the manager functionality to handle employee schedule.">
+      <created>1627134991956</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1626881556020</updated>
+      <updated>1627134991959</updated>
     </task>
-    <task id="LOCAL-00010" summary="Merge remote-tracking branch 'origin/ria' into ria">
-      <created>1627063824291</created>
+    <task id="LOCAL-00010" summary="Implemented project management for employee">
+      <created>1627154589859</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1627063824291</updated>
+      <updated>1627154589859</updated>
     </task>
-    <task id="LOCAL-00011" summary="Fixed the bugs that were there in the Test Validation Class.">
-      <created>1627064194121</created>
+    <task id="LOCAL-00011" summary="Added presentation layer for notifications.">
+      <created>1627162051307</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1627064194121</updated>
+      <updated>1627162051307</updated>
     </task>
-    <task id="LOCAL-00012" summary="Fixed the bugs that were there in the Test Validation Class.">
-      <created>1627064621483</created>
+    <task id="LOCAL-00012" summary="Added presentation layer for notifications.">
+      <created>1627169390561</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1627064621483</updated>
+      <updated>1627169390561</updated>
     </task>
-    <task id="LOCAL-00013" summary="Fixed the bugs that were there in the Test Validation Class.">
-      <created>1627064829932</created>
+    <task id="LOCAL-00013" summary="Combined the merge commit with my local changes on notification presentation layer.">
+      <created>1627169750700</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1627064829932</updated>
+      <updated>1627169750700</updated>
     </task>
-    <task id="LOCAL-00014" summary="Fixed the bugs that were there in the Test Validation Class.">
-      <created>1627065101770</created>
+    <task id="LOCAL-00014" summary="Fixed a layer violation.">
+      <created>1627341937355</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1627065101770</updated>
+      <updated>1627341937355</updated>
     </task>
-    <task id="LOCAL-00015" summary="Refactored the code, added comments, fixed bugs and added login date in the LoginSession table code.">
-      <created>1627120829522</created>
+    <task id="LOCAL-00015" summary="Final small fixes for code.">
+      <created>1627424838754</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1627120829522</updated>
+      <updated>1627424838754</updated>
     </task>
-    <task id="LOCAL-00016" summary="added TestClass for Print class">
-      <created>1627123835265</created>
+    <task id="LOCAL-00016" summary="Final small fixes for code.">
+      <created>1627425820589</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1627123835265</updated>
+      <updated>1627425820589</updated>
     </task>
-    <task id="LOCAL-00017" summary="added comments">
-      <created>1627153668419</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1627153668419</updated>
-    </task>
-    <task id="LOCAL-00018" summary="commit for UsernameCheck.java">
-      <created>1627156006791</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1627156006791</updated>
-    </task>
-    <task id="LOCAL-00019" summary="commit for UsernameCheck.java">
-      <created>1627156135084</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1627156135084</updated>
-    </task>
-    <task id="LOCAL-00020" summary="fixed the resign request bug in EmployeeLoginDashBoard">
-      <created>1627323736107</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1627323736107</updated>
-    </task>
-    <task id="LOCAL-00021" summary="fixed the resign request bug in EmployeeLoginDashBoard">
-      <created>1627323781586</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1627323781586</updated>
-    </task>
-    <task id="LOCAL-00022" summary="committing and pushing the final changes by refactoring the code in my repository">
-      <created>1627400793653</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1627400793653</updated>
-    </task>
-    <option name="localTasksCounter" value="23" />
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,18 +342,13 @@
     <MESSAGE value="Dbconnection code changed" />
     <MESSAGE value="commit no 1" />
     <MESSAGE value="login file changed ;removed implements" />
-    <MESSAGE value="resign_requests" />
-    <MESSAGE value="developed the feature to handle resign requests" />
-    <MESSAGE value="developed resign requests and mediclaim requests feature" />
-    <MESSAGE value="updated resign requests, mediclaim requests and done refactoring" />
-    <MESSAGE value="Merge remote-tracking branch 'origin/ria' into ria" />
-    <MESSAGE value="Fixed the bugs that were there in the Test Validation Class." />
-    <MESSAGE value="Refactored the code, added comments, fixed bugs and added login date in the LoginSession table code." />
-    <MESSAGE value="added TestClass for Print class" />
-    <MESSAGE value="added comments" />
-    <MESSAGE value="commit for UsernameCheck.java" />
-    <MESSAGE value="fixed the resign request bug in EmployeeLoginDashBoard" />
-    <MESSAGE value="committing and pushing the final changes by refactoring the code in my repository" />
-    <option name="LAST_COMMIT_MESSAGE" value="committing and pushing the final changes by refactoring the code in my repository" />
+    <MESSAGE value="Use of scanner class implemented." />
+    <MESSAGE value="Implemented the manager functionality to handle employee schedule." />
+    <MESSAGE value="Implemented project management for employee" />
+    <MESSAGE value="Added presentation layer for notifications." />
+    <MESSAGE value="Combined the merge commit with my local changes on notification presentation layer." />
+    <MESSAGE value="Fixed a layer violation." />
+    <MESSAGE value="Final small fixes for code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Final small fixes for code." />
   </component>
 </project>

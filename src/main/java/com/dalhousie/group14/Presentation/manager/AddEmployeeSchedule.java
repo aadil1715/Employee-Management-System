@@ -1,3 +1,7 @@
+/**
+ * Author: Aadil Shaikh
+ * This displays screen for adding an event to employee calendar.
+ */
 package com.dalhousie.group14.Presentation.manager;
 
 import com.dalhousie.group14.BusinessLogic.employee.CalendarEvent;

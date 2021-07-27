@@ -9,7 +9,7 @@
         <module name="group-14" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8">
+    <bytecodeTargetLevel>
       <module name="group-14" target="9" />
     </bytecodeTargetLevel>
   </component>

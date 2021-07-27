@@ -1,14 +1,11 @@
-/*
+/**
  * This class contains the logic to display calendar.
  * Author : Aadil Shaikh
  */
 package com.dalhousie.group14.Presentation.utilities;
 
 import com.dalhousie.group14.Database.utilities.GetSpecialDates;
-import com.dalhousie.group14.Database.utilities.QueryExecutor;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.YearMonth;
 import java.util.ArrayList;
@@ -24,6 +21,7 @@ public class CalendarDisplay implements ICalendarDisplay {
   int currentMonth = currentDate.getMonth().getValue();
   GetSpecialDates getSpecialDatesObject = new GetSpecialDates();
   List<Long> fetchedSpecialDates = new ArrayList<>();
+
   public void displayMonths(int year, int month) {
     YearMonth ym = YearMonth.of(year, month);
 
@@ -59,7 +57,7 @@ public class CalendarDisplay implements ICalendarDisplay {
   }
 
   @Override
-  public void display(int year,String employeeID, int current_month,
+  public void display(int year, String employeeID, int current_month,
                       int total_months) {
     try {
       getSpecialDatesEmployee(employeeID);
@@ -80,7 +78,7 @@ public class CalendarDisplay implements ICalendarDisplay {
                                   String employeeID) {
     try {
       getSpecialDatesEmployee(employeeID);
-      display(year,employeeID,current_month,current_month+1);
+      display(year, employeeID, current_month, current_month + 1);
     } catch (Exception e) {
       e.printStackTrace();
     }
@@ -90,17 +88,17 @@ public class CalendarDisplay implements ICalendarDisplay {
                                  String EmployeeID) {
     try {
       getSpecialDatesEmployee(EmployeeID);
-      display(year,EmployeeID,current_month,current_month+2);
+      display(year, EmployeeID, current_month, current_month + 2);
     } catch (Exception e) {
       e.printStackTrace();
     }
   }
 
-  public void getAllSpecialDates(){
+  public void getAllSpecialDates() {
     fetchedSpecialDates = getSpecialDatesObject.getSpecialDates();
   }
 
-  public void getSpecialDatesEmployee(String employeeID){
+  public void getSpecialDatesEmployee(String employeeID) {
     fetchedSpecialDates = getSpecialDatesObject.getSpecialDatesForEmployee(employeeID);
   }
 }

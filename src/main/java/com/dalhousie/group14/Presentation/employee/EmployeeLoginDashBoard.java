@@ -1,13 +1,22 @@
 package com.dalhousie.group14.Presentation.employee;
 
 /*Author- Jainam Shah(B00883898)*/
+/*This page for Employee login dashboard where employee has options to
+edit profile
+request for leave
+request for medicliam
+request for asset
+request for resign.
+*/
 
 import com.dalhousie.group14.BusinessLogic.employee.Employee;
 import com.dalhousie.group14.BusinessLogic.employee.IRequestForLeave;
 import com.dalhousie.group14.BusinessLogic.employee.RequestForLeave;
-import com.dalhousie.group14.BusinessLogic.utilities.NotificationManager;
+import com.dalhousie.group14.BusinessLogic.manager.AssetRequests;
+import com.dalhousie.group14.Database.utilities.NotificationManager;
 import com.dalhousie.group14.Database.employee.GetEmployeeUserNameUserID;
 import com.dalhousie.group14.Database.employee.IGetEmployeeUserNameUserID;
+import com.dalhousie.group14.Presentation.manager.ResignRequest;
 import com.dalhousie.group14.Presentation.utilities.Login;
 
 import java.util.Scanner;
@@ -47,8 +56,8 @@ public class EmployeeLoginDashBoard {
             break;
           case 3:
             System.out.println("Salary Management");
-            Employee employee = new Employee(userName);
-            Salary salary = new Salary();
+            Employee employee= new Employee(userName);
+            Salary salary=new Salary();
             salary.view(employee.getUserName());
             break;
           case 4:
@@ -63,14 +72,14 @@ public class EmployeeLoginDashBoard {
             break;
           case 6:
             System.out.println("Asset Requests");
-            AssetRequestPresentation assetRequests =
-                new AssetRequestPresentation();
-            assetRequests.askForAssets();
+            AssetRequests assetRequests=
+                new AssetRequests();
+            assetRequests.viewRequests(userName);
             break;
           case 7:
             System.out.println("Resign Requests");
-            MakeResignRequest resignRequest = new MakeResignRequest();
-            resignRequest.resignRequest();
+            ResignRequest resignRequest = new ResignRequest();
+            resignRequest.displayResignRequest();
             break;
           case 8:
             System.out.println("Manage your projects.");

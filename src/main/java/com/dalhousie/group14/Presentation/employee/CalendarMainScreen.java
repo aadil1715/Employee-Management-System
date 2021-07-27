@@ -1,11 +1,10 @@
-/*
+/**
  * This class displays the main screen for calendar operations.
  * It gives various options to add,modify,remove events from the calendar.
  * Author : Aadil Shaikh
  */
 package com.dalhousie.group14.Presentation.employee;
 
-import java.sql.SQLException;
 import java.util.Scanner;
 
 public class CalendarMainScreen implements ICalendarScreen {

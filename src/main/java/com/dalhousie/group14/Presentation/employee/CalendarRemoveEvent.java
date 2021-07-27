@@ -1,4 +1,4 @@
-/*
+/**
  * This class removes an event from the employee calendar
  * Author : Aadil Shaikh
  */
@@ -17,7 +17,7 @@ public class CalendarRemoveEvent implements ICalendarScreen {
   public void displayScreen() {
     Scanner scanner = new Scanner(System.in);
     LocalDate currentDate = LocalDate.now();
-    String employeeID = "891000";
+    String employeeID = "17";
     int currentYear = currentDate.getYear();
     int currentMonth = currentDate.getMonth().getValue();
     ICalendarDisplay calendarDisplay = new CalendarDisplay();
