@@ -49,8 +49,9 @@ public class PerformanceEvaluatorScreen implements EvaluatorInterface {
         displayLeastDisciplined(iEmpEvaluation);
       } else if (userinput == 5) {
         displayEoM(iEmpEvaluation);
-      } else {
-        return;
+      } else if (userinput == 6){
+        ManagerLoginDashBoard obj = new ManagerLoginDashBoard();
+        obj.managerLoginDashBoard();
       }
       returntoEvaluatorScreen(scanner, tries);
     }

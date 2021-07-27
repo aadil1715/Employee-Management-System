@@ -1,12 +1,9 @@
 package com.dalhousie.group14.Database.manager;
 
-import com.dalhousie.group14.Database.utilities.DbConnection;
-import com.dalhousie.group14.Database.utilities.QueryExecutor;
 
-import java.sql.Connection;
+import com.dalhousie.group14.Database.utilities.QueryExecutor;
 import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+
 
 
 public class MediClaimApproval implements IMediclaimApproval {

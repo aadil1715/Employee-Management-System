@@ -17,4 +17,6 @@ public interface ILogin {
 
   void loginTime();
 
+  void loginDate();
+
 }
