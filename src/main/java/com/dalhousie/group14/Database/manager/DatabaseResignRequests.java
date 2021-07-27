@@ -7,7 +7,7 @@ import java.sql.Statement;
 
 import com.dalhousie.group14.Database.utilities.DbConnection;
 
-public class DatabaseResignRequests  implements IDatabaseResignRequests{
+public class DatabaseResignRequests implements IDatabaseResignRequests {
 
   public void selectResignRequests() {
     try {

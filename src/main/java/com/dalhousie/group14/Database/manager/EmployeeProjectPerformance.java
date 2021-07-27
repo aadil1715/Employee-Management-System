@@ -43,8 +43,9 @@ public class EmployeeProjectPerformance {
 
   public static ResultSet employeeProjectPerformance(String userName) {
     ResultSet resultSet = null;
-    String query = "select ClientFeedback from Project where " +
-        "ClientFeedbackStatus=true and ProjectID='" + userName + "';";
+
+    String query = "select EmployeeID,Languages,ProjectHistory from EmployeeTechDetails where " +
+        "EmployeeID='" + userName + "';";
     resultSet = QueryExecutor.readData(query);
 
     return resultSet;

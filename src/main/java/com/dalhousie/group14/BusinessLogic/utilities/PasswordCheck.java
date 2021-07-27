@@ -3,15 +3,16 @@ package com.dalhousie.group14.BusinessLogic.utilities;
 import com.dalhousie.group14.Presentation.utilities.ILogin;
 import com.dalhousie.group14.Presentation.utilities.Login;
 
-/*@Author: Ria Shah
-   @Name of File:PasswordCheck.java
-   @Class Description: This class will check whether the
-   entered password by the user is valid or not. If the password is
-   not valid then the system will prompt the user again to enter the
-   password until it will be valid.
-   @Method Name: passwordCheck(String password)- This method will check
-   whether the password entered contains enough numbers, capital letters,
-   valid characters or the password is short.
+/**
+ * @Author: Ria Shah
+ * @NameofFile: PasswordCheck.java
+ * @ClassDescription: This class will check whether the
+ * entered password by the user is valid or not. If the password is
+ * not valid then the system will prompt the user again to enter the
+ * password until it will be valid.
+ * @MethodName: passwordCheck(String password)- This method will check
+ * whether the password entered contains enough numbers, capital letters,
+ * valid characters or the password is short.
  */
 public class PasswordCheck implements IPasswordCheck {
 

@@ -1,10 +1,10 @@
-package manager;
+package com.dalhousie.group14.BusinessLogic.employee;
 
-import com.dalhousie.group14.BusinessLogic.employee.FindDistanceBettweenDates;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/*Author- Jainam Shah*/
 class FindDistanceBettweenDatesTest {
 
   @Test
@@ -15,5 +15,4 @@ class FindDistanceBettweenDatesTest {
         "-12-12", "2021-12" +
         "-15"));
   }
-
 }

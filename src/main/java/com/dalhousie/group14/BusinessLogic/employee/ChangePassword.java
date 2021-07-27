@@ -1,6 +1,7 @@
 package com.dalhousie.group14.BusinessLogic.employee;
 
 import com.dalhousie.group14.Database.employee.DisplayEmployeeLoginInfo;
+import com.dalhousie.group14.Database.employee.IDisplayEmployeeLoginInfo;
 import com.dalhousie.group14.Database.employee.UpdatePassword;
 import com.dalhousie.group14.Presentation.employee.TakeInputsFromEmployee;
 
@@ -14,20 +15,19 @@ public class ChangePassword implements IChangePassword {
 
   UpdatePassword updatePassword = new UpdatePassword();
 
-  DisplayEmployeeLoginInfo displayEmployeeLoginInfo = new
+  IDisplayEmployeeLoginInfo displayEmployeeLoginInfo = new
       DisplayEmployeeLoginInfo();
-
 
   /* This method update the userName and Password.
    */
   public void changePassword() {
 
     HashMap<String, String> hashMap;
-    TakeInputsFromEmployee tip = new TakeInputsFromEmployee();
+    TakeInputsFromEmployee inputsFromEmployee = new TakeInputsFromEmployee();
     String userName;
     String password;
 
-    hashMap = tip.getUserNamePassword();
+    hashMap = inputsFromEmployee.getUserNamePassword();
 
     userName = hashMap.get("UserName");
     password = hashMap.get("Password");

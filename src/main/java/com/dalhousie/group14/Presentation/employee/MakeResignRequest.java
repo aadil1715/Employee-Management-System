@@ -10,6 +10,12 @@ import com.dalhousie.group14.Database.employee.InsertResignRequests;
 import java.time.LocalDate;
 import java.util.Scanner;
 
+/**
+ * @Author: Ria Shah
+ * @NameofFile: MakeResignRequest.java
+ * @ClassDescription: This class will provide the user to make the resign
+ * request by entering the required details on the console.
+ */
 public class MakeResignRequest implements IResignRequest {
 
   Scanner scanner = new Scanner(System.in);

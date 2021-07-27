@@ -28,7 +28,7 @@ public class Validation implements IValidation {
     }
   }
 
-  public boolean validatePolicyNumber(int policynumber) {
+    public boolean validatePolicyNumber(int policynumber) {
     if (policynumber < 0 || policynumber == 0) {
       flag = 1;
       return false;

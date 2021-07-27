@@ -15,15 +15,12 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
 /**
  * Author- Jainam Shah(B00883898)
  * This class insert the Security Question with UserName into Database.
  */
 public class DBSecurityQuestion implements IDBSecurityQuestion {
 
-
-  @Override
   /*This method take username as a parameter and retrive all the data from
    *database.
    */
@@ -64,7 +61,6 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
     }
   }
 
-  @Override
   /* This method Insert the Security Question Into Database.
    */
   public void insertSecurityAnswer(String userName, String answer1, String answer2, String answer3) {
@@ -80,7 +76,7 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
       result = statement.executeUpdate(query);
       if (result > 0) {
         System.out.println("Successfully Inserted your Answers.");
-        securityQuestion.securityQuestion();
+
       } else {
         System.out.println("Answers not inserted!! Please check your userName: ");
       }
@@ -89,7 +85,6 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
     }
   }
 
-  @Override
   /* This method check the security answer given by employee is right or
   wrong. */
   public void employeeValidate(String userName, String answer) {
@@ -133,7 +128,6 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
     }
   }
 
-  @Override
   /* This method update the security Question in their respective row.
    */
   public void updateSecurityQuestion(String userName, String question1, String question2, String question3) {
@@ -161,7 +155,6 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
 
   }
 
-  @Override
   /* This method update the security Answer in their respective row.
    */
   public void updateSecurityAnswer(String userName, String answer1, String answer2, String answer3) {
@@ -188,7 +181,7 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
   }
 
 
-  @Override
+
   /*
    * This method take username as a parameter and insert data into database.
    * @param username
@@ -232,8 +225,6 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
     }
   }
 
-
-  @Override
   public void insertTechDetails(int userID, String techLanguage1, String techLanguage2,
                                 String techLanguage3) {
     String query;
@@ -242,7 +233,7 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
     int result;
     query = "INSERT INTO `ems`.`EmployeeTechDetails` (`EmployeeID`,`Languages`)" +
         " VALUES ('" + userID + "', '" + techLanguage1 + " ," + techLanguage2 + " ," + techLanguage3 + "')";
-
+    SecurityQuestion securityQuestion = new SecurityQuestion();
     try {
       Connection connection = DbConnection.connectDB();
       statement = connection.createStatement();
@@ -252,6 +243,7 @@ public class DBSecurityQuestion implements IDBSecurityQuestion {
       if (result > 0) {
         System.out.println("Successfully sampledata First " +
             "Time.");
+        securityQuestion.securityQuestion();
       } else {
         System.out.println("Data not Inserted!! please, check your Username ");
 
