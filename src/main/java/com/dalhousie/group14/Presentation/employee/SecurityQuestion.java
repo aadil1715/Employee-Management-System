@@ -10,7 +10,7 @@ import java.util.Scanner;
 /**
  * Author- Jainam Shah
  */
-public class SecurityQuestion {
+public class SecurityQuestion implements ISecurityQuestion {
 
   public void securityQuestion() {
 

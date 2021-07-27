@@ -5,6 +5,7 @@ import com.dalhousie.group14.BusinessLogic.utilities.*;
 import com.dalhousie.group14.Presentation.client.ClientDashboard;
 import com.dalhousie.group14.Presentation.client.IClientDashboard;
 import com.dalhousie.group14.Presentation.employee.EmployeeLoginDashBoard;
+import com.dalhousie.group14.Presentation.employee.ISecurityQuestion;
 import com.dalhousie.group14.Presentation.employee.NewEmployeePresentation;
 import com.dalhousie.group14.Presentation.employee.SecurityQuestion;
 import com.dalhousie.group14.Presentation.manager.ManagerLoginDashBoard;
@@ -46,7 +47,7 @@ public class Login implements ILogin {
           enterPassword();
           loginTime();
           loginDate();
-          SecurityQuestion securityQuestion = new SecurityQuestion();
+          ISecurityQuestion securityQuestion = new SecurityQuestion();
           securityQuestion.securityQuestion();
           EmployeeLoginDashBoard employeeLoginDashBoard = new EmployeeLoginDashBoard();
           employeeLoginDashBoard.employeeLoginDashBoard(loggedinUser);

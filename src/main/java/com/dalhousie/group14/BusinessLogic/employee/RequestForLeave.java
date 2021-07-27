@@ -24,10 +24,10 @@ public class RequestForLeave implements IRequestForLeave {
    * logically calculated the date difference between this. Take all data
    * process it if needed then send to the database Layer.
    */
-  public void requestForLeave() {
+  public void requestForLeave(String userNamee) {
 
     Scanner scanner = new Scanner(System.in);
-    String userName;
+    String userName = userNamee;
     String managerName;
     String startingLeaveDate;
     String endingLeaveDate;
@@ -43,7 +43,8 @@ public class RequestForLeave implements IRequestForLeave {
         new GetManagerUserNameUserID();
 
     IDBRequestForLeave dbRequestForLeave = new DBRequestForLeave();
-    FindDistanceBettweenDates findDistanceBettweenDates = new FindDistanceBettweenDates();
+    IFindDistanceBettweenDates findDistanceBettweenDates =
+        new FindDistanceBettweenDates();
 
     Date actualStartingLeaveDate;
     Date actualEndingLeaveDate;
@@ -79,7 +80,7 @@ public class RequestForLeave implements IRequestForLeave {
         System.out.println("Please Write the correct data. Ending date is " +
             "before Starting date.");
         System.out.println("Let`s Start with again with beginning.");
-        requestForLeave();
+        requestForLeave(userName);
       }
       days = findDistanceBettweenDates.findDistanceBettweenDates(startingLeaveDate, endingLeaveDate);
       System.out.println(days);
@@ -98,19 +99,19 @@ public class RequestForLeave implements IRequestForLeave {
     } catch (Exception e) {
       System.out.println("Exception:" + e);
       System.out.println("Please Write correct value.");
-      requestForLeave();
+      requestForLeave(userName);
     }
   }
-
 
   /* this method logically validate that starting leave date is always before
    the starting end date.
    */
   public boolean dateValidation(String startingLeaveDate,
                                 String endingLeaveDate) {
-
-    Date actualStartingLeaveDate = Date.valueOf(startingLeaveDate);
-    Date actualEndingLeaveDate = Date.valueOf(endingLeaveDate);
+    Date actualStartingLeaveDate;
+    Date actualEndingLeaveDate;
+    actualStartingLeaveDate = Date.valueOf(startingLeaveDate);
+    actualEndingLeaveDate = Date.valueOf(endingLeaveDate);
     return actualStartingLeaveDate.before(actualEndingLeaveDate);
 
   }

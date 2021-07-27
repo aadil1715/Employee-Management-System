@@ -11,7 +11,6 @@ import java.sql.Statement;
 
 public class UpdatePassword {
 
-
   public void updatePassword(String userName, String password) {
 
     Statement statement;
