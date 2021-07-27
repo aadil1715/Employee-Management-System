@@ -12,7 +12,7 @@ public class EnterCredentials implements IEnterCredentials {
   private String time = null;
   private String date = null;
 
-
+  // method to enter enter  login credentials //
   public void credentials(HashMap<String, String> map) {
     IInsertCredentials insertCredentials = new InsertLoginCredentials();
     IInsertLoginDateTime insertLoginTime = new InsertLoginDateTime();

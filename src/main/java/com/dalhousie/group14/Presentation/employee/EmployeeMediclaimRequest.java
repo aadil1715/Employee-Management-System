@@ -27,7 +27,6 @@ public class EmployeeMediclaimRequest implements IMediclaimRequest {
   }
 
   public void enterName() {
-
     System.out.println("Enter your Name");
     Scanner scanner = new Scanner(System.in);
     name = scanner.nextLine();

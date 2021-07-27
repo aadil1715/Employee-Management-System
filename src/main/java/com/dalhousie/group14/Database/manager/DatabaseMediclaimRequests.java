@@ -13,7 +13,8 @@ public class DatabaseMediclaimRequests implements IManagerDatabaseMediclaimReque
       String query = "SELECT * from MediclaimRequests";
       ResultSet rs = QueryExecutor.readData(query);
       while (rs != null && rs.next()) {
-        System.out.printf("%15s %30s %30s %30s %30s %30s", rs.getString("name"), rs.getInt("policy_number"),
+        System.out.printf("%20s %30s %35s %35s %35s %30s",
+            rs.getString("name"), rs.getInt("policy_number"),
             rs.getInt("Medical_ID"), rs.getLong("money_claimed"),
             rs.getString("reason"), rs.getString("approved_status"));
         System.out.println();

@@ -14,10 +14,8 @@ import java.sql.Statement;
  */
 public class GetEmployeeUserNameUserID implements IGetEmployeeUserNameUserID {
 
-
   /* Take userName as a parameter and return the UserID.
    */
-  @Override
   public int getEmployeeUserIDFromUserName(String userName) {
 
     Statement statement;
@@ -41,10 +39,8 @@ public class GetEmployeeUserNameUserID implements IGetEmployeeUserNameUserID {
     return userID;
   }
 
-
   /* Take userID as a parameter and return the UserName.
    */
-  @Override
   public String getEmployeeUserNameFromUserID(int employeeID) {
 
     Statement statement;

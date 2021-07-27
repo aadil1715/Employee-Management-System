@@ -1,30 +1,23 @@
 package com.dalhousie.group14.Presentation.manager;
 
-import com.dalhousie.group14.BusinessLogic.manager.Manager;
 import com.dalhousie.group14.Presentation.utilities.Login;
 
 import java.util.Scanner;
 
 /**
+ * Author-Jainam Shah
  * This is Manager Login Dashboard. After successfully login manager redirect
  * to this page. Manager has option to select.
  */
 public class ManagerLoginDashBoard {
 
-  public static void main(String[] args) {
-    ManagerLoginDashBoard obj = new ManagerLoginDashBoard();
-    obj.managerLoginDashBoard();
-  }
   public void managerLoginDashBoard() {
 
     Scanner scanner = new Scanner(System.in);
-    ManageEmployee ManageEmployee = new ManageEmployee();
-    IRequestForApprovals request = new RequestForApprovals();
 
     System.out.println("\t\t\t\t\t\t\t\t\t\t\t\tWelcome to Manager Dashboard\t\t\t\t\t\t\t\t\t\t\t\t");
 
     System.out.println("Please Select the number from following Options:");
-
 
     int select;
     boolean decision = true;
@@ -43,7 +36,8 @@ public class ManagerLoginDashBoard {
         select = scanner.nextInt();
         switch (select) {
           case 1:
-            ManageEmployee.manageEmployee();
+            ManageEmployee manageEmployee = new ManageEmployee();
+            manageEmployee.manageEmployee();
             System.out.println("Manage Employee");
             break;
           case 2:
@@ -55,6 +49,7 @@ public class ManagerLoginDashBoard {
             obj2.evaluatoroptions();
             break;
           case 4:
+            IRequestForApprovals request = new RequestForApprovals();
             request.requestForApprovals();
             System.out.println("Requests");
             break;
@@ -77,7 +72,7 @@ public class ManagerLoginDashBoard {
             break;
           case 9:
             decision = false;
-            return;
+            break;
           default:
             System.out.println("Enter Correct number:");
         }

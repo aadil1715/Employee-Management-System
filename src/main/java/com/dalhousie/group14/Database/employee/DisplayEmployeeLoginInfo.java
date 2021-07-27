@@ -8,10 +8,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 /*Author- Jainam Shah(B00883898)*/
-public class DisplayEmployeeLoginInfo {
+public class DisplayEmployeeLoginInfo implements IDisplayEmployeeLoginInfo {
 
   /* This method Display Employee information.
    */
+
   public void displayEmployeeLoginInfo(String username) {
 
     Statement statement;

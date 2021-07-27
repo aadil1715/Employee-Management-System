@@ -8,6 +8,7 @@ import com.dalhousie.group14.BusinessLogic.manager.JoininRequest;
 import java.util.Scanner;
 
 /**
+ * Author- Jainam Shah
  * This class handle the all requests.
  */
 public class RequestForApprovals implements IRequestForApprovals {
@@ -15,8 +16,6 @@ public class RequestForApprovals implements IRequestForApprovals {
   public void requestForApprovals() {
 
     Scanner scanner = new Scanner(System.in);
-    IRequestLeave requestLeave = new RequestLeave();
-
     ManagerLoginDashBoard managerLoginDashBoard =
         new ManagerLoginDashBoard();
 
@@ -37,6 +36,7 @@ public class RequestForApprovals implements IRequestForApprovals {
         IJoininRequest.displayAllRequests();
         break;
       case 2:
+        IRequestLeave requestLeave = new RequestLeave();
         requestLeave.requestLeave();
         System.out.println("Request for leave");
         break;
@@ -47,7 +47,7 @@ public class RequestForApprovals implements IRequestForApprovals {
         break;
       case 4:
         System.out.println("Redirect to Asset Request Page.");
-        AssetRequests assetRequests=
+        AssetRequests assetRequests =
             new AssetRequests();
         assetRequests.viewRequests("fakeUser");
         break;

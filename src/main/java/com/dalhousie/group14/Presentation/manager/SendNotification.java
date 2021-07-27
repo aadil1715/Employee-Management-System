@@ -1,7 +1,11 @@
+/**
+ * Author: Aadil Shaikh
+ * This displays the screen to send notifications.
+ */
 package com.dalhousie.group14.Presentation.manager;
 
 import com.dalhousie.group14.BusinessLogic.utilities.Notification;
-import com.dalhousie.group14.BusinessLogic.utilities.NotificationManager;
+import com.dalhousie.group14.Database.utilities.NotificationManager;
 
 import java.sql.SQLException;
 import java.util.Scanner;

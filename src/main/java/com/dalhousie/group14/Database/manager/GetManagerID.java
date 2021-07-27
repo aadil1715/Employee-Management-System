@@ -7,9 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class GetManagerID implements IGetManagerID{
+public class GetManagerID implements IGetManagerID {
 
-  static int id = 0;
+  private static int id = 0;
 
   public int getManagerID(String username) {
     Connection connection = DbConnection.connectDB();

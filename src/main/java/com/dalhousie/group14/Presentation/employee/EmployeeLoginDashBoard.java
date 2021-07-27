@@ -13,7 +13,7 @@ import com.dalhousie.group14.BusinessLogic.employee.Employee;
 import com.dalhousie.group14.BusinessLogic.employee.IRequestForLeave;
 import com.dalhousie.group14.BusinessLogic.employee.RequestForLeave;
 import com.dalhousie.group14.BusinessLogic.manager.AssetRequests;
-import com.dalhousie.group14.BusinessLogic.utilities.NotificationManager;
+import com.dalhousie.group14.Database.utilities.NotificationManager;
 import com.dalhousie.group14.Database.employee.GetEmployeeUserNameUserID;
 import com.dalhousie.group14.Database.employee.IGetEmployeeUserNameUserID;
 import com.dalhousie.group14.Presentation.manager.ResignRequest;
@@ -62,7 +62,7 @@ public class EmployeeLoginDashBoard {
             break;
           case 4:
             System.out.println("Request Leave");
-            request.requestForLeave();
+            request.requestForLeave(userName);
             break;
           case 5:
             IMediclaimRequest iMediclaimRequest =
@@ -72,14 +72,14 @@ public class EmployeeLoginDashBoard {
             break;
           case 6:
             System.out.println("Asset Requests");
-            AssetRequestPresentation assetRequests=
-                new AssetRequestPresentation();
-            assetRequests.askForAssets();
+            AssetRequests assetRequests=
+                new AssetRequests();
+            assetRequests.viewRequests(userName);
             break;
           case 7:
             System.out.println("Resign Requests");
-            MakeResignRequest resignRequest = new MakeResignRequest();
-            resignRequest.resignRequest();
+            ResignRequest resignRequest = new ResignRequest();
+            resignRequest.displayResignRequest();
             break;
           case 8:
             System.out.println("Manage your projects.");

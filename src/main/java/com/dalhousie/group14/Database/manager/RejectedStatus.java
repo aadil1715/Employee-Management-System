@@ -6,7 +6,9 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-
+/**
+ * @Author: Ria Shah
+ */
 public class RejectedStatus implements IRejectedStatus {
 
   public void rejectStatus(int id) {
