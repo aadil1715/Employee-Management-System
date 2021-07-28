@@ -1,8 +1,8 @@
 package manager;
 
-import com.dalhousie.group14.BusinessLogic.manager.IProjectStatusRetrieve;
-import com.dalhousie.group14.BusinessLogic.manager.ProjectStatusRetrieve;
 import com.dalhousie.group14.BusinessLogic.manager.ProjectAssigner;
+import com.dalhousie.group14.Database.manager.IProjectStatusRetrieve;
+import com.dalhousie.group14.Database.manager.ProjectStatusRetrieve;
 import org.junit.jupiter.api.Test;
 
 import java.sql.ResultSet;
