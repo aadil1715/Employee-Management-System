@@ -11,6 +11,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/*Name:-Ninad Nitin Shukla
+ * File:-NewEmployee
+ * This  class is responsible for setting and getting information about new
+ * employees
+ * */
 public class NewEmployee {
 
   Connection connection = null;
@@ -33,16 +38,6 @@ public class NewEmployee {
       throwables.printStackTrace();
     }
     return false;
-  }
-
-  public void deleteTemporaryUser(String UserName) {
-    Statement stmt = null;
-    try {
-      stmt = this.connection.createStatement();
-      stmt.execute("delete from joinrequest where TempUserName='" + UserName + "';");
-    } catch (SQLException throwables) {
-      throwables.printStackTrace();
-    }
   }
 
   public boolean setEmployee(Map<String, String> map) {

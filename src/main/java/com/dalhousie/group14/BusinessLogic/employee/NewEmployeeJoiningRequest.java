@@ -7,54 +7,68 @@ import com.dalhousie.group14.Presentation.employee.NewEmployeePresentation;
 import java.util.HashMap;
 import java.util.Map;
 
-public class NewEmployeeBusiness {
+/*Name of the Author:Ninad Nitin Shukla
+ *Name of the File:NewEmployeeJoiningRequest
+ * Purpose:-This class is responsible for New employees joining request it
+ * checks if request is pending or Approved and for login and for applying
+ * joining request. It also validates username and password
+ * */
+public class NewEmployeeJoiningRequest implements INewEmployeeJoiningRequest {
 
+  @Override
   public String checkIfRequestPendingOrApproved(String userName) {
     NewEmployee newEmployee = new NewEmployee();
     Map<String, String> info = new HashMap<>();
 
     info = newEmployee.getNewEmployeeInfo(userName);
-    if (info.get("approvalstatus")!=null && info.get(
-        "approvalstatus").equals("pending")) {
-      return "pending";
-    } else if (info.get("approvalstatus")!=null && info.get("approvalstatus").equals("approved")) {
-      return "approved";
-    } else {
-      return " ";
+    try {
+      if (info.get("approvalstatus") != null && info.get(
+          "approvalstatus").equals("pending")) {
+        return "pending";
+      } else if (info.get("approvalstatus") != null && info.get("approvalstatus").equals("approved")) {
+        return "approved";
+      } else {
+        return " ";
+      }
+    } catch (NullPointerException e) {
+      return null;
     }
   }
 
 
-  public Boolean Login(String UserName, String Password) {
+  @Override
+  public Boolean login(String UserName, String Password) {
     Map<String, String> info = new HashMap<>();
     NewEmployee nd = new NewEmployee();
     info = nd.getNewEmployeeInfo(UserName);
-
-    if (Password.equals(info.get("Password"))) {
-      NewEmployeePresentation newEmployeePresentation = new NewEmployeePresentation();
-      NewEmployeeBusiness newEmployeeBusiness = new NewEmployeeBusiness();
-      if (newEmployeeBusiness.checkIfRequestPendingOrApproved(UserName).equals("pending")) {
-        newEmployeePresentation.requestStillPending();
-        return true;
-      }
-      if (newEmployeeBusiness.checkIfRequestPendingOrApproved(UserName).equals("approved")) {
-        newEmployeePresentation.requestApproved();
-        return true;
+    try {
+      if (Password.equals(info.get("Password"))) {
+        NewEmployeePresentation newEmployeePresentation = new NewEmployeePresentation();
+        NewEmployeeJoiningRequest newEmployeeJoiningRequest = new NewEmployeeJoiningRequest();
+        if (newEmployeeJoiningRequest.checkIfRequestPendingOrApproved(UserName).equals("pending")) {
+          newEmployeePresentation.requestStillPending();
+          return true;
+        }
+        if (newEmployeeJoiningRequest.checkIfRequestPendingOrApproved(UserName).equals("approved")) {
+          newEmployeePresentation.requestApproved();
+          return true;
+        } else {
+          newEmployeePresentation.applyRequestPresentation(UserName);
+          return true;
+        }
       } else {
-        newEmployeePresentation.applyRequestPresentation(UserName);
-        return true;
+        NewEmployeePresentation newEmployeePresentation = new NewEmployeePresentation();
+        newEmployeePresentation.incorrectInfo();
+        return false;
       }
-    } else {
-      NewEmployeePresentation newEmployeePresentation = new NewEmployeePresentation();
-      newEmployeePresentation.incorrectInfo();
-
+    } catch (Exception e) {
       return false;
     }
 
-
   }
 
-  public boolean applyjoinRequest(String oldUserName, String userName,
+  @Override
+  public boolean applyJoinRequest(String oldUserName, String userName,
                                   String password) {
     NewEmployee newEmployee = new NewEmployee();
     try {
@@ -71,6 +85,7 @@ public class NewEmployeeBusiness {
 
   }
 
+  @Override
   public boolean userNameValidtion(String userName) {
     if (userName != null) {
       NewEmployeePresentation newEmployeePresentation = new NewEmployeePresentation();
@@ -93,6 +108,7 @@ public class NewEmployeeBusiness {
   }
 
 
+  @Override
   public boolean passwordValidtion(String password) {
     int flag1 = 0;
     int flag2 = 0;

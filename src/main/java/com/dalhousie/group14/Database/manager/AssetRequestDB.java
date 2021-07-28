@@ -9,13 +9,22 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AssetRequestDB {
-  Connection connection=null;
-  public AssetRequestDB(){
+/*Ninad Nitin Shukla
+ * File name:-AssetRequestDB
+ * This file is responsible for getting the pending requests and setting new
+ * asset requests
+ * */
+public class AssetRequestDB implements IAssetRequestDB {
 
-    connection= DbConnection.connectDB();
+  Connection connection = null;
+
+  public AssetRequestDB() {
+
+    connection = DbConnection.connectDB();
   }
-  public List<List<String>>getPendingAssetRequestInformation(String managerUserName){
+
+  @Override
+  public List<List<String>> getPendingAssetRequestInformation(String managerUserName) {
     Statement stmt = null;
     List<List<String>> info = new ArrayList<>();
 
@@ -40,11 +49,11 @@ public class AssetRequestDB {
     return info;
 
 
-
   }
 
+  @Override
   public boolean setNewAsset(String userName, String type,
-                       String value) {
+                             String value) {
     try {
       Statement stmt = this.connection.createStatement();
       String sql =
@@ -61,13 +70,14 @@ public class AssetRequestDB {
 
   }
 
+  @Override
   public void insertNewAssetRequest(String employeeUserName, String item,
                                     String reason) {
     try {
-      Statement statement=this.connection.createStatement();
-      String sql=
-          "insert into AssetRequest values('"+employeeUserName+"', '"+reason+
-              "', 'pending','"+item+"');";
+      Statement statement = this.connection.createStatement();
+      String sql =
+          "insert into AssetRequest values('" + employeeUserName + "', '" + reason +
+              "', 'pending','" + item + "');";
       statement.execute(sql);
     } catch (SQLException throwables) {
       throwables.printStackTrace();

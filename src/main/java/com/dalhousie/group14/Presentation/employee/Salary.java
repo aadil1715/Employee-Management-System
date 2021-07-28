@@ -6,7 +6,9 @@ import com.dalhousie.group14.BusinessLogic.utilities.ISalaries;
 import com.dalhousie.group14.BusinessLogic.utilities.Salaries;
 
 import java.util.Scanner;
-
+/*Name:-Ninad Nitin Shukla
+*
+* */
 public class Salary {
     public void view(String userName){
         System.out.println("Hello "+userName);
@@ -20,8 +22,8 @@ public class Salary {
         }
         System.out.println("BACK TO the previous page?[yes/no]");
         Scanner scanner=new Scanner(System.in);
-        String x=scanner.next();
-        if(x.equals("yes")){
+        String input=scanner.next();
+        if(input.equals("yes")){
             return;
         }
 

@@ -58,7 +58,7 @@ public class ManagerLoginDashBoard {
             obj3.displayScreen();
             break;
           case 6:
-            SalaryOfEmployee se = new SalaryOfEmployee();
+            ISalaryOfEmployee se=new SalaryOfEmployee();
             se.ViewAllEmployees();
             break;
           case 7:

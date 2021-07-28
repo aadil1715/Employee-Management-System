@@ -2,6 +2,7 @@ package com.dalhousie.group14.Presentation.manager;
 /*Author- Jainam Shah(B00883898)*/
 
 import com.dalhousie.group14.BusinessLogic.manager.AssetRequests;
+import com.dalhousie.group14.BusinessLogic.manager.IJoininRequest;
 import com.dalhousie.group14.BusinessLogic.manager.JoininRequest;
 
 import java.util.Scanner;
@@ -31,8 +32,8 @@ public class RequestForApprovals implements IRequestForApprovals {
     switch (select) {
       case 1:
         System.out.println("Redirect to Joining Request Page.");
-        JoininRequest joininRequest = new JoininRequest();
-        joininRequest.displayAllRequests();
+        IJoininRequest IJoininRequest = new JoininRequest();
+        IJoininRequest.displayAllRequests();
         break;
       case 2:
         IRequestLeave requestLeave = new RequestLeave();
