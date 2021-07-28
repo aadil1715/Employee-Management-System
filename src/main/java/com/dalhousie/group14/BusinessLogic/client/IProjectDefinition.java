@@ -1,11 +1,14 @@
 package com.dalhousie.group14.BusinessLogic.client;
 
 import java.util.Date;
+
 /**
- * @author Harjot Singh
+ * @Author: Harjot Singh
+ * @NameofFile: IMilestones.java
+ * @InterfaceDescription: This interface defines the method datesetter,
+ * which is sets the date, returns a date object of a string.
  */
 public interface IProjectDefinition {
 
-    String noreturn(int i);
-    Date datesetter(String date);
+  Date datesetter(String date);
 }

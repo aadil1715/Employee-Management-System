@@ -5,10 +5,13 @@ import com.dalhousie.group14.Database.manager.ProjectStatus;
 import com.dalhousie.group14.Presentation.manager.ProjectManagementDashboard;
 import com.dalhousie.group14.Presentation.utilities.TableFormatter;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.*;
-
+/**
+ * @Author: Harjot Singh
+ * @NameofFile: ProjectAssigner.java
+ * @ClassDescription: This class is responsible for performing the task of
+ * assigning the projects to the best fitting employees.
+ */
 public class ProjectAssigner implements IProjectAssigner {
   private int assigned = 0;
   private static final int ID_INDEX = 1;
@@ -30,25 +33,13 @@ public class ProjectAssigner implements IProjectAssigner {
     String projectName = projectValues[NAME_INDEX];
     String projectLanguages = projectValues[LANG_INDEX];
     List<String> requiredlanguages = languageformatter(projectLanguages);
-    ResultSet resultSet = ProjectStatus.availableEmployees();
-    if(resultSet == null){
+    Map<String, String> availableEmployees= ProjectStatus.availableEmployees();
+    if(availableEmployees == null){
       return null;
     }
 
-    while (true) {
-      try {
-        if (!resultSet.next()) {
-          break;
-        }
-        String languages = resultSet.getString("Languages");
-        List<String> employeeLanguages = languageformatter(languages);
-        String empID = resultSet.getString("EmployeeID");
-        empInfo.put(empID, employeeLanguages);
-        empInfo2.put(empID, employeeLanguages);
-      } catch (SQLException throwables) {
-        throwables.printStackTrace();
-      }
-    }
+
+
     Set<String> assignedEmployees = empAssigner(requiredlanguages);
     if (assignedEmployees == null) {
       return null;
@@ -162,7 +153,6 @@ public class ProjectAssigner implements IProjectAssigner {
     return false;
   }
 
-  @Override
   public List<String> languageformatter(String languages) {
     String[] languageArray = languages.split(",");
     List<String> languageList = new ArrayList<>();

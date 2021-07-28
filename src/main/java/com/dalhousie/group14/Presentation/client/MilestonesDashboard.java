@@ -5,7 +5,12 @@ import com.dalhousie.group14.BusinessLogic.client.Milestones;
 import com.dalhousie.group14.BusinessLogic.utilities.Validations;
 
 import java.util.*;
-
+/**
+ * @Author: Harjot Singh
+ * @NameofFile: ClientProject.java
+ * @ClassDescription: This class is used for the purpose of providing
+ * the screen for milestones definition.
+ */
 public class MilestonesDashboard implements IMilestonesDashboard {
     public static final int MAX_TRIES = 5;
     public static final int MILESTONE_LIMIT = 3;

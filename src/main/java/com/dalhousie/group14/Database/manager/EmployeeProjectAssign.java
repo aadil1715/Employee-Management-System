@@ -5,7 +5,12 @@ import com.dalhousie.group14.Database.utilities.QueryExecutor;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Set;
-
+/**
+ * @Author: Harjot Singh
+ * @NameofFile: EmployeeProjectAssign.java
+ * @ClassDescription: This class is used for the purpose of providing
+ * database interaction for assigning the projects.
+ */
 public class EmployeeProjectAssign {
   public static boolean assignEmp(String projectID, Set<String> assignedEmployees){
     String query = "Select milestoneID from milestones where " +
