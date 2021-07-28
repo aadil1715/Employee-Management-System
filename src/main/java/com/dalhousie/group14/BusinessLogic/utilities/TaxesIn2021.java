@@ -1,11 +1,14 @@
 package com.dalhousie.group14.BusinessLogic.utilities;
+/*Name-Ninad Nitin Shukla
+*Purpose:-This is the taxes only for year 2021 if we need to use some
+* different rules we can make a separate class
+* */
 
-//This isi the taxes only for year 2021 if we need to use some different rules we can make a seperate class
-public class TaxesIn2021 implements Taxes {
+public class TaxesIn2021 implements ITaxes {
 
   @Override
-  public double computeTaxes(double ctc, double epf, double basic_salary) {
-    double gratuity = basic_salary * 15 / 26;
+  public double computeTaxes(double ctc, double epf, double basicSalary) {
+    double gratuity = basicSalary * 15 / 26;
     double gross_salary = ctc - epf - gratuity;
     double taxable_income = 0.5 * gross_salary;
     double tax = 0;

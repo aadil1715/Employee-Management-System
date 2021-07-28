@@ -1,7 +1,12 @@
+/**
+ * Author: Aadil Shaikh
+ *
+ */
 package com.dalhousie.group14.Presentation.manager;
 
 import com.dalhousie.group14.BusinessLogic.employee.CalendarEvent;
 import com.dalhousie.group14.Presentation.employee.ICalendarScreen;
+import com.dalhousie.group14.Presentation.manager.CalendarManagerScreen;
 import com.dalhousie.group14.Presentation.utilities.CalendarDisplay;
 import com.dalhousie.group14.Presentation.utilities.ICalendarDisplay;
 
@@ -27,7 +32,7 @@ public class DisplayEmployeeSchedule implements ICalendarScreen {
       int currentMonth = currentDate.getMonth().getValue();
       switch (choice) {
         case 1:
-          calendarDisplay.displayCurrentMonth(currentYear,currentMonth,empID);
+          calendarDisplay.displayCurrentMonth(currentYear, currentMonth, empID);
           displayEvent();
 
         case 2:
@@ -35,7 +40,7 @@ public class DisplayEmployeeSchedule implements ICalendarScreen {
           displayEvent();
 
         case 3:
-          calendarDisplay.display(currentYear,empID,1,12);
+          calendarDisplay.display(currentYear, empID, 1, 12);
           displayEvent();
 
         case 4:
@@ -57,7 +62,7 @@ public class DisplayEmployeeSchedule implements ICalendarScreen {
     System.out.println("Enter a date to look at the event details: ");
     System.out.println("Enter EXIT to return to previous screen");
     String date = scanner.nextLine();
-    if(!date.equals("EXIT")) {
+    if (!date.equals("EXIT")) {
       CalendarEvent e = CalendarEvent.searchEvent(date);
       e.display();
       System.out.println("Press enter to continue...");

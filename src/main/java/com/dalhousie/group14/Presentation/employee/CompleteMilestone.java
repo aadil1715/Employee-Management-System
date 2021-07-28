@@ -1,3 +1,7 @@
+/**
+ * Author: Aadil Shaikh
+ * This class shows the complete milestone screen.
+ */
 package com.dalhousie.group14.Presentation.employee;
 
 import com.dalhousie.group14.Database.employee.MilestoneOperations;
@@ -8,6 +12,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class CompleteMilestone {
+
   public void display() {
     Scanner scanner = new Scanner(System.in);
     System.out.println("Complete your milestone: ");
@@ -31,12 +36,15 @@ public class CompleteMilestone {
     } catch (ParseException e) {
       e.printStackTrace();
     }
-    milestoneOperations.completeMilestone(milestoneID,empID,date1);
+    milestoneOperations.completeMilestone(milestoneID, empID, date1);
     System.out.println("Updated the milestone successfully");
-
+    System.out.println("Enter exit to go back to previous screen.");
+    String input = scanner.nextLine();
+    EmployeeProjectHandling employeeProjectHandling =
+        new EmployeeProjectHandling();
+    employeeProjectHandling.display();
 
   }
-
 
 
 }

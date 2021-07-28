@@ -1,6 +1,6 @@
 package com.dalhousie.group14.Presentation.employee;
 
-import com.dalhousie.group14.BusinessLogic.employee.NewEmployeeBusiness;
+import com.dalhousie.group14.BusinessLogic.employee.NewEmployeeJoiningRequest;
 
 import java.util.Scanner;
 
@@ -24,9 +24,9 @@ public class NewEmployeePresentation {
 
       String userName = sc.nextLine();
       String password = sc.nextLine();
-      NewEmployeeBusiness nb = new NewEmployeeBusiness();
+      NewEmployeeJoiningRequest nb = new NewEmployeeJoiningRequest();
 
-      nb.Login(userName, password);
+      nb.login(userName, password);
     } while (exit == false);
 
   }
@@ -46,8 +46,8 @@ public class NewEmployeePresentation {
       }
       Scanner scanner = new Scanner(System.in);
       userName = scanner.nextLine();
-      NewEmployeeBusiness newEmployeeBusiness = new NewEmployeeBusiness();
-      if (newEmployeeBusiness.userNameValidtion(userName)) {
+      NewEmployeeJoiningRequest newEmployeeJoiningRequest = new NewEmployeeJoiningRequest();
+      if (newEmployeeJoiningRequest.userNameValidtion(userName)) {
         exit = "yes";
       } else {
         exit = "No";
@@ -66,10 +66,11 @@ public class NewEmployeePresentation {
       }
       Scanner scanner = new Scanner(System.in);
       password = scanner.nextLine();
-      NewEmployeeBusiness newEmployeeBusiness = new NewEmployeeBusiness();
-      if (newEmployeeBusiness.passwordValidtion(password)) {
+      NewEmployeeJoiningRequest newEmployeeJoiningRequest = new NewEmployeeJoiningRequest();
+      if (newEmployeeJoiningRequest.passwordValidtion(password)) {
         exit1 = "yes";
-        if (newEmployeeBusiness.applyjoinRequest(old, userName, password)) {
+        if (newEmployeeJoiningRequest.applyJoinRequest(old, userName,
+            password)) {
 
           System.out.println("Request Sent successfully");
           exit1="yes";
