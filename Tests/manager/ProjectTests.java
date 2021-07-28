@@ -1,7 +1,7 @@
 package manager;
 
-import com.dalhousie.group14.BusinessLogic.manager.IProjectStatusRetrieve;
-import com.dalhousie.group14.BusinessLogic.manager.ProjectStatusRetrieve;
+import com.dalhousie.group14.Database.manager.IProjectStatusRetrieve;
+import com.dalhousie.group14.Database.manager.ProjectStatusRetrieve;
 import com.dalhousie.group14.BusinessLogic.manager.ProjectAssigner;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +11,11 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
+/**
+ * @Author: Harjot Singh
+ * @NameofFile: ProjectTests.java
+ * @ClassDescription: Testingthe projects.
+ */
 public class ProjectTests {
 
   @Test
