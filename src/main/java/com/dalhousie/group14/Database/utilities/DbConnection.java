@@ -12,9 +12,9 @@ public class DbConnection{
 
 
     public static Connection connectDB() {
-        IDbCredLoad obj = new DbCredLoad();
+        // IDbCredLoad obj = new DbCredLoad();
 
-        List<String> credList = obj.loadCredentials();
+        // List<String> credList = obj.loadCredentials();
 //        final String url = credList.get(URL_INDEX);
 //        final String username = credList.get(USERNAME_INDEX);
 //        final String password = credList.get(PASSWORD_INDEX);
