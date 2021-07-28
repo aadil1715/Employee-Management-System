@@ -1,7 +1,7 @@
 package com.dalhousie.group14.Presentation.manager;
 
 import com.dalhousie.group14.BusinessLogic.manager.IProjectAssigner;
-import com.dalhousie.group14.BusinessLogic.manager.IProjectStatusRetrieve;
+import com.dalhousie.group14.Database.manager.IProjectStatusRetrieve;
 import com.dalhousie.group14.BusinessLogic.manager.ProjectAssigner;
 import com.dalhousie.group14.Database.manager.ProjectStatus;
 import com.dalhousie.group14.Presentation.utilities.IuserIntValidation;
@@ -10,7 +10,12 @@ import com.dalhousie.group14.Presentation.utilities.userIntValidation;
 import java.sql.ResultSet;
 import java.util.List;
 import java.util.Scanner;
-
+/**
+ * @Author: Harjot Singh
+ * @NameofFile: PendingProjects.java
+ * @ClassDescription: This class is used for the purpose of providing
+ * the screen for pending projects.
+ */
 public class PendingProjects implements IPendingProjects {
   public static final int MIN = 0;
   public static final int ONE = 1;

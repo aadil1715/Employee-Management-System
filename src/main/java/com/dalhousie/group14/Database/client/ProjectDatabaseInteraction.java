@@ -1,7 +1,7 @@
 package com.dalhousie.group14.Database.client;
 
-import com.dalhousie.group14.BusinessLogic.manager.IProjectStatusRetrieve;
-import com.dalhousie.group14.BusinessLogic.manager.ProjectStatusRetrieve;
+import com.dalhousie.group14.Database.manager.IProjectStatusRetrieve;
+import com.dalhousie.group14.Database.manager.ProjectStatusRetrieve;
 import com.dalhousie.group14.Database.utilities.QueryExecutor;
 
 import java.sql.ResultSet;
@@ -9,12 +9,16 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 
 import java.util.*;
-
+/**
+ * @Author: Harjot Singh
+ * @NameofFile: ProjectDatabaseInteraction.java
+ * @ClassDescription: This class is used for the purpose of providing
+ * database interaction for the projects.
+ */
 public class ProjectDatabaseInteraction implements IProjectDatabaseInteraction {
   public static final String pattern = "yyyy-MM-dd";
   public static final SimpleDateFormat sdf = new SimpleDateFormat(pattern);
 
-  @Override
   public boolean insertProjectDB(String projectName, Date startDate,
                                  Date endDate, List<String> languages,
                                  Map<Date, String> milestones,
@@ -51,7 +55,6 @@ public class ProjectDatabaseInteraction implements IProjectDatabaseInteraction {
     return false;
   }
 
-  @Override
   public boolean projectExistsCheck(String Projectname) {
 
     String query = "Select ProjectName from Project where ProjectName='" + Projectname + "';";

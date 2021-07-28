@@ -7,7 +7,12 @@ import com.dalhousie.group14.Database.client.IProjectDatabaseInteraction;
 import com.dalhousie.group14.Database.client.ProjectDatabaseInteraction;
 
 import java.util.*;
-
+/**
+ * @Author: Harjot Singh
+ * @NameofFile: ClientProject.java
+ * @ClassDescription: This class is used for the purpose of providing
+ * the screen for project definition.
+ */
 public class ClientProject implements IClientProject {
   String projectName = "";
   int tries = 0;
@@ -37,7 +42,7 @@ public class ClientProject implements IClientProject {
     }
   }
 
-  @Override
+
   public boolean defineProjectName(IProjectDatabaseInteraction projectDatabaseInteraction) {
 
     if (tries == MAX_TRIES) {
@@ -61,7 +66,6 @@ public class ClientProject implements IClientProject {
     return false;
   }
 
-  @Override
   public boolean defineProjectLanguages() {
     System.out.println();
     System.out.println("Now, you will need to enter the programming languages for the project.");
@@ -91,7 +95,6 @@ public class ClientProject implements IClientProject {
     return false;
   }
 
-  @Override
   public boolean defineProjectDates() {
 
     boolean done = false;
@@ -127,7 +130,6 @@ public class ClientProject implements IClientProject {
     return false;
   }
 
-  @Override
   public boolean defineProjectMilestones(IProjectDatabaseInteraction projectDatabaseInteraction, String clientID) {
     IMilestonesDashboard obj = new MilestonesDashboard();
     Map<Date, String> milestones = obj.definemilestonescreen(start_date, end_date);

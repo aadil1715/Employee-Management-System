@@ -1,4 +1,4 @@
-package com.dalhousie.group14.BusinessLogic.manager;
+package com.dalhousie.group14.Database.manager;
 
 import com.dalhousie.group14.Presentation.manager.IProjectManagementDashboard;
 import com.dalhousie.group14.Presentation.manager.ProjectManagementDashboard;
@@ -9,7 +9,12 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
+/**
+ * @Author: Harjot Singh
+ * @NameofFile: ProjectStatus.java
+ * @ClassDescription: This class is used for the purpose of retrieving the
+ * status of the projects.
+ */
 public class ProjectStatusRetrieve implements IProjectStatusRetrieve {
 
   public List<String> projectList(ResultSet resultSet){

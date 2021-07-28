@@ -1,9 +1,16 @@
 package com.dalhousie.group14.BusinessLogic.manager;
 
-import com.dalhousie.group14.Database.manager.EmployeeProjectPerformance;
+import com.dalhousie.group14.Database.manager.IEmployeeProjectPerformance;
 import com.dalhousie.group14.Presentation.utilities.TableFormatter;
 
 import java.util.*;
+/**
+ * @Author: Harjot Singh
+ * @NameofFile: EmpEvaluation.java
+ * @ClassDescription: This class is responsible for performing the Employee
+ * Evaluation, it has methods which serve the purpose of evaluating the
+ * employees on the metrics like discipline and project performance.
+ */
 
 public class EmpEvaluation implements IEmpEvaluation {
   public static final int DIVIDER = 2;
@@ -11,9 +18,10 @@ public class EmpEvaluation implements IEmpEvaluation {
 
 
   public String EvaluateAll() {
-    SessionEvaluator obj = new SessionEvaluator();
+    ISessionEvaluator obj = new SessionEvaluator();
+    IProjectPerformanceEvaluator obj2 = new ProjectPerformanceEvaluator();
+
     Map<String, Float> emp_performance = new HashMap<>();
-    ProjectPerformanceEvaluator obj2 = new ProjectPerformanceEvaluator();
     Map<String, Float> empsessions = obj.evaluateAllSessions();
     Map<String, Float> empprojectperformance = obj2.evalProjPerformanceAll();
     Set<String> empsessions_keys = empsessions.keySet();
@@ -47,7 +55,7 @@ public class EmpEvaluation implements IEmpEvaluation {
           performanceRatingString, totalRatingString);
       evaluationTable.add(row);
     }
-    EmployeeProjectPerformance.writeprojectPerformanceAll(sortedEmpCompleteDetails);
+    IEmployeeProjectPerformance.writeprojectPerformanceAll(sortedEmpCompleteDetails);
     return TableFormatter.formatAsTable(evaluationTable);
   }
 
@@ -88,7 +96,7 @@ public class EmpEvaluation implements IEmpEvaluation {
   }
 
   public String EoMDisplay() {
-    return EmployeeProjectPerformance.DisplayEoM();
+    return IEmployeeProjectPerformance.DisplayEoM();
   }
 
 }

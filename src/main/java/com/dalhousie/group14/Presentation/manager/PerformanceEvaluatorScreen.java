@@ -6,10 +6,18 @@ import com.dalhousie.group14.BusinessLogic.utilities.Validations;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+/**
+ * @Author: Harjot Singh
+ * @NameofFile: PerformanceEvaluatorScreen.java
+ * @ClassDescription: This class is used for the purpose of providing
+ * the screen for the performance evaluation of employees.
+ */
 
-
-public class PerformanceEvaluatorScreen implements EvaluatorInterface {
+public class PerformanceEvaluatorScreen implements IPerformanceEvaluatorScreen {
   public static final int MAX_TRIES = 5;
+  public static final int DATE = 10;
+  public static final int LOW_LIMIT = 0;
+  public static final int HIGH_LIMIT = 6;
 
 
   public void evaluatoroptions() {
@@ -27,7 +35,7 @@ public class PerformanceEvaluatorScreen implements EvaluatorInterface {
 
     try {
       userinput = scanner.nextInt();
-      if (userinput > low_limit && userinput <= high_limit) {
+      if (userinput > LOW_LIMIT && userinput <= HIGH_LIMIT) {
         correctinput = true;
       } else {
         System.out.println("Wrong Input Choice.");
@@ -76,8 +84,7 @@ public class PerformanceEvaluatorScreen implements EvaluatorInterface {
     }
   }
 
-  public void displayEmployeeEvaluation(Scanner scanner,
-                                        IEmpEvaluation iEmpEvaluation) {
+  public void displayEmployeeEvaluation(Scanner scanner, IEmpEvaluation iEmpEvaluation) {
     System.out.println("Enter the Employee User ID");
     String username = scanner.next();
     if (Validations.isStringvalid(username)) {

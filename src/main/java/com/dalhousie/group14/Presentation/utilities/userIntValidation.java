@@ -4,6 +4,9 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 /**
  * @author Harjot Singh
+ * @NameofFile: userIntValidation.java
+ * @ClassDescription: This class is used for validating the user's input with
+ * regards to the screen on which he is interacting.
  */
 public class userIntValidation implements IuserIntValidation {
   public static final int MIN = 0;

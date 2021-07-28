@@ -3,7 +3,7 @@ package com.dalhousie.group14.BusinessLogic.manager;
 import java.util.List;
 import java.util.Map;
 /**
- * @author Harjot Singh
+ * @Author: Harjot Singh
  */
 public interface IEmpEvaluation {
   String EvaluateAll();

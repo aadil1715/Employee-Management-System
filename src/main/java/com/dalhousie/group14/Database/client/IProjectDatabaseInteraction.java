@@ -1,10 +1,14 @@
 package com.dalhousie.group14.Database.client;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
-
+/**
+ * @Author: Harjot Singh
+ * @NameofFile: IProjectDatabaseInteraction.java
+ * @InterfaceDescription: This interface is used for the purpose of providing
+ * database interaction for the projects.
+ */
 public interface IProjectDatabaseInteraction {
   boolean insertProjectDB(String project_name, Date start_date, Date end_date
       , List<String> languages, Map<Date, String> milestones, String clientID);

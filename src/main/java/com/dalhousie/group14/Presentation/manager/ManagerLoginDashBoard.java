@@ -45,7 +45,7 @@ public class ManagerLoginDashBoard {
             obj.projDashboard();
             break;
           case 3:
-            PerformanceEvaluatorScreen obj2 = new PerformanceEvaluatorScreen();
+            IPerformanceEvaluatorScreen obj2 = new PerformanceEvaluatorScreen();
             obj2.evaluatoroptions();
             break;
           case 4:
@@ -77,7 +77,7 @@ public class ManagerLoginDashBoard {
             System.out.println("Enter Correct number:");
         }
       } catch (Exception e) {
-        System.out.println("Exception in ManagerLoginDashboard" + e);
+        System.out.println("Sorry couldn't complete your request as of now");
       }
     } while (decision);
   }

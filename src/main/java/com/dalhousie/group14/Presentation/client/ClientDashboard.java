@@ -13,7 +13,12 @@ import com.dalhousie.group14.Presentation.utilities.userIntValidation;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
-
+/**
+ * @Author: Harjot Singh
+ * @NameofFile: ClientDashboard.java
+ * @ClassDescription: This class is used for the purpose of providing
+ * the client dashboard.
+ */
 public class ClientDashboard implements IClientDashboard {
   public static int LOW_RANGE = 0;
   public static int HIGH_rANGE = 5;

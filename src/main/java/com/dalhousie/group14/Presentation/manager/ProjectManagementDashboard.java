@@ -1,12 +1,17 @@
 package com.dalhousie.group14.Presentation.manager;
 
-import com.dalhousie.group14.BusinessLogic.manager.IProjectStatusRetrieve;
-import com.dalhousie.group14.BusinessLogic.manager.ProjectStatusRetrieve;
+import com.dalhousie.group14.Database.manager.IProjectStatusRetrieve;
+import com.dalhousie.group14.Database.manager.ProjectStatusRetrieve;
 import com.dalhousie.group14.BusinessLogic.utilities.Validations;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
+/**
+ * @Author: Harjot Singh
+ * @NameofFile: ProjectManagementDashboard.java
+ * @ClassDescription: This class is used for the purpose of providing
+ * the screen for the project management module.
+ */
 public class ProjectManagementDashboard implements IProjectManagementDashboard {
 
   int tries = 0;
