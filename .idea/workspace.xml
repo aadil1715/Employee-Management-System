@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98510d03-2851-4869-a0ae-8263b7d693ba" name="Default Changelist" comment="Basic Setup Commit">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="98510d03-2851-4869-a0ae-8263b7d693ba" name="Default Changelist" comment="Patch Fix">
+      <change beforePath="$PROJECT_DIR$/.idea/group-14.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/group-14.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/utilities/DbConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/utilities/DbConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/utilities/DbCredLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalhousie/group14/Database/utilities/DbCredLoad.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,17 +19,32 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1u2akOH3r2IguoVWpSeVn0w6R9a" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -34,30 +53,135 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="14" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="H:\Dalhousie\CSCI 5308 - Advanced Software Development\Project\group-14" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.dalhousie.group14.Database.utilities" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="Employee" />
+      <recent name="com.dalhousie.group14.Presentation.utilities" />
+      <recent name="com.dalhousie.group14.BusinessLogic.utilities" />
+    </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn compile" />
+      <command value="mvn insta;;" />
+      <command value="mvn install" />
+      <command value="mvn clean install" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.EMSController">
+    <configuration name="EMSController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dalhousie.group14.EMSController" />
+      <module name="group-14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dalhousie.group14.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmployeeProjectHandling" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dalhousie.group14.Presentation.employee.EmployeeProjectHandling" />
+      <module name="group-14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dalhousie.group14.Presentation.employee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalendarDisplayTest.display" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="group-14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="utilities.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="utilities" />
+      <option name="MAIN_CLASS_NAME" value="utilities.CalendarDisplayTest" />
+      <option name="METHOD_NAME" value="display" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalendarEventTest.searchEvent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="group-14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Employee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Employee" />
+      <option name="MAIN_CLASS_NAME" value="Employee.CalendarEventTest" />
+      <option name="METHOD_NAME" value="searchEvent" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NotificationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="group-14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Employee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Employee" />
+      <option name="MAIN_CLASS_NAME" value="Employee.NotificationTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.EMSController" />
+      <item itemvalue="Application.EmployeeProjectHandling" />
+      <item itemvalue="JUnit.CalendarEventTest.searchEvent" />
+      <item itemvalue="JUnit.NotificationTest" />
+      <item itemvalue="JUnit.CalendarDisplayTest.display" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.EMSController" />
+        <item itemvalue="JUnit.CalendarDisplayTest.display" />
+        <item itemvalue="JUnit.NotificationTest" />
+        <item itemvalue="JUnit.CalendarEventTest.searchEvent" />
+        <item itemvalue="Application.EmployeeProjectHandling" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -68,6 +192,15 @@
       <option name="presentableId" value="Default" />
       <updated>1623866301513</updated>
       <workItem from="1623866337051" duration="2740000" />
+      <workItem from="1627073090774" duration="544000" />
+      <workItem from="1627073646871" duration="1678000" />
+      <workItem from="1627120743829" duration="6746000" />
+      <workItem from="1627134685678" duration="14933000" />
+      <workItem from="1627161783571" duration="10584000" />
+      <workItem from="1627337257581" duration="9495000" />
+      <workItem from="1627418480384" duration="6530000" />
+      <workItem from="1627425110169" duration="882000" />
+      <workItem from="1627439454626" duration="1284000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Setup Commit">
       <created>1623867197649</created>
@@ -76,7 +209,119 @@
       <option name="project" value="LOCAL" />
       <updated>1623867197649</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Login functionality done">
+      <created>1625905358243</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1625905358243</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Dbconnection code changed">
+      <created>1625939613998</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1625939613998</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Dbconnection code changed">
+      <created>1625940196484</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1625940196484</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Dbconnection code changed">
+      <created>1625940425042</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1625940425042</updated>
+    </task>
+    <task id="LOCAL-00006" summary="commit no 1">
+      <created>1625940685609</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1625940685609</updated>
+    </task>
+    <task id="LOCAL-00007" summary="login file changed ;removed implements">
+      <created>1625940773760</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1625940773760</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Use of scanner class implemented.">
+      <created>1627074771820</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1627074771820</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Implemented the manager functionality to handle employee schedule.">
+      <created>1627134991956</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1627134991959</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Implemented project management for employee">
+      <created>1627154589859</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1627154589859</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added presentation layer for notifications.">
+      <created>1627162051307</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1627162051307</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added presentation layer for notifications.">
+      <created>1627169390561</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1627169390561</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Combined the merge commit with my local changes on notification presentation layer.">
+      <created>1627169750700</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1627169750700</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fixed a layer violation.">
+      <created>1627341937355</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1627341937355</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Final small fixes for code.">
+      <created>1627424838754</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1627424838754</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Final small fixes for code.">
+      <created>1627425820589</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1627425820589</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Patch Fix">
+      <created>1627438817836</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1627438817837</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,9 +337,22 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basic Setup Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic Setup Commit" />
+    <MESSAGE value="Login functionality done" />
+    <MESSAGE value="Dbconnection code changed" />
+    <MESSAGE value="commit no 1" />
+    <MESSAGE value="login file changed ;removed implements" />
+    <MESSAGE value="Use of scanner class implemented." />
+    <MESSAGE value="Implemented the manager functionality to handle employee schedule." />
+    <MESSAGE value="Implemented project management for employee" />
+    <MESSAGE value="Added presentation layer for notifications." />
+    <MESSAGE value="Combined the merge commit with my local changes on notification presentation layer." />
+    <MESSAGE value="Fixed a layer violation." />
+    <MESSAGE value="Final small fixes for code." />
+    <MESSAGE value="Patch Fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Patch Fix" />
   </component>
 </project>
