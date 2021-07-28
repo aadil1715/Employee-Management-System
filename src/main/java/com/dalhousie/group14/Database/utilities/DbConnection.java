@@ -15,9 +15,12 @@ public class DbConnection{
         IDbCredLoad obj = new DbCredLoad();
 
         List<String> credList = obj.loadCredentials();
-        final String url = credList.get(URL_INDEX);
-        final String username = credList.get(USERNAME_INDEX);
-        final String password = credList.get(PASSWORD_INDEX);
+//        final String url = credList.get(URL_INDEX);
+//        final String username = credList.get(USERNAME_INDEX);
+//        final String password = credList.get(PASSWORD_INDEX);
+        final String url = "jdbc:mysql://34.134.143.1/ems";
+        final String username = "root";
+        final String password = "ahjnr5";
         try {
             Connection connection = DriverManager.getConnection(url, username, password);
 

@@ -20,7 +20,7 @@ public class DbCredLoad implements IDbCredLoad {
   public List<String> loadCredentials(){
     List<String> credList = new ArrayList<>();
     try (InputStream dbcredfile =
-             new FileInputStream(DB_FILE_PATH)) {
+             getClass().getResourceAsStream("/db.properties")) {
 
       Properties dbproperties = new Properties();
 
